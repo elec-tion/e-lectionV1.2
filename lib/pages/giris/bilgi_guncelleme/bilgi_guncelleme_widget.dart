@@ -241,6 +241,7 @@ class _BilgiGuncellemeWidgetState extends State<BilgiGuncellemeWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.name,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).text1,
                                   validator: _model
@@ -319,6 +320,7 @@ class _BilgiGuncellemeWidgetState extends State<BilgiGuncellemeWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.name,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).text1,
                                   validator: _model

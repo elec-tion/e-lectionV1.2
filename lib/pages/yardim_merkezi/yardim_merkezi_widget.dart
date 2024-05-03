@@ -163,14 +163,14 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                     SizedBox(
                       width: 340.0,
                       child: Divider(
-                        height: 30.0,
+                        height: 29.0,
                         thickness: 1.0,
                         color: FlutterFlowTheme.of(context).customColor2,
                       ),
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '54sztl2t' /* How can we help today? */,

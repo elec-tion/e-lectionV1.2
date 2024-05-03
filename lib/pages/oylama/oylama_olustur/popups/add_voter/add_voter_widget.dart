@@ -76,7 +76,7 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 40.0, 10.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -84,7 +84,7 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'behlv6t5' /* Enter the committee member's w... */,
+                      'behlv6t5' /* Enter the voter's wallet ID: */,
                     ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

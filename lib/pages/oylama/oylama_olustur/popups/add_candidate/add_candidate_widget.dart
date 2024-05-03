@@ -161,6 +161,7 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                             letterSpacing: 0.0,
                           ),
                       textAlign: TextAlign.center,
+                      keyboardType: TextInputType.name,
                       cursorColor: FlutterFlowTheme.of(context).text1,
                       validator: _model.comMemNameTextControllerValidator
                           .asValidator(context),
@@ -226,6 +227,7 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                             letterSpacing: 0.0,
                           ),
                       textAlign: TextAlign.center,
+                      keyboardType: TextInputType.name,
                       cursorColor: FlutterFlowTheme.of(context).text1,
                       validator: _model.comMemSurnameTextControllerValidator
                           .asValidator(context),

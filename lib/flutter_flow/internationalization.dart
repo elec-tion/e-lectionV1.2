@@ -139,6 +139,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'I forgot my password',
       'tr': 'Şifremi Unuttum',
     },
+    '72y6svrw': {
+      'en': 'Dropdown deneme',
+      'tr': 'Dropdown deneme',
+    },
     'wztpgkwk': {
       'en': 'Sign In',
       'tr': 'Giriş Yap',
@@ -387,7 +391,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hfphpy8f': {
       'en': 'Please enter the informations about yourself.',
-      'tr': 'Lütfen sizinle alakalı bilgileri giriniz',
+      'tr': 'Lütfen sizinle alakalı bilgileri giriniz.',
     },
     'mvtv24xs': {
       'en': 'Name',
@@ -442,14 +446,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uqyci65q': {
       'en': 'Next Upcoming Election',
       'tr': 'En Yakın Seçim:',
-    },
-    'zmnrwm71': {
-      'en': '[Oylama İsmi]',
-      'tr': '[Oylama İsmi]',
-    },
-    'a6j7d62s': {
-      'en': '[Sonuç Durumu]',
-      'tr': '[Sonuç Durumu]',
     },
     'nmfy3l1z': {
       'en': 'My All Elections',
@@ -622,7 +618,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'All voters must carefully read \nand acknowledge the following \nwarnings.\n\n1. DO NOT exceed voting time limit or\n   your vote may invalidated by your\n   committee\n\n2. e-lection is not responsible for any \n   problems that may occur in the \n   voting process and/or results.\n\n3. No changes can be made about \n    the voting after the voting process.\n\n3. By clicking \"Next\" you \nAccept the e-lection\nTerms of Use and User Consent form.',
       'tr':
-          'Bütün adaylar aşağıdaki\n uyarıları dikkatlice okuyup onaylamalıdır.\n\n1. Oylama İşlemlerinde ve/veya\n sonuçlarında yaşanabilecek\n aksaklıklardan e-lection \nsorumlu değildir.\n\n2. Oy kullanma işlemi \nsonrasında oylama hakkında \ndeğişiklik yapılamaz.\n\n3. İleri tuşuna bastığınız zaman\ne-lection Kullanım Şartlarını onaylamış olursunuz.',
+          'Bütün adaylar aşağıdaki\n uyarıları dikkatlice okuyup onaylamalıdır.\n\n1. Oylama İşlemlerinde ve/veya\n sonuçlarında yaşanabilecek\n aksaklıklardan e-lection \nsorumlu değildir.\n\n2. Oy kullanma işlemi \nsonrasında oylama hakkında \ndeğişiklik yapılamaz.\n\n3. İleri tuşuna bastığınız zaman\ne-lection Kullanım Şartlarını onaylamış\nolursunuz.',
     },
     '98d1vdjn': {
       'en':
@@ -1390,7 +1386,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'toj3s98v': {
       'en': 'Contact Us',
-      'tr': 'Yardım Merkezi',
+      'tr': 'Bize ulaşın',
     },
     'cv23mvee': {
       'en': 'If you can\'t find your answers we\'re here\nto help.',
@@ -1423,6 +1419,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HowToVoteBallots
   {
+    'w8f231kw': {
+      'en': '- Ongoing Election -',
+      'tr': '- Devam Eden Oylama İşlemi -',
+    },
     '8j9eujba': {
       'en': 'Electronic Voting Ballot Help',
       'tr': 'Elektronik Oy Pusulası \nYardımı',
@@ -1682,9 +1682,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jmiip34v': {
       'en':
-          'You Can Find Various Questions With Answers.\n\nYou can simply click the answer cards to\n show their answer.',
+          'You Can Find Various Questions With Answers Below.\n\nYou can simply click the answer cards to\n show their answer.',
       'tr':
-          'Çeşitli Sorular ve Cevaplarını Bulabilirsiniz.\n\nKartlara dokunarak cevaplarını gorebilirsiniz.',
+          'Çeşitli Sorular ve Cevaplarını Aşağıda Bulabilirsiniz.\n\nKartlara dokunarak cevaplarını gorebilirsiniz.',
     },
     't6b8o119': {
       'en': 'General Questions',
@@ -1692,48 +1692,73 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     't8s10m1p': {
       'en': '1. What is e-lection?',
-      'tr': '',
+      'tr': 'e-lection nedir?',
     },
     'u9qlbgyt': {
       'en':
-          'e-lection is a blockchain-integrated voting application that allows users to securely cast their votes for various elections and polls using blockchain technology.\n\n',
-      'tr': '',
+          'e-lection is a blockchain-integrated voting application that allows users to securely cast their votes for various elections using blockchain technology.\n\n',
+      'tr':
+          'e-lection, kullanıcıların blok zinciri teknolojisi kullanarak çeşitli seçimler için oy kullanmalarını sağlayan bir blok zinciri entegreli oy verme uygulamasıdır.',
     },
     'g33up34n': {
-      'en': '2. How does e-lection ensure the security of my vote?\n\n',
-      'tr': '',
+      'en': '2. How does e-lection ensure the security of my vote?',
+      'tr': 'Oyumun güvenliğini e-lection nasıl sağlar?',
     },
     'diuhj9cj': {
       'en':
           'e-lection utilizes blockchain technology, which provides security, transparency, and immutability to the voting process. Each vote is recorded as a transaction on the blockchain, making it tamper-proof and verifiable.',
-      'tr': '',
+      'tr':
+          'e-lection, her bir oy işlemini blok zinciri teknolojisi kullanarak kaydederek güvenlik, şeffaflık ve değişmezlik sağlar. Her oy, blok zinciri üzerinde bir işlem olarak kaydedilir, bu da onu müdahale edilemez ve doğrulanabilir hale getirir.',
     },
     '3z9vn7lu': {
       'en': '3. Is my personal data safe with e-lection?',
-      'tr': '',
+      'tr': 'Kişisel verilerim e-lection\'da güvende mi?',
     },
     'hykjr7ob': {
       'en':
           'Yes, we take the privacy and security of your personal data very seriously. We employ industry-standard security measures to protect your data and adhere to strict privacy policies.',
-      'tr': '',
+      'tr':
+          'Evet, kişisel verilerinizin gizliliğini ve güvenliğini ciddiye alıyoruz. Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanıyor ve katı gizlilik politikalarına uyuyoruz.',
     },
     'vk0kek68': {
       'en': '4. Can I trust the results of the elections on e-lection?',
-      'tr': '',
+      'tr': 'e-lection\'daki seçim sonuçlarına güvenebilir miyim?',
     },
     '1cwma8r3': {
       'en':
           'Yes, e-lection ensures the integrity of election results by leveraging blockchain technology, which prevents tampering or manipulation of votes. Additionally, our platform undergoes regular audits to maintain transparency and trustworthiness.',
-      'tr': '',
+      'tr':
+          'Evet, e-lection, blok zinciri teknolojisini kullanarak seçim sonuçlarının bütünlüğünü sağlar; bu da oy kullanımını engelleyen veya manipüle eden bir sistemdir. Ayrıca, platformumuz düzenli denetimlere tabi tutularak şeffaflığı ve güvenilirliği korur.',
     },
     'mkx3066r': {
       'en': '5. Can I change my vote after casting it?',
-      'tr': '',
+      'tr': 'Oyumu verdikten sonra değiştirebilir miyim?',
     },
     'pievm466': {
       'en':
           'No, once your vote is cast on e-lection, it is recorded on the blockchain and cannot be altered or revoked. This ensures the integrity and reliability of the voting process.',
-      'tr': '',
+      'tr':
+          'Hayır, e-lection\'da oy verildikten sonra, blok zinciri üzerinde kaydedilir ve değiştirilemez veya geri alınamaz. Bu, oy verme sürecinin bütünlüğünü ve güvenilirliğini sağlar.',
+    },
+    'i66kbpo8': {
+      'en': '6. What happens to my voting data after the election?',
+      'tr': 'Seçimden sonra oy verme verilerim ne olacak?',
+    },
+    '3qdrjujc': {
+      'en':
+          'Your voting data may be used for commercial purposes, including research, analysis, and marketing by e-lection. However, rest assured that your personal data will be handled in accordance with our privacy policy and applicable laws.',
+      'tr':
+          'Oy verme verileriniz, e-lection tarafından araştırma, analiz ve pazarlama gibi ticari amaçlar için kullanılabilir. Ancak, kişisel verilerinizin gizliliği politikamız ve ilgili yasalara uygun olarak işleneceğinden emin olabilirsiniz.',
+    },
+    'lh7t418i': {
+      'en':
+          'If you believe you have still questions in your mind,\nplease contact us anytime you need.',
+      'tr':
+          'Eğer aklınızda hala soru kaldığını düşünüyorsanız lütfen bize ulaşın.',
+    },
+    'u4fxtjsr': {
+      'en': 'Contact us',
+      'tr': 'Bize Ulaşın',
     },
     'dg0qh907': {
       'en': 'Voting',
@@ -1775,6 +1800,69 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama Süreci Nasıl İşliyor?',
     },
     'l0dcr5s4': {
+      'en': 'Voting',
+      'tr': 'Oylama',
+    },
+  },
+  // dropdownDeneme
+  {
+    '10pveiu2': {
+      'en': 'District\'i yicem',
+      'tr': '',
+    },
+    'mnoqhjh1': {
+      'en': 'Ülke',
+      'tr': 'Ülke',
+    },
+    '09icxkl3': {
+      'en': 'Please select...',
+      'tr': '',
+    },
+    '2bo9xodr': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    'z2b0giz6': {
+      'en': 'İl',
+      'tr': 'İl',
+    },
+    'c8kirnq8': {
+      'en': 'Please select...',
+      'tr': '',
+    },
+    '6n038rnk': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    '1mu4g28p': {
+      'en': 'İlçe',
+      'tr': 'İlçe',
+    },
+    '3sv0gkh1': {
+      'en': 'Please select...',
+      'tr': '',
+    },
+    '4hwi01jk': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    'z2xb8nk4': {
+      'en': 'Mahalle',
+      'tr': 'Mahalle',
+    },
+    '5gme7tpn': {
+      'en': 'Option 1',
+      'tr': '',
+    },
+    '1iqatnfw': {
+      'en': 'Please select...',
+      'tr': '',
+    },
+    'v0mkx94z': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    'wjo5edwk': {
       'en': 'Voting',
       'tr': 'Oylama',
     },
@@ -1826,7 +1914,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'pytsrzxe': {
       'en': 'Enter the committee member\'s wallet ID:',
-      'tr': 'Yeni mail adresinizi giriniz:',
+      'tr': 'Oylama sorumlusunun cüzdan numarasını giriniz:',
     },
     'vwq9ql1w': {
       'en': '',
@@ -1863,8 +1951,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // addVoter
   {
     'behlv6t5': {
-      'en': 'Enter the committee member\'s wallet ID:',
-      'tr': 'Yeni mail adresinizi giriniz:',
+      'en': 'Enter the voter\'s wallet ID:',
+      'tr': 'Seçmenin cüzdan numarasını giriniz:',
     },
     'wrti3fsf': {
       'en': '',

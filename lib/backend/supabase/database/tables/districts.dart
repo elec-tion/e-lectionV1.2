@@ -19,4 +19,7 @@ class DistrictsRow extends SupabaseDataRow {
 
   String get districtName => getField<String>('districtName')!;
   set districtName(String value) => setField<String>('districtName', value);
+
+  int? get lengthOfID => getField<int>('lengthOfID');
+  set lengthOfID(int? value) => setField<int>('lengthOfID', value);
 }

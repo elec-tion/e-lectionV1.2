@@ -17,7 +17,7 @@ export '/pages/oylama/oy_kullan/oy_kullan_p1given/oy_kullan_p1given_widget.dart'
     show OyKullanP1givenWidget;
 export '/pages/oylama/oy_kullan/oy_kullan_p1res/oy_kullan_p1res_widget.dart'
     show OyKullanP1resWidget;
-export '/pages/oylama/oy_kullan/oy_kullan_p2devam/oy_kullan_p2devam_widget.dart'
+export '/pages/oylama/oy_kullan_p2devam/oy_kullan_p2devam_widget.dart'
     show OyKullanP2devamWidget;
 export '/pages/oylama/oy_kullan/oy_kullan_p3devam/oy_kullan_p3devam_widget.dart'
     show OyKullanP3devamWidget;
@@ -75,3 +75,5 @@ export '/pages/oylama/oylama_olustur/oylama_olustur_p3/oylama_olustur_p3_widget.
 export '/pages/how_to_vote/faq/faq_widget.dart' show FaqWidget;
 export '/pages/oylama/oy_kullan/oy_kullan/oy_kullan_widget.dart'
     show OyKullanWidget;
+export '/pages/giris/dropdown_deneme/dropdown_deneme_widget.dart'
+    show DropdownDenemeWidget;

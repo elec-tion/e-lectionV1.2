@@ -367,6 +367,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
           ),
+        ),
+        FFRoute(
+          name: 'dropdownDeneme',
+          path: '/dropdownDeneme',
+          builder: (context, params) => const DropdownDenemeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

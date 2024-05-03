@@ -143,32 +143,32 @@ class FFAppState extends ChangeNotifier {
     _addedElecComWalletID = value;
   }
 
-  List<String> _deneme = [];
-  List<String> get deneme => _deneme;
-  set deneme(List<String> value) {
-    _deneme = value;
+  List<String> _districtCountryID = [];
+  List<String> get districtCountryID => _districtCountryID;
+  set districtCountryID(List<String> value) {
+    _districtCountryID = value;
   }
 
-  void addToDeneme(String value) {
-    _deneme.add(value);
+  void addToDistrictCountryID(String value) {
+    _districtCountryID.add(value);
   }
 
-  void removeFromDeneme(String value) {
-    _deneme.remove(value);
+  void removeFromDistrictCountryID(String value) {
+    _districtCountryID.remove(value);
   }
 
-  void removeAtIndexFromDeneme(int index) {
-    _deneme.removeAt(index);
+  void removeAtIndexFromDistrictCountryID(int index) {
+    _districtCountryID.removeAt(index);
   }
 
-  void updateDenemeAtIndex(
+  void updateDistrictCountryIDAtIndex(
     int index,
     String Function(String) updateFn,
   ) {
-    _deneme[index] = updateFn(_deneme[index]);
+    _districtCountryID[index] = updateFn(_districtCountryID[index]);
   }
 
-  void insertAtIndexInDeneme(int index, String value) {
-    _deneme.insert(index, value);
+  void insertAtIndexInDistrictCountryID(int index, String value) {
+    _districtCountryID.insert(index, value);
   }
 }

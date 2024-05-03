@@ -55,3 +55,10 @@ String getStringBasedOnTime() {
   }
   return 'Good Evening!';
 }
+
+String? getCountryFromDistrict(String countryID) {
+  // measure the length of string and just get the strings if length is = 2
+  if (countryID.length == 5) {
+    return countryID;
+  }
+}

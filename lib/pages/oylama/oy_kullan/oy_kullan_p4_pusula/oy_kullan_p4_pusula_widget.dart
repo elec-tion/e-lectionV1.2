@@ -191,6 +191,8 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                   );
                                 },
                               );
+
+                              context.pushNamed('OyKullanP6Final');
                             },
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
@@ -298,6 +300,20 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     child: Divider(
                                                       height: 20.0,
                                                       thickness: 5.0,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Opacity(
+                                                  opacity: 0.7,
+                                                  child: SizedBox(
+                                                    width: 300.0,
+                                                    child: Divider(
+                                                      height: 20.0,
+                                                      thickness: 1.0,
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1003,47 +1019,13 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     ),
                                                   ),
                                                 ),
-                                                const Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 20.0, 0.0, 20.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [],
-                                                  ),
-                                                ),
                                                 Opacity(
                                                   opacity: 0.7,
                                                   child: SizedBox(
                                                     width: 300.0,
                                                     child: Divider(
                                                       height: 20.0,
-                                                      thickness: 1.0,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                    ),
-                                                  ),
-                                                ),
-                                                const Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 20.0, 0.0, 20.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [],
-                                                  ),
-                                                ),
-                                                Opacity(
-                                                  opacity: 0.7,
-                                                  child: SizedBox(
-                                                    width: 300.0,
-                                                    child: Divider(
-                                                      height: 20.0,
-                                                      thickness: 1.0,
+                                                      thickness: 5.0,
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
