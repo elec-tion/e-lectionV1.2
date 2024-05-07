@@ -143,32 +143,56 @@ class FFAppState extends ChangeNotifier {
     _addedElecComWalletID = value;
   }
 
-  List<String> _districtCountryID = [];
-  List<String> get districtCountryID => _districtCountryID;
-  set districtCountryID(List<String> value) {
-    _districtCountryID = value;
+  String _cityID = '';
+  String get cityID => _cityID;
+  set cityID(String value) {
+    _cityID = value;
   }
 
-  void addToDistrictCountryID(String value) {
-    _districtCountryID.add(value);
+  String _districtID = '';
+  String get districtID => _districtID;
+  set districtID(String value) {
+    _districtID = value;
   }
 
-  void removeFromDistrictCountryID(String value) {
-    _districtCountryID.remove(value);
+  String _countryID = '';
+  String get countryID => _countryID;
+  set countryID(String value) {
+    _countryID = value;
   }
 
-  void removeAtIndexFromDistrictCountryID(int index) {
-    _districtCountryID.removeAt(index);
+  String _neighborhoodID = '';
+  String get neighborhoodID => _neighborhoodID;
+  set neighborhoodID(String value) {
+    _neighborhoodID = value;
   }
 
-  void updateDistrictCountryIDAtIndex(
+  List<String> _userDistrictIDs = [];
+  List<String> get userDistrictIDs => _userDistrictIDs;
+  set userDistrictIDs(List<String> value) {
+    _userDistrictIDs = value;
+  }
+
+  void addToUserDistrictIDs(String value) {
+    _userDistrictIDs.add(value);
+  }
+
+  void removeFromUserDistrictIDs(String value) {
+    _userDistrictIDs.remove(value);
+  }
+
+  void removeAtIndexFromUserDistrictIDs(int index) {
+    _userDistrictIDs.removeAt(index);
+  }
+
+  void updateUserDistrictIDsAtIndex(
     int index,
     String Function(String) updateFn,
   ) {
-    _districtCountryID[index] = updateFn(_districtCountryID[index]);
+    _userDistrictIDs[index] = updateFn(_userDistrictIDs[index]);
   }
 
-  void insertAtIndexInDistrictCountryID(int index, String value) {
-    _districtCountryID.insert(index, value);
+  void insertAtIndexInUserDistrictIDs(int index, String value) {
+    _userDistrictIDs.insert(index, value);
   }
 }

@@ -195,97 +195,231 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                       topRight: Radius.circular(40.0),
                     ),
                   ),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      if (_model.comMemWalletIDTextController.text != '') {
-                        FFAppState().update(() {
-                          FFAppState().addToAddElecComtoElection(
-                              _model.comMemWalletIDTextController.text);
-                        });
-                        await ElectionsTable().update(
-                          data: {
-                            'committee_members':
-                                FFAppState().addElecComtoElection,
-                          },
-                          matchingRows: (rows) => rows.eq(
-                            'name',
-                            FFAppState().electionName,
+                  child: FutureBuilder<ApiCallResponse>(
+                    future: CommitteeMemberGroup
+                        .getElectionCommitteeMemberDetailsCall
+                        .call(
+                      wallet: _model.comMemWalletIDTextController.text,
+                    ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).mavi,
+                              ),
+                            ),
                           ),
                         );
-                        await CommitteeMemberGroup
-                            .addElectionCommitteeMemberToElectionCall
-                            .call(
-                          electionID: FFAppState().electionID,
-                          wallet: _model.comMemWalletIDTextController.text,
-                        );
-                        Navigator.pop(context);
-                      } else {
-                        if (FFLocalizations.of(context).languageCode == 'en') {
-                          // enAlert
-                          await showDialog(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title:
-                                    const Text('You didn\'t add committee member!'),
-                                content: const Text(
-                                    'You didn\'t add committee member, please add a committee member.'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext),
-                                    child: const Text('OK'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        } else {
-                          // trAlert
-                          await showDialog(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title: const Text('Sorumlu Eklemedin!'),
-                                content: const Text(
-                                    'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext),
-                                    child: const Text('Tamam'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        }
                       }
+                      final buttonGetElectionCommitteeMemberDetailsResponse =
+                          snapshot.data!;
+                      return FFButtonWidget(
+                        onPressed: () async {
+                          if (FFAppState().addElecComtoElection.contains(
+                                  _model.comMemWalletIDTextController.text) ==
+                              true) {
+                            if (FFLocalizations.of(context).languageCode ==
+                                'en') {
+                              // enAlert
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: const Text(
+                                        'You can\'t add this election committe member!'),
+                                    content: const Text(
+                                        'You have already added this person to the election.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: const Text('OK'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            } else {
+                              // trAlert
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: const Text('Bu Sorumluyu Ekleyemezsin!'),
+                                    content: const Text(
+                                        'Bu sorumluyu zaten oylamaya eklediniz.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: const Text('Tamam'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                          } else {
+                            if (_model.comMemWalletIDTextController.text !=
+                                    '') {
+                              _model.comVarMi = await CommitteeMemberGroup
+                                  .getElectionCommitteeMemberDetailsCall
+                                  .call(
+                                wallet:
+                                    _model.comMemWalletIDTextController.text,
+                              );
+                              if (getJsonField(
+                                    (_model.comVarMi?.jsonBody ?? ''),
+                                    r'''$["wallet"]''',
+                                  ) !=
+                                  null) {
+                                FFAppState().update(() {
+                                  FFAppState().addToAddElecComtoElection(
+                                      _model.comMemWalletIDTextController.text);
+                                });
+                                await ElectionsTable().update(
+                                  data: {
+                                    'committee_members':
+                                        FFAppState().addElecComtoElection,
+                                  },
+                                  matchingRows: (rows) => rows.eq(
+                                    'name',
+                                    FFAppState().electionName,
+                                  ),
+                                );
+                                await CommitteeMemberGroup
+                                    .addElectionCommitteeMemberToElectionCall
+                                    .call(
+                                  electionID: FFAppState().electionID,
+                                  wallet:
+                                      _model.comMemWalletIDTextController.text,
+                                );
+                                Navigator.pop(context);
+                              } else {
+                                if (FFLocalizations.of(context).languageCode ==
+                                    'en') {
+                                  // enAlert
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: const Text(
+                                            'You cannot add committee member!'),
+                                        content: const Text(
+                                            'The election committee member\'s wallet number you want to add is not available in e-lection. Please try again.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                } else {
+                                  // trAlert
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: const Text('Sorumlu Ekleyemezsin!'),
+                                        content: const Text(
+                                            'Eklemek istediğiniz sorumlu cüzdan numarası e-lection\'da bulunmamaktadır. Lütfen tekrar deneyin.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: const Text('Tamam'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                }
+
+                                setState(() {
+                                  _model.comMemWalletIDTextController?.clear();
+                                });
+                              }
+                            } else {
+                              if (FFLocalizations.of(context).languageCode ==
+                                  'en') {
+                                // enAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text(
+                                          'You didn\'t add committee member!'),
+                                      content: const Text(
+                                          'You didn\'t add committee member, please add a committee member.'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              } else {
+                                // trAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('Sorumlu Eklemedin!'),
+                                      content: const Text(
+                                          'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('Tamam'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+                            }
+                          }
+
+                          setState(() {});
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'idzapqlr' /* Save */,
+                        ),
+                        options: FFButtonOptions(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: const Color(0x00067BB7),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleLarge.override(
+                                    fontFamily: 'Montserrat',
+                                    color: FlutterFlowTheme.of(context).info,
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                          elevation: 0.0,
+                          borderSide: const BorderSide(
+                            color: Colors.transparent,
+                            width: 0.0,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                      );
                     },
-                    text: FFLocalizations.of(context).getText(
-                      'idzapqlr' /* Save */,
-                    ),
-                    options: FFButtonOptions(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0x00067BB7),
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleLarge.override(
-                                fontFamily: 'Montserrat',
-                                color: FlutterFlowTheme.of(context).info,
-                                fontSize: 18.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                      elevation: 0.0,
-                      borderSide: const BorderSide(
-                        color: Colors.transparent,
-                        width: 0.0,
-                      ),
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
                   ),
                 ),
               ],

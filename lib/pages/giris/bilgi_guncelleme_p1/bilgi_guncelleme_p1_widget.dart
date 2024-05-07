@@ -5,25 +5,26 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'bilgi_guncelleme_model.dart';
-export 'bilgi_guncelleme_model.dart';
+import 'bilgi_guncelleme_p1_model.dart';
+export 'bilgi_guncelleme_p1_model.dart';
 
-class BilgiGuncellemeWidget extends StatefulWidget {
-  const BilgiGuncellemeWidget({super.key});
+class BilgiGuncellemeP1Widget extends StatefulWidget {
+  const BilgiGuncellemeP1Widget({super.key});
 
   @override
-  State<BilgiGuncellemeWidget> createState() => _BilgiGuncellemeWidgetState();
+  State<BilgiGuncellemeP1Widget> createState() =>
+      _BilgiGuncellemeP1WidgetState();
 }
 
-class _BilgiGuncellemeWidgetState extends State<BilgiGuncellemeWidget> {
-  late BilgiGuncellemeModel _model;
+class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
+  late BilgiGuncellemeP1Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => BilgiGuncellemeModel());
+    _model = createModel(context, () => BilgiGuncellemeP1Model());
 
     _model.guncelleIsimTextController ??= TextEditingController();
     _model.guncelleIsimFocusNode ??= FocusNode();
@@ -652,7 +653,7 @@ class _BilgiGuncellemeWidgetState extends State<BilgiGuncellemeWidget> {
                                     wallet: FFAppState().userElecComWalletID,
                                   );
 
-                                  context.goNamed('HowvotingWorksP1');
+                                  context.goNamed('BilgiGuncellemeP2');
                                 }
                               }
                             } else {

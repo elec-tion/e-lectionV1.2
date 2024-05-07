@@ -1,10 +1,13 @@
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'anasayfa_model.dart';
 export 'anasayfa_model.dart';
@@ -16,15 +19,93 @@ class AnasayfaWidget extends StatefulWidget {
   State<AnasayfaWidget> createState() => _AnasayfaWidgetState();
 }
 
-class _AnasayfaWidgetState extends State<AnasayfaWidget> {
+class _AnasayfaWidgetState extends State<AnasayfaWidget>
+    with TickerProviderStateMixin {
   late AnasayfaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => AnasayfaModel());
+
+    animationsMap.addAll({
+      'columnOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 700.0.ms,
+            begin: const Offset(-100.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'circleImageOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 700.0.ms,
+            begin: const Offset(100.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'rowOnPageLoadAnimation1': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'rowOnPageLoadAnimation2': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ScaleEffect(
+            curve: Curves.easeOut,
+            delay: 100.0.ms,
+            duration: 750.0.ms,
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+      'rowOnPageLoadAnimation3': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'rowOnPageLoadAnimation4': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ScaleEffect(
+            curve: Curves.easeOut,
+            delay: 100.0.ms,
+            duration: 750.0.ms,
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -229,226 +310,44 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget> {
                                         ],
                                       ),
                                     ],
-                                  ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'columnOnPageLoadAnimation']!),
                                 ],
                               ),
-                              Container(
-                                width: 80.0,
-                                height: 80.0,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/1665420076729.jpeg',
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              50.0, 10.0, 50.0, 0.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: FutureBuilder<List<ElectionsRow>>(
-                                      future: ElectionsTable().querySingleRow(
-                                        queryFn: (q) => q
-                                            .contains(
-                                              'candidates_wallet_id',
-                                              '{${FFAppState()
-                                                      .userElecComWalletID}}',
-                                            )
-                                            .order('endDate'),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'Profilim',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: const TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 10),
                                       ),
-                                      builder: (context, snapshot) {
-                                        // Customize what your widget looks like when it's loading.
-                                        if (!snapshot.hasData) {
-                                          return Center(
-                                            child: SizedBox(
-                                              width: 50.0,
-                                              height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .mavi,
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }
-                                        List<ElectionsRow>
-                                            textElectionsRowList =
-                                            snapshot.data!;
-                                        // Return an empty Container when the item does not exist.
-                                        if (snapshot.data!.isEmpty) {
-                                          return Container();
-                                        }
-                                        final textElectionsRow =
-                                            textElectionsRowList.isNotEmpty
-                                                ? textElectionsRowList.first
-                                                : null;
-                                        return SelectionArea(
-                                            child: Text(
-                                          valueOrDefault<String>(
-                                            textElectionsRow?.name,
-                                            'electionName',
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .text1,
-                                                fontSize: 12.0,
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ));
-                                      },
-                                    ),
+                                    },
+                                  );
+                                },
+                                child: Container(
+                                  width: 80.0,
+                                  height: 80.0,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
                                   ),
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 5.0, 0.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    if (FFLocalizations.of(context)
-                                            .languageCode ==
-                                        'en')
-                                      Expanded(
-                                        child: SelectionArea(
-                                            child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '8kwsmno5' /* will start at */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .text1,
-                                                fontSize: 12.0,
-                                                letterSpacing: 0.0,
-                                              ),
-                                        )),
-                                      ),
-                                  ],
-                                ),
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 5.0, 0.0, 0.0),
-                                      child: FutureBuilder<List<ElectionsRow>>(
-                                        future: ElectionsTable().querySingleRow(
-                                          queryFn: (q) => q
-                                              .contains(
-                                                'candidates_wallet_id',
-                                                '{${anasayfaUsersRow?.walletIdElectionCommittee}}',
-                                              )
-                                              .order('endDate'),
-                                        ),
-                                        builder: (context, snapshot) {
-                                          // Customize what your widget looks like when it's loading.
-                                          if (!snapshot.hasData) {
-                                            return Center(
-                                              child: SizedBox(
-                                                width: 50.0,
-                                                height: 50.0,
-                                                child:
-                                                    CircularProgressIndicator(
-                                                  valueColor:
-                                                      AlwaysStoppedAnimation<
-                                                          Color>(
-                                                    FlutterFlowTheme.of(context)
-                                                        .mavi,
-                                                  ),
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          List<ElectionsRow>
-                                              textElectionsRowList =
-                                              snapshot.data!;
-                                          // Return an empty Container when the item does not exist.
-                                          if (snapshot.data!.isEmpty) {
-                                            return Container();
-                                          }
-                                          final textElectionsRow =
-                                              textElectionsRowList.isNotEmpty
-                                                  ? textElectionsRowList.first
-                                                  : null;
-                                          return SelectionArea(
-                                              child: Text(
-                                            functions.showDateTime(
-                                                textElectionsRow!.startDate),
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .text1,
-                                                  fontSize: 12.0,
-                                                  letterSpacing: 0.0,
-                                                ),
-                                          ));
-                                        },
-                                      ),
-                                    ),
+                                  child: CachedNetworkImage(
+                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeOutDuration:
+                                        const Duration(milliseconds: 500),
+                                    imageUrl: anasayfaUsersRow!.photoUrl,
+                                    fit: BoxFit.fill,
                                   ),
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 5.0, 0.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    if (FFLocalizations.of(context)
-                                            .languageCode ==
-                                        'tr')
-                                      Expanded(
-                                        child: SelectionArea(
-                                            child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '78uncosr' /*  */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .text1,
-                                                fontSize: 12.0,
-                                                letterSpacing: 0.0,
-                                              ),
-                                        )),
-                                      ),
-                                  ],
                                 ),
-                              ),
+                              ).animateOnPageLoad(animationsMap[
+                                  'circleImageOnPageLoadAnimation']!),
                             ],
                           ),
                         ),
@@ -636,7 +535,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['rowOnPageLoadAnimation1']!),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -731,7 +631,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['rowOnPageLoadAnimation2']!),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -904,7 +805,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['rowOnPageLoadAnimation3']!),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -999,7 +901,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['rowOnPageLoadAnimation4']!),
                             ),
                           ],
                         ),

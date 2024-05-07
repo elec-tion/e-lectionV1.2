@@ -12,13 +12,17 @@ class DropdownDenemeModel extends FlutterFlowModel<DropdownDenemeWidget> {
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
   // Stores action output result for [Backend Call - Query Rows] action in DropDown widget.
-  List<DistrictsRow>? idOut;
+  List<DistrictsRow>? countryIDOut;
   // State field(s) for DropDown widget.
   String? dropDownValue2;
   FormFieldController<String>? dropDownValueController2;
+  // Stores action output result for [Backend Call - Query Rows] action in DropDown widget.
+  List<DistrictsRow>? cityIDOut;
   // State field(s) for DropDown widget.
   String? dropDownValue3;
   FormFieldController<String>? dropDownValueController3;
+  // Stores action output result for [Backend Call - Query Rows] action in DropDown widget.
+  List<DistrictsRow>? districtIDOut;
   // State field(s) for DropDown widget.
   String? dropDownValue4;
   FormFieldController<String>? dropDownValueController4;

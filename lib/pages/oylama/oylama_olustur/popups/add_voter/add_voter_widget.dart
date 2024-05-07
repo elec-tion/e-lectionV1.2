@@ -1,8 +1,11 @@
+import '/backend/api_requests/api_calls.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'add_voter_model.dart';
 export 'add_voter_model.dart';
 
@@ -40,6 +43,8 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: MediaQuery.sizeOf(context).height * 1.0,
@@ -189,81 +194,203 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                       topRight: Radius.circular(40.0),
                     ),
                   ),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      if (_model.voterWalletIDTextController.text != '') {
-                        FFAppState().update(() {
-                          FFAppState().addToAddVoterToElection(
-                              _model.voterWalletIDTextController.text);
-                        });
-                        Navigator.pop(context);
-                      } else {
-                        if (FFLocalizations.of(context).languageCode == 'en') {
-                          // enAlert
-                          await showDialog(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title:
-                                    const Text('You didn\'t add committee member!'),
-                                content: const Text(
-                                    'You didn\'t add committee member, please add a committee member.'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext),
-                                    child: const Text('OK'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        } else {
-                          // trAlert
-                          await showDialog(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title: const Text('Sorumlu Eklemedin!'),
-                                content: const Text(
-                                    'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext),
-                                    child: const Text('Tamam'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        }
-                      }
-                    },
-                    text: FFLocalizations.of(context).getText(
-                      'lroqgoxh' /* Save */,
-                    ),
-                    options: FFButtonOptions(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0x00067BB7),
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleLarge.override(
-                                fontFamily: 'Montserrat',
-                                color: FlutterFlowTheme.of(context).info,
-                                fontSize: 18.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                      elevation: 0.0,
-                      borderSide: const BorderSide(
-                        color: Colors.transparent,
-                        width: 0.0,
+                  child: FutureBuilder<List<UsersRow>>(
+                    future: UsersTable().queryRows(
+                      queryFn: (q) => q.eq(
+                        'wallet_id_voter',
+                        _model.voterWalletIDTextController.text,
                       ),
-                      borderRadius: BorderRadius.circular(15.0),
                     ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).mavi,
+                              ),
+                            ),
+                          ),
+                        );
+                      }
+                      List<UsersRow> buttonUsersRowList = snapshot.data!;
+                      return FFButtonWidget(
+                        onPressed: () async {
+                          if (FFAppState().addVoterToElection.contains(
+                                  _model.voterWalletIDTextController.text) ==
+                              true) {
+                            if (FFLocalizations.of(context).languageCode ==
+                                'en') {
+                              // enAlert
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: const Text(
+                                        'You didn\'t add committee member!'),
+                                    content: const Text(
+                                        'You didn\'t add committee member, please add a committee member.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: const Text('OK'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            } else {
+                              // trAlert
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: const Text('Sorumlu Eklemedin!'),
+                                    content: const Text(
+                                        'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: const Text('Tamam'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                          } else {
+                            if (_model.voterWalletIDTextController.text != '') {
+                              if (buttonUsersRowList
+                                  .unique((e) =>
+                                      _model.voterWalletIDTextController.text)
+                                  .isNotEmpty) {
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('var'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('Ok'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              } else {
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('yok'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('Ok'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+                            } else {
+                              if (FFLocalizations.of(context).languageCode ==
+                                  'en') {
+                                // enAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('You didn\'t add voter!'),
+                                      content: const Text(
+                                          'Please enter the voter\'s wallet number!'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              } else {
+                                // trAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('Seçmen ekleyemedin!'),
+                                      content: const Text(
+                                          'Lütfen seçmenin cüzdan numarasını giriniz!'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('Tamam'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+
+                              FFAppState().update(() {
+                                FFAppState().addToAddVoterToElection(
+                                    _model.voterWalletIDTextController.text);
+                              });
+                              await ElectionsTable().update(
+                                data: {
+                                  'voters_wallet_id':
+                                      FFAppState().addVoterToElection,
+                                },
+                                matchingRows: (rows) => rows.eq(
+                                  'name',
+                                  FFAppState().electionName,
+                                ),
+                              );
+                              await VoterGroup.addVoterToElectionCall.call(
+                                wallet: _model.voterWalletIDTextController.text,
+                                electionID: FFAppState().electionID,
+                              );
+                              Navigator.pop(context);
+                            }
+                          }
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'lroqgoxh' /* Save */,
+                        ),
+                        options: FFButtonOptions(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: const Color(0x00067BB7),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleLarge.override(
+                                    fontFamily: 'Montserrat',
+                                    color: FlutterFlowTheme.of(context).info,
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                          elevation: 0.0,
+                          borderSide: const BorderSide(
+                            color: Colors.transparent,
+                            width: 0.0,
+                          ),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

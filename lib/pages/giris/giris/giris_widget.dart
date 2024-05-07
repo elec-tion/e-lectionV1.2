@@ -239,6 +239,46 @@ class _GirisWidgetState extends State<GirisWidget>
                                           fontWeight: FontWeight.bold,
                                         ),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 20.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                          'dropdownDeneme',
+                                          extra: <String, dynamic>{
+                                            kTransitionInfoKey: const TransitionInfo(
+                                              hasTransition: true,
+                                              transitionType:
+                                                  PageTransitionType.fade,
+                                              duration:
+                                                  Duration(milliseconds: 0),
+                                            ),
+                                          },
+                                        );
+                                      },
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '72y6svrw' /* Dropdown :00 */,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .headlineSmall
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text2,
+                                              fontSize: 15.0,
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -821,69 +861,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'y12ln0n7' /* I forgot my password */,
-                                                                  ),
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .start,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text2,
-                                                                        fontSize:
-                                                                            15.0,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          20.0),
-                                                              child: InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  context
-                                                                      .pushNamed(
-                                                                    'dropdownDeneme',
-                                                                    extra: <String,
-                                                                        dynamic>{
-                                                                      kTransitionInfoKey:
-                                                                          const TransitionInfo(
-                                                                        hasTransition:
-                                                                            true,
-                                                                        transitionType:
-                                                                            PageTransitionType.fade,
-                                                                        duration:
-                                                                            Duration(milliseconds: 0),
-                                                                      ),
-                                                                    },
-                                                                  );
-                                                                },
-                                                                child: Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    '72y6svrw' /* Dropdown deneme */,
+                                                                    'y12ln0n7' /* I forgot my password :( */,
                                                                   ),
                                                                   textAlign:
                                                                       TextAlign
@@ -1032,11 +1010,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                       context.goNamed(
                                                                           'Anasayfa');
 
-                                                                      FFAppState()
-                                                                          .update(
-                                                                              () {
-                                                                        FFAppState().userElecComWalletID =
-                                                                            girisUsersRow!.walletIdElectionCommittee;
+                                                                      setState(
+                                                                          () {
+                                                                        FFAppState().userDistrictIDs = girisUsersRow!
+                                                                            .districts
+                                                                            .toList()
+                                                                            .cast<String>();
                                                                       });
                                                                     } else {
                                                                       if (FFLocalizations.of(context)
@@ -1063,6 +1042,10 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             .update(() {
                                                                           FFAppState().userIDNum =
                                                                               '';
+                                                                          FFAppState().userDistrictIDs =
+                                                                              [];
+                                                                          FFAppState().userElecComWalletID =
+                                                                              '';
                                                                         });
                                                                       } else {
                                                                         await showDialog(
@@ -1085,6 +1068,10 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                         FFAppState()
                                                                             .update(() {
                                                                           FFAppState().userIDNum =
+                                                                              '';
+                                                                          FFAppState().userDistrictIDs =
+                                                                              [];
+                                                                          FFAppState().userElecComWalletID =
                                                                               '';
                                                                         });
                                                                       }
@@ -1819,7 +1806,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                       });
 
                                                                       context.goNamed(
-                                                                          'BilgiGuncelleme');
+                                                                          'BilgiGuncellemeP1');
                                                                     }
 
                                                                     setState(

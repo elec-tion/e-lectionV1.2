@@ -39,4 +39,11 @@ class UsersRow extends SupabaseDataRow {
       getField<String>('wallet_id_election_committee')!;
   set walletIdElectionCommittee(String value) =>
       setField<String>('wallet_id_election_committee', value);
+
+  List<String> get districts => getListField<String>('districts');
+  set districts(List<String>? value) =>
+      setListField<String>('districts', value);
+
+  String get photoUrl => getField<String>('photo_url')!;
+  set photoUrl(String value) => setField<String>('photo_url', value);
 }

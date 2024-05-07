@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'add_committee_member_widget.dart' show AddCommitteeMemberWidget;
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ class AddCommitteeMemberModel
   TextEditingController? comMemWalletIDTextController;
   String? Function(BuildContext, String?)?
       comMemWalletIDTextControllerValidator;
+  // Stores action output result for [Backend Call - API (getElectionCommitteeMemberDetails)] action in Button widget.
+  ApiCallResponse? comVarMi;
 
   @override
   void initState(BuildContext context) {}

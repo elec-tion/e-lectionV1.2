@@ -32,38 +32,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.showSplashImage
-          ? Builder(
-              builder: (context) => Container(
-                color: Colors.black,
-                child: Center(
-                  child: Image.asset(
-                    'assets/images/e-lection-logo-beyaz.png',
-                    width: MediaQuery.sizeOf(context).width * 0.6,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            )
-          : const GirisWidget(),
+      errorBuilder: (context, state) => const AcilisWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.showSplashImage
-              ? Builder(
-                  builder: (context) => Container(
-                    color: Colors.black,
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/e-lection-logo-beyaz.png',
-                        width: MediaQuery.sizeOf(context).width * 0.6,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                )
-              : const GirisWidget(),
+          builder: (context, _) => const AcilisWidget(),
         ),
         FFRoute(
           name: 'Giris',
@@ -114,9 +88,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'BilgiGuncelleme',
-          path: '/bilgiGuncelleme',
-          builder: (context, params) => const BilgiGuncellemeWidget(),
+          name: 'BilgiGuncellemeP1',
+          path: '/bilgiGuncellemeP1',
+          builder: (context, params) => const BilgiGuncellemeP1Widget(),
         ),
         FFRoute(
           name: 'SifremiUnuttumP4',
@@ -132,11 +106,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'OyKullanP1cont',
-          path: '/oyKullanP1cont',
+          name: 'OyKullanOLD',
+          path: '/oyKullanOLD',
           builder: (context, params) => const NavBarPage(
             initialPage: '',
-            page: OyKullanP1contWidget(),
+            page: OyKullanOLDWidget(),
           ),
         ),
         FFRoute(
@@ -321,17 +295,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OylamaAdaylar',
           path: '/oylamaAdaylar',
-          builder: (context, params) => const NavBarPage(
+          builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OylamaAdaylarWidget(),
+            page: OylamaAdaylarWidget(
+              votedesc: params.getParam<ElectionsRow>(
+                'votedesc',
+                ParamType.SupabaseRow,
+              ),
+            ),
           ),
         ),
         FFRoute(
           name: 'OylamaAcklamasi',
           path: '/oylamaAcklamasi',
-          builder: (context, params) => const NavBarPage(
+          builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OylamaAcklamasiWidget(),
+            page: OylamaAcklamasiWidget(
+              votedesc: params.getParam<ElectionsRow>(
+                'votedesc',
+                ParamType.SupabaseRow,
+              ),
+            ),
           ),
         ),
         FFRoute(
@@ -372,6 +356,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'dropdownDeneme',
           path: '/dropdownDeneme',
           builder: (context, params) => const DropdownDenemeWidget(),
+        ),
+        FFRoute(
+          name: 'BilgiGuncellemeP2',
+          path: '/bilgiGuncellemeP2',
+          builder: (context, params) => const BilgiGuncellemeP2Widget(),
+        ),
+        FFRoute(
+          name: 'OyKullanP1devam',
+          path: '/oyKullanP1devam',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: OyKullanP1devamWidget(
+              givevote: params.getParam<ElectionsRow>(
+                'givevote',
+                ParamType.SupabaseRow,
+              ),
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'Acilis',
+          path: '/acilis',
+          builder: (context, params) => const AcilisWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

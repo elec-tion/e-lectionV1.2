@@ -111,6 +111,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'e-lection',
       'tr': 'e-lection',
     },
+    '72y6svrw': {
+      'en': 'Dropdown :00',
+      'tr': 'Dropdown deneme',
+    },
     '2nusyfli': {
       'en': 'Log In',
       'tr': 'Oturum Aç',
@@ -136,12 +140,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Şifre',
     },
     'y12ln0n7': {
-      'en': 'I forgot my password',
+      'en': 'I forgot my password :(',
       'tr': 'Şifremi Unuttum',
-    },
-    '72y6svrw': {
-      'en': 'Dropdown deneme',
-      'tr': 'Dropdown deneme',
     },
     'wztpgkwk': {
       'en': 'Sign In',
@@ -193,14 +193,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7ck4ukmf': {
       'en': 'Good Evening!',
       'tr': 'İyi Akşamlar,',
-    },
-    '8kwsmno5': {
-      'en': 'will start at',
-      'tr': '',
-    },
-    '78uncosr': {
-      'en': '',
-      'tr': '\'de başlayacak',
     },
     'db31qvx9': {
       'en': 'Give Vote',
@@ -262,6 +254,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Profilim',
     },
     '39bjex55': {
+      'en': 'Log out from my e-lection account',
+      'tr': 'e-lection hesabımdan çıkış yap',
+    },
+    'rcwzcytv': {
       'en': 'Settings',
       'tr': 'Ayarlar',
     },
@@ -293,7 +289,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama Paneli',
     },
     'k17eihfq': {
-      'en': 'Create Election',
+      'en': 'Create \nElection',
       'tr': 'Oylama Oluştur',
     },
     'jnfa6i4g': {
@@ -305,7 +301,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'İstatistikler',
     },
     'x5yzhokh': {
-      'en': '    Help Center',
+      'en': ' Help Center',
       'tr': 'Yardım Merkezi',
     },
     'u8xt6qab': {
@@ -358,6 +354,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Profile',
       'tr': 'Profilim',
     },
+    'xxejesxf': {
+      'en': 'To change your profile photo, \nclick to the photo.',
+      'tr': 'Profil fotoğrafını değiştirmek için,\nfotoğrafa tıkla.',
+    },
     'lafnta0x': {
       'en': 'Change my password',
       'tr': 'Şifremi Değiştir',
@@ -383,7 +383,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
-  // BilgiGuncelleme
+  // BilgiGuncellemeP1
   {
     'pzuhuwkg': {
       'en': 'Update Your Profile',
@@ -444,8 +444,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
     'uqyci65q': {
-      'en': 'Next Upcoming Election',
-      'tr': 'En Yakın Seçim:',
+      'en': 'My Last Started Election',
+      'tr': 'En Yakın Başlamış Seçimim',
+    },
+    'xr6of2eg': {
+      'en': 'End Date and Time:',
+      'tr': '',
     },
     'nmfy3l1z': {
       'en': 'My All Elections',
@@ -460,7 +464,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
-  // OyKullanP1cont
+  // OyKullanOLD
   {
     'ziklqfe3': {
       'en':
@@ -738,6 +742,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           '3. Oylama oluşturma işlemi sonrasında oylama hakkında değişiklik yapılabilir.',
     },
+    'ojbqhzup': {
+      'en': '4. Once you click the Continue button, you can never go back.',
+      'tr': '4. İlerle butonuna tıkladıktan sonra bir daha geri dönemezsiniz.',
+    },
     'th6zdtcu': {
       'en': 'I confirm that I have carefully read and understood the warnings.',
       'tr': 'Uyarıları dikkatlice okuduğumu ve anladığımı onaylıyorum.',
@@ -819,8 +827,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Oylamanız başarıyla oluşturuldu.\nOylamanızı yönetmek ve seçmen davet etmek için Oy Paneli ekranını kullanabilirsiniz.',
     },
     'wullhp0r': {
-      'en': 'Voting Panel',
-      'tr': 'Oylama Paneli',
+      'en': 'Go to Homepage',
+      'tr': 'Anasayfa\'ya Git',
     },
     'dyjqgjir': {
       'en': 'Voting',
@@ -853,7 +861,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Not Started',
       'tr': 'Başlamamış',
     },
-    '0xyroz08': {
+    '2cl0z1ud': {
+      'en': 'Start date & time:',
+      'tr': 'Başlangıç tarihi ve saati:',
+    },
+    '4jer33wn': {
+      'en': 'Start date & time:',
+      'tr': 'Başlangıç tarihi ve saati:',
+    },
+    'awyirs0x': {
+      'en': 'Start date & time:',
+      'tr': 'Başlangıç tarihi ve saati:',
+    },
+    '7v7ltn0x': {
+      'en': 'Start date & time:',
+      'tr': 'Başlangıç tarihi ve saati:',
+    },
+    '3sp00u7z': {
       'en': 'Start date & time:',
       'tr': 'Başlangıç tarihi ve saati:',
     },
@@ -861,7 +885,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Started',
       'tr': 'Başlamış',
     },
-    'qv9poii3': {
+    'taolk35m': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    '4zc8unmi': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    '75525nq1': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    '67i8dpp0': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    '02dxfg6z': {
       'en': 'End date & time:',
       'tr': 'Bitiş tarihi ve saati:',
     },
@@ -869,7 +909,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Finished',
       'tr': 'Bitmiş',
     },
-    'ghgajwdv': {
+    '5gw230b9': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    'izbdgjc3': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    '73ek3p3t': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    'pirgo0te': {
+      'en': 'End date & time:',
+      'tr': 'Bitiş tarihi ve saati:',
+    },
+    's0zhuhyi': {
       'en': 'End date & time:',
       'tr': 'Bitiş tarihi ve saati:',
     },
@@ -1151,9 +1207,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bh30p9wp': {
       'en':
-          'In this quick tutorial you will find\nvarious information about\nvoting process in e-lection.',
+          'Welcome!\nIn this quick tutorial you will find\nvarious information about\nvoting process in e-lection.',
       'tr':
-          'Bu kısa eğitimde e-lection\nuygulaması üzerinden\noy kullanma süreci ile\nalakalı bilgiler bulacaksınız.',
+          'Hoş Geldiniz!\nBu kısa eğitimde e-lection\nuygulaması üzerinden\noy kullanma süreci ile\nalakalı bilgiler bulacaksınız.',
     },
     'ffm861c7': {
       'en':
@@ -1161,7 +1217,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           '\nE-lection ile oy kullanmak basittir.\nÖncelikle aradığınız seçimi\nbulmak ile başlayalım.',
     },
-    'td2ahgq6': {
+    'gjcb4wz6': {
       'en': 'Next',
       'tr': 'İleri',
     },
@@ -1577,26 +1633,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Election Description',
       'tr': 'Oylama Açıklaması',
     },
-    '9s2ujfzn': {
-      'en': '[Seçim adı]',
-      'tr': '[Seçim adı]',
-    },
     'n6mzyogs': {
       'en': 'Voting Supervisor',
       'tr': 'Seçim Sorumlusu',
     },
-    '1xfpluk2': {
-      'en': '[Sorumlu İsmi]',
-      'tr': '[Sorumlu İsmi]',
-    },
-    '6gaasz1o': {
-      'en':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis metus, dapibus ut rutrum non, egestas at magna. Nulla efficitur leo ac accumsan pellentesque. Ut ultricies est interdum lorem viverra sagittis. Maecenas eget risus nisi. Morbi vestibulum imperdiet sem, viverra vestibulum urna mattis at. In congue suscipit maximus. Suspendisse sed ex vel purus pulvinar scelerisque. Nam magna libero, consequat eu augue quis, maximus varius elit. Fusce eu odio nec purus hendrerit suscipit sit amet vulputate arcu.\n\nMauris pulvinar commodo massa eget cursus. Sed vitae aliquam diam, vitae sodales lorem. Quisque mattis odio ac aliquam tempus. Aenean faucibus felis odio, in blandit elit ultrices at. Nunc quis viverra erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ut neque ac velit blandit auctor. Donec a dolor eu dolor porta dignissim vel at augue. Maecenas in imperdiet enim. Praesent enim justo, suscipit ac nisl eu, porttitor ultrices ante. Curabitur ac sem sed elit accumsan fringilla. Aliquam hendrerit eu sem non molestie. Nunc eu lacus felis. Nam et erat purus. Mauris lobortis eros et dolor lacinia semper.\n\nSed ut lacinia magna. Mauris egestas ante quis sapien elementum, eget pretium leo laoreet. Cras a dui eget nulla sagittis luctus. Integer aliquet justo ut ante gravida pretium. Proin condimentum nec metus sit amet bibendum. Morbi tincidunt vestibulum eros, tristique faucibus eros consequat in. In non mi et neque sollicitudin pharetra. Nam volutpat purus ac metus sodales, ut fringilla nunc dapibus. Sed sollicitudin lectus ex, non iaculis sem consequat sed. Nunc vitae nisl vel eros varius semper ut sed quam. Sed non vulputate sapien, vitae vestibulum arcu. Nam quis nisl quis felis maximus mattis. Donec aliquet sem elit, id varius mi porta id. Mauris sit amet malesuada tellus. Nam elementum sed nunc non ullamcorper.\n\nDonec fringilla nunc dapibus tortor rutrum, nec pretium lorem tempus. Proin laoreet neque nisl, sed maximus lacus accumsan at. Ut lacinia tortor enim, nec porttitor augue mollis pulvinar. Aenean elementum vehicula enim. Quisque eu ligula porttitor justo consectetur suscipit a ac nulla. Curabitur sollicitudin sed sem sit amet luctus. Cras et nulla nec magna mollis aliquet dictum a dui. Vivamus risus velit, pulvinar sit amet blandit eu, facilisis vitae tellus. Vestibulum in ipsum id augue fringilla malesuada vel eget velit.\n\nQuisque accumsan odio orci, vitae suscipit ex cursus sollicitudin. Quisque dictum elit ut vulputate tristique. Nam quis euismod magna, nec semper nibh. Pellentesque erat enim, ullamcorper et tortor a, laoreet luctus enim. Mauris augue augue, placerat id ante quis, tempus rutrum velit. Praesent molestie orci velit, nec faucibus leo accumsan sit amet. Nam ac mattis ligula.',
-      'tr':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis metus, dapibus ut rutrum non, egestas at magna. Nulla efficitur leo ac accumsan pellentesque. Ut ultricies est interdum lorem viverra sagittis. Maecenas eget risus nisi. Morbi vestibulum imperdiet sem, viverra vestibulum urna mattis at. In congue suscipit maximus. Suspendisse sed ex vel purus pulvinar scelerisque. Nam magna libero, consequat eu augue quis, maximus varius elit. Fusce eu odio nec purus hendrerit suscipit sit amet vulputate arcu.\n\nMauris pulvinar commodo massa eget cursus. Sed vitae aliquam diam, vitae sodales lorem. Quisque mattis odio ac aliquam tempus. Aenean faucibus felis odio, in blandit elit ultrices at. Nunc quis viverra erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ut neque ac velit blandit auctor. Donec a dolor eu dolor porta dignissim vel at augue. Maecenas in imperdiet enim. Praesent enim justo, suscipit ac nisl eu, porttitor ultrices ante. Curabitur ac sem sed elit accumsan fringilla. Aliquam hendrerit eu sem non molestie. Nunc eu lacus felis. Nam et erat purus. Mauris lobortis eros et dolor lacinia semper.\n\nSed ut lacinia magna. Mauris egestas ante quis sapien elementum, eget pretium leo laoreet. Cras a dui eget nulla sagittis luctus. Integer aliquet justo ut ante gravida pretium. Proin condimentum nec metus sit amet bibendum. Morbi tincidunt vestibulum eros, tristique faucibus eros consequat in. In non mi et neque sollicitudin pharetra. Nam volutpat purus ac metus sodales, ut fringilla nunc dapibus. Sed sollicitudin lectus ex, non iaculis sem consequat sed. Nunc vitae nisl vel eros varius semper ut sed quam. Sed non vulputate sapien, vitae vestibulum arcu. Nam quis nisl quis felis maximus mattis. Donec aliquet sem elit, id varius mi porta id. Mauris sit amet malesuada tellus. Nam elementum sed nunc non ullamcorper.\n\nDonec fringilla nunc dapibus tortor rutrum, nec pretium lorem tempus. Proin laoreet neque nisl, sed maximus lacus accumsan at. Ut lacinia tortor enim, nec porttitor augue mollis pulvinar. Aenean elementum vehicula enim. Quisque eu ligula porttitor justo consectetur suscipit a ac nulla. Curabitur sollicitudin sed sem sit amet luctus. Cras et nulla nec magna mollis aliquet dictum a dui. Vivamus risus velit, pulvinar sit amet blandit eu, facilisis vitae tellus. Vestibulum in ipsum id augue fringilla malesuada vel eget velit.\n\nQuisque accumsan odio orci, vitae suscipit ex cursus sollicitudin. Quisque dictum elit ut vulputate tristique. Nam quis euismod magna, nec semper nibh. Pellentesque erat enim, ullamcorper et tortor a, laoreet luctus enim. Mauris augue augue, placerat id ante quis, tempus rutrum velit. Praesent molestie orci velit, nec faucibus leo accumsan sit amet. Nam ac mattis ligula.',
-    },
     'vin2wnws': {
-      'en': 'Next',
+      'en': 'Back',
       'tr': 'İlerle',
     },
     'pc30v98z': {
@@ -1655,9 +1697,83 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Add Committee Member',
       'tr': 'Sorumlu Ekle',
     },
-    'gbm5vum9': {
+    'xqrw0g7x': {
+      'en': 'Voters',
+      'tr': 'Seçmenler',
+    },
+    'wgntiigk': {
+      'en': 'I want to create a regional election.',
+      'tr': 'Bölgesel bir oylama yaratmak istiyorum.',
+    },
+    'hi287s1h': {
+      'en': 'I want to create a custom election.',
+      'tr': 'Özel bir oylama yaratmak istiyorum.',
+    },
+    'fo4bgdr5': {
       'en': 'Add Voter',
       'tr': 'Seçmen Ekle',
+    },
+    '5813glb2': {
+      'en':
+          'The voting you want to create regionally can be only country-wide, only city-wide, or only district-wide. It is not mandatory to select all options. Simply select the region in which you want to vote regionally.',
+      'tr':
+          'Bölgesel olarak oluşturmak istediğiniz oylama sadece ülke çapında veya sadece il çapında veya sadece ilçe çapında olabilir. Tüm seçenekleri seçmeniz zorunlu değildir. Bölgesel olarak oylama yapmak istediğiniz bölgeyi seçmeniz yeterlidir.',
+    },
+    'dukz377p': {
+      'en': 'Regional Election Information',
+      'tr': 'Bölgesel Oylama Bilgileri',
+    },
+    '4rxiz1rt': {
+      'en': 'Country:',
+      'tr': 'Ülke:',
+    },
+    '0nn638fb': {
+      'en': 'City:',
+      'tr': 'İl:',
+    },
+    'd5wcuqc0': {
+      'en': 'District:',
+      'tr': 'İlçe:',
+    },
+    '437p8djm': {
+      'en': 'Neighbourhood:',
+      'tr': 'Mahalle/Köy:',
+    },
+    '7472l4wj': {
+      'en': 'Please select your country.',
+      'tr': 'Lütfen ülkenizi seçin.',
+    },
+    '7u1qvmto': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    'z0ztwxsn': {
+      'en': 'Please select your city.',
+      'tr': 'Lütfen şehrinizi seçin.',
+    },
+    'nwcswc0g': {
+      'en': 'Search for a city...',
+      'tr': 'Bir şehir arayın...',
+    },
+    'betwihvd': {
+      'en': 'Please select your district.',
+      'tr': 'Lütfen ilçenizi seçin.',
+    },
+    'xqe25xr1': {
+      'en': 'Search for a district...',
+      'tr': 'Bir ilçe arayın...',
+    },
+    'xy9039eg': {
+      'en': 'Option 1',
+      'tr': '',
+    },
+    '1bsj3a4h': {
+      'en': 'Please select your neighbourhood or village.',
+      'tr': 'Lütfen mahallenizi veya köyünüzü seçiniz.',
+    },
+    'wrq4xy1e': {
+      'en': 'Search for a neighbourhood or village...',
+      'tr': 'Bir mahalle veya köy arayın...',
     },
     '77w8hnlu': {
       'en':
@@ -1807,64 +1923,157 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // dropdownDeneme
   {
     '10pveiu2': {
-      'en': 'District\'i yicem',
-      'tr': '',
-    },
-    'mnoqhjh1': {
-      'en': 'Ülke',
-      'tr': 'Ülke',
+      'en': 'District\'i yedim',
+      'tr': 'District\'i yedim',
     },
     '09icxkl3': {
-      'en': 'Please select...',
-      'tr': '',
+      'en': 'Please select your country.',
+      'tr': 'Lütfen ülkenizi seçin.',
     },
     '2bo9xodr': {
       'en': 'Search for an item...',
       'tr': '',
     },
-    'z2b0giz6': {
-      'en': 'İl',
-      'tr': 'İl',
-    },
     'c8kirnq8': {
-      'en': 'Please select...',
-      'tr': '',
+      'en': 'Please select your city.',
+      'tr': 'Lütfen şehrinizi seçin.',
     },
     '6n038rnk': {
-      'en': 'Search for an item...',
-      'tr': '',
-    },
-    '1mu4g28p': {
-      'en': 'İlçe',
-      'tr': 'İlçe',
+      'en': 'Search for a city...',
+      'tr': 'Bir şehir arayın...',
     },
     '3sv0gkh1': {
-      'en': 'Please select...',
-      'tr': '',
+      'en': 'Please select your district.',
+      'tr': 'Lütfen ilçenizi seçin.',
     },
     '4hwi01jk': {
-      'en': 'Search for an item...',
-      'tr': '',
-    },
-    'z2xb8nk4': {
-      'en': 'Mahalle',
-      'tr': 'Mahalle',
+      'en': 'Search for a district...',
+      'tr': 'Bir ilçe arayın...',
     },
     '5gme7tpn': {
       'en': 'Option 1',
       'tr': '',
     },
     '1iqatnfw': {
-      'en': 'Please select...',
-      'tr': '',
+      'en': 'Please select your neighbourhood or village.',
+      'tr': 'Lütfen mahallenizi veya köyünüzü seçiniz.',
     },
     'v0mkx94z': {
-      'en': 'Search for an item...',
-      'tr': '',
+      'en': 'Search for a neighbourhood or village...',
+      'tr': 'Bir mahalle veya köy arayın...',
     },
     'wjo5edwk': {
       'en': 'Voting',
       'tr': 'Oylama',
+    },
+  },
+  // BilgiGuncellemeP2
+  {
+    'sa9l808p': {
+      'en': 'Update Your Profile',
+      'tr': 'Profilini Güncelle',
+    },
+    'wsk54q1i': {
+      'en': 'Please enter your address.',
+      'tr': 'Lütfen adresinizi girin.',
+    },
+    'usmqixi6': {
+      'en': 'Please select your country.',
+      'tr': 'Lütfen ülkenizi seçin.',
+    },
+    '0r2rclc9': {
+      'en': 'Search for an item...',
+      'tr': '',
+    },
+    '463m3v9g': {
+      'en': 'Please select your city.',
+      'tr': 'Lütfen şehrinizi seçin.',
+    },
+    '6siasvx1': {
+      'en': 'Search for a city...',
+      'tr': 'Bir şehir arayın...',
+    },
+    'u3kn1wo3': {
+      'en': 'Please select your district.',
+      'tr': 'Lütfen ilçenizi seçin.',
+    },
+    'cqmmnizu': {
+      'en': 'Search for a district...',
+      'tr': 'Bir ilçe arayın...',
+    },
+    'p4tgnfkm': {
+      'en': 'Option 1',
+      'tr': '',
+    },
+    'es31fj2c': {
+      'en': 'Please select your neighbourhood or village.',
+      'tr': 'Lütfen mahallenizi veya köyünüzü seçiniz.',
+    },
+    'te1vgncn': {
+      'en': 'Search for a neighbourhood or village...',
+      'tr': 'Bir mahalle veya köy arayın...',
+    },
+    '69w1mgr7': {
+      'en': 'Next',
+      'tr': 'İleri',
+    },
+    'thoan4ut': {
+      'en': 'Voting',
+      'tr': 'Oylama',
+    },
+  },
+  // OyKullanP1devam
+  {
+    '87xfj9pl': {
+      'en': 'Voting Process Has Been Started.',
+      'tr': 'Oy Verme Süreci Başladı.',
+    },
+    'gzubtghz': {
+      'en': 'You Are Eligible To Give Vote.',
+      'tr': 'Oy Vermek İçin Uygunsunuz.',
+    },
+    'fqrg6tqq': {
+      'en': 'Give Vote',
+      'tr': 'Oy Ver',
+    },
+    'tz03r0zb': {
+      'en': 'Voting Period Ends at:',
+      'tr': 'Oylama Sürecinin Bitiş Tarihi:',
+    },
+    '8upzzory': {
+      'en': 'Candidates',
+      'tr': '    Adaylar',
+    },
+    'xkx4qyww': {
+      'en': 'Statistics',
+      'tr': 'İstatistikler',
+    },
+    'tiq6sohe': {
+      'en': 'Election Description',
+      'tr': 'Seçim Açıklaması',
+    },
+    '3l863dge': {
+      'en': 'How voting works?',
+      'tr': 'Oylama Süreci Nasıl İşliyor?',
+    },
+    'qkywkstd': {
+      'en': 'Voting',
+      'tr': 'Oylama',
+    },
+  },
+  // Acilis
+  {
+    'cgsj2nxc': {
+      'en': 'e-lection',
+      'tr': 'e-lection',
+    },
+    'ycn5zutu': {
+      'en': 'Electronic voting solutions',
+      'tr': 'Elektronik oylama çözümleri',
+    },
+    '4xh33qoe': {
+      'en': 'Home',
+      'tr': 'Anasayfa',
     },
   },
   // changeEmail
@@ -1976,6 +2185,56 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9qfbml3c': {
       'en': 'No',
       'tr': 'Hayır',
+    },
+  },
+  // voterPopup
+  {
+    'dzfcx3h8': {
+      'en': 'If you check \"I want to create a regional election\":',
+      'tr':
+          'Eğer \"Bölgesel bir oylama yaratmak istiyorum.\" seçeneğini işaretlerseniz:',
+    },
+    '9pz7mvfi': {
+      'en':
+          'The created vote is shown to all e-lection users with addresses in the country, province, district or neighborhood you have selected.',
+      'tr':
+          'Oluşturulan oylama seçmiş olduğunuz ülke, il, ilçe veya mahalle\'de adresi bulunan tüm e-lection kullanıcılarına gösterilir.',
+    },
+    '4lr72fdc': {
+      'en': 'If you check \"I want to create a custom election\":',
+      'tr':
+          'Eğer \"Özel bir oylama yaratmak istiyorum.\" seçeneğini işaretlerseniz:',
+    },
+    'w7tuwq4f': {
+      'en':
+          'The created vote is displayed only for e-lection user voters whose wallet numbers you have added.',
+      'tr':
+          'Oluşturulan oylama sadece cüzdan numaralarını eklemiş olduğunuz e-lection kullanıcısı seçmenlerde görüntülenir.',
+    },
+    'i8fwbn5q': {
+      'en': 'OK',
+      'tr': 'Tamam',
+    },
+  },
+  // acilisPopup
+  {
+    '343ktr0t': {
+      'en': 'You couldn\'t enter e-lection!',
+      'tr': 'e-lection\'a giremedin!',
+    },
+    'vze7caba': {
+      'en':
+          'Because you don\'t have an internet connection. Please connect to the internet and try again.',
+      'tr':
+          'Çünkü internet bağlantın yok. Lütfen internete bağlanıp tekrar deneyin.',
+    },
+    'mqgr86mw': {
+      'en': 'Log Out',
+      'tr': 'Çıkış Yap',
+    },
+    '9p6suzi3': {
+      'en': 'Try Again',
+      'tr': 'Tekrar Dene',
     },
   },
   // Miscellaneous

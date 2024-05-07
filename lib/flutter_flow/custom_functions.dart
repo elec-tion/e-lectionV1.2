@@ -29,6 +29,36 @@ List<String> candidateJoinToElection(String candidateWalletID) {
   return candidateList;
 }
 
+List<String>? cityIDGenerator(String countryID) {
+  List<String> cityID = [];
+  var i;
+
+  for (i = 1; i < 90; i++) {
+    if (i < 10) {
+      cityID.add('\t' + '$countryID' + '-0' + '$i');
+    } else if (i > 9) {
+      cityID.add('\t' + '$countryID' + '-' + '$i');
+    }
+  }
+
+  return cityID;
+}
+
+List<String>? neighborhoodIDGenerator(String districtID) {
+  List<String> neighborhoodID = [];
+  var i;
+
+  for (i = 1; i < 200; i++) {
+    if (i < 10) {
+      neighborhoodID.add('\t' + '$districtID' + '-0' + '$i');
+    } else if (i > 9) {
+      neighborhoodID.add('\t' + '$districtID' + '-' + '$i');
+    }
+  }
+
+  return neighborhoodID;
+}
+
 String showDateTime(int dateTime) {
   DateTime date = DateTime.fromMillisecondsSinceEpoch(dateTime * 1000);
   String sonuc = date.toString();
@@ -56,9 +86,17 @@ String getStringBasedOnTime() {
   return 'Good Evening!';
 }
 
-String? getCountryFromDistrict(String countryID) {
-  // measure the length of string and just get the strings if length is = 2
-  if (countryID.length == 5) {
-    return countryID;
+List<String>? districtIDGenerator(String cityID) {
+  List<String> districtID = [];
+  var i;
+
+  for (i = 1; i < 50; i++) {
+    if (i < 10) {
+      districtID.add('\t' + '$cityID' + '-0' + '$i');
+    } else if (i > 9) {
+      districtID.add('\t' + '$cityID' + '-' + '$i');
+    }
   }
+
+  return districtID;
 }

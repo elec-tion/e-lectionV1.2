@@ -42,4 +42,7 @@ class OyKullanP4PusulaModel extends FlutterFlowModel<OyKullanP4PusulaWidget> {
     unfocusNode.dispose();
     timerController.dispose();
   }
+
+  /// Action blocks.
+  Future stoptimer(BuildContext context) async {}
 }

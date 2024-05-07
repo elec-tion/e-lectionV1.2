@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/profilim/popups/change_email/change_email_widget.dart';
 import '/pages/profilim/popups/change_phone_number/change_phone_number_widget.dart';
 import '/pages/profilim/popups/delete_account/delete_account_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -190,10 +191,38 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ],
                               ),
-                              Icon(
-                                Icons.contact_emergency,
-                                color: FlutterFlowTheme.of(context).text1,
-                                size: 50.0,
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'Profilim',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: const TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 10),
+                                      ),
+                                    },
+                                  );
+                                },
+                                child: Container(
+                                  width: 80.0,
+                                  height: 80.0,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: CachedNetworkImage(
+                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeOutDuration:
+                                        const Duration(milliseconds: 500),
+                                    imageUrl: hakkimdaUsersRow!.photoUrl,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -323,7 +352,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             decoration: InputDecoration(
                                               alignLabelWithHint: false,
                                               hintText: hakkimdaUsersRow
-                                                  ?.walletIdVoter,
+                                                  .walletIdVoter,
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: const BorderSide(
                                                   color: Color(0x002D789F),
@@ -389,7 +418,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                           onTap: () async {
                                             await Clipboard.setData(
                                                 ClipboardData(
-                                                    text: hakkimdaUsersRow!
+                                                    text: hakkimdaUsersRow
                                                         .walletIdVoter));
                                           },
                                           child: Text(
@@ -458,7 +487,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             decoration: InputDecoration(
                                               alignLabelWithHint: false,
                                               hintText: hakkimdaUsersRow
-                                                  ?.walletIdElectionCommittee,
+                                                  .walletIdElectionCommittee,
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: const BorderSide(
                                                   color: Color(0x002D789F),
@@ -523,7 +552,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
                                             await Clipboard.setData(ClipboardData(
-                                                text: hakkimdaUsersRow!
+                                                text: hakkimdaUsersRow
                                                     .walletIdElectionCommittee));
                                           },
                                           child: Text(
@@ -578,7 +607,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                       ),
                                       Text(
                                         valueOrDefault<String>(
-                                          hakkimdaUsersRow?.name,
+                                          hakkimdaUsersRow.name,
                                           'name',
                                         ),
                                         textAlign: TextAlign.center,
@@ -631,7 +660,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           valueOrDefault<String>(
-                                            hakkimdaUsersRow?.email,
+                                            hakkimdaUsersRow.email,
                                             'email',
                                           ),
                                           textAlign: TextAlign.center,
@@ -756,7 +785,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           valueOrDefault<String>(
-                                            hakkimdaUsersRow?.phoneNumber,
+                                            hakkimdaUsersRow.phoneNumber,
                                             'phone_number',
                                           ),
                                           style: FlutterFlowTheme.of(context)

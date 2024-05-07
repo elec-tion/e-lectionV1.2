@@ -47,38 +47,19 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
             automaticallyImplyLeading: false,
             title: Align(
               alignment: const AlignmentDirectional(0.0, 0.0),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(57.0, 0.0, 6.0, 0.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/e-lection-logo-beyaz.png'
-                        : 'assets/images/e-lection-logo-siyah.png',
-                    width: 95.0,
-                    height: 50.0,
-                    fit: BoxFit.cover,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(
+                  Theme.of(context).brightness == Brightness.dark
+                      ? 'assets/images/e-lection-logo-beyaz.png'
+                      : 'assets/images/e-lection-logo-siyah.png',
+                  width: 95.0,
+                  height: 50.0,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            actions: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                child: Container(
-                  width: 40.0,
-                  height: 40.0,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.asset(
-                    'assets/images/1665420076729.jpeg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ],
+            actions: const [],
             centerTitle: false,
           ),
           body: SafeArea(

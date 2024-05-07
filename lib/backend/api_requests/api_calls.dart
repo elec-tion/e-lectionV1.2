@@ -225,7 +225,7 @@ class AddDistrictToElectionCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrictToElection',
-      apiUrl: '${DistrictGroup.baseUrl}/$electionID/$id',
+      apiUrl: '${DistrictGroup.baseUrl}withelection/$electionID/$id',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -561,7 +561,7 @@ class AddVoterToElectionCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'addVoterToElection',
-      apiUrl: '${VoterGroup.baseUrl}/$name/$wallet/$electionID',
+      apiUrl: '${VoterGroup.baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -607,10 +607,9 @@ class RemoveVoterCall {
     return ApiManager.instance.makeApiCall(
       callName: 'removeVoter',
       apiUrl: '${VoterGroup.baseUrl}/$wallet',
-      callType: ApiCallType.POST,
+      callType: ApiCallType.DELETE,
       headers: {},
       params: {},
-      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
