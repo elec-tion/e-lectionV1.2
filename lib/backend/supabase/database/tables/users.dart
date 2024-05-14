@@ -46,4 +46,7 @@ class UsersRow extends SupabaseDataRow {
 
   String get photoUrl => getField<String>('photo_url')!;
   set photoUrl(String value) => setField<String>('photo_url', value);
+
+  String? get key => getField<String>('key');
+  set key(String? value) => setField<String>('key', value);
 }

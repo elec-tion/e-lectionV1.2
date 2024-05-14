@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'giris_widget.dart' show GirisWidget;
@@ -57,6 +58,10 @@ class GirisModel extends FlutterFlowModel<GirisWidget> {
   String? walletIDECom;
   // Stores action output result for [Backend Call - Insert Row] action in getStartedButton widget.
   UsersRow? createAccount;
+  // Stores action output result for [Backend Call - API (getContractAddress)] action in getStartedButton widget.
+  ApiCallResponse? contractAddressJSON;
+  // Stores action output result for [Backend Call - API (getContractAbi)] action in getStartedButton widget.
+  ApiCallResponse? contractAbiJSON;
 
   @override
   void initState(BuildContext context) {

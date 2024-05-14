@@ -10,7 +10,12 @@ import 'oy_kullan_p1notstarted_model.dart';
 export 'oy_kullan_p1notstarted_model.dart';
 
 class OyKullanP1notstartedWidget extends StatefulWidget {
-  const OyKullanP1notstartedWidget({super.key});
+  const OyKullanP1notstartedWidget({
+    super.key,
+    required this.deneme,
+  });
+
+  final ElectionsRow? deneme;
 
   @override
   State<OyKullanP1notstartedWidget> createState() =>
@@ -154,7 +159,7 @@ class _OyKullanP1notstartedWidgetState
                 future: ElectionsTable().querySingleRow(
                   queryFn: (q) => q.contains(
                     'committee_members',
-                    '{${FFAppState().userElecComWalletID}}',
+                    '{${oyKullanP1notstartedUsersRow.walletIdElectionCommittee}}',
                   ),
                 ),
                 builder: (context, snapshot) {

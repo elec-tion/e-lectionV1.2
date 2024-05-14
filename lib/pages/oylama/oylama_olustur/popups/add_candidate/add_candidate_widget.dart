@@ -1,9 +1,11 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'add_candidate_model.dart';
@@ -274,6 +276,13 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                         _model.candidatePrivateKey =
                             await actions.createCandidatePrivateKey(
                           '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
+                          random_data.randomString(
+                            5,
+                            10,
+                            true,
+                            true,
+                            true,
+                          ),
                         );
                         _model.candidateWalletID = await actions.createWalletID(
                           _model.candidatePrivateKey!,
@@ -282,12 +291,65 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                           FFAppState().addToAddCandidateToElection(
                               _model.candidateWalletID!);
                         });
-                        await CandidatesTable().insert({
-                          'name':
-                              '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
-                          'wallet_id': _model.candidateWalletID,
-                        });
-                        Navigator.pop(context);
+                        if (FFAppState().electionDistrict != '') {
+                          await CandidatesTable().insert({
+                            'name':
+                                '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
+                            'wallet_id': _model.candidateWalletID,
+                            'district_id': FFAppState().electionDistrict,
+                            'election_id': FFAppState().electionID,
+                          });
+                          await ElectionsTable().update(
+                            data: {
+                              'candidates_wallet_id':
+                                  FFAppState().addCandidateToElection,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              FFAppState().electionID,
+                            ),
+                          );
+                          await CandidateGroup.addCandidateCall.call(
+                            name:
+                                '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
+                            districtID: FFAppState().electionDistrict,
+                            wallet: _model.candidateWalletID,
+                          );
+                          await CandidateGroup.addCandidateToElectionCall.call(
+                            electionID: FFAppState().electionID,
+                            wallet: _model.candidateWalletID,
+                          );
+                          Navigator.pop(context);
+                        } else {
+                          await CandidatesTable().insert({
+                            'name':
+                                '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
+                            'wallet_id': _model.candidateWalletID,
+                            'election_id': FFAppState().electionID,
+                            'district_id': '01',
+                          });
+                          await ElectionsTable().update(
+                            data: {
+                              'candidates_wallet_id':
+                                  FFAppState().addCandidateToElection,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              FFAppState().electionID,
+                            ),
+                          );
+                          await CandidateGroup.addCandidateCall.call(
+                            name:
+                                '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
+                            districtID: '01',
+                            wallet: _model.candidateWalletID,
+                          );
+                          await CandidateGroup.addCandidateToElectionCall.call(
+                            electionID: FFAppState().electionID,
+                            wallet: _model.candidateWalletID,
+                          );
+                          Navigator.pop(context);
+                        }
                       } else {
                         if (FFLocalizations.of(context).languageCode == 'en') {
                           // enAlert
@@ -295,10 +357,9 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title:
-                                    const Text('You didn\'t add committee member!'),
+                                title: const Text('You didn\'t add candidate!'),
                                 content: const Text(
-                                    'You didn\'t add committee member, please add a committee member.'),
+                                    'You didn\'t add candidate, please add a committee member.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
@@ -315,9 +376,9 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: const Text('Sorumlu Eklemedin!'),
+                                title: const Text('Aday Eklemedin!'),
                                 content: const Text(
-                                    'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
+                                    'Oylamanıza aday eklemediniz. Lütfen tekrar deneyin.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>

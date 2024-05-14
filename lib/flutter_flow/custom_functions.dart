@@ -77,7 +77,7 @@ String showDateTime(int dateTime) {
 
 String getStringBasedOnTime() {
   var hour = DateTime.now().hour;
-  if (hour < 12) {
+  if (hour < 5) {
     return 'Morning!';
   }
   if (hour < 17) {
@@ -99,4 +99,8 @@ List<String>? districtIDGenerator(String cityID) {
   }
 
   return districtID;
+}
+
+dynamic returnNull() {
+  return "null";
 }

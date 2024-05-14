@@ -214,6 +214,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                           duration: const Duration(milliseconds: 500),
                                           curve: Curves.ease,
                                         );
+                                        setState(() {});
                                       },
                                       effect: smooth_page_indicator
                                           .ExpandingDotsEffect(

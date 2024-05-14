@@ -125,12 +125,6 @@ class FFAppState extends ChangeNotifier {
     _addVoterToElection.insert(index, value);
   }
 
-  String _userElecComWalletID = '';
-  String get userElecComWalletID => _userElecComWalletID;
-  set userElecComWalletID(String value) {
-    _userElecComWalletID = value;
-  }
-
   String _electionID = '';
   String get electionID => _electionID;
   set electionID(String value) {
@@ -194,5 +188,17 @@ class FFAppState extends ChangeNotifier {
 
   void insertAtIndexInUserDistrictIDs(int index, String value) {
     _userDistrictIDs.insert(index, value);
+  }
+
+  String _voterPrivKey = '';
+  String get voterPrivKey => _voterPrivKey;
+  set voterPrivKey(String value) {
+    _voterPrivKey = value;
+  }
+
+  String _electionDistrict = '';
+  String get electionDistrict => _electionDistrict;
+  set electionDistrict(String value) {
+    _electionDistrict = value;
   }
 }

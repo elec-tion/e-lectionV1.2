@@ -265,41 +265,76 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                             }
                           } else {
                             if (_model.voterWalletIDTextController.text != '') {
-                              if (buttonUsersRowList
-                                  .unique((e) =>
-                                      _model.voterWalletIDTextController.text)
-                                  .isNotEmpty) {
-                                await showDialog(
-                                  context: context,
-                                  builder: (alertDialogContext) {
-                                    return AlertDialog(
-                                      title: const Text('var'),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () =>
-                                              Navigator.pop(alertDialogContext),
-                                          child: const Text('Ok'),
-                                        ),
-                                      ],
-                                    );
+                              _model.voterVarMi =
+                                  await VoterGroup.getVoterDetailsCall.call(
+                                wallet: _model.voterWalletIDTextController.text,
+                              );
+                              if ((_model.voterVarMi?.succeeded ?? true)) {
+                                FFAppState().update(() {
+                                  FFAppState().addToAddVoterToElection(
+                                      _model.voterWalletIDTextController.text);
+                                });
+                                await ElectionsTable().update(
+                                  data: {
+                                    'voters_wallet_id':
+                                        FFAppState().addVoterToElection,
                                   },
+                                  matchingRows: (rows) => rows.eq(
+                                    'name',
+                                    FFAppState().electionName,
+                                  ),
                                 );
+                                await VoterGroup.addVoterToElectionCall.call(
+                                  wallet:
+                                      _model.voterWalletIDTextController.text,
+                                  electionID: FFAppState().electionID,
+                                );
+                                Navigator.pop(context);
                               } else {
-                                await showDialog(
-                                  context: context,
-                                  builder: (alertDialogContext) {
-                                    return AlertDialog(
-                                      title: const Text('yok'),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () =>
-                                              Navigator.pop(alertDialogContext),
-                                          child: const Text('Ok'),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
+                                if (FFLocalizations.of(context).languageCode ==
+                                    'en') {
+                                  // enAlert
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: const Text('You cannot add voter!'),
+                                        content: const Text(
+                                            'The voter\'s wallet number you want to add is not available in e-lection. Please try again.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                } else {
+                                  // trAlert
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: const Text('Seçmen Ekleyemezsin!'),
+                                        content: const Text(
+                                            'Eklemek istediğiniz seçmen cüzdan numarası e-lection\'da bulunmamaktadır. Lütfen tekrar deneyin.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: const Text('Tamam'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                }
+
+                                setState(() {
+                                  _model.voterWalletIDTextController?.clear();
+                                });
                               }
                             } else {
                               if (FFLocalizations.of(context).languageCode ==
@@ -342,28 +377,10 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                                   },
                                 );
                               }
-
-                              FFAppState().update(() {
-                                FFAppState().addToAddVoterToElection(
-                                    _model.voterWalletIDTextController.text);
-                              });
-                              await ElectionsTable().update(
-                                data: {
-                                  'voters_wallet_id':
-                                      FFAppState().addVoterToElection,
-                                },
-                                matchingRows: (rows) => rows.eq(
-                                  'name',
-                                  FFAppState().electionName,
-                                ),
-                              );
-                              await VoterGroup.addVoterToElectionCall.call(
-                                wallet: _model.voterWalletIDTextController.text,
-                                electionID: FFAppState().electionID,
-                              );
-                              Navigator.pop(context);
                             }
                           }
+
+                          setState(() {});
                         },
                         text: FFLocalizations.of(context).getText(
                           'lroqgoxh' /* Save */,

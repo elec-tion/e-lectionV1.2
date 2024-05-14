@@ -6,6 +6,10 @@ class OylamaOlusturP4Model extends FlutterFlowModel<OylamaOlusturP4Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for addYourselfAsEleComMem widget.
+  bool? addYourselfAsEleComMemValue;
+  // State field(s) for createVoteAgreeDataCheckbox widget.
+  bool? createVoteAgreeDataCheckboxValue;
 
   @override
   void initState(BuildContext context) {}

@@ -156,7 +156,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                 future: ElectionsTable().querySingleRow(
                   queryFn: (q) => q.contains(
                     'voters_wallet_id',
-                    '{${FFAppState().userElecComWalletID}}',
+                    '{${oylamaAcklamasiUsersRow.walletIdVoter}}',
                   ),
                 ),
                 builder: (context, snapshot) {
@@ -271,7 +271,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'n6mzyogs' /* Voting Supervisor */,
+                                            'n6mzyogs' /* Voting Supervisor(s) */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium

@@ -3,7 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/oylama/oy_kullan/timewarn/timewarn_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -427,132 +427,6 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      30.0, 20.0, 0.0, 0.0),
-                                  child: Material(
-                                    color: Colors.transparent,
-                                    elevation: 0.0,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            color: Color(0x33000000),
-                                            offset: Offset(
-                                              0.0,
-                                              2.0,
-                                            ),
-                                          )
-                                        ],
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .graSet23,
-                                            FlutterFlowTheme.of(context)
-                                                .graSet22
-                                          ],
-                                          stops: const [0.0, 1.0],
-                                          begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                        border: Border.all(
-                                          color: FlutterFlowTheme.of(context)
-                                              .graSet22,
-                                        ),
-                                      ),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          context.safePop();
-                                        },
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 0.0, 0.0),
-                                              child: Icon(
-                                                Icons.keyboard_arrow_left,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                size: 35.0,
-                                              ),
-                                            ),
-                                            Align(
-                                              alignment: const AlignmentDirectional(
-                                                  1.0, 0.0),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        3.0, 0.0, 0.0, 0.0),
-                                                child: FFButtonWidget(
-                                                  onPressed: () async {
-                                                    context.safePop();
-                                                  },
-                                                  text: FFLocalizations.of(
-                                                          context)
-                                                      .getText(
-                                                    'ff8xsg3s' /* Back */,
-                                                  ),
-                                                  options: FFButtonOptions(
-                                                    width: 106.0,
-                                                    height: 50.0,
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(24.0, 0.0,
-                                                                24.0, 0.0),
-                                                    iconPadding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 0.0),
-                                                    color: Colors.transparent,
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .text1,
-                                                          fontSize: 17.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                    elevation: 0.0,
-                                                    borderSide: const BorderSide(
-                                                      color: Colors.transparent,
-                                                      width: 1.0,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            15.0),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       38.0, 20.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -560,7 +434,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('OyKullanP4Pusula');
+                                      context.safePop();
                                     },
                                     child: Material(
                                       color: Colors.transparent,
@@ -570,6 +444,8 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                             BorderRadius.circular(15.0),
                                       ),
                                       child: Container(
+                                        width: 150.0,
+                                        height: 52.0,
                                         decoration: BoxDecoration(
                                           boxShadow: const [
                                             BoxShadow(
@@ -600,97 +476,237 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                 .graSet22,
                                           ),
                                         ),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            context
-                                                .pushNamed('OyKullanP4Pusula');
-                                          },
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Align(
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      10.0, 0.0, 0.0, 0.0),
+                                              child: Icon(
+                                                Icons.chevron_left,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                size: 35.0,
+                                              ),
+                                            ),
+                                            Flexible(
+                                              child: Align(
                                                 alignment: const AlignmentDirectional(
-                                                    1.0, 0.0),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          3.0, 0.0, 0.0, 0.0),
-                                                  child: FFButtonWidget(
-                                                    onPressed: () async {
-                                                      context.pushNamed(
-                                                          'OyKullanP4Pusula');
-                                                    },
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'arkpjqzy' /* Next */,
-                                                    ),
-                                                    options: FFButtonOptions(
-                                                      width: 106.0,
-                                                      height: 50.0,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  24.0,
-                                                                  0.0,
-                                                                  24.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: Colors.transparent,
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Montserrat',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .text1,
-                                                                fontSize: 17.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
-                                                      elevation: 0.0,
-                                                      borderSide: const BorderSide(
+                                                    0.0, 0.0),
+                                                child: Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ujl1at17' /* Back */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         color:
-                                                            Colors.transparent,
-                                                        width: 1.0,
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontSize: 17.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              15.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: Builder(
+                                  builder: (context) => Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        38.0, 20.0, 0.0, 0.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (dialogContext) {
+                                            return Dialog(
+                                              elevation: 0,
+                                              insetPadding: EdgeInsets.zero,
+                                              backgroundColor:
+                                                  Colors.transparent,
+                                              alignment:
+                                                  const AlignmentDirectional(0.0, 0.0)
+                                                      .resolve(
+                                                          Directionality.of(
+                                                              context)),
+                                              child: GestureDetector(
+                                                onTap: () => _model.unfocusNode
+                                                        .canRequestFocus
+                                                    ? FocusScope.of(context)
+                                                        .requestFocus(
+                                                            _model.unfocusNode)
+                                                    : FocusScope.of(context)
+                                                        .unfocus(),
+                                                child: const TimewarnWidget(),
+                                              ),
+                                            );
+                                          },
+                                        ).then((value) => setState(() {}));
+                                      },
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        elevation: 0.0,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                        ),
+                                        child: Container(
+                                          width: 150.0,
+                                          height: 52.0,
+                                          decoration: BoxDecoration(
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 4.0,
+                                                color: Color(0x33000000),
+                                                offset: Offset(
+                                                  0.0,
+                                                  2.0,
+                                                ),
+                                              )
+                                            ],
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                FlutterFlowTheme.of(context)
+                                                    .graSet23,
+                                                FlutterFlowTheme.of(context)
+                                                    .graSet22
+                                              ],
+                                              stops: const [0.0, 1.0],
+                                              begin: const AlignmentDirectional(
+                                                  -1.0, 0.87),
+                                              end: const AlignmentDirectional(
+                                                  1.0, -0.87),
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet22,
+                                            ),
+                                          ),
+                                          child: Builder(
+                                            builder: (context) => InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                await showDialog(
+                                                  barrierColor:
+                                                      const Color(0x48020202),
+                                                  context: context,
+                                                  builder: (dialogContext) {
+                                                    return Dialog(
+                                                      elevation: 0,
+                                                      insetPadding:
+                                                          EdgeInsets.zero,
+                                                      backgroundColor:
+                                                          Colors.transparent,
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                                  0.0, 0.0)
+                                                              .resolve(
+                                                                  Directionality.of(
+                                                                      context)),
+                                                      child: GestureDetector(
+                                                        onTap: () => _model
+                                                                .unfocusNode
+                                                                .canRequestFocus
+                                                            ? FocusScope.of(
+                                                                    context)
+                                                                .requestFocus(_model
+                                                                    .unfocusNode)
+                                                            : FocusScope.of(
+                                                                    context)
+                                                                .unfocus(),
+                                                        child: const SizedBox(
+                                                          height: 375.0,
+                                                          width: 350.0,
+                                                          child:
+                                                              TimewarnWidget(),
+                                                        ),
+                                                      ),
+                                                    );
+                                                  },
+                                                ).then(
+                                                    (value) => setState(() {}));
+                                              },
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Flexible(
+                                                    child: Align(
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              0.0, 0.0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'obybjewx' /* Next */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Montserrat',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  fontSize:
+                                                                      17.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                10.0, 0.0),
+                                                    child: Icon(
+                                                      Icons
+                                                          .keyboard_arrow_right_sharp,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      size: 35.0,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 10.0, 0.0),
-                                                child: Icon(
-                                                  Icons
-                                                      .keyboard_arrow_right_sharp,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  size: 35.0,
-                                                ),
-                                              ),
-                                            ],
+                                            ),
                                           ),
                                         ),
                                       ),

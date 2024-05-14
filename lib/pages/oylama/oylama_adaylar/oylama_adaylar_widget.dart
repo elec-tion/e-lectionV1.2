@@ -156,7 +156,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                 future: ElectionsTable().querySingleRow(
                   queryFn: (q) => q.contains(
                     'committee_members',
-                    '{${FFAppState().userElecComWalletID}}',
+                    '{${oylamaAdaylarUsersRow.walletIdElectionCommittee}}',
                   ),
                 ),
                 builder: (context, snapshot) {
@@ -270,7 +270,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'zu7darch' /* Voting Supervisor */,
+                                            'zu7darch' /* Voting Supervisor(s) */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium

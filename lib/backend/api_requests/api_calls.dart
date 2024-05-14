@@ -11,7 +11,10 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 class CommitteeMemberGroup {
   static String baseUrl =
       'https://api.e-lection.babico.name.tr/api/committeemember';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
   static AddElectionCommitteeMemberCall addElectionCommitteeMemberCall =
       AddElectionCommitteeMemberCall();
   static RemoveElectionCommitteeMemberCall removeElectionCommitteeMemberCall =
@@ -37,7 +40,10 @@ class AddElectionCommitteeMemberCall {
       callName: 'addElectionCommitteeMember',
       apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet/$name',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -59,7 +65,10 @@ class RemoveElectionCommitteeMemberCall {
       callName: 'removeElectionCommitteeMember',
       apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -81,7 +90,10 @@ class RemoveElectionCommitteeMemberFromElectionCall {
       apiUrl:
           '${CommitteeMemberGroup.baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -103,7 +115,10 @@ class GetElectionCommitteeMemberDetailsCall {
       callName: 'getElectionCommitteeMemberDetails',
       apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet',
       callType: ApiCallType.GET,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -125,7 +140,10 @@ class AddElectionCommitteeMemberToElectionCall {
       apiUrl:
           '${CommitteeMemberGroup.baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -143,7 +161,10 @@ class AddElectionCommitteeMemberToElectionCall {
 
 class DistrictGroup {
   static String baseUrl = 'https://api.e-lection.babico.name.tr/api/district';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
   static AddDistrictCall addDistrictCall = AddDistrictCall();
   static RemoveDistrictCall removeDistrictCall = RemoveDistrictCall();
   static GetDistrictCall getDistrictCall = GetDistrictCall();
@@ -163,7 +184,10 @@ class AddDistrictCall {
       callName: 'addDistrict',
       apiUrl: '${DistrictGroup.baseUrl}/$id/$name',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -185,7 +209,10 @@ class RemoveDistrictCall {
       callName: 'removeDistrict',
       apiUrl: '${DistrictGroup.baseUrl}/$id',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -206,7 +233,10 @@ class GetDistrictCall {
       callName: 'getDistrict',
       apiUrl: '${DistrictGroup.baseUrl}/$id',
       callType: ApiCallType.GET,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -227,7 +257,10 @@ class AddDistrictToElectionCall {
       callName: 'addDistrictToElection',
       apiUrl: '${DistrictGroup.baseUrl}withelection/$electionID/$id',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -249,7 +282,10 @@ class RemoveDistrictFromElectionCall {
       callName: 'removeDistrictFromElection',
       apiUrl: '${DistrictGroup.baseUrl}/$electionID/$id',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -266,7 +302,10 @@ class RemoveDistrictFromElectionCall {
 
 class ElectionGroup {
   static String baseUrl = 'https://api.e-lection.babico.name.tr/api/election';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
   static CreateElectionCall createElectionCall = CreateElectionCall();
   static RemoveElectionCall removeElectionCall = RemoveElectionCall();
   static GetElectionDetailsCall getElectionDetailsCall =
@@ -291,7 +330,10 @@ class CreateElectionCall {
       callName: 'createElection',
       apiUrl: '${ElectionGroup.baseUrl}/$name/$startDate/$endDate',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -321,7 +363,10 @@ class RemoveElectionCall {
       callName: 'removeElection',
       apiUrl: '${ElectionGroup.baseUrl}/$id',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -350,7 +395,10 @@ class GetElectionDetailsCall {
       callName: 'getElectionDetails',
       apiUrl: '${ElectionGroup.baseUrl}/$id',
       callType: ApiCallType.GET,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -367,7 +415,10 @@ class GetElectionDetailsCall {
 
 class CandidateGroup {
   static String baseUrl = 'https://api.e-lection.babico.name.tr/api/candidate';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
   static AddCandidateCall addCandidateCall = AddCandidateCall();
   static RemoveCandidateCall removeCandidateCall = RemoveCandidateCall();
   static AddCandidateToElectionCall addCandidateToElectionCall =
@@ -388,7 +439,10 @@ class AddCandidateCall {
       callName: 'addCandidate',
       apiUrl: '${CandidateGroup.baseUrl}/$name/$districtID/$wallet',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -411,7 +465,10 @@ class RemoveCandidateCall {
       callName: 'removeCandidate',
       apiUrl: '${CandidateGroup.baseUrl}/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -433,7 +490,10 @@ class AddCandidateToElectionCall {
       callName: 'addCandidateToElection',
       apiUrl: '${CandidateGroup.baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -456,7 +516,10 @@ class RemoveCandidateFromElectionCall {
       callName: 'removeCandidateFromElection',
       apiUrl: '${CandidateGroup.baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -478,7 +541,10 @@ class GetCandidateCall {
       callName: 'getCandidate',
       apiUrl: '${CandidateGroup.baseUrl}/$wallet',
       callType: ApiCallType.GET,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -495,7 +561,10 @@ class GetCandidateCall {
 
 class VoterGroup {
   static String baseUrl = 'https://api.e-lection.babico.name.tr/api/voter';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
   static AddDistrictToVoterCall addDistrictToVoterCall =
       AddDistrictToVoterCall();
   static RemoveDistrictFromVoterCall removeDistrictFromVoterCall =
@@ -505,6 +574,7 @@ class VoterGroup {
   static RemoveVoterFromElectionCall removeVoterFromElectionCall =
       RemoveVoterFromElectionCall();
   static RemoveVoterCall removeVoterCall = RemoveVoterCall();
+  static GetVoterDetailsCall getVoterDetailsCall = GetVoterDetailsCall();
 }
 
 class AddDistrictToVoterCall {
@@ -518,7 +588,10 @@ class AddDistrictToVoterCall {
       callName: 'addDistrictToVoter',
       apiUrl: '${VoterGroup.baseUrl}withdistrict/$wallet/$districtID',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -541,7 +614,10 @@ class RemoveDistrictFromVoterCall {
       callName: 'removeDistrictFromVoter',
       apiUrl: '${VoterGroup.baseUrl}withdistrict/$districtID/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -563,7 +639,10 @@ class AddVoterToElectionCall {
       callName: 'addVoterToElection',
       apiUrl: '${VoterGroup.baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       bodyType: BodyType.JSON,
       returnBody: true,
@@ -586,7 +665,10 @@ class RemoveVoterFromElectionCall {
       callName: 'removeVoterFromElection',
       apiUrl: '${VoterGroup.baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -608,7 +690,35 @@ class RemoveVoterCall {
       callName: 'removeVoter',
       apiUrl: '${VoterGroup.baseUrl}/$wallet',
       callType: ApiCallType.DELETE,
-      headers: {},
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class GetVoterDetailsCall {
+  Future<ApiCallResponse> call({
+    String? wallet = '',
+    String? districtID = '',
+    String? name = '',
+    String? electionID = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'getVoterDetails',
+      apiUrl: '${VoterGroup.baseUrl}/$wallet',
+      callType: ApiCallType.GET,
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -625,10 +735,74 @@ class RemoveVoterCall {
 
 class BalanceGroup {
   static String baseUrl = 'https://api.e-lection.babico.name.tr/balance';
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
 }
 
 /// End Balance Group Code
+
+/// Start Contract Group Code
+
+class ContractGroup {
+  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/contract';
+  static Map<String, String> headers = {
+    'x-api-key':
+        'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+  };
+  static GetContractAddressCall getContractAddressCall =
+      GetContractAddressCall();
+  static GetContractAbiCall getContractAbiCall = GetContractAbiCall();
+}
+
+class GetContractAddressCall {
+  Future<ApiCallResponse> call({
+    String? address = '',
+    String? abi = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'getContractAddress',
+      apiUrl: '${ContractGroup.baseUrl}/address',
+      callType: ApiCallType.GET,
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class GetContractAbiCall {
+  Future<ApiCallResponse> call({
+    String? address = '',
+    String? abi = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'getContractAbi',
+      apiUrl: '${ContractGroup.baseUrl}/abi',
+      callType: ApiCallType.GET,
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+/// End Contract Group Code
 
 class ApiPagingParams {
   int nextPageNumber = 0;

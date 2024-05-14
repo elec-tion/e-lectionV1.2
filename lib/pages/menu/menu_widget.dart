@@ -34,12 +34,12 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
       'rowOnPageLoadAnimation1': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
-          ScaleEffect(
-            curve: Curves.easeOut,
+          FadeEffect(
+            curve: Curves.easeInOut,
             delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
           ),
         ],
       ),
@@ -55,27 +55,39 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
           ),
         ],
       ),
-      'columnOnPageLoadAnimation1': AnimationInfo(
+      'containerOnPageLoadAnimation1': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
-          ScaleEffect(
-            curve: Curves.easeOut,
+          FadeEffect(
+            curve: Curves.easeInOut,
             delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
           ),
         ],
       ),
-      'columnOnPageLoadAnimation2': AnimationInfo(
+      'containerOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
-          ScaleEffect(
-            curve: Curves.easeOut,
+          FadeEffect(
+            curve: Curves.easeInOut,
             delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'columnOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 1000.0.ms,
+            begin: 0.0,
+            end: 1.0,
           ),
         ],
       ),
@@ -473,10 +485,10 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
-                        ),
+                        ).animateOnPageLoad(
+                            animationsMap['containerOnPageLoadAnimation1']!),
                       ],
-                    ).animateOnPageLoad(
-                        animationsMap['columnOnPageLoadAnimation1']!),
+                    ),
                   ),
                   Padding(
                     padding:
@@ -552,10 +564,10 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               ),
                             ),
                           ),
-                        ),
+                        ).animateOnPageLoad(
+                            animationsMap['containerOnPageLoadAnimation2']!),
                       ],
-                    ).animateOnPageLoad(
-                        animationsMap['columnOnPageLoadAnimation2']!),
+                    ),
                   ),
                   SizedBox(
                     width: 320.0,
@@ -604,7 +616,6 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       FFAppState().addCandidateToElection = [];
                                       FFAppState().addElecComtoElection = [];
                                       FFAppState().addVoterToElection = [];
-                                      FFAppState().userElecComWalletID = '';
                                       FFAppState().electionID = '';
                                       FFAppState().addedElecComWalletID = '';
                                       FFAppState().cityID = '';
@@ -779,7 +790,8 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               ),
                             ),
                           ],
-                        ),
+                        ).animateOnPageLoad(
+                            animationsMap['columnOnPageLoadAnimation']!),
                       ],
                     ),
                   ),

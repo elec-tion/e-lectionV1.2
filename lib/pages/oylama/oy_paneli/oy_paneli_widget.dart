@@ -284,102 +284,91 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed('OyKullanP1notstarted');
-                                    },
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 5.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'f7lal1zo' /* Republic of Mozambique Municip... */,
-                                                      ),
-                                                      textAlign:
-                                                          TextAlign.start,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Text(
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 5.0),
+                                                  child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'e7odf2qy' /* Results will be announced in 2... */,
+                                                      'f7lal1zo' /* Republic of Mozambique Municip... */,
                                                     ),
+                                                    textAlign: TextAlign.start,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
                                                               'Montserrat',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .text3,
-                                                          fontSize: 13.0,
+                                                          fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                ),
+                                              ],
+                                            ),
+                                            Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'e7odf2qy' /* Results will be announced in 2... */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .text3,
+                                                        fontSize: 13.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
-                                        Flexible(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Icon(
-                                                Icons.keyboard_arrow_right,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .text1,
-                                                size: 30.0,
-                                              ),
-                                            ],
-                                          ),
+                                      ),
+                                      Flexible(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Icon(
+                                              Icons.keyboard_arrow_right,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text1,
+                                              size: 30.0,
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 SizedBox(

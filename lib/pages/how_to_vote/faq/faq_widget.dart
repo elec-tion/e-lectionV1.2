@@ -485,7 +485,7 @@ Questions */
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color(0xFFA5A545),
+                                        const Color(0xFF619DA7),
                                         FlutterFlowTheme.of(context).secondary
                                       ],
                                       stops: const [0.4, 1.0],
@@ -937,9 +937,14 @@ Questions */
                                 ),
                               ),
                             ),
+                            Divider(
+                              height: 40.0,
+                              thickness: 1.0,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                            ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 50.0, 20.0, 10.0),
+                                  20.0, 10.0, 20.0, 10.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'lh7t418i' /* If you believe you have still ... */,

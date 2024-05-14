@@ -243,7 +243,7 @@ war... */
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        '72ivzzgj' /* Voting Supervisor */,
+                                        '72ivzzgj' /* Voting Supervisor(s) */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium

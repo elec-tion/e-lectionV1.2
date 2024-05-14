@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
@@ -263,7 +264,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                       },
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '72y6svrw' /* Dropdown :00 */,
+                                          '72y6svrw' /* OYLAMA OLUŞTU */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -861,11 +862,11 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'y12ln0n7' /* I forgot my password :( */,
+                                                                    'y12ln0n7' /* I forgot my password :( unutma... */,
                                                                   ),
                                                                   textAlign:
                                                                       TextAlign
-                                                                          .start,
+                                                                          .center,
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .headlineSmall
@@ -1003,20 +1004,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                                 FFAppState().userIDNum,
                                                                               ),
                                                                     );
-                                                                    if ((_model.loginControl !=
-                                                                                null &&
-                                                                            (_model.loginControl)!.isNotEmpty) ==
-                                                                        true) {
+                                                                    if (_model.loginControl !=
+                                                                            null &&
+                                                                        (_model.loginControl)!
+                                                                            .isNotEmpty) {
                                                                       context.goNamed(
                                                                           'Anasayfa');
-
-                                                                      setState(
-                                                                          () {
-                                                                        FFAppState().userDistrictIDs = girisUsersRow!
-                                                                            .districts
-                                                                            .toList()
-                                                                            .cast<String>();
-                                                                      });
                                                                     } else {
                                                                       if (FFLocalizations.of(context)
                                                                               .languageCode ==
@@ -1038,15 +1031,6 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             );
                                                                           },
                                                                         );
-                                                                        FFAppState()
-                                                                            .update(() {
-                                                                          FFAppState().userIDNum =
-                                                                              '';
-                                                                          FFAppState().userDistrictIDs =
-                                                                              [];
-                                                                          FFAppState().userElecComWalletID =
-                                                                              '';
-                                                                        });
                                                                       } else {
                                                                         await showDialog(
                                                                           context:
@@ -1065,17 +1049,17 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             );
                                                                           },
                                                                         );
-                                                                        FFAppState()
-                                                                            .update(() {
-                                                                          FFAppState().userIDNum =
-                                                                              '';
-                                                                          FFAppState().userDistrictIDs =
-                                                                              [];
-                                                                          FFAppState().userElecComWalletID =
-                                                                              '';
-                                                                        });
                                                                       }
 
+                                                                      setState(
+                                                                          () {
+                                                                        FFAppState().userPassword =
+                                                                            '';
+                                                                        FFAppState().userDistrictIDs =
+                                                                            [];
+                                                                        FFAppState().userIDNum =
+                                                                            '';
+                                                                      });
                                                                       setState(
                                                                           () {
                                                                         _model
@@ -1160,7 +1144,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                 text: FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'wztpgkwk' /* Sign In */,
+                                                                  'dcj75pxu' /* Sign In */,
                                                                 ),
                                                                 options:
                                                                     FFButtonOptions(
@@ -1734,52 +1718,63 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                         });
                                                                       }
                                                                     } else {
-                                                                      _model.hashedID =
-                                                                          await actions
-                                                                              .hashingIDPassword(
-                                                                        _model
-                                                                            .idCreateTextController
-                                                                            .text,
-                                                                        'h18WIEKBWd',
-                                                                      );
-                                                                      _model.hashedPassword =
-                                                                          await actions
-                                                                              .hashingIDPassword(
-                                                                        _model
-                                                                            .passwordCreateTextController
-                                                                            .text,
-                                                                        '9pVAnaMCfk',
-                                                                      );
-                                                                      _model.privateKeyVoter =
-                                                                          await actions
-                                                                              .createPrivateKey(
-                                                                        _model
-                                                                            .hashedID!,
-                                                                        _model
-                                                                            .hashedPassword!,
-                                                                        '8HmR1kx47s',
-                                                                      );
-                                                                      _model.privateKeyECom =
-                                                                          await actions
-                                                                              .createPrivateKey(
-                                                                        _model
-                                                                            .hashedID!,
-                                                                        _model
-                                                                            .hashedPassword!,
-                                                                        'QIUNb3cS0O',
-                                                                      );
-                                                                      _model.walletIDVoter =
-                                                                          await actions
-                                                                              .createWalletID(
-                                                                        _model
-                                                                            .privateKeyVoter!,
-                                                                      );
-                                                                      _model.walletIDECom =
-                                                                          await actions
-                                                                              .createWalletID(
-                                                                        _model
-                                                                            .privateKeyECom!,
-                                                                      );
+                                                                      await Future
+                                                                          .wait([
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.hashedID =
+                                                                              await actions.hashingIDPassword(
+                                                                            _model.idCreateTextController.text,
+                                                                            'h18WIEKBWd',
+                                                                          );
+                                                                        }),
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.hashedPassword =
+                                                                              await actions.hashingIDPassword(
+                                                                            _model.passwordCreateTextController.text,
+                                                                            '9pVAnaMCfk',
+                                                                          );
+                                                                        }),
+                                                                      ]);
+                                                                      await Future
+                                                                          .wait([
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.privateKeyVoter =
+                                                                              await actions.createPrivateKey(
+                                                                            _model.hashedID!,
+                                                                            _model.hashedPassword!,
+                                                                            '8HmR1kx47s',
+                                                                          );
+                                                                        }),
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.privateKeyECom =
+                                                                              await actions.createPrivateKey(
+                                                                            _model.hashedID!,
+                                                                            _model.hashedPassword!,
+                                                                            'QIUNb3cS0O',
+                                                                          );
+                                                                        }),
+                                                                      ]);
+                                                                      await Future
+                                                                          .wait([
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.walletIDVoter =
+                                                                              await actions.createWalletID(
+                                                                            _model.privateKeyVoter!,
+                                                                          );
+                                                                        }),
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.walletIDECom =
+                                                                              await actions.createWalletID(
+                                                                            _model.privateKeyECom!,
+                                                                          );
+                                                                        }),
+                                                                      ]);
                                                                       _model.createAccount =
                                                                           await UsersTable()
                                                                               .insert({
@@ -1793,7 +1788,39 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             _model.walletIDVoter,
                                                                         'wallet_id_election_committee':
                                                                             _model.walletIDECom,
+                                                                        'key': _model
+                                                                            .privateKeyVoter,
                                                                       });
+                                                                      await Future
+                                                                          .wait([
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.contractAddressJSON = await ContractGroup
+                                                                              .getContractAddressCall
+                                                                              .call();
+                                                                        }),
+                                                                        Future(
+                                                                            () async {
+                                                                          _model.contractAbiJSON = await ContractGroup
+                                                                              .getContractAbiCall
+                                                                              .call();
+                                                                        }),
+                                                                      ]);
+                                                                      await actions
+                                                                          .addVoter(
+                                                                        _model
+                                                                            .privateKeyVoter!,
+                                                                        getJsonField(
+                                                                          (_model.contractAddressJSON?.jsonBody ??
+                                                                              ''),
+                                                                          r'''$["address"]''',
+                                                                        ).toString(),
+                                                                        getJsonField(
+                                                                          (_model.contractAbiJSON?.jsonBody ??
+                                                                              ''),
+                                                                          r'''$["abi"]''',
+                                                                        ),
+                                                                      );
                                                                       FFAppState()
                                                                           .update(
                                                                               () {
@@ -1801,8 +1828,6 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             _model.hashedID!;
                                                                         FFAppState().userPassword =
                                                                             _model.hashedPassword!;
-                                                                        FFAppState().userElecComWalletID =
-                                                                            _model.walletIDECom!;
                                                                       });
 
                                                                       context.goNamed(

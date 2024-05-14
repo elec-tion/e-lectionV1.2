@@ -90,8 +90,9 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '10pveiu2' /* District'i yedim */,
+                          '10pveiu2' /* KANDIRDIM DISTRICT SEÇ */,
                         ),
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Montserrat',
                               fontSize: 30.0,

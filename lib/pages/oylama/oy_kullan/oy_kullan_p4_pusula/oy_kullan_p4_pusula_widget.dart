@@ -215,7 +215,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                   0.0, 0.0, 0.0, 15.0),
                               child: FlutterFlowTimer(
                                 key: const ValueKey('votetimer'),
-                                initialTime: _model.timerMilliseconds,
+                                initialTime: _model.timerInitialTimeMs,
                                 getDisplayTime: (value) =>
                                     StopWatchTimer.getDisplayTime(
                                   value,
@@ -367,10 +367,10 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                         width: 300.0,
                                                         child: Divider(
                                                           height: 20.0,
-                                                          thickness: 5.0,
+                                                          thickness: 4.0,
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                         ),
                                                       ),
                                                     ),
@@ -383,7 +383,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                           thickness: 1.0,
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                         ),
                                                       ),
                                                     ),
@@ -517,7 +517,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                                     FlutterFlowTheme.of(
                                                                             context)
                                                                         .info,
-                                                                dense: false,
+                                                                dense: true,
                                                                 controlAffinity:
                                                                     ListTileControlAffinity
                                                                         .trailing,

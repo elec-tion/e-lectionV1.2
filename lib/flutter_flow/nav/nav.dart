@@ -32,12 +32,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const AcilisWidget(),
+      errorBuilder: (context, state) => appStateNotifier.showSplashImage
+          ? Builder(
+              builder: (context) => Container(
+                color: Colors.black,
+                child: Center(
+                  child: Image.asset(
+                    'assets/images/e-lection-logo-beyaz.png',
+                    width: MediaQuery.sizeOf(context).width * 0.6,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            )
+          : const AcilisWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const AcilisWidget(),
+          builder: (context, _) => appStateNotifier.showSplashImage
+              ? Builder(
+                  builder: (context) => Container(
+                    color: Colors.black,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/e-lection-logo-beyaz.png',
+                        width: MediaQuery.sizeOf(context).width * 0.6,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                )
+              : const AcilisWidget(),
         ),
         FFRoute(
           name: 'Giris',
@@ -106,14 +132,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'OyKullanOLD',
-          path: '/oyKullanOLD',
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: OyKullanOLDWidget(),
-          ),
-        ),
-        FFRoute(
           name: 'OyKullanP1given',
           path: '/oyKullanP1given',
           builder: (context, params) => const NavBarPage(
@@ -167,9 +185,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const OylamaOlusturP2Widget(),
         ),
         FFRoute(
-          name: 'OylamaOlusturP4',
-          path: '/oylamaOlusturP4',
-          builder: (context, params) => const OylamaOlusturP4Widget(),
+          name: 'OylamaOlusturP5',
+          path: '/oylamaOlusturP5',
+          builder: (context, params) => const OylamaOlusturP5Widget(),
         ),
         FFRoute(
           name: 'Secimler',
@@ -215,15 +233,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OyKullanP1notstarted',
           path: '/oyKullanP1notstarted',
-          builder: (context, params) => const NavBarPage(
+          builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OyKullanP1notstartedWidget(),
+            page: OyKullanP1notstartedWidget(
+              deneme: params.getParam<ElectionsRow>(
+                'deneme',
+                ParamType.SupabaseRow,
+              ),
+            ),
           ),
         ),
         FFRoute(
           name: 'HowvotingWorksP1',
           path: '/howvotingWorksP1',
-          builder: (context, params) => const HowvotingWorksP1Widget(),
+          builder: (context, params) => const NavBarPage(
+            initialPage: '',
+            page: HowvotingWorksP1Widget(),
+          ),
         ),
         FFRoute(
           name: 'HowvotingWorksP2',
@@ -379,6 +405,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Acilis',
           path: '/acilis',
           builder: (context, params) => const AcilisWidget(),
+        ),
+        FFRoute(
+          name: 'OylamaOlusturP4',
+          path: '/oylamaOlusturP4',
+          builder: (context, params) => const OylamaOlusturP4Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -563,4 +594,14 @@ class RootPageContext {
         value: RootPageContext(true, errorRoute),
         child: child,
       );
+}
+
+extension GoRouterLocationExtension on GoRouter {
+  String getCurrentLocation() {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    return matchList.uri.toString();
+  }
 }

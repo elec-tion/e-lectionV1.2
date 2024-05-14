@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'Dropdown :00',
+      'en': 'OYLAMA OLUŞTU',
       'tr': 'Dropdown deneme',
     },
     '2nusyfli': {
@@ -140,10 +140,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Şifre',
     },
     'y12ln0n7': {
-      'en': 'I forgot my password :(',
+      'en': 'I forgot my password :( unutma BENİ unutama beni',
       'tr': 'Şifremi Unuttum',
     },
-    'wztpgkwk': {
+    'dcj75pxu': {
       'en': 'Sign In',
       'tr': 'Giriş Yap',
     },
@@ -193,6 +193,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7ck4ukmf': {
       'en': 'Good Evening!',
       'tr': 'İyi Akşamlar,',
+    },
+    '4tpi9f5n': {
+      'en': 'oyver',
+      'tr': '',
     },
     'db31qvx9': {
       'en': 'Give Vote',
@@ -445,7 +449,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'uqyci65q': {
       'en': 'My Last Started Election',
-      'tr': 'En Yakın Başlamış Seçimim',
+      'tr': 'En Son Başlamış Seçimim',
     },
     'xr6of2eg': {
       'en': 'End Date and Time:',
@@ -460,51 +464,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama Süreci Nasıl İşliyor?',
     },
     'czc6v08h': {
-      'en': 'Voting',
-      'tr': 'Oylama',
-    },
-  },
-  // OyKullanOLD
-  {
-    'ziklqfe3': {
-      'en':
-          '[Seçim İsmi...................\n.........................................]',
-      'tr':
-          '[Seçim İsmi...................\n.........................................]',
-    },
-    '47468tbq': {
-      'en': 'Voting Process Has Been Started',
-      'tr': 'Oylama Süreci Başladı',
-    },
-    'ncujr1tm': {
-      'en': 'Give Vote',
-      'tr': 'Oy Ver',
-    },
-    'wphtzlba': {
-      'en': 'Voting Period Ends In:',
-      'tr': 'Oylama Sürecinin Bitmesine:',
-    },
-    'qzn89q4e': {
-      'en': '... hour ... minutes',
-      'tr': '... saat ... dakika',
-    },
-    '29od8yd5': {
-      'en': 'Candidates',
-      'tr': '    Adaylar',
-    },
-    'ny4km4fn': {
-      'en': 'Statistics',
-      'tr': 'İstatistikler',
-    },
-    'pbd15a4s': {
-      'en': 'Election Description',
-      'tr': 'Seçim Açıklaması',
-    },
-    'jfebbw08': {
-      'en': 'How voting works?',
-      'tr': 'Oylama Süreci Nasıl İşliyor?',
-    },
-    'm9sv8hni': {
       'en': 'Voting',
       'tr': 'Oylama',
     },
@@ -611,7 +570,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Oy kullanma işleminden önce\n aşağıdaki uyarıları dikkatlice\n okuyunuz.',
     },
     '72ivzzgj': {
-      'en': 'Voting Supervisor',
+      'en': 'Voting Supervisor(s)',
       'tr': 'Seçim Sorumlusu',
     },
     'g1wvmjrl': {
@@ -620,7 +579,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ca8vhzio': {
       'en':
-          'All voters must carefully read \nand acknowledge the following \nwarnings.\n\n1. DO NOT exceed voting time limit or\n   your vote may invalidated by your\n   committee\n\n2. e-lection is not responsible for any \n   problems that may occur in the \n   voting process and/or results.\n\n3. No changes can be made about \n    the voting after the voting process.\n\n3. By clicking \"Next\" you \nAccept the e-lection\nTerms of Use and User Consent form.',
+          'All voters must carefully read \nand acknowledge the following \nwarnings.\n\n1. DO NOT exceed voting time limit \n   (if exists) or your vote may invalidated \n   by your committee.\n\n2. e-lection is not responsible for any \n   problems that may occur in the \n   voting process and/or results.\n\n3. No changes can be made about \n    the voting after the voting process.\n\n3. By clicking \"Next\" you \nAccept the e-lection\nTerms of Use and User Consent form.',
       'tr':
           'Bütün adaylar aşağıdaki\n uyarıları dikkatlice okuyup onaylamalıdır.\n\n1. Oylama İşlemlerinde ve/veya\n sonuçlarında yaşanabilecek\n aksaklıklardan e-lection \nsorumlu değildir.\n\n2. Oy kullanma işlemi \nsonrasında oylama hakkında \ndeğişiklik yapılamaz.\n\n3. İleri tuşuna bastığınız zaman\ne-lection Kullanım Şartlarını onaylamış\nolursunuz.',
     },
@@ -650,7 +609,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nevybw4m': {
       'en':
-          'If you proceed to the next page,\n you will reach the \nvoting screen.\n\nWhen you reach the voting screen,\n if you exit the screen in any way,\n your vote will be  invalidated.\n',
+          'If you proceed to the next page,\n you will reach the \nvoting ballot screen.\n\nWhen you reach the voting screen,\n if you exit the screen in any way,\n your vote will be invalidated.\n',
       'tr':
           'Bir sonraki sayfaya ilerlediğinizde\n oy kullanma ekranına \nulaşacaksınız.\n\nOy kullanma ekranına \nulaştığınızda herhangi bir \nşekilde ekrandan çıkış yapılması\ndurumunda oyunuz geçersiz sayılacaktır.',
     },
@@ -660,13 +619,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           'Bu ekrana yanlışlıkla \ngeldiğinizi düşünüyorsanız, \nlütfen geri dönünüz.',
     },
-    'ff8xsg3s': {
+    'ujl1at17': {
       'en': 'Back',
-      'tr': 'Geri',
+      'tr': '',
     },
-    'arkpjqzy': {
+    'obybjewx': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     'fm9xh195': {
       'en': 'Voting',
@@ -806,7 +765,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
-  // OylamaOlusturP4
+  // OylamaOlusturP5
   {
     'wbg0y9zb': {
       'en': 'Create Election',
@@ -1611,7 +1570,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': '[Seçim adı]',
     },
     'zu7darch': {
-      'en': 'Voting Supervisor',
+      'en': 'Voting Supervisor(s)',
       'tr': 'Seçim Sorumlusu',
     },
     'h6dz1wwc': {
@@ -1634,7 +1593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama Açıklaması',
     },
     'n6mzyogs': {
-      'en': 'Voting Supervisor',
+      'en': 'Voting Supervisor(s)',
       'tr': 'Seçim Sorumlusu',
     },
     'vin2wnws': {
@@ -1672,30 +1631,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'duqynpe2': {
       'en': 'Create Election',
       'tr': 'Oylama Yarat',
-    },
-    'ar9i4k69': {
-      'en': 'Candidates',
-      'tr': 'Adaylar',
-    },
-    '5ucaq15w': {
-      'en': '1. Işık Onkun',
-      'tr': '1. Işık Onkun',
-    },
-    'vo7s4tu7': {
-      'en': 'Party Name',
-      'tr': 'Party Name',
-    },
-    '6jq0xspb': {
-      'en': 'Add Candidate',
-      'tr': 'Aday Ekle',
-    },
-    '1hm7ffbo': {
-      'en': 'Election Committee Members',
-      'tr': 'Oylama Sorumluları',
-    },
-    'hg0isp80': {
-      'en': 'Add Committee Member',
-      'tr': 'Sorumlu Ekle',
     },
     'xqrw0g7x': {
       'en': 'Voters',
@@ -1777,9 +1712,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '77w8hnlu': {
       'en':
-          'I agree that voting data may be processed by e-lection and used for commercial purposes.',
-      'tr':
-          'Oylama verilerinin e-lection tarafından işlenebileceği ve ticari amaçlar için kullanılabileceğini onaylıyorum.',
+          'I confirm that I will not be able to return once I have passed this stage.',
+      'tr': 'Bu aşamayı geçtikten sonra geri dönemeyeceğimi onaylıyorum.',
     },
     '9k0yx9my': {
       'en': 'Continue',
@@ -1907,10 +1841,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Statistics',
       'tr': 'İstatistikler',
     },
-    '1gccnyg0': {
-      'en': 'Election Description',
-      'tr': 'Seçim Açıklaması',
-    },
     'tl3i1b2u': {
       'en': 'How voting works?',
       'tr': 'Oylama Süreci Nasıl İşliyor?',
@@ -1923,7 +1853,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // dropdownDeneme
   {
     '10pveiu2': {
-      'en': 'District\'i yedim',
+      'en': 'KANDIRDIM DISTRICT SEÇ',
       'tr': 'District\'i yedim',
     },
     '09icxkl3': {
@@ -2029,7 +1959,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oy Verme Süreci Başladı.',
     },
     'gzubtghz': {
-      'en': 'You Are Eligible To Give Vote.',
+      'en': 'You Are Eligible To Vote.',
       'tr': 'Oy Vermek İçin Uygunsunuz.',
     },
     'fqrg6tqq': {
@@ -2044,13 +1974,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Candidates',
       'tr': '    Adaylar',
     },
-    'xkx4qyww': {
+    '59i6gofy': {
       'en': 'Statistics',
       'tr': 'İstatistikler',
     },
-    'tiq6sohe': {
+    'sxp4uuiy': {
       'en': 'Election Description',
-      'tr': 'Seçim Açıklaması',
+      'tr': 'Oylama Açıklaması',
     },
     '3l863dge': {
       'en': 'How voting works?',
@@ -2074,6 +2004,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4xh33qoe': {
       'en': 'Home',
       'tr': 'Anasayfa',
+    },
+  },
+  // OylamaOlusturP4
+  {
+    'vpi6z5f0': {
+      'en': 'Create Election',
+      'tr': 'Oylama Yarat',
+    },
+    '4q1nint7': {
+      'en': 'Election Committee Members',
+      'tr': 'Oylama Sorumluları',
+    },
+    'mb082ovj': {
+      'en': 'Add Committee Member',
+      'tr': 'Sorumlu Ekle',
+    },
+    'igp44cib': {
+      'en': 'Add myself as a election committee member',
+      'tr': 'Oylama sorumlusu olarak kendimi ekle.',
+    },
+    '6qmbzlfr': {
+      'en': 'Candidates',
+      'tr': 'Adaylar',
+    },
+    'lbmeoxab': {
+      'en': 'Add Candidate',
+      'tr': 'Aday Ekle',
+    },
+    'ksnrfi03': {
+      'en':
+          'I agree that voting data may be processed by e-lection and used for commercial purposes.',
+      'tr':
+          'Oylama verilerinin e-lection tarafından işlenebileceği ve ticari amaçlar için kullanılabileceğini onaylıyorum.',
+    },
+    'wm9rx85e': {
+      'en': 'Continue',
+      'tr': 'İlerle',
+    },
+    'pvr1wtcc': {
+      'en': 'Voting',
+      'tr': 'Oylama',
     },
   },
   // changeEmail
@@ -2237,8 +2208,67 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Tekrar Dene',
     },
   },
+  // timewarn
+  {
+    '42rx8464': {
+      'en': 'Warning!\nThis Voting Has Time Limit',
+      'tr': 'Oy Pusulasına devam etmek istediğinize\nemin misiniz?',
+    },
+    '06ixus75': {
+      'en':
+          'After Continue for ballot, you have\nonly 10 minutes to vote.  If you \nexceed this time limit your vote \nwill be invalidated.',
+      'tr':
+          'İlerledikten sonra bu seçim için \nyanlızca 10 dakikanız bulunmaktadır.\nBu süreyi geçmeniz halinde oyunuz geçersiz sayılacaktır.',
+    },
+    'b7ez0huk': {
+      'en': 'Continue to Ballot',
+      'tr': 'Kaydet',
+    },
+    'w5v6831d': {
+      'en': 'Back',
+      'tr': '',
+    },
+  },
+  // deleteVoter
+  {
+    '53ea0rzn': {
+      'en': 'Are you sure you want to remove the voter?',
+      'tr': 'Seçmeni kaldırmak istediğinize emin misiniz?',
+    },
+    '3rtswhjw': {
+      'en': 'Yes',
+      'tr': 'Evet',
+    },
+    '4945pe4o': {
+      'en': 'No',
+      'tr': 'Hayır',
+    },
+  },
+  // deleteCandidate
+  {
+    'zncbgw0r': {
+      'en': 'Are you sure you want to remove the candidate?',
+      'tr': 'Seçmeni kaldırmak istediğinize emin misiniz?',
+    },
+    '0pocb8zm': {
+      'en': 'Yes',
+      'tr': 'Evet',
+    },
+    'wzt9mzd5': {
+      'en': 'No',
+      'tr': 'Hayır',
+    },
+  },
   // Miscellaneous
   {
+    '1p1hlrf3': {
+      'en': '',
+      'tr': '',
+    },
+    'm1l5m469': {
+      'en': '',
+      'tr': '',
+    },
     'fdb0u31s': {
       'en': '',
       'tr': '',

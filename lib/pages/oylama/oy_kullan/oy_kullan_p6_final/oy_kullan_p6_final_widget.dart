@@ -263,7 +263,7 @@ Your vote ha... */
                                                           fontFamily:
                                                               'Montserrat',
                                                           fontSize: 20.0,
-                                                          letterSpacing: 0.0,
+                                                          letterSpacing: 1.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -277,53 +277,6 @@ Your vote ha... */
                                 ],
                               ),
                             ),
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Material(
-                                    color: Colors.transparent,
-                                    elevation: 0.0,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            color: Color(0x33000000),
-                                            offset: Offset(
-                                              0.0,
-                                              2.0,
-                                            ),
-                                          )
-                                        ],
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .graSet23,
-                                            FlutterFlowTheme.of(context)
-                                                .graSet22
-                                          ],
-                                          stops: const [0.0, 1.0],
-                                          begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
                           ),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),

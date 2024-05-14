@@ -6,10 +6,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/pages/oylama/oylama_olustur/popups/add_candidate/add_candidate_widget.dart';
-import '/pages/oylama/oylama_olustur/popups/add_committee_member/add_committee_member_widget.dart';
 import '/pages/oylama/oylama_olustur/popups/add_voter/add_voter_widget.dart';
-import '/pages/oylama/oylama_olustur/popups/delete_elec_com_member/delete_elec_com_member_widget.dart';
+import '/pages/oylama/oylama_olustur/popups/delete_voter/delete_voter_widget.dart';
 import '/pages/oylama/oylama_olustur/popups/voter_popup/voter_popup_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -204,808 +202,6 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 30.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'ar9i4k69' /* Candidates */,
-                                                        ),
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Montserrat',
-                                                              fontSize: 20.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                            ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  15.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceEvenly,
-                                                        children: [
-                                                          Expanded(
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              children: [
-                                                                Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    '5ucaq15w' /* 1. Işık Onkun */,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text1,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w600,
-                                                                      ),
-                                                                ),
-                                                                Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    'vo7s4tu7' /* Party Name */,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text1,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w300,
-                                                                      ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Container(
-                                                                width: 50.0,
-                                                                height: 50.0,
-                                                                clipBehavior: Clip
-                                                                    .antiAlias,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  shape: BoxShape
-                                                                      .circle,
-                                                                ),
-                                                                child:
-                                                                    Image.asset(
-                                                                  'assets/images/1665420076729.jpeg',
-                                                                  fit: BoxFit
-                                                                      .cover,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            40.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                child:
-                                                                    FlutterFlowIconButton(
-                                                                  borderColor:
-                                                                      const Color(
-                                                                          0x004B39EF),
-                                                                  borderRadius:
-                                                                      50.0,
-                                                                  borderWidth:
-                                                                      1.0,
-                                                                  buttonSize:
-                                                                      50.0,
-                                                                  fillColor: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .background1,
-                                                                  icon: Icon(
-                                                                    Icons
-                                                                        .person_remove_outlined,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .text1,
-                                                                    size: 24.0,
-                                                                  ),
-                                                                  onPressed:
-                                                                      () {
-                                                                    print(
-                                                                        'createVotingRemoveCandidate pressed ...');
-                                                                  },
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 20.0),
-                                                    child: Material(
-                                                      color: Colors.transparent,
-                                                      elevation: 0.0,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(15.0),
-                                                      ),
-                                                      child: Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          boxShadow: const [
-                                                            BoxShadow(
-                                                              blurRadius: 4.0,
-                                                              color: Color(
-                                                                  0x33000000),
-                                                              offset: Offset(
-                                                                0.0,
-                                                                2.0,
-                                                              ),
-                                                            )
-                                                          ],
-                                                          gradient:
-                                                              LinearGradient(
-                                                            colors: [
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .graSet23,
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .graSet22
-                                                            ],
-                                                            stops: const [0.0, 1.0],
-                                                            begin:
-                                                                const AlignmentDirectional(
-                                                                    -1.0, 0.0),
-                                                            end:
-                                                                const AlignmentDirectional(
-                                                                    1.0, 0),
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      15.0),
-                                                        ),
-                                                        child: Builder(
-                                                          builder: (context) =>
-                                                              FFButtonWidget(
-                                                            onPressed:
-                                                                () async {
-                                                              await showDialog(
-                                                                context:
-                                                                    context,
-                                                                builder:
-                                                                    (dialogContext) {
-                                                                  return Dialog(
-                                                                    elevation:
-                                                                        0,
-                                                                    insetPadding:
-                                                                        EdgeInsets
-                                                                            .zero,
-                                                                    backgroundColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    alignment: const AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0)
-                                                                        .resolve(
-                                                                            Directionality.of(context)),
-                                                                    child:
-                                                                        GestureDetector(
-                                                                      onTap: () => _model
-                                                                              .unfocusNode
-                                                                              .canRequestFocus
-                                                                          ? FocusScope.of(context).requestFocus(_model
-                                                                              .unfocusNode)
-                                                                          : FocusScope.of(context)
-                                                                              .unfocus(),
-                                                                      child:
-                                                                          const SizedBox(
-                                                                        height:
-                                                                            450.0,
-                                                                        width:
-                                                                            300.0,
-                                                                        child:
-                                                                            AddCandidateWidget(),
-                                                                      ),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                              ).then((value) =>
-                                                                  setState(
-                                                                      () {}));
-                                                            },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              '6jq0xspb' /* Add Candidate */,
-                                                            ),
-                                                            icon: Icon(
-                                                              Icons
-                                                                  .person_add_alt_outlined,
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .text1,
-                                                              size: 28.0,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              width: 250.0,
-                                                              height: 50.0,
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          24.0,
-                                                                          0.0,
-                                                                          24.0,
-                                                                          0.0),
-                                                              iconPadding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              color: Colors
-                                                                  .transparent,
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text1,
-                                                                        fontSize:
-                                                                            17.0,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w600,
-                                                                      ),
-                                                              elevation: 0.0,
-                                                              borderSide:
-                                                                  const BorderSide(
-                                                                color: Colors
-                                                                    .transparent,
-                                                                width: 1.0,
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          15.0),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  width: 340.0,
-                                                  child: Divider(
-                                                    height: 10.0,
-                                                    thickness: 1.0,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor2,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 30.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '1hm7ffbo' /* Election Committee Members */,
-                                                        ),
-                                                        textAlign:
-                                                            TextAlign.start,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Montserrat',
-                                                              fontSize: 20.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                            ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    FutureBuilder<
-                                                        List<UsersRow>>(
-                                                      future: UsersTable()
-                                                          .queryRows(
-                                                        queryFn: (q) => q.in_(
-                                                          'wallet_id_election_committee',
-                                                          FFAppState()
-                                                              .addElecComtoElection,
-                                                        ),
-                                                      ),
-                                                      builder:
-                                                          (context, snapshot) {
-                                                        // Customize what your widget looks like when it's loading.
-                                                        if (!snapshot.hasData) {
-                                                          return Center(
-                                                            child: SizedBox(
-                                                              width: 50.0,
-                                                              height: 50.0,
-                                                              child:
-                                                                  CircularProgressIndicator(
-                                                                valueColor:
-                                                                    AlwaysStoppedAnimation<
-                                                                        Color>(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .mavi,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          );
-                                                        }
-                                                        List<UsersRow>
-                                                            listViewUsersRowList =
-                                                            snapshot.data!;
-                                                        return ListView.builder(
-                                                          padding:
-                                                              EdgeInsets.zero,
-                                                          shrinkWrap: true,
-                                                          scrollDirection:
-                                                              Axis.vertical,
-                                                          itemCount:
-                                                              listViewUsersRowList
-                                                                  .length,
-                                                          itemBuilder: (context,
-                                                              listViewIndex) {
-                                                            final listViewUsersRow =
-                                                                listViewUsersRowList[
-                                                                    listViewIndex];
-                                                            return Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          10.0),
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0),
-                                                                    child: Icon(
-                                                                      Icons
-                                                                          .arrow_right,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .text1,
-                                                                      size:
-                                                                          24.0,
-                                                                    ),
-                                                                  ),
-                                                                  Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            20.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        Container(
-                                                                      width:
-                                                                          40.0,
-                                                                      height:
-                                                                          40.0,
-                                                                      clipBehavior:
-                                                                          Clip.antiAlias,
-                                                                      decoration:
-                                                                          const BoxDecoration(
-                                                                        shape: BoxShape
-                                                                            .circle,
-                                                                      ),
-                                                                      child: Image
-                                                                          .network(
-                                                                        listViewUsersRow
-                                                                            .photoUrl,
-                                                                        fit: BoxFit
-                                                                            .cover,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  Expanded(
-                                                                    child: Text(
-                                                                      valueOrDefault<
-                                                                          String>(
-                                                                        listViewUsersRow
-                                                                            .name,
-                                                                        'electionName',
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Montserrat',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).text1,
-                                                                            fontSize:
-                                                                                15.0,
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                  Builder(
-                                                                    builder:
-                                                                        (context) =>
-                                                                            FlutterFlowIconButton(
-                                                                      borderColor:
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .mavi,
-                                                                      borderRadius:
-                                                                          20.0,
-                                                                      borderWidth:
-                                                                          1.0,
-                                                                      buttonSize:
-                                                                          40.0,
-                                                                      fillColor:
-                                                                          const Color(
-                                                                              0x004B39EF),
-                                                                      icon:
-                                                                          Icon(
-                                                                        Icons
-                                                                            .person_remove,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
-                                                                        size:
-                                                                            20.0,
-                                                                      ),
-                                                                      onPressed:
-                                                                          () async {
-                                                                        await showDialog(
-                                                                          context:
-                                                                              context,
-                                                                          builder:
-                                                                              (dialogContext) {
-                                                                            return Dialog(
-                                                                              elevation: 0,
-                                                                              insetPadding: EdgeInsets.zero,
-                                                                              backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
-                                                                              child: GestureDetector(
-                                                                                onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: SizedBox(
-                                                                                  height: 300.0,
-                                                                                  width: 300.0,
-                                                                                  child: DeleteElecComMemberWidget(
-                                                                                    deneme: listViewUsersRow,
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            );
-                                                                          },
-                                                                        ).then((value) =>
-                                                                            setState(() {}));
-                                                                      },
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            );
-                                                          },
-                                                        );
-                                                      },
-                                                    ),
-                                                  ],
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(40.0, 5.0, 40.0,
-                                                          20.0),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Align(
-                                                        alignment:
-                                                            const AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Material(
-                                                          color: Colors
-                                                              .transparent,
-                                                          elevation: 0.0,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        15.0),
-                                                          ),
-                                                          child: Container(
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              boxShadow: const [
-                                                                BoxShadow(
-                                                                  blurRadius:
-                                                                      4.0,
-                                                                  color: Color(
-                                                                      0x33000000),
-                                                                  offset:
-                                                                      Offset(
-                                                                    0.0,
-                                                                    2.0,
-                                                                  ),
-                                                                )
-                                                              ],
-                                                              gradient:
-                                                                  LinearGradient(
-                                                                colors: [
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .graSet23,
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .graSet22
-                                                                ],
-                                                                stops: const [
-                                                                  0.0,
-                                                                  1.0
-                                                                ],
-                                                                begin:
-                                                                    const AlignmentDirectional(
-                                                                        -1.0,
-                                                                        0.0),
-                                                                end:
-                                                                    const AlignmentDirectional(
-                                                                        1.0, 0),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          15.0),
-                                                            ),
-                                                            child: Builder(
-                                                              builder: (context) =>
-                                                                  FFButtonWidget(
-                                                                onPressed:
-                                                                    () async {
-                                                                  await showDialog(
-                                                                    context:
-                                                                        context,
-                                                                    builder:
-                                                                        (dialogContext) {
-                                                                      return Dialog(
-                                                                        elevation:
-                                                                            0,
-                                                                        insetPadding:
-                                                                            EdgeInsets.zero,
-                                                                        backgroundColor:
-                                                                            Colors.transparent,
-                                                                        alignment:
-                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
-                                                                        child:
-                                                                            GestureDetector(
-                                                                          onTap: () => _model.unfocusNode.canRequestFocus
-                                                                              ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-                                                                              : FocusScope.of(context).unfocus(),
-                                                                          child:
-                                                                              const SizedBox(
-                                                                            height:
-                                                                                350.0,
-                                                                            width:
-                                                                                300.0,
-                                                                            child:
-                                                                                AddCommitteeMemberWidget(),
-                                                                          ),
-                                                                        ),
-                                                                      );
-                                                                    },
-                                                                  ).then((value) =>
-                                                                      setState(
-                                                                          () {}));
-                                                                },
-                                                                text: FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'hg0isp80' /* Add Committee Member */,
-                                                                ),
-                                                                icon: Icon(
-                                                                  Icons
-                                                                      .person_add_alt_outlined,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .text1,
-                                                                  size: 28.0,
-                                                                ),
-                                                                options:
-                                                                    FFButtonOptions(
-                                                                  width: 300.0,
-                                                                  height: 50.0,
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          24.0,
-                                                                          0.0,
-                                                                          24.0,
-                                                                          0.0),
-                                                                  iconPadding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  color: Colors
-                                                                      .transparent,
-                                                                  textStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text1,
-                                                                        fontSize:
-                                                                            17.0,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w600,
-                                                                      ),
-                                                                  elevation:
-                                                                      0.0,
-                                                                  borderSide:
-                                                                      const BorderSide(
-                                                                    color: Colors
-                                                                        .transparent,
-                                                                    width: 1.0,
-                                                                  ),
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              15.0),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  width: 340.0,
-                                                  child: Divider(
-                                                    height: 10.0,
-                                                    thickness: 1.0,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor2,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -1409,13 +605,42 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                           24.0,
                                                                     ),
                                                                   ),
+                                                                  Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            20.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          40.0,
+                                                                      height:
+                                                                          40.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          const BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        listViewUsersRow
+                                                                            .photoUrl,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
                                                                   Expanded(
                                                                     child: Text(
                                                                       valueOrDefault<
                                                                           String>(
                                                                         listViewUsersRow
                                                                             .name,
-                                                                        'electionName',
+                                                                        'voterName',
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -1474,7 +699,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                                 child: SizedBox(
                                                                                   height: 300.0,
                                                                                   width: 300.0,
-                                                                                  child: DeleteElecComMemberWidget(
+                                                                                  child: DeleteVoterWidget(
                                                                                     deneme: listViewUsersRow,
                                                                                   ),
                                                                                 ),
@@ -3050,7 +2275,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '77w8hnlu' /* I agree that voting data may b... */,
+                                                      '77w8hnlu' /* I confirm that I will not be a... */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -3158,8 +2383,8 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               .call(
                                                             id: FFAppState()
                                                                 .cityID,
-                                                            name: _model
-                                                                .dropDownValue2,
+                                                            name:
+                                                                '${_model.dropDownValue1}, ${_model.dropDownValue2}',
                                                           );
                                                         }
                                                         if (_model.dropDownValue3 !=
@@ -3182,8 +2407,8 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                 .call(
                                                               id: FFAppState()
                                                                   .districtID,
-                                                              name: _model
-                                                                  .dropDownValue3,
+                                                              name:
+                                                                  '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}',
                                                             );
                                                           }
                                                           if (_model.dropDownValue4 !=
@@ -3206,8 +2431,8 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                   .call(
                                                                 id: FFAppState()
                                                                     .neighborhoodID,
-                                                                name: _model
-                                                                    .dropDownValue4,
+                                                                name:
+                                                                    '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}, ${_model.dropDownValue4}',
                                                               );
                                                             }
                                                             _model.sendNeigh =
@@ -3257,15 +2482,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                             FFAppState()
                                                                 .update(() {
                                                               FFAppState()
-                                                                  .addCandidateToElection = [];
-                                                              FFAppState()
-                                                                  .addElecComtoElection = [];
-                                                              FFAppState()
-                                                                  .addVoterToElection = [];
-                                                              FFAppState()
-                                                                  .electionName = '';
-                                                              FFAppState()
-                                                                  .electionID = '';
+                                                                      .electionDistrict =
+                                                                  FFAppState()
+                                                                      .neighborhoodID;
                                                             });
                                                           } else {
                                                             _model.sendDistrict =
@@ -3315,15 +2534,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                             FFAppState()
                                                                 .update(() {
                                                               FFAppState()
-                                                                  .addCandidateToElection = [];
-                                                              FFAppState()
-                                                                  .addElecComtoElection = [];
-                                                              FFAppState()
-                                                                  .addVoterToElection = [];
-                                                              FFAppState()
-                                                                  .electionName = '';
-                                                              FFAppState()
-                                                                  .electionID = '';
+                                                                      .electionDistrict =
+                                                                  FFAppState()
+                                                                      .districtID;
                                                             });
                                                           }
                                                         } else {
@@ -3374,15 +2587,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                           FFAppState()
                                                               .update(() {
                                                             FFAppState()
-                                                                .addCandidateToElection = [];
-                                                            FFAppState()
-                                                                .addElecComtoElection = [];
-                                                            FFAppState()
-                                                                .addVoterToElection = [];
-                                                            FFAppState()
-                                                                .electionName = '';
-                                                            FFAppState()
-                                                                .electionID = '';
+                                                                    .electionDistrict =
+                                                                FFAppState()
+                                                                    .cityID;
                                                           });
                                                         }
                                                       } else {
@@ -3431,23 +2638,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
 
                                                         FFAppState().update(() {
                                                           FFAppState()
-                                                              .addCandidateToElection = [];
-                                                          FFAppState()
-                                                              .addElecComtoElection = [];
-                                                          FFAppState()
-                                                              .addVoterToElection = [];
-                                                          FFAppState()
-                                                              .electionName = '';
-                                                          FFAppState()
-                                                              .electionID = '';
-                                                          FFAppState().cityID =
-                                                              '';
-                                                          FFAppState()
-                                                              .neighborhoodID = '';
-                                                          FFAppState()
-                                                              .countryID = '';
-                                                          FFAppState()
-                                                              .districtID = '';
+                                                                  .electionDistrict =
+                                                              FFAppState()
+                                                                  .countryID;
                                                         });
                                                       }
                                                     } else {
@@ -3501,33 +2694,76 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                       }
                                                     }
                                                   } else {
-                                                    context.goNamed(
-                                                      'OylamaOlusturP4',
-                                                      extra: <String, dynamic>{
-                                                        kTransitionInfoKey:
-                                                            const TransitionInfo(
-                                                          hasTransition: true,
-                                                          transitionType:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          duration: Duration(
-                                                              milliseconds: 10),
-                                                        ),
-                                                      },
-                                                    );
-
-                                                    FFAppState().update(() {
-                                                      FFAppState()
-                                                          .addCandidateToElection = [];
-                                                      FFAppState()
-                                                          .addElecComtoElection = [];
-                                                      FFAppState()
-                                                          .addVoterToElection = [];
-                                                      FFAppState()
-                                                          .electionName = '';
-                                                      FFAppState().electionID =
-                                                          '';
-                                                    });
+                                                    if ((FFAppState()
+                                                            .addVoterToElection
+                                                            .isNotEmpty) ==
+                                                        true) {
+                                                      context.goNamed(
+                                                        'OylamaOlusturP4',
+                                                        extra: <String,
+                                                            dynamic>{
+                                                          kTransitionInfoKey:
+                                                              const TransitionInfo(
+                                                            hasTransition: true,
+                                                            transitionType:
+                                                                PageTransitionType
+                                                                    .fade,
+                                                            duration: Duration(
+                                                                milliseconds:
+                                                                    10),
+                                                          ),
+                                                        },
+                                                      );
+                                                    } else {
+                                                      if (FFLocalizations.of(
+                                                                  context)
+                                                              .languageCode ==
+                                                          'en') {
+                                                        await showDialog(
+                                                          context: context,
+                                                          builder:
+                                                              (alertDialogContext) {
+                                                            return AlertDialog(
+                                                              title: const Text(
+                                                                  'You Can\'t Create a Custom Vote!'),
+                                                              content: const Text(
+                                                                  'Please enter voter\'s wallet id.'),
+                                                              actions: [
+                                                                TextButton(
+                                                                  onPressed: () =>
+                                                                      Navigator.pop(
+                                                                          alertDialogContext),
+                                                                  child: const Text(
+                                                                      'OK'),
+                                                                ),
+                                                              ],
+                                                            );
+                                                          },
+                                                        );
+                                                      } else {
+                                                        await showDialog(
+                                                          context: context,
+                                                          builder:
+                                                              (alertDialogContext) {
+                                                            return AlertDialog(
+                                                              title: const Text(
+                                                                  'Özel Oylama Oluşturamazsın!'),
+                                                              content: const Text(
+                                                                  'Lütfen seçmenin cüzdan numarasını girin.'),
+                                                              actions: [
+                                                                TextButton(
+                                                                  onPressed: () =>
+                                                                      Navigator.pop(
+                                                                          alertDialogContext),
+                                                                  child: const Text(
+                                                                      'Tamam'),
+                                                                ),
+                                                              ],
+                                                            );
+                                                          },
+                                                        );
+                                                      }
+                                                    }
                                                   }
                                                 } else {
                                                   if (FFLocalizations.of(

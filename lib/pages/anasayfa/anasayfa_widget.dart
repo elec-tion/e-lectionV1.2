@@ -1,9 +1,11 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -305,6 +307,73 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 5.0, 0.0),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                await Future.wait([
+                                                  Future(() async {
+                                                    _model.contractAddressJSON =
+                                                        await ContractGroup
+                                                            .getContractAddressCall
+                                                            .call();
+                                                  }),
+                                                  Future(() async {
+                                                    _model.contractAbiJSON =
+                                                        await ContractGroup
+                                                            .getContractAbiCall
+                                                            .call();
+                                                  }),
+                                                ]);
+                                                await actions.addVote(
+                                                  anasayfaUsersRow!.key!,
+                                                  'aebfdfdb-4e0e-4709-b8ea-fb316bed593b',
+                                                  '0xae2705A6e86b06a232204925b03a18D572F33099',
+                                                  getJsonField(
+                                                    (_model.contractAddressJSON
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                    r'''$["address"]''',
+                                                  ).toString(),
+                                                  getJsonField(
+                                                    (_model.contractAbiJSON
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                    r'''$["abi"]''',
+                                                  ),
+                                                );
+
+                                                setState(() {});
+                                              },
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '4tpi9f5n' /* oyver */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleLarge
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .text1,
+                                                      fontSize: 18.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                              ),
                                             ),
                                           ),
                                         ],

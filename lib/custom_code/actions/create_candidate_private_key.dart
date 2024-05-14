@@ -12,10 +12,11 @@ import 'dart:convert';
 import 'package:convert/convert.dart';
 import 'package:crypto/crypto.dart';
 
-Future<String> createCandidatePrivateKey(String name) async {
+Future<String> createCandidatePrivateKey(
+  String name,
+  String degisken,
+) async {
   // Add your function code here!
-  String degisken = "qTeolNLu1e";
-
   var output = AccumulatorSink<Digest>();
   var input = sha256.startChunkedConversion(output);
   input.add(utf8.encode(name));
