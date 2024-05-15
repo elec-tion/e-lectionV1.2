@@ -13,6 +13,8 @@ class OylamaOlusturP3Model extends FlutterFlowModel<OylamaOlusturP3Widget> {
   bool? regionalElectionValue;
   // State field(s) for customElection widget.
   bool? customElectionValue;
+  // State field(s) for addMyselfVoter widget.
+  bool? addMyselfVoterValue;
   // State field(s) for DropDown widget.
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
@@ -51,6 +53,10 @@ class OylamaOlusturP3Model extends FlutterFlowModel<OylamaOlusturP3Widget> {
   ApiCallResponse? sendCity;
   // Stores action output result for [Backend Call - API (addDistrictToElection)] action in createVotingContinue widget.
   ApiCallResponse? sendCountry;
+  // Stores action output result for [Backend Call - API (addDistrictToElection)] action in createVotingContinue widget.
+  ApiCallResponse? sendCountry3;
+  // Stores action output result for [Backend Call - API (addDistrictToElection)] action in createVotingContinue widget.
+  ApiCallResponse? sendCountry2;
 
   @override
   void initState(BuildContext context) {}

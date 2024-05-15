@@ -1648,6 +1648,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Add Voter',
       'tr': 'Seçmen Ekle',
     },
+    '8atwf5am': {
+      'en': 'Add myself as a voter.',
+      'tr': 'Seçmen olarak kendimi ekle.',
+    },
     '5813glb2': {
       'en':
           'The voting you want to create regionally can be only country-wide, only city-wide, or only district-wide. It is not mandatory to select all options. Simply select the region in which you want to vote regionally.',
