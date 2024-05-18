@@ -45,7 +45,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : const AcilisWidget(),
+          : const GirisWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -63,7 +63,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : const AcilisWidget(),
+              : const GirisWidget(),
         ),
         FFRoute(
           name: 'Giris',
@@ -150,17 +150,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OyKullanP2devam',
           path: '/oyKullanP2devam',
-          builder: (context, params) => const NavBarPage(
+          builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OyKullanP2devamWidget(),
+            page: OyKullanP2devamWidget(
+              p2: params.getParam<ElectionsRow>(
+                'p2',
+                ParamType.SupabaseRow,
+              ),
+            ),
           ),
         ),
         FFRoute(
           name: 'OyKullanP3devam',
           path: '/oyKullanP3devam',
-          builder: (context, params) => const NavBarPage(
+          builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OyKullanP3devamWidget(),
+            page: OyKullanP3devamWidget(
+              p3: params.getParam<ElectionsRow>(
+                'p3',
+                ParamType.SupabaseRow,
+              ),
+            ),
           ),
         ),
         FFRoute(
@@ -200,12 +210,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OyKullanP4Pusula',
           path: '/oyKullanP4Pusula',
-          builder: (context, params) => const OyKullanP4PusulaWidget(),
+          builder: (context, params) => OyKullanP4PusulaWidget(
+            ballot1: params.getParam<ElectionsRow>(
+              'ballot1',
+              ParamType.SupabaseRow,
+            ),
+          ),
         ),
         FFRoute(
           name: 'OyKullanP5Pusula',
           path: '/oyKullanP5Pusula',
-          builder: (context, params) => const OyKullanP5PusulaWidget(),
+          builder: (context, params) => OyKullanP5PusulaWidget(
+            ballot2: params.getParam<ElectionsRow>(
+              'ballot2',
+              ParamType.SupabaseRow,
+            ),
+          ),
         ),
         FFRoute(
           name: 'OyKullanP6Final',
@@ -246,10 +266,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HowvotingWorksP1',
           path: '/howvotingWorksP1',
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: HowvotingWorksP1Widget(),
-          ),
+          builder: (context, params) => const HowvotingWorksP1Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP2',
@@ -347,10 +364,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'termsOfUse',
           path: '/termsOfUse',
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: TermsOfUseWidget(),
-          ),
+          builder: (context, params) => const TermsOfUseWidget(),
         ),
         FFRoute(
           name: 'OylamaOlusturP3',
@@ -410,6 +424,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OylamaOlusturP4',
           path: '/oylamaOlusturP4',
           builder: (context, params) => const OylamaOlusturP4Widget(),
+        ),
+        FFRoute(
+          name: 'OyPaneliP2',
+          path: '/oyPaneliP2',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: OyPaneliP2Widget(
+              oyPaneli: params.getParam<ElectionsRow>(
+                'oyPaneli',
+                ParamType.SupabaseRow,
+              ),
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -1285,7 +1285,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                 .isNotEmpty) ==
                                                             true)) {
                                                       if (FFAppState()
-                                                              .addCandidateToElection.isNotEmpty) {
+                                                              .addElecComtoElection.isNotEmpty) {
                                                         if (FFAppState()
                                                                 .addCandidateToElection
                                                                 .length >=

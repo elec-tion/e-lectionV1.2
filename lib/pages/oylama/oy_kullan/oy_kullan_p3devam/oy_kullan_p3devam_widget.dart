@@ -12,7 +12,12 @@ import 'oy_kullan_p3devam_model.dart';
 export 'oy_kullan_p3devam_model.dart';
 
 class OyKullanP3devamWidget extends StatefulWidget {
-  const OyKullanP3devamWidget({super.key});
+  const OyKullanP3devamWidget({
+    super.key,
+    this.p3,
+  });
+
+  final ElectionsRow? p3;
 
   @override
   State<OyKullanP3devamWidget> createState() => _OyKullanP3devamWidgetState();
@@ -39,7 +44,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
+            begin: const Offset(0.0, 21.0),
             end: const Offset(0.0, 0.0),
           ),
         ],
@@ -203,10 +208,9 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 13.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'bqkir6j6' /* [Seçim İsmi]
-.................... */
-                              ,
+                            valueOrDefault<String>(
+                              widget.p3?.name,
+                              'can not get name',
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -255,7 +259,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 5.0, 0.0, 0.0),
+                                        0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         '7exdsjni' /* Attention */,
@@ -374,49 +378,6 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                               ),
                             ],
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          blurRadius: 4.0,
-                                          color: Color(0x33000000),
-                                          offset: Offset(
-                                            0.0,
-                                            2.0,
-                                          ),
-                                        )
-                                      ],
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          FlutterFlowTheme.of(context).graSet23,
-                                          FlutterFlowTheme.of(context).graSet22
-                                        ],
-                                        stops: const [0.0, 1.0],
-                                        begin: const AlignmentDirectional(-1.0, 0.0),
-                                        end: const AlignmentDirectional(1.0, 0),
-                                      ),
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
                         ),
                         Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
@@ -642,11 +603,12 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                             : FocusScope.of(
                                                                     context)
                                                                 .unfocus(),
-                                                        child: const SizedBox(
+                                                        child: SizedBox(
                                                           height: 375.0,
                                                           width: 350.0,
-                                                          child:
-                                                              TimewarnWidget(),
+                                                          child: TimewarnWidget(
+                                                            comp: widget.p3,
+                                                          ),
                                                         ),
                                                       ),
                                                     );

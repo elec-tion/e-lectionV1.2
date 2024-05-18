@@ -277,6 +277,74 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                             ),
                           ),
                         ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 10.0, 0.0, 0.0),
+                                child: Theme(
+                                  data: ThemeData(
+                                    checkboxTheme: CheckboxThemeData(
+                                      visualDensity: VisualDensity.standard,
+                                      materialTapTargetSize:
+                                          MaterialTapTargetSize.padded,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(0.0),
+                                      ),
+                                    ),
+                                    unselectedWidgetColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                  ),
+                                  child: Checkbox(
+                                    key: const ValueKey('confirm1'),
+                                    value: _model.checkwarnValue ??= true,
+                                    onChanged: true
+                                        ? null
+                                        : (newValue) async {
+                                            setState(() => _model
+                                                .checkwarnValue = newValue!);
+                                          },
+                                    side: BorderSide(
+                                      width: 2,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                    ),
+                                    activeColor:
+                                        FlutterFlowTheme.of(context).graSet11,
+                                    checkColor: true
+                                        ? null
+                                        : FlutterFlowTheme.of(context).info,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 13.0, 5.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  '9xr8trgc' /* You Have Accepted Terms Of Use... */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Montserrat',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
                         Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(

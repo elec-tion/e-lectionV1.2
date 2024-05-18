@@ -2,25 +2,24 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'timewarn_model.dart';
-export 'timewarn_model.dart';
+import 'voting_desc_model.dart';
+export 'voting_desc_model.dart';
 
-class TimewarnWidget extends StatefulWidget {
-  const TimewarnWidget({
+class VotingDescWidget extends StatefulWidget {
+  const VotingDescWidget({
     super.key,
-    this.comp,
+    this.compdesc,
   });
 
-  final ElectionsRow? comp;
+  final ElectionsRow? compdesc;
 
   @override
-  State<TimewarnWidget> createState() => _TimewarnWidgetState();
+  State<VotingDescWidget> createState() => _VotingDescWidgetState();
 }
 
-class _TimewarnWidgetState extends State<TimewarnWidget> {
-  late TimewarnModel _model;
+class _VotingDescWidgetState extends State<VotingDescWidget> {
+  late VotingDescModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -31,7 +30,7 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TimewarnModel());
+    _model = createModel(context, () => VotingDescModel());
   }
 
   @override
@@ -61,6 +60,35 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Flexible(
+                  child: Align(
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                      child: Icon(
+                        Icons.description_outlined,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 40.0,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'ynm39k1h' /* Election Description */,
+                    ),
+                    textAlign: TextAlign.center,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Montserrat',
+                          fontSize: 16.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                ),
                 FlutterFlowIconButton(
                   borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
@@ -78,108 +106,42 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
               ],
             ),
           ),
+          Container(
+            width: double.infinity,
+            height: 233.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).secondaryBackground,
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Align(
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
+                      child: Text(
+                        valueOrDefault<String>(
+                          widget.compdesc?.detail,
+                          'no detail...',
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Montserrat',
+                              fontSize: 17.0,
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
-                child: Text(
-                  FFLocalizations.of(context).getText(
-                    '42rx8464' /* Warning!
-This Voting Has Time ... */
-                    ,
-                  ),
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Montserrat',
-                        fontSize: 16.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
-                child: Text(
-                  FFLocalizations.of(context).getText(
-                    '06ixus75' /* After Continue for ballot, you... */,
-                  ),
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Montserrat',
-                        letterSpacing: 0.0,
-                      ),
-                ),
-              ),
-
-              // This Voting Has Time Limit
-              Container(
-                width: 180.0,
-                height: 45.0,
-                decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      blurRadius: 4.0,
-                      color: Color(0x33000000),
-                      offset: Offset(
-                        0.0,
-                        2.0,
-                      ),
-                    )
-                  ],
-                  gradient: LinearGradient(
-                    colors: [
-                      FlutterFlowTheme.of(context).graSet11,
-                      FlutterFlowTheme.of(context).graSet12,
-                      FlutterFlowTheme.of(context).graSet13
-                    ],
-                    stops: const [0.0, 1.0, 1.0],
-                    begin: const AlignmentDirectional(1.0, 0.0),
-                    end: const AlignmentDirectional(-1.0, 0),
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(40.0),
-                    bottomRight: Radius.circular(40.0),
-                    topLeft: Radius.circular(40.0),
-                    topRight: Radius.circular(40.0),
-                  ),
-                ),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed(
-                      'OyKullanP4Pusula',
-                      queryParameters: {
-                        'ballot1': serializeParam(
-                          widget.comp,
-                          ParamType.SupabaseRow,
-                        ),
-                      }.withoutNulls,
-                    );
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'b7ez0huk' /* Continue to Ballot */,
-                  ),
-                  options: FFButtonOptions(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: const Color(0x00067BB7),
-                    textStyle: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Montserrat',
-                          color: FlutterFlowTheme.of(context).info,
-                          fontSize: 16.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                    elevation: 0.0,
-                    borderSide: const BorderSide(
-                      color: Colors.transparent,
-                      width: 0.0,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                ),
-              ),
+              // container goes back
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: InkWell(
@@ -229,7 +191,7 @@ This Voting Has Time ... */
                                   23.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'w5v6831d' /* Back */,
+                                  '6s61j95s' /* Back */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge

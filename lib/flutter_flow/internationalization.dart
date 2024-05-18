@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'OYLAMA OLUŞTU',
+      'en': 'kaydet 1112222',
       'tr': 'Dropdown deneme',
     },
     '2nusyfli': {
@@ -140,7 +140,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Şifre',
     },
     'y12ln0n7': {
-      'en': 'I forgot my password :( unutma BENİ unutama beni',
+      'en': 'I forgot my password ( ͡° ͜ʖ ͡°)',
       'tr': 'Şifremi Unuttum',
     },
     'dcj75pxu': {
@@ -448,7 +448,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
     'uqyci65q': {
-      'en': 'My Last Started Election',
+      'en': 'My Last Started Election 69 4',
       'tr': 'En Son Başlamış Seçimim',
     },
     'xr6of2eg': {
@@ -573,24 +573,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Voting Supervisor(s)',
       'tr': 'Seçim Sorumlusu',
     },
-    'g1wvmjrl': {
-      'en': '[Sorumlu İsmi]',
-      'tr': '[Sorumlu İsmi]',
-    },
     'ca8vhzio': {
       'en':
-          'All voters must carefully read \nand acknowledge the following \nwarnings.\n\n1. DO NOT exceed voting time limit \n   (if exists) or your vote may invalidated \n   by your committee.\n\n2. e-lection is not responsible for any \n   problems that may occur in the \n   voting process and/or results.\n\n3. No changes can be made about \n    the voting after the voting process.\n\n3. By clicking \"Next\" you \nAccept the e-lection\nTerms of Use and User Consent form.',
+          'All voters must carefully read \nand acknowledge the following \nwarnings.\n\n1. DO NOT exceed voting time limit \n   (if exists) or your vote may invalidated \n   by your committee.\n\n2. e-lection is not responsible for any \n   problems that may occur in the \n   voting process and/or results.\n\n3. No changes can be made about \n    the voting after the voting process.\n\n 4. By clicking \"Next\" you \n      Accept the e-lection\n      Terms of Use and User Consent form.',
       'tr':
-          'Bütün adaylar aşağıdaki\n uyarıları dikkatlice okuyup onaylamalıdır.\n\n1. Oylama İşlemlerinde ve/veya\n sonuçlarında yaşanabilecek\n aksaklıklardan e-lection \nsorumlu değildir.\n\n2. Oy kullanma işlemi \nsonrasında oylama hakkında \ndeğişiklik yapılamaz.\n\n3. İleri tuşuna bastığınız zaman\ne-lection Kullanım Şartlarını onaylamış\nolursunuz.',
+          'Bütün seçmenler aşağıdaki\n uyarıları dikkatlice okuyup onaylamalıdır.\n\n1. Oylama İşlemlerinde ve/veya\n sonuçlarında yaşanabilecek\n aksaklıklardan e-lection \nsorumlu değildir.\n\n2. Oy kullanma işlemi \nsonrasında oylama hakkında \ndeğişiklik yapılamaz.\n\n3. İleri tuşuna bastığınız zaman\ne-lection Kullanım Şartlarını onaylamış\nolursunuz.',
     },
     '98d1vdjn': {
       'en':
           'I confirm that I have carefully \nread and understood the warnings',
       'tr': 'Uyarıları dikkatlice okuduğumu ve \nanladığımı onaylıyorum',
     },
+    '6v1no6fz': {
+      'en': 'View Terms of Use and User Consent Form',
+      'tr': '   Kullanım Koşulları ve Rıza Onayını Görüntüle',
+    },
     '1c77iiss': {
       'en': 'Continue',
-      'tr': 'İlerle',
+      'tr': ' İlerle',
     },
     'dh9ibcj6': {
       'en': 'Voting',
@@ -599,10 +599,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OyKullanP3devam
   {
-    'bqkir6j6': {
-      'en': '[Seçim İsmi]\n...........................',
-      'tr': '[Seçim İsmi]\n...........................',
-    },
     '7exdsjni': {
       'en': 'Attention',
       'tr': 'Dikkat',
@@ -621,11 +617,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ujl1at17': {
       'en': 'Back',
-      'tr': '',
+      'tr': 'Geri',
     },
     'obybjewx': {
       'en': 'Next',
-      'tr': '',
+      'tr': 'İlerle',
     },
     'fm9xh195': {
       'en': 'Voting',
@@ -638,21 +634,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Voting Panel',
       'tr': 'Oy Paneli',
     },
-    'vkv9t265': {
-      'en': 'To ****: 27 hours.',
-      'tr': '**** adlı seçime: 27 saat.',
-    },
     'kmszbpwf': {
-      'en': 'Votes I Created',
-      'tr': 'Oluşturduğum Oylamalar',
+      'en': 'Elections that I am responsible',
+      'tr': 'Sorumlu olduğum oylamalar',
     },
-    'f7lal1zo': {
-      'en': 'Republic of Mozambique Municipal Election 2024',
-      'tr': 'Mozambik Cumhuriyeti Belediye Seçimi 2024',
-    },
-    'e7odf2qy': {
-      'en': 'Results will be announced in 2 hours',
-      'tr': 'Sonuçlar 2 saat içinde açıklanacak',
+    '4xrr3hrk': {
+      'en':
+          'This page shows the elections which is not started and that you are assigned as election committee member.',
+      'tr':
+          'Bu sayfada seçim sorumlusu olarak görevlendirildiğiniz başlamamış seçimler gösterilmektedir.',
     },
     'tg5053i6': {
       'en': 'Voting Statistics',
@@ -708,6 +698,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'th6zdtcu': {
       'en': 'I confirm that I have carefully read and understood the warnings.',
       'tr': 'Uyarıları dikkatlice okuduğumu ve anladığımı onaylıyorum.',
+    },
+    '8jpm88tb': {
+      'en': 'View Terms of Use and User Consent Form',
+      'tr': '   Kullanım Koşulları ve Rıza Onayını Görüntüle',
     },
     'nx0lhw8r': {
       'en': 'Continue',
@@ -895,57 +889,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OyKullanP4Pusula
   {
-    'a6et2c9u': {
-      'en': '[Seçim İsmi]\n...........................',
-      'tr': '[Seçim İsmi]\n...........................',
-    },
     'rf3eqp4w': {
       'en': 'Electronic Voting Ballot',
       'tr': 'Elektronik Oy Pusulası',
     },
-    'vup09jh4': {
-      'en': '[candidate_name]',
-      'tr': '',
+    'kkwl5bk3': {
+      'en': 'This voting ballot is provided by e-lection.',
+      'tr': 'Bu oy pusulası e-lection tarafından sağlanmaktadır.',
     },
-    '3tno19fg': {
-      'en': 'organization',
-      'tr': 'parti',
-    },
-    'vegfkuau': {
-      'en': '[candidate_name]',
-      'tr': '',
-    },
-    'gy3jejn5': {
-      'en': 'organization',
-      'tr': 'parti',
-    },
-    'j5pq7lut': {
-      'en': '[candidate_name]',
-      'tr': '',
-    },
-    'd7can56m': {
-      'en': 'organization',
-      'tr': 'parti',
-    },
-    'ljuzmg92': {
-      'en': '[candidate_name]',
-      'tr': '',
-    },
-    '16l3cuez': {
-      'en': 'organization',
-      'tr': 'parti',
-    },
-    'otrr9g42': {
-      'en': '[candidate_name]',
-      'tr': '',
-    },
-    '97cc8fwh': {
-      'en': 'organization',
-      'tr': 'parti',
-    },
-    'xyei4nnw': {
-      'en': 'Next',
-      'tr': 'İleri',
+    '95m2r08k': {
+      'en': 'Review Vote    ',
+      'tr': 'Oyu İncele    ',
     },
     'z03xgff0': {
       'en': 'Voting',
@@ -954,29 +908,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OyKullanP5Pusula
   {
-    '713167re': {
-      'en': '[Seçim İsmi]\n...........................',
-      'tr': '[Seçim İsmi]\n...........................',
-    },
     'hc0zqdoy': {
       'en': 'Voter Information',
       'tr': 'Oy Kullanan Bilgileri',
     },
-    'jxkidt9r': {
-      'en': 'user_name',
-      'tr': 'user_name',
-    },
-    'sqkn0y7o': {
-      'en': 'user_surname',
-      'tr': 'user_surname',
-    },
     'lkfx1s5k': {
-      'en': 'National ID Number',
+      'en': 'Contact E-mail',
       'tr': 'TC Kimlik No',
     },
-    'd91x5j5u': {
-      'en': 'user_idnum',
-      'tr': 'user_idnum',
+    '5rx9hshl': {
+      'en': 'Contact Phone',
+      'tr': 'TC Kimlik No',
     },
     '4vk0vjpg': {
       'en': 'The Candidate You Vote For',
@@ -994,19 +936,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Time Of Voting:',
       'tr': 'Time Of Voting:',
     },
-    'y4l1raqi': {
-      'en': 'Back',
-      'tr': 'Geri',
-    },
-    '4y3t3t0g': {
-      'en': 'Give Vote',
-      'tr': 'Oy Ver',
-    },
-    'uwubt0r1': {
+    'xygeoi02': {
       'en':
           'I confirm this information and confirm that my vote may be invalidated in case of incorrect information.',
       'tr':
           'Yukarıdaki bilgilerin doğruluğunu onaylayıp, yanlış bir bilgi olması durumunda oyumun geçersiz sayılabileceğini onaylıyorum.',
+    },
+    '1ha2hpse': {
+      'en': 'Back',
+      'tr': 'Oyu İncele    ',
+    },
+    'teal6w80': {
+      'en': 'Give Vote',
+      'tr': 'Oyu İncele    ',
+    },
+    'nyqx0ta2': {
+      'en': '- Ongoing Election -',
+      'tr': '< Devam Eden Oylama İşlemi',
     },
     'ocv84efz': {
       'en': 'Voting',
@@ -1176,9 +1122,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           '\nE-lection ile oy kullanmak basittir.\nÖncelikle aradığınız seçimi\nbulmak ile başlayalım.',
     },
-    'gjcb4wz6': {
-      'en': 'Next',
-      'tr': 'İleri',
+    'gcs6w6su': {
+      'en': 'Start',
+      'tr': '',
     },
     'pzxmokbo': {
       'en': 'Voting',
@@ -1197,13 +1143,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hsskn1zo': {
       'en':
-          'Firstly, click on \"Voting\" tab on \"Menu\".\nClick \"Give Vote\" button.\n Then find and click\n\"My next upcoming election\" \nor you can simply seach any election\nwith search bar.\n',
+          'Firstly, click on \"Voting\" tab on \"Menu\".\nClick \"Give Vote\" button.\n Then find and click\n\"My next upcoming election\" \nor you can simply seach any election\nwith search bar.\na b',
       'tr':
           'İlk olarak, \"Menü\" üzerindeki \n\"Oylama\" sekmesine tıklayın.\n\"Oy Ver\" butonuna tıklayın.\n Sonra \"Bir sonraki seçimim\" \nyazısını bulun.\nYa da basitçe arama çubuğu ile\nherhangi bir seçimi arayabilirsiniz',
     },
-    '4y4ty8b1': {
+    'urogro65': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     '44nwtma7': {
       'en': 'Voting',
@@ -1226,9 +1172,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           'Şimdi bir sonraki yaklaşan\n seçiminizi göreceksiniz. \nSayfada belirtilen \nseçimin durumunu görebilirsiniz.\n\nBir seçimin 4 aşaması vardır:\nOylama Başlatılmadı\nOylama Başladı\nOylama Sona Erdi\nSonuçlar Açıklandı\n\n Oylama başladıysa \"Oy Ver\" \nbutonuna tıklayarak \ndevam edebilirsiniz.\n',
     },
-    'h1smmr9c': {
+    '1hsmtp05': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     '5qjaz33a': {
       'en': 'Voting',
@@ -1251,9 +1197,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           '\"Oy Ver\" butonuna tıkladıktan\n sonra önemli uyarılar  göreceksiniz.\nLütfen bunları dikkatlice\n okuyunuz, aksi takdirde \noyunuz geçersiz sayılabilir.\n\"İleri\" düğmesine tıklamak \nsizi elektronik oy pusulasına\n götürecektir.',
     },
-    'nf0mwjha': {
+    'ezzvfnjq': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     '4zdog414': {
       'en': 'Voting',
@@ -1272,13 +1218,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2q7auu3j': {
       'en':
-          'In the above you can see a example\nballot.\nSimply tap on the circle next\nto your desired candidate.\nRemember to check your timer\nlocated right above the ballot.\nThen tap to \"Next\" after.',
+          'In the above you can see a \nexample ballot.\nSimply tap on the circle next\nto your desired candidate.\nRemember to check your timer \n(may not exist for your election)\n located right above the ballot.\nThen tap to \"Next\" after.',
       'tr':
-          'Yukarıdaki resimde örnek bir oy \npusulası görebilirsiniz.\nİstediğiniz adayın yanındaki \ndaireye dokunmanız yeterlidir.\nArdından \"İleri\" seçeneğine dokunun.',
+          'Yukarıdaki resimde örnek bir oy \npusulası görebilirsiniz.\nİstediğiniz adayın yanındaki \ndaireye dokunmanız yeterlidir.\nEğer varsa sayacınızı kontrol\netmeyi unutmayın.\nArdından \"İleri\" seçeneğine dokunun.',
     },
-    '03r9gc70': {
+    'eqj14tn0': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     'udb7esyl': {
       'en': 'Voting',
@@ -1305,9 +1251,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Remember you CAN NOT change\nyour vote after clicking.',
       'tr': 'Tıkladıktan sonra oyunuzu\n değiştiremeyeceğinizi unutmayın.',
     },
-    'ai5qxrcf': {
+    'hyxtiyh5': {
       'en': 'Next',
-      'tr': 'İleri',
+      'tr': '',
     },
     'xx9nbtdq': {
       'en': 'Voting',
@@ -1334,9 +1280,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           'Sonrasında ise onay ekranı karşınıza\n gelecektir.  Daha sonra oylamanın\ndurumunu ve sonuçlarını\nmobil uygulama veya Web\nüzerinden takip edebileceksiniz.\n\nEğitimin sonuna ulaştınız.\nEğer aklınızda hala soru kaldığını\ndüşünüyorsanız bize\nulaşabilirsiniz.',
     },
-    'dljpmc2d': {
+    'i9wjwlzb': {
       'en': 'Finish',
-      'tr': 'Bitir',
+      'tr': '',
     },
     'n9fede48': {
       'en': 'Voting',
@@ -1435,8 +1381,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // HowToVoteBallots
   {
     'w8f231kw': {
-      'en': '- Ongoing Election -',
-      'tr': '- Devam Eden Oylama İşlemi -',
+      'en': '< Ongoing Election',
+      'tr': '< Devam Eden Oylama İşlemi',
     },
     '8j9eujba': {
       'en': 'Electronic Voting Ballot Help',
@@ -1577,6 +1523,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '[Sorumlu İsmi]',
       'tr': '[Sorumlu İsmi]',
     },
+    'qq1lvy9a': {
+      'en': 'Hello World',
+      'tr': '',
+    },
     'u3cw7es0': {
       'en': 'Next',
       'tr': 'İlerle',
@@ -1609,13 +1559,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'zt7rx9bv': {
       'en': 'Terms of Use and User Consent',
-      'tr': 'Oylama Açıklaması',
+      'tr': 'Kullanım Koşulları ve Rıza Onayı',
     },
     'zd9q9k6i': {
       'en':
           'Terms of Use and User Consent\n\n1. Introduction\n\nWelcome to e-lection, the blockchain-integrated voting application (\"App\"). By accessing or using the App, you agree to comply with and be bound by these Terms of Use (\"Terms\"). These Terms govern your access to and use of the App, including any content, functionality, and services offered through the App.\n\n2. User Registration\n\na. In order to use certain features of the App, you may be required to register and create an account. You agree to provide accurate, current, and complete information during the registration process.\n\nb. You are solely responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.\n\n3. User Consent\n\na. By using the App, you consent to the collection, processing, and storage of your personal data, including but not limited to your name, email address, voting preferences, and any other information provided by you during registration or while using the App.\n\nb. You understand and agree that e-lection may collect, process, and use your voting data for commercial purposes, including but not limited to research, analysis, and marketing.\n\n4. Use of Blockchain Technology\n\na. The App utilizes blockchain technology to ensure the security, transparency, and immutability of voting data. By using the App, you consent to the use of blockchain technology for these purposes.\n\n5. Intellectual Property\n\na. All intellectual property rights in the App and its content, including but not limited to text, graphics, logos, images, and software, are owned by e-lection or its licensors. You agree not to reproduce, distribute, or create derivative works based on the App or its content without prior written consent from e-lection.\n\n6. Disclaimer of Warranties\n\na. The App is provided on an \"as is\" and \"as available\" basis, without any warranties of any kind, either express or implied. e-lection disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.\n\n7. Limitation of Liability\n\na. In no event shall e-lection be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or goodwill, arising out of or in connection with the use or inability to use the App.\n\n8. Governing Law\n\na. These Terms shall be governed by and construed in accordance with the laws of [Your jurisdiction], without regard to its conflict of law principles.\n\n9. Changes to Terms\n\na. e-lection reserves the right to modify or update these Terms at any time without prior notice. Your continued use of the App following the posting of any changes to these Terms constitutes acceptance of those changes.\n\n10. Contact Us\n\na. If you have any questions or concerns about these Terms or the App, please contact us at support@e-lection.com.\n\nBy clicking \"I Agree\" or by accessing or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and User Consent.',
       'tr':
-          'Kullanım Koşulları ve Kullanıcı Onayı\n\n1. Giriş\n\ne-lection\'a hoş geldiniz, blok zinciri entegreli oy verme uygulaması (\"Uygulama\"). Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları (\"Koşullar\") uyarınca uymanızı ve bağlı olmanızı kabul edersiniz. Bu Koşullar, Uygulama aracılığıyla sunulan içerik, işlevsellik ve hizmetleri de içeren erişiminizi ve Uygulama\'yı kullanımınızı yönetir.\n\n2. Kullanıcı Kaydı\n\na. Uygulamanın belirli özelliklerini kullanabilmek için kaydolmanız ve bir hesap oluşturmanız gerekebilir. Kayıt sürecinde doğru, güncel ve eksiksiz bilgi vermeyi kabul edersiniz.\n\nb. Hesap kimlik bilgilerinizin gizliliğini korumak ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuzdur. Hesabınızın yetkisiz kullanımını veya herhangi bir güvenlik ihlalini derhal bize bildirmeyi kabul edersiniz.\n\n3. Kullanıcı Onayı\n\na. Uygulamayı kullanarak, adınız, e-posta adresiniz, oy tercihleriniz ve kayıt sırasında veya Uygulama\'yı kullanırken tarafınızdan sağlanan diğer bilgiler de dahil olmak üzere kişisel verilerinizin toplanmasına, işlenmesine ve depolanmasına onay verirsiniz.\n\nb. e-lection\'ın, ticari amaçlar da dahil olmak üzere oy verme verilerinizi toplamasına, işlemesine ve kullanmasına onay verdiğinizi anlıyor ve kabul ediyorsunuz.\n\n4. Blok Zinciri Teknolojisinin Kullanımı\n\na. Uygulama, oy verme verilerinin güvenliği, şeffaflığı ve değişmezliğini sağlamak için blok zinciri teknolojisini kullanır. Uygulamayı kullanarak, bu amaçlarla blok zinciri teknolojisinin kullanımına onay verirsiniz.\n\n5. Fikri Mülkiyet\n\na. Uygulama ve içeriğindeki tüm fikri mülkiyet hakları, metin, grafikler, logolar, görüntüler ve yazılım dahil ancak bunlarla sınırlı olmamak üzere, e-lection\'a veya lisans verenlerine aittir. e-lection\'ın önceden yazılı izni olmaksızın, Uygulama veya içeriğine dayalı türev eserler oluşturmamanızı kabul edersiniz.\n\n6. Garanti Reddi\n\na. Uygulama, \"olduğu gibi\" ve \"mevcut olduğu şekliyle\" sunulur, herhangi bir türdeki, açık veya zımni tüm garantiler dahil olmak üzere, hiçbir garantinin olmadığı bir temelde sunulur. e-lection, ticari amaç için uygunluk, belirli bir amaca uygunluk ve ihlal etmeme konusundaki zımni garantiler de dahil olmak üzere, tüm garantileri reddeder.\n\n7. Sorumluluk Sınırlaması\n\na. Hiçbir durumda e-lection, Uygulama\'nın kullanımından kaynaklanan veya Uygulama\'nın kullanımının imkansızlaşmasından kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu değildir, karlılık kaybı, veri veya iyi niyet kaybı dahil ancak bunlarla sınırlı olmamak üzere.\n\n8. Yürürlükteki Hukuk\n\na. Bu Koşullar, Sizin yargı alanınız yasalarına uygun olarak yürürlüğe konulacak ve yorumlanacaktır, çelişme hükümleri olmaksızın.\n\n9. Koşulların Değiştirilmesi\n\na. e-lection, bu Koşulları önceden bildirim yapmaksızın herhangi bir zamanda değiştirme hakkını saklı tutar. Bu Koşullardaki değişikliklerin yayınlanmasını takiben Uygulama\'nın kullanımınız, bu değişiklikleri kabul ettiğiniz anlamına gelir.\n\n10. Bizimle İletişime Geçin\n\na. Bu Koşullar veya Uygulama ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bizimle şu adresten iletişime geçin: support@e-lection.com.\n\n\"Kabul Ediyorum\" düğmesini tıklayarak veya Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları ve Kullanıcı Onayını okuduğunuzu, anladığınızı ve bağlı olmayı kabul ettiğinizi beyan edersiniz.',
+          'Kullanım Koşulları ve Rıza Onayı\n\n1. Giriş\n\ne-lection\'a hoş geldiniz, blok zinciri entegreli oy verme uygulaması (\"Uygulama\"). Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları (\"Koşullar\") uyarınca uymanızı ve bağlı olmanızı kabul edersiniz. Bu Koşullar, Uygulama aracılığıyla sunulan içerik, işlevsellik ve hizmetleri de içeren erişiminizi ve Uygulama\'yı kullanımınızı yönetir.\n\n2. Kullanıcı Kaydı\n\na. Uygulamanın belirli özelliklerini kullanabilmek için kaydolmanız ve bir hesap oluşturmanız gerekebilir. Kayıt sürecinde doğru, güncel ve eksiksiz bilgi vermeyi kabul edersiniz.\n\nb. Hesap kimlik bilgilerinizin gizliliğini korumak ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuzdur. Hesabınızın yetkisiz kullanımını veya herhangi bir güvenlik ihlalini derhal bize bildirmeyi kabul edersiniz.\n\n3. Kullanıcı Onayı\n\na. Uygulamayı kullanarak, adınız, e-posta adresiniz, oy tercihleriniz ve kayıt sırasında veya Uygulama\'yı kullanırken tarafınızdan sağlanan diğer bilgiler de dahil olmak üzere kişisel verilerinizin toplanmasına, işlenmesine ve depolanmasına onay verirsiniz.\n\nb. e-lection\'ın, ticari amaçlar da dahil olmak üzere oy verme verilerinizi toplamasına, işlemesine ve kullanmasına onay verdiğinizi anlıyor ve kabul ediyorsunuz.\n\n4. Blok Zinciri Teknolojisinin Kullanımı\n\na. Uygulama, oy verme verilerinin güvenliği, şeffaflığı ve değişmezliğini sağlamak için blok zinciri teknolojisini kullanır. Uygulamayı kullanarak, bu amaçlarla blok zinciri teknolojisinin kullanımına onay verirsiniz.\n\n5. Fikri Mülkiyet\n\na. Uygulama ve içeriğindeki tüm fikri mülkiyet hakları, metin, grafikler, logolar, görüntüler ve yazılım dahil ancak bunlarla sınırlı olmamak üzere, e-lection\'a veya lisans verenlerine aittir. e-lection\'ın önceden yazılı izni olmaksızın, Uygulama veya içeriğine dayalı türev eserler oluşturmamanızı kabul edersiniz.\n\n6. Garanti Reddi\n\na. Uygulama, \"olduğu gibi\" ve \"mevcut olduğu şekliyle\" sunulur, herhangi bir türdeki, açık veya zımni tüm garantiler dahil olmak üzere, hiçbir garantinin olmadığı bir temelde sunulur. e-lection, ticari amaç için uygunluk, belirli bir amaca uygunluk ve ihlal etmeme konusundaki zımni garantiler de dahil olmak üzere, tüm garantileri reddeder.\n\n7. Sorumluluk Sınırlaması\n\na. Hiçbir durumda e-lection, Uygulama\'nın kullanımından kaynaklanan veya Uygulama\'nın kullanımının imkansızlaşmasından kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu değildir, karlılık kaybı, veri veya iyi niyet kaybı dahil ancak bunlarla sınırlı olmamak üzere.\n\n8. Yürürlükteki Hukuk\n\na. Bu Koşullar, Sizin yargı alanınız yasalarına uygun olarak yürürlüğe konulacak ve yorumlanacaktır, çelişme hükümleri olmaksızın.\n\n9. Koşulların Değiştirilmesi\n\na. e-lection, bu Koşulları önceden bildirim yapmaksızın herhangi bir zamanda değiştirme hakkını saklı tutar. Bu Koşullardaki değişikliklerin yayınlanmasını takiben Uygulama\'nın kullanımınız, bu değişiklikleri kabul ettiğiniz anlamına gelir.\n\n10. Bizimle İletişime Geçin\n\na. Bu Koşullar veya Uygulama ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bizimle şu adresten iletişime geçin: support@e-lection.com.\n\n\"Kabul Ediyorum\" düğmesini tıklayarak veya Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları ve Kullanıcı Onayını okuduğunuzu, anladığınızı ve bağlı olmayı kabul ettiğinizi beyan edersiniz.',
+    },
+    '9xr8trgc': {
+      'en': 'You Have Accepted Terms Of Use and User Consent',
+      'tr': 'Kullanım Koşulları ve Rıza Onayını Kabul\nEttiniz.',
     },
     'pst4u7od': {
       'en': 'Next',
@@ -2051,6 +2005,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
+  // OyPaneliP2
+  {
+    '60ir5pnf': {
+      'en': 'Voting Panel',
+      'tr': 'Oy Paneli',
+    },
+    'b189m1kf': {
+      'en': 'Details',
+      'tr': 'Detaylar',
+    },
+    'i1bez1n0': {
+      'en': 'Election Detail 1',
+      'tr': 'Oylama Açıklaması',
+    },
+    'f711na4g': {
+      'en': 'Election Start Date&Time',
+      'tr': 'Oylama Başlangıç Tarih&Saat',
+    },
+    'f53e5bdv': {
+      'en': 'Election End Date&Time',
+      'tr': 'Oylama Bitiş Tarih&Saat',
+    },
+    'pyc3ivd4': {
+      'en': 'Change Voting Start - End Date & Time',
+      'tr': 'Oylama Başlangıç - Bitiş Tarihi & Saati\'ni Değiştir',
+    },
+    '6k6kbojw': {
+      'en': 'Com. Members',
+      'tr': 'Sorumlular',
+    },
+    'qi7zo0r7': {
+      'en': 'Add Committee Member',
+      'tr': 'Sorumlu Ekle',
+    },
+    '5lgpn5e5': {
+      'en': 'Candidates',
+      'tr': 'Adaylar',
+    },
+    'l7drvuqc': {
+      'en': 'Add Candidate',
+      'tr': 'Sorumlu Ekle',
+    },
+    'pkh58tm3': {
+      'en': 'Voting',
+      'tr': 'Oylama',
+    },
+  },
   // changeEmail
   {
     't6fnaaew': {
@@ -2216,7 +2217,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '42rx8464': {
       'en': 'Warning!\nThis Voting Has Time Limit',
-      'tr': 'Oy Pusulasına devam etmek istediğinize\nemin misiniz?',
+      'tr': 'Oy Pusulasına devam etmek istediğinize emin misiniz?',
     },
     '06ixus75': {
       'en':
@@ -2226,11 +2227,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'b7ez0huk': {
       'en': 'Continue to Ballot',
-      'tr': 'Kaydet',
+      'tr': 'Oy Pusulasına Git',
     },
     'w5v6831d': {
       'en': 'Back',
-      'tr': '',
+      'tr': 'Geri',
     },
   },
   // deleteVoter
@@ -2261,6 +2262,132 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wzt9mzd5': {
       'en': 'No',
       'tr': 'Hayır',
+    },
+  },
+  // StatsNA
+  {
+    'wzj21glh': {
+      'en': 'Statistics Are Not Available Yet',
+      'tr': 'İstatistikler Oluşturulmadı',
+    },
+    'shjlxr5s': {
+      'en': 'Statistics will be available after \nvoting period ends.',
+      'tr':
+          'İstatistikler Oylama süresi bittikten\nsonra görüntülenebilecektir.',
+    },
+    'fgk9cumn': {
+      'en': 'Back',
+      'tr': 'Geri',
+    },
+  },
+  // oyPaneliComponent
+  {
+    '3mms5epz': {
+      'en':
+          'The election(s) that you are election committee member were not found.',
+      'tr': 'Sorumlu olduğun oylama(lar) bulunamadı.',
+    },
+  },
+  // saatTarihDegistirPopup
+  {
+    '6vsdasak': {
+      'en': 'Voting Start Date & Time',
+      'tr': 'Oylama Başlangıç Tarihi & Saati',
+    },
+    'sl1aip89': {
+      'en': 'Voting Start Date & Time:',
+      'tr': 'Oylama Başlangıç Tarihi & Saati',
+    },
+    '16ngl0u3': {
+      'en': 'Voting End Date & Time',
+      'tr': 'Oylama Bitiş Tarihi & Saati',
+    },
+    '2jx1yyr7': {
+      'en': 'Voting End Date & Time:',
+      'tr': 'Oylama Bitiş Tarihi & Saati',
+    },
+    'vpo09xoq': {
+      'en': 'Save',
+      'tr': 'Kaydet',
+    },
+  },
+  // deleteComMemOyPanel
+  {
+    '7xj7fg2z': {
+      'en': 'Are you sure you want to remove the election committee member?',
+      'tr': 'Oylama sorumlusunu kaldırmak istediğinize emin misiniz?',
+    },
+    'b3cqmtzg': {
+      'en': 'Yes',
+      'tr': 'Evet',
+    },
+    'uvcvnyzo': {
+      'en': 'No',
+      'tr': 'Hayır',
+    },
+  },
+  // deleteCandidateOyPanel
+  {
+    'bitgnxfx': {
+      'en': 'Are you sure you want to remove the candidate?',
+      'tr': 'Seçmeni kaldırmak istediğinize emin misiniz?',
+    },
+    '2ojysj4e': {
+      'en': 'Yes',
+      'tr': 'Evet',
+    },
+    'x29bidsn': {
+      'en': 'No',
+      'tr': 'Hayır',
+    },
+  },
+  // addCandidateOyPanel
+  {
+    '4d7bl84y': {
+      'en': 'Enter the candidate information:',
+      'tr': 'Aday bilgisini yazınız:',
+    },
+    'sb0ow8jt': {
+      'en': 'Name',
+      'tr': 'İsim',
+    },
+    't7ztgcqq': {
+      'en': '',
+      'tr': '',
+    },
+    '10jqd6ix': {
+      'en': 'Surname',
+      'tr': 'Soyad',
+    },
+    'e1vvil1t': {
+      'en': 'Save',
+      'tr': 'Kaydet',
+    },
+  },
+  // addComMemOyPanel
+  {
+    '6ls4dzd9': {
+      'en': 'Enter the committee member\'s wallet ID:',
+      'tr': 'Oylama sorumlusunun cüzdan numarasını giriniz:',
+    },
+    'h8s4s4rg': {
+      'en': '',
+      'tr': 'E-mail',
+    },
+    'u5v6ewah': {
+      'en': 'Save',
+      'tr': 'Kaydet',
+    },
+  },
+  // VotingDesc
+  {
+    'ynm39k1h': {
+      'en': 'Election Description',
+      'tr': 'İstatistikler Oluşturulmadı',
+    },
+    '6s61j95s': {
+      'en': 'Back',
+      'tr': 'Geri',
     },
   },
   // Miscellaneous

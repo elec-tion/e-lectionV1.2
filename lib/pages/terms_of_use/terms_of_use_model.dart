@@ -6,6 +6,8 @@ class TermsOfUseModel extends FlutterFlowModel<TermsOfUseWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for checkwarn widget.
+  bool? checkwarnValue;
 
   @override
   void initState(BuildContext context) {}

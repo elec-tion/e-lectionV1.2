@@ -11,7 +11,12 @@ import 'oy_kullan_p2devam_model.dart';
 export 'oy_kullan_p2devam_model.dart';
 
 class OyKullanP2devamWidget extends StatefulWidget {
-  const OyKullanP2devamWidget({super.key});
+  const OyKullanP2devamWidget({
+    super.key,
+    this.p2,
+  });
+
+  final ElectionsRow? p2;
 
   @override
   State<OyKullanP2devamWidget> createState() => _OyKullanP2devamWidgetState();
@@ -199,7 +204,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                                           fontFamily: 'Montserrat',
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w800,
                                         ),
                                   ),
                                 ),
@@ -267,9 +272,10 @@ war... */
                                     ),
                                   ),
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'g1wvmjrl' /* [Sorumlu İsmi] */,
-                                    ),
+                                    widget.p2!.committeeMembers
+                                        .take(1)
+                                        .toList()
+                                        .first,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -374,7 +380,7 @@ war... */
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 10.0, 0.0, 0.0),
+                                      10.0, 0.0, 0.0, 0.0),
                                   child: Theme(
                                     data: ThemeData(
                                       checkboxTheme: CheckboxThemeData(
@@ -412,7 +418,7 @@ war... */
                               ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 13.0, 5.0, 0.0),
+                                    0.0, 0.0, 5.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     '98d1vdjn' /* I confirm that I have carefull... */,
@@ -432,48 +438,32 @@ war... */
                             ],
                           ),
                         ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              50.0, 5.0, 0.0, 20.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed('termsOfUse');
+                            },
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '6v1no6fz' /* View Terms of Use and User Con... */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    color: FlutterFlowTheme.of(context).mavi,
+                                    fontSize: 12.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          blurRadius: 4.0,
-                                          color: Color(0x33000000),
-                                          offset: Offset(
-                                            0.0,
-                                            2.0,
-                                          ),
-                                        )
-                                      ],
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          FlutterFlowTheme.of(context).graSet23,
-                                          FlutterFlowTheme.of(context).graSet22
-                                        ],
-                                        stops: const [0.0, 1.0],
-                                        begin: const AlignmentDirectional(-1.0, 0.0),
-                                        end: const AlignmentDirectional(1.0, 0),
-                                      ),
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                  ),
-                                ),
-                              ],
                             ),
-                          ],
+                          ),
                         ),
                         Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
@@ -525,8 +515,15 @@ war... */
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             if (_model.checkwarnValue!) {
-                                              context
-                                                  .pushNamed('OyKullanP3devam');
+                                              context.pushNamed(
+                                                'OyKullanP3devam',
+                                                queryParameters: {
+                                                  'p3': serializeParam(
+                                                    widget.p2,
+                                                    ParamType.SupabaseRow,
+                                                  ),
+                                                }.withoutNulls,
+                                              );
                                             } else {
                                               if (FFLocalizations.of(context)
                                                       .languageCode ==
@@ -608,8 +605,10 @@ war... */
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                             elevation: 0.0,
-                                            borderSide: const BorderSide(
-                                              color: Colors.transparent,
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet22,
                                               width: 1.0,
                                             ),
                                             borderRadius:

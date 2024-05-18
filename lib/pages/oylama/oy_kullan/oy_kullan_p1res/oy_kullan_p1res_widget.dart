@@ -88,8 +88,8 @@ class _OyKullanP1resWidgetState extends State<OyKullanP1resWidget> {
                   color: FlutterFlowTheme.of(context).primaryText,
                   size: 30.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.safePop();
                 },
               ),
               title: Align(

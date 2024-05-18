@@ -331,9 +331,37 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                         color: FlutterFlowTheme.of(context)
                                             .background2,
                                       ),
-                                      child: const Column(
+                                      child: Column(
                                         mainAxisSize: MainAxisSize.max,
-                                        children: [],
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    50.0, 20.0, 0.0, 0.0),
+                                            child: ListView(
+                                              padding: EdgeInsets.zero,
+                                              shrinkWrap: true,
+                                              scrollDirection: Axis.vertical,
+                                              children: [
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'qq1lvy9a' /* Hello World */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        fontSize: 20.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),

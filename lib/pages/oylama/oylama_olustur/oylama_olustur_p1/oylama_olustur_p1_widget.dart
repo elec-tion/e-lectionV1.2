@@ -465,7 +465,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                             // onaylama için checkbox & text
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  40.0, 30.0, 40.0, 20.0),
+                                  40.0, 30.0, 40.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -538,6 +538,34 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                     ),
                                   ),
                                 ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 5.0, 0.0, 25.0),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('termsOfUse');
+                                },
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '8jpm88tb' /* View Terms of Use and User Con... */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Montserrat',
+                                        color:
+                                            FlutterFlowTheme.of(context).mavi,
+                                        fontSize: 12.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                ),
                               ),
                             ),
                             Row(

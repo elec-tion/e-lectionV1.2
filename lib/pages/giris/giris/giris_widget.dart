@@ -264,7 +264,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                       },
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '72y6svrw' /* OYLAMA OLUŞTU */,
+                                          '72y6svrw' /* kaydet 1112222 */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -862,7 +862,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'y12ln0n7' /* I forgot my password :( unutma... */,
+                                                                    'y12ln0n7' /* I forgot my password ( ͡° ͜ʖ ͡... */,
                                                                   ),
                                                                   textAlign:
                                                                       TextAlign

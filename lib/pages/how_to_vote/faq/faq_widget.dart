@@ -256,6 +256,15 @@ Questions */
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              width: 340.0,
+                              child: Divider(
+                                height: 20.0,
+                                thickness: 1.0,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor2,
+                              ),
+                            ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
@@ -267,15 +276,6 @@ Questions */
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      SizedBox(
-                                        width: 340.0,
-                                        child: Divider(
-                                          height: 20.0,
-                                          thickness: 1.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .customColor2,
-                                        ),
-                                      ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 20.0),
@@ -305,7 +305,7 @@ Questions */
                                                     padding:
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
-                                                                0.0, 30.0),
+                                                                0.0, 20.0),
                                                     child: Text(
                                                       FFLocalizations.of(
                                                               context)
@@ -334,6 +334,17 @@ Questions */
                                                       width: 341.0,
                                                       height: 100.0,
                                                       decoration: BoxDecoration(
+                                                        boxShadow: const [
+                                                          BoxShadow(
+                                                            blurRadius: 4.0,
+                                                            color: Color(
+                                                                0x33000000),
+                                                            offset: Offset(
+                                                              2.0,
+                                                              2.0,
+                                                            ),
+                                                          )
+                                                        ],
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -483,6 +494,16 @@ Questions */
                                   width: 341.0,
                                   height: 100.0,
                                   decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          2.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
                                     gradient: LinearGradient(
                                       colors: [
                                         const Color(0xFF619DA7),
@@ -576,6 +597,16 @@ Questions */
                                   width: 341.0,
                                   height: 100.0,
                                   decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          0.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
                                     gradient: LinearGradient(
                                       colors: [
                                         const Color(0xFF68C263),
@@ -669,6 +700,16 @@ Questions */
                                   width: 341.0,
                                   height: 100.0,
                                   decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          0.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
                                     gradient: LinearGradient(
                                       colors: [
                                         const Color(0xFF6544C6),
@@ -762,6 +803,16 @@ Questions */
                                   width: 341.0,
                                   height: 100.0,
                                   decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          0.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
                                     gradient: LinearGradient(
                                       colors: [
                                         const Color(0xFFC07EC2),
@@ -855,6 +906,16 @@ Questions */
                                   width: 341.0,
                                   height: 100.0,
                                   decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          0.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
                                     gradient: LinearGradient(
                                       colors: [
                                         const Color(0xFFCB6D70),
@@ -937,14 +998,18 @@ Questions */
                                 ),
                               ),
                             ),
-                            Divider(
-                              height: 40.0,
-                              thickness: 1.0,
-                              color: FlutterFlowTheme.of(context).secondaryText,
+                            SizedBox(
+                              width: 340.0,
+                              child: Divider(
+                                height: 50.0,
+                                thickness: 1.0,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor2,
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 10.0, 20.0, 10.0),
+                                  20.0, 0.0, 20.0, 10.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'lh7t418i' /* If you believe you have still ... */,

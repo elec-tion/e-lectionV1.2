@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 
 import 'api_manager.dart';
 
@@ -9,7 +10,11 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start CommitteeMember Group Code
 
 class CommitteeMemberGroup {
-  static String baseUrl =
+  static String getBaseUrl({
+    String? wallet = '',
+    String? name = '',
+    String? electionID = '',
+  }) =>
       'https://api.e-lection.babico.name.tr/api/committeemember';
   static Map<String, String> headers = {
     'x-api-key':
@@ -36,9 +41,15 @@ class AddElectionCommitteeMemberCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = CommitteeMemberGroup.getBaseUrl(
+      wallet: wallet,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addElectionCommitteeMember',
-      apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet/$name',
+      apiUrl: '$baseUrl/$wallet/$name',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -61,9 +72,15 @@ class RemoveElectionCommitteeMemberCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = CommitteeMemberGroup.getBaseUrl(
+      wallet: wallet,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeElectionCommitteeMember',
-      apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -85,10 +102,15 @@ class RemoveElectionCommitteeMemberFromElectionCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = CommitteeMemberGroup.getBaseUrl(
+      wallet: wallet,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeElectionCommitteeMemberFromElection',
-      apiUrl:
-          '${CommitteeMemberGroup.baseUrl}withelection/$electionID/$wallet',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -111,9 +133,15 @@ class GetElectionCommitteeMemberDetailsCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = CommitteeMemberGroup.getBaseUrl(
+      wallet: wallet,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getElectionCommitteeMemberDetails',
-      apiUrl: '${CommitteeMemberGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -135,10 +163,15 @@ class AddElectionCommitteeMemberToElectionCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = CommitteeMemberGroup.getBaseUrl(
+      wallet: wallet,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addElectionCommitteeMemberToElection',
-      apiUrl:
-          '${CommitteeMemberGroup.baseUrl}withelection/$wallet/$electionID',
+      apiUrl: '${baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -160,7 +193,12 @@ class AddElectionCommitteeMemberToElectionCall {
 /// Start District Group Code
 
 class DistrictGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/district';
+  static String getBaseUrl({
+    String? name = '',
+    String? id = '',
+    String? electionID = '',
+  }) =>
+      'https://api.e-lection.babico.name.tr/api/district';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -180,9 +218,15 @@ class AddDistrictCall {
     String? id = '',
     String? electionID = '',
   }) async {
+    final baseUrl = DistrictGroup.getBaseUrl(
+      name: name,
+      id: id,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrict',
-      apiUrl: '${DistrictGroup.baseUrl}/$id/$name',
+      apiUrl: '$baseUrl/$id/$name',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -205,9 +249,15 @@ class RemoveDistrictCall {
     String? id = '',
     String? electionID = '',
   }) async {
+    final baseUrl = DistrictGroup.getBaseUrl(
+      name: name,
+      id: id,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrict',
-      apiUrl: '${DistrictGroup.baseUrl}/$id',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -229,9 +279,15 @@ class GetDistrictCall {
     String? id = '',
     String? electionID = '',
   }) async {
+    final baseUrl = DistrictGroup.getBaseUrl(
+      name: name,
+      id: id,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getDistrict',
-      apiUrl: '${DistrictGroup.baseUrl}/$id',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -253,9 +309,15 @@ class AddDistrictToElectionCall {
     String? id = '',
     String? electionID = '',
   }) async {
+    final baseUrl = DistrictGroup.getBaseUrl(
+      name: name,
+      id: id,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrictToElection',
-      apiUrl: '${DistrictGroup.baseUrl}withelection/$electionID/$id',
+      apiUrl: '${baseUrl}withelection/$electionID/$id',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -278,9 +340,15 @@ class RemoveDistrictFromElectionCall {
     String? id = '',
     String? electionID = '',
   }) async {
+    final baseUrl = DistrictGroup.getBaseUrl(
+      name: name,
+      id: id,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrictFromElection',
-      apiUrl: '${DistrictGroup.baseUrl}/$electionID/$id',
+      apiUrl: '$baseUrl/$electionID/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -301,7 +369,16 @@ class RemoveDistrictFromElectionCall {
 /// Start Election Group Code
 
 class ElectionGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/election';
+  static String getBaseUrl({
+    String? id = '',
+    String? name = '',
+    List<String>? districtIDsList,
+    List<String>? candidateAddressesList,
+    List<String>? electionCommitteeList,
+    int? startDate,
+    int? endDate,
+  }) =>
+      'https://api.e-lection.babico.name.tr/api/election';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -310,6 +387,7 @@ class ElectionGroup {
   static RemoveElectionCall removeElectionCall = RemoveElectionCall();
   static GetElectionDetailsCall getElectionDetailsCall =
       GetElectionDetailsCall();
+  static EditElectionCall editElectionCall = EditElectionCall();
 }
 
 class CreateElectionCall {
@@ -322,13 +400,22 @@ class CreateElectionCall {
     int? startDate,
     int? endDate,
   }) async {
+    final baseUrl = ElectionGroup.getBaseUrl(
+      id: id,
+      name: name,
+      districtIDsList: districtIDsList,
+      candidateAddressesList: candidateAddressesList,
+      electionCommitteeList: electionCommitteeList,
+      startDate: startDate,
+      endDate: endDate,
+    );
     final districtIDs = _serializeList(districtIDsList);
     final candidateAddresses = _serializeList(candidateAddressesList);
     final electionCommittee = _serializeList(electionCommitteeList);
 
     return ApiManager.instance.makeApiCall(
       callName: 'createElection',
-      apiUrl: '${ElectionGroup.baseUrl}/$name/$startDate/$endDate',
+      apiUrl: '$baseUrl/$name/$startDate/$endDate',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -355,13 +442,22 @@ class RemoveElectionCall {
     int? startDate,
     int? endDate,
   }) async {
+    final baseUrl = ElectionGroup.getBaseUrl(
+      id: id,
+      name: name,
+      districtIDsList: districtIDsList,
+      candidateAddressesList: candidateAddressesList,
+      electionCommitteeList: electionCommitteeList,
+      startDate: startDate,
+      endDate: endDate,
+    );
     final districtIDs = _serializeList(districtIDsList);
     final candidateAddresses = _serializeList(candidateAddressesList);
     final electionCommittee = _serializeList(electionCommitteeList);
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeElection',
-      apiUrl: '${ElectionGroup.baseUrl}/$id',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -387,13 +483,22 @@ class GetElectionDetailsCall {
     int? startDate,
     int? endDate,
   }) async {
+    final baseUrl = ElectionGroup.getBaseUrl(
+      id: id,
+      name: name,
+      districtIDsList: districtIDsList,
+      candidateAddressesList: candidateAddressesList,
+      electionCommitteeList: electionCommitteeList,
+      startDate: startDate,
+      endDate: endDate,
+    );
     final districtIDs = _serializeList(districtIDsList);
     final candidateAddresses = _serializeList(candidateAddressesList);
     final electionCommittee = _serializeList(electionCommitteeList);
 
     return ApiManager.instance.makeApiCall(
       callName: 'getElectionDetails',
-      apiUrl: '${ElectionGroup.baseUrl}/$id',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -409,12 +514,60 @@ class GetElectionDetailsCall {
   }
 }
 
+class EditElectionCall {
+  Future<ApiCallResponse> call({
+    String? id = '',
+    String? name = '',
+    List<String>? districtIDsList,
+    List<String>? candidateAddressesList,
+    List<String>? electionCommitteeList,
+    int? startDate,
+    int? endDate,
+  }) async {
+    final baseUrl = ElectionGroup.getBaseUrl(
+      id: id,
+      name: name,
+      districtIDsList: districtIDsList,
+      candidateAddressesList: candidateAddressesList,
+      electionCommitteeList: electionCommitteeList,
+      startDate: startDate,
+      endDate: endDate,
+    );
+    final districtIDs = _serializeList(districtIDsList);
+    final candidateAddresses = _serializeList(candidateAddressesList);
+    final electionCommittee = _serializeList(electionCommitteeList);
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'editElection',
+      apiUrl: '$baseUrl/$id/$name/$startDate/$endDate',
+      callType: ApiCallType.PATCH,
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
+      params: {},
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 /// End Election Group Code
 
 /// Start Candidate Group Code
 
 class CandidateGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/candidate';
+  static String getBaseUrl({
+    String? name = '',
+    String? wallet = '',
+    String? electionID = '',
+    String? districtID = '',
+  }) =>
+      'https://api.e-lection.babico.name.tr/api/candidate';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -435,9 +588,16 @@ class AddCandidateCall {
     String? electionID = '',
     String? districtID = '',
   }) async {
+    final baseUrl = CandidateGroup.getBaseUrl(
+      name: name,
+      wallet: wallet,
+      electionID: electionID,
+      districtID: districtID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addCandidate',
-      apiUrl: '${CandidateGroup.baseUrl}/$name/$districtID/$wallet',
+      apiUrl: '$baseUrl/$name/$districtID/$wallet',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -461,9 +621,16 @@ class RemoveCandidateCall {
     String? electionID = '',
     String? districtID = '',
   }) async {
+    final baseUrl = CandidateGroup.getBaseUrl(
+      name: name,
+      wallet: wallet,
+      electionID: electionID,
+      districtID: districtID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeCandidate',
-      apiUrl: '${CandidateGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -486,9 +653,16 @@ class AddCandidateToElectionCall {
     String? electionID = '',
     String? districtID = '',
   }) async {
+    final baseUrl = CandidateGroup.getBaseUrl(
+      name: name,
+      wallet: wallet,
+      electionID: electionID,
+      districtID: districtID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addCandidateToElection',
-      apiUrl: '${CandidateGroup.baseUrl}withelection/$electionID/$wallet',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -512,9 +686,16 @@ class RemoveCandidateFromElectionCall {
     String? electionID = '',
     String? districtID = '',
   }) async {
+    final baseUrl = CandidateGroup.getBaseUrl(
+      name: name,
+      wallet: wallet,
+      electionID: electionID,
+      districtID: districtID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeCandidateFromElection',
-      apiUrl: '${CandidateGroup.baseUrl}withelection/$electionID/$wallet',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -537,9 +718,16 @@ class GetCandidateCall {
     String? electionID = '',
     String? districtID = '',
   }) async {
+    final baseUrl = CandidateGroup.getBaseUrl(
+      name: name,
+      wallet: wallet,
+      electionID: electionID,
+      districtID: districtID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getCandidate',
-      apiUrl: '${CandidateGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -560,7 +748,13 @@ class GetCandidateCall {
 /// Start Voter Group Code
 
 class VoterGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/voter';
+  static String getBaseUrl({
+    String? wallet = '',
+    String? districtID = '',
+    String? name = '',
+    String? electionID = '',
+  }) =>
+      'https://api.e-lection.babico.name.tr/api/voter';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -584,9 +778,16 @@ class AddDistrictToVoterCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrictToVoter',
-      apiUrl: '${VoterGroup.baseUrl}withdistrict/$wallet/$districtID',
+      apiUrl: '${baseUrl}withdistrict/$wallet/$districtID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -610,9 +811,16 @@ class RemoveDistrictFromVoterCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrictFromVoter',
-      apiUrl: '${VoterGroup.baseUrl}withdistrict/$districtID/$wallet',
+      apiUrl: '${baseUrl}withdistrict/$districtID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -635,9 +843,16 @@ class AddVoterToElectionCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'addVoterToElection',
-      apiUrl: '${VoterGroup.baseUrl}withelection/$wallet/$electionID',
+      apiUrl: '${baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -661,9 +876,16 @@ class RemoveVoterFromElectionCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeVoterFromElection',
-      apiUrl: '${VoterGroup.baseUrl}withelection/$electionID/$wallet',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -686,9 +908,16 @@ class RemoveVoterCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'removeVoter',
-      apiUrl: '${VoterGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -711,9 +940,16 @@ class GetVoterDetailsCall {
     String? name = '',
     String? electionID = '',
   }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getVoterDetails',
-      apiUrl: '${VoterGroup.baseUrl}/$wallet',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -734,7 +970,10 @@ class GetVoterDetailsCall {
 /// Start Balance Group Code
 
 class BalanceGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/balance';
+  static String getBaseUrl({
+    String? wallet = '',
+  }) =>
+      'https://api.e-lection.babico.name.tr/balance';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -746,7 +985,11 @@ class BalanceGroup {
 /// Start Contract Group Code
 
 class ContractGroup {
-  static String baseUrl = 'https://api.e-lection.babico.name.tr/api/contract';
+  static String getBaseUrl({
+    String? address = '',
+    String? abi = '',
+  }) =>
+      'https://api.e-lection.babico.name.tr/api/contract';
   static Map<String, String> headers = {
     'x-api-key':
         'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
@@ -761,9 +1004,14 @@ class GetContractAddressCall {
     String? address = '',
     String? abi = '',
   }) async {
+    final baseUrl = ContractGroup.getBaseUrl(
+      address: address,
+      abi: abi,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getContractAddress',
-      apiUrl: '${ContractGroup.baseUrl}/address',
+      apiUrl: '$baseUrl/address',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -784,9 +1032,14 @@ class GetContractAbiCall {
     String? address = '',
     String? abi = '',
   }) async {
+    final baseUrl = ContractGroup.getBaseUrl(
+      address: address,
+      abi: abi,
+    );
+
     return ApiManager.instance.makeApiCall(
       callName: 'getContractAbi',
-      apiUrl: '${ContractGroup.baseUrl}/abi',
+      apiUrl: '$baseUrl/abi',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -825,6 +1078,9 @@ String _serializeList(List? list) {
   try {
     return json.encode(list);
   } catch (_) {
+    if (kDebugMode) {
+      print("List serialization failed. Returning empty list.");
+    }
     return '[]';
   }
 }
@@ -834,6 +1090,9 @@ String _serializeJson(dynamic jsonVar, [bool isList = false]) {
   try {
     return json.encode(jsonVar);
   } catch (_) {
+    if (kDebugMode) {
+      print("Json serialization failed. Returning empty json.");
+    }
     return isList ? '[]' : '{}';
   }
 }

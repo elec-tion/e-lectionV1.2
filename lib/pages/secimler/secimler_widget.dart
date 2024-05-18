@@ -803,54 +803,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: FlutterFlowTheme.of(context).text1,
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1notstarted',
+                                                                                queryParameters: {
+                                                                                  'deneme': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '2cl0z1ud' /* Start date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: FlutterFlowTheme.of(context).text1,
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '2cl0z1ud' /* Start date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -858,15 +868,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -941,54 +963,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: FlutterFlowTheme.of(context).text1,
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1notstarted',
+                                                                                queryParameters: {
+                                                                                  'deneme': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '4jer33wn' /* Start date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: FlutterFlowTheme.of(context).text1,
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '4jer33wn' /* Start date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -996,15 +1028,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1079,54 +1123,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: FlutterFlowTheme.of(context).text1,
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1notstarted',
+                                                                                queryParameters: {
+                                                                                  'deneme': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        'awyirs0x' /* Start date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: FlutterFlowTheme.of(context).text1,
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          'awyirs0x' /* Start date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1134,15 +1188,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1217,54 +1283,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: FlutterFlowTheme.of(context).text1,
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1notstarted',
+                                                                                queryParameters: {
+                                                                                  'deneme': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '7v7ltn0x' /* Start date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: FlutterFlowTheme.of(context).text1,
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '7v7ltn0x' /* Start date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1272,15 +1348,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1355,54 +1443,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: FlutterFlowTheme.of(context).text1,
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1notstarted',
+                                                                                queryParameters: {
+                                                                                  'deneme': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '3sp00u7z' /* Start date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: FlutterFlowTheme.of(context).text1,
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '3sp00u7z' /* Start date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1410,15 +1508,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.startDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1506,54 +1616,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFF00FF48),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1devam',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        'taolk35m' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFF00FF48),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          'taolk35m' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1561,15 +1681,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1648,54 +1780,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFF00FF48),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1devam',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '4zc8unmi' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFF00FF48),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '4zc8unmi' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1703,15 +1845,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1790,54 +1944,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFF00FF48),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1devam',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '75525nq1' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFF00FF48),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '75525nq1' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1845,15 +2009,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -1932,54 +2108,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFF00FF48),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1devam',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '67i8dpp0' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFF00FF48),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '67i8dpp0' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -1987,15 +2173,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2074,54 +2272,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFF00FF48),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1devam',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '02dxfg6z' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFF00FF48),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '02dxfg6z' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2129,15 +2337,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2220,64 +2440,54 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1notstarted',
-                                                                                queryParameters: {
-                                                                                  'deneme': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  const Icon(
+                                                                                    Icons.arrow_right,
+                                                                                    color: Color(0xFFFF0000),
+                                                                                    size: 29.0,
                                                                                   ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    const Icon(
-                                                                                      Icons.arrow_right,
-                                                                                      color: Color(0xFFFF0000),
-                                                                                      size: 29.0,
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          listViewElectionsRow.name,
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text1,
-                                                                                                fontSize: 18.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        listViewElectionsRow.name,
+                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                                              fontSize: 18.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
                                                                                       ),
                                                                                     ),
-                                                                                  ],
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                  child: Row(
-                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          '5gw230b9' /* End date & time: */,
-                                                                                        ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        '5gw230b9' /* End date & time: */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).text3,
+                                                                                            fontSize: 15.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2285,27 +2495,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                      Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text3,
-                                                                                                fontSize: 15.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                                Divider(
-                                                                                  thickness: 0.5,
-                                                                                  color: FlutterFlowTheme.of(context).mavi,
-                                                                                ),
-                                                                              ],
-                                                                            ),
+                                                                              ),
+                                                                              Divider(
+                                                                                thickness: 0.5,
+                                                                                color: FlutterFlowTheme.of(context).mavi,
+                                                                              ),
+                                                                            ],
                                                                           ),
                                                                         );
                                                                       },
@@ -2379,64 +2577,54 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1notstarted',
-                                                                                queryParameters: {
-                                                                                  'deneme': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  const Icon(
+                                                                                    Icons.arrow_right,
+                                                                                    color: Color(0xFFFF0000),
+                                                                                    size: 29.0,
                                                                                   ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    const Icon(
-                                                                                      Icons.arrow_right,
-                                                                                      color: Color(0xFFFF0000),
-                                                                                      size: 29.0,
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          listViewElectionsRow.name,
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text1,
-                                                                                                fontSize: 18.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        listViewElectionsRow.name,
+                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                                              fontSize: 18.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
                                                                                       ),
                                                                                     ),
-                                                                                  ],
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                  child: Row(
-                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          'izbdgjc3' /* End date & time: */,
-                                                                                        ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        'izbdgjc3' /* End date & time: */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).text3,
+                                                                                            fontSize: 15.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2444,27 +2632,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                      Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text3,
-                                                                                                fontSize: 15.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                                Divider(
-                                                                                  thickness: 0.5,
-                                                                                  color: FlutterFlowTheme.of(context).mavi,
-                                                                                ),
-                                                                              ],
-                                                                            ),
+                                                                              ),
+                                                                              Divider(
+                                                                                thickness: 0.5,
+                                                                                color: FlutterFlowTheme.of(context).mavi,
+                                                                              ),
+                                                                            ],
                                                                           ),
                                                                         );
                                                                       },
@@ -2538,64 +2714,54 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1notstarted',
-                                                                                queryParameters: {
-                                                                                  'deneme': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  const Icon(
+                                                                                    Icons.arrow_right,
+                                                                                    color: Color(0xFFFF0000),
+                                                                                    size: 29.0,
                                                                                   ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    const Icon(
-                                                                                      Icons.arrow_right,
-                                                                                      color: Color(0xFFFF0000),
-                                                                                      size: 29.0,
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          listViewElectionsRow.name,
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text1,
-                                                                                                fontSize: 18.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        listViewElectionsRow.name,
+                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                                              fontSize: 18.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
                                                                                       ),
                                                                                     ),
-                                                                                  ],
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                  child: Row(
-                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          '73ek3p3t' /* End date & time: */,
-                                                                                        ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        '73ek3p3t' /* End date & time: */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).text3,
+                                                                                            fontSize: 15.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2603,27 +2769,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                      Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text3,
-                                                                                                fontSize: 15.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                                Divider(
-                                                                                  thickness: 0.5,
-                                                                                  color: FlutterFlowTheme.of(context).mavi,
-                                                                                ),
-                                                                              ],
-                                                                            ),
+                                                                              ),
+                                                                              Divider(
+                                                                                thickness: 0.5,
+                                                                                color: FlutterFlowTheme.of(context).mavi,
+                                                                              ),
+                                                                            ],
                                                                           ),
                                                                         );
                                                                       },
@@ -2697,64 +2851,54 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1notstarted',
-                                                                                queryParameters: {
-                                                                                  'deneme': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  const Icon(
+                                                                                    Icons.arrow_right,
+                                                                                    color: Color(0xFFFF0000),
+                                                                                    size: 29.0,
                                                                                   ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    const Icon(
-                                                                                      Icons.arrow_right,
-                                                                                      color: Color(0xFFFF0000),
-                                                                                      size: 29.0,
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          listViewElectionsRow.name,
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text1,
-                                                                                                fontSize: 18.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        listViewElectionsRow.name,
+                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                                              fontSize: 18.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
                                                                                       ),
                                                                                     ),
-                                                                                  ],
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                  child: Row(
-                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          'pirgo0te' /* End date & time: */,
-                                                                                        ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        'pirgo0te' /* End date & time: */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).text3,
+                                                                                            fontSize: 15.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2762,27 +2906,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                      Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text3,
-                                                                                                fontSize: 15.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                                Divider(
-                                                                                  thickness: 0.5,
-                                                                                  color: FlutterFlowTheme.of(context).mavi,
-                                                                                ),
-                                                                              ],
-                                                                            ),
+                                                                              ),
+                                                                              Divider(
+                                                                                thickness: 0.5,
+                                                                                color: FlutterFlowTheme.of(context).mavi,
+                                                                              ),
+                                                                            ],
                                                                           ),
                                                                         );
                                                                       },
@@ -2856,64 +2988,54 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1notstarted',
-                                                                                queryParameters: {
-                                                                                  'deneme': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  const Icon(
+                                                                                    Icons.arrow_right,
+                                                                                    color: Color(0xFFFF0000),
+                                                                                    size: 29.0,
                                                                                   ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              children: [
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    const Icon(
-                                                                                      Icons.arrow_right,
-                                                                                      color: Color(0xFFFF0000),
-                                                                                      size: 29.0,
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          listViewElectionsRow.name,
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text1,
-                                                                                                fontSize: 18.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        listViewElectionsRow.name,
+                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                                              fontSize: 18.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
                                                                                       ),
                                                                                     ),
-                                                                                  ],
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                  child: Row(
-                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          's0zhuhyi' /* End date & time: */,
-                                                                                        ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        's0zhuhyi' /* End date & time: */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).text3,
+                                                                                            fontSize: 15.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2921,27 +3043,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                      Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                        child: Text(
-                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                fontFamily: 'Montserrat',
-                                                                                                color: FlutterFlowTheme.of(context).text3,
-                                                                                                fontSize: 15.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                              ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                                Divider(
-                                                                                  thickness: 0.5,
-                                                                                  color: FlutterFlowTheme.of(context).mavi,
-                                                                                ),
-                                                                              ],
-                                                                            ),
+                                                                              ),
+                                                                              Divider(
+                                                                                thickness: 0.5,
+                                                                                color: FlutterFlowTheme.of(context).mavi,
+                                                                              ),
+                                                                            ],
                                                                           ),
                                                                         );
                                                                       },

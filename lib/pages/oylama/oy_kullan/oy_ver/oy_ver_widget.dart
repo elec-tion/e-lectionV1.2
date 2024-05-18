@@ -229,7 +229,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'uqyci65q' /* My Last Started Election */,
+                                    'uqyci65q' /* My Last Started Election 69 4 */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -319,7 +319,9 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                                 'endDate',
                                                                 getCurrentTimestamp
                                                                     .secondsSinceEpoch,
-                                                              ),
+                                                              )
+                                                              .order(
+                                                                  'startDate'),
                                                           limit: 1,
                                                         ),
                                                         builder: (context,

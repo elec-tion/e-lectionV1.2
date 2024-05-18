@@ -10,30 +10,21 @@ class OyKullanP4PusulaModel extends FlutterFlowModel<OyKullanP4PusulaWidget> {
 
   final unfocusNode = FocusNode();
   // State field(s) for Timer widget.
-  final timerInitialTimeMs = 30000;
-  int timerMilliseconds = 30000;
+  final timerInitialTimeMs = 0;
+  int timerMilliseconds = 0;
   String timerValue = StopWatchTimer.getDisplayTime(
-    30000,
+    0,
     hours: false,
     milliSecond: false,
   );
   FlutterFlowTimerController timerController =
-      FlutterFlowTimerController(StopWatchTimer(mode: StopWatchMode.countDown));
+      FlutterFlowTimerController(StopWatchTimer(mode: StopWatchMode.countUp));
 
   // State field(s) for Check1 widget.
 
-  Map<CandidatesRow, bool> check1ValueMap1 = {};
-  List<CandidatesRow> get check1CheckedItems1 =>
-      check1ValueMap1.entries.where((e) => e.value).map((e) => e.key).toList();
-
-  // State field(s) for Check1 widget.
-  bool? check1Value2;
-  // State field(s) for Check2 widget.
-  bool? check2Value1;
-  // State field(s) for Check2 widget.
-  bool? check2Value2;
-  // State field(s) for Check2 widget.
-  bool? check2Value3;
+  Map<CandidatesRow, bool> check1ValueMap = {};
+  List<CandidatesRow> get check1CheckedItems =>
+      check1ValueMap.entries.where((e) => e.value).map((e) => e.key).toList();
 
   @override
   void initState(BuildContext context) {}

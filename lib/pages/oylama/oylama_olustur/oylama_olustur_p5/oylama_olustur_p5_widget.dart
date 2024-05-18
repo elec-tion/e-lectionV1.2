@@ -392,7 +392,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                     ),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        context.goNamed('OyPaneli');
+                                        context.goNamed('Anasayfa');
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'wullhp0r' /* Go to Homepage */,

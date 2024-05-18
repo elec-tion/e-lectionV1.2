@@ -334,8 +334,7 @@ Your vote ha... */
                                               'popoty35' /* Finish */,
                                             ),
                                             icon: Icon(
-                                              Icons
-                                                  .keyboard_arrow_right_outlined,
+                                              Icons.check_rounded,
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .text1,
@@ -348,7 +347,8 @@ Your vote ha... */
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 10.0, 0.0),
                                               color: Colors.transparent,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)

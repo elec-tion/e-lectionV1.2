@@ -1,26 +1,19 @@
-import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'timewarn_model.dart';
-export 'timewarn_model.dart';
+import 'stats_n_a_model.dart';
+export 'stats_n_a_model.dart';
 
-class TimewarnWidget extends StatefulWidget {
-  const TimewarnWidget({
-    super.key,
-    this.comp,
-  });
-
-  final ElectionsRow? comp;
+class StatsNAWidget extends StatefulWidget {
+  const StatsNAWidget({super.key});
 
   @override
-  State<TimewarnWidget> createState() => _TimewarnWidgetState();
+  State<StatsNAWidget> createState() => _StatsNAWidgetState();
 }
 
-class _TimewarnWidgetState extends State<TimewarnWidget> {
-  late TimewarnModel _model;
+class _StatsNAWidgetState extends State<StatsNAWidget> {
+  late StatsNAModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -31,7 +24,7 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TimewarnModel());
+    _model = createModel(context, () => StatsNAModel());
   }
 
   @override
@@ -85,9 +78,7 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    '42rx8464' /* Warning!
-This Voting Has Time ... */
-                    ,
+                    'wzj21glh' /* Statistics Are Not Available Y... */,
                   ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,10 +90,10 @@ This Voting Has Time ... */
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    '06ixus75' /* After Continue for ballot, you... */,
+                    'shjlxr5s' /* Statistics will be available a... */,
                   ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -112,74 +103,7 @@ This Voting Has Time ... */
                 ),
               ),
 
-              // This Voting Has Time Limit
-              Container(
-                width: 180.0,
-                height: 45.0,
-                decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      blurRadius: 4.0,
-                      color: Color(0x33000000),
-                      offset: Offset(
-                        0.0,
-                        2.0,
-                      ),
-                    )
-                  ],
-                  gradient: LinearGradient(
-                    colors: [
-                      FlutterFlowTheme.of(context).graSet11,
-                      FlutterFlowTheme.of(context).graSet12,
-                      FlutterFlowTheme.of(context).graSet13
-                    ],
-                    stops: const [0.0, 1.0, 1.0],
-                    begin: const AlignmentDirectional(1.0, 0.0),
-                    end: const AlignmentDirectional(-1.0, 0),
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(40.0),
-                    bottomRight: Radius.circular(40.0),
-                    topLeft: Radius.circular(40.0),
-                    topRight: Radius.circular(40.0),
-                  ),
-                ),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed(
-                      'OyKullanP4Pusula',
-                      queryParameters: {
-                        'ballot1': serializeParam(
-                          widget.comp,
-                          ParamType.SupabaseRow,
-                        ),
-                      }.withoutNulls,
-                    );
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'b7ez0huk' /* Continue to Ballot */,
-                  ),
-                  options: FFButtonOptions(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: const Color(0x00067BB7),
-                    textStyle: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Montserrat',
-                          color: FlutterFlowTheme.of(context).info,
-                          fontSize: 16.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                    elevation: 0.0,
-                    borderSide: const BorderSide(
-                      color: Colors.transparent,
-                      width: 0.0,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                ),
-              ),
+              // container that is for sign in button
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: InkWell(
@@ -229,7 +153,7 @@ This Voting Has Time ... */
                                   23.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'w5v6831d' /* Back */,
+                                  'fgk9cumn' /* Back */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge

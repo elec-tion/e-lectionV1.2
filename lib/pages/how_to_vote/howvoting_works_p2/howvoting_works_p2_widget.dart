@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -71,7 +70,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: MediaQuery.sizeOf(context).height * 0.85,
+                  height: MediaQuery.sizeOf(context).height * 0.77,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -320,117 +319,6 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                                         .graSet22,
                                                   ),
                                                 ),
-                                                child: InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {
-                                                    context.pushNamed(
-                                                        'HowvotingWorksP3');
-                                                  },
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Align(
-                                                        alignment:
-                                                            const AlignmentDirectional(
-                                                                1.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      3.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: FFButtonWidget(
-                                                            onPressed:
-                                                                () async {
-                                                              context.pushNamed(
-                                                                  'HowvotingWorksP3');
-                                                            },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              '4y4ty8b1' /* Next */,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              width: 106.0,
-                                                              height: 50.0,
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          24.0,
-                                                                          0.0,
-                                                                          24.0,
-                                                                          0.0),
-                                                              iconPadding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              color: Colors
-                                                                  .transparent,
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .text1,
-                                                                        fontSize:
-                                                                            17.0,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                              elevation: 0.0,
-                                                              borderSide:
-                                                                  const BorderSide(
-                                                                color: Colors
-                                                                    .transparent,
-                                                                width: 1.0,
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          15.0),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    10.0,
-                                                                    0.0),
-                                                        child: Icon(
-                                                          Icons
-                                                              .keyboard_arrow_right_sharp,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          size: 35.0,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
                                               ),
                                             ),
                                           ),
@@ -491,6 +379,130 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                         ],
                       ),
                     ],
+                  ),
+                ),
+                Flexible(
+                  child: Align(
+                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: 415.0,
+                            height: 182.0,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  FlutterFlowTheme.of(context).alternate,
+                                  FlutterFlowTheme.of(context).graSet23
+                                ],
+                                stops: const [0.0, 1.0],
+                                begin: const AlignmentDirectional(0.0, -1.0),
+                                end: const AlignmentDirectional(0, 1.0),
+                              ),
+                            ),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('HowvotingWorksP3');
+                                },
+                                child: Material(
+                                  color: Colors.transparent,
+                                  elevation: 0.0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Container(
+                                    width: 200.0,
+                                    height: 70.0,
+                                    decoration: BoxDecoration(
+                                      boxShadow: const [
+                                        BoxShadow(
+                                          blurRadius: 4.0,
+                                          color: Color(0x33000000),
+                                          offset: Offset(
+                                            0.0,
+                                            2.0,
+                                          ),
+                                        )
+                                      ],
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          FlutterFlowTheme.of(context).graSet23,
+                                          FlutterFlowTheme.of(context).graSet22
+                                        ],
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(-1.0, 0.87),
+                                        end: const AlignmentDirectional(1.0, -0.87),
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                      border: Border.all(
+                                        color: FlutterFlowTheme.of(context)
+                                            .graSet22,
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Flexible(
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'urogro65' /* Next */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      fontSize: 17.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 10.0, 0.0),
+                                            child: Icon(
+                                              Icons.keyboard_arrow_right_sharp,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              size: 35.0,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

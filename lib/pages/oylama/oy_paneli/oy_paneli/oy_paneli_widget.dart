@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/oylama/oy_paneli/popups/oy_paneli_component/oy_paneli_component_widget.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -148,7 +150,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: MediaQuery.sizeOf(context).height * 0.8,
+                    height: MediaQuery.sizeOf(context).height * 0.824,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
@@ -205,35 +207,6 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 5.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'vkv9t265' /* To ****: 27 hours. */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text1,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
                         SizedBox(
                           width: 340.0,
                           child: Divider(
@@ -253,17 +226,17 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 30.0),
-                                      child: Text(
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
                                         FFLocalizations.of(context).getText(
-                                          'kmszbpwf' /* Votes I Created */,
+                                          'kmszbpwf' /* Elections that I am responsibl... */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -278,105 +251,38 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                               fontWeight: FontWeight.w600,
                                             ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 20.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Expanded(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 5.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'f7lal1zo' /* Republic of Mozambique Municip... */,
-                                                    ),
-                                                    textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                            Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'e7odf2qy' /* Results will be announced in 2... */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Montserrat',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .text3,
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Flexible(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Icon(
-                                              Icons.keyboard_arrow_right,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .text1,
-                                              size: 30.0,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 320.0,
-                                  child: Divider(
-                                    thickness: 1.0,
-                                    color: FlutterFlowTheme.of(context).text3,
-                                  ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 0.0, 20.0, 30.0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            '4xrr3hrk' /* This page shows the elections ... */,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Montserrat',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .text2,
+                                                fontSize: 14.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 FutureBuilder<List<UsersRow>>(
                                   future: UsersTable().queryRows(
@@ -414,11 +320,17 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                           return FutureBuilder<
                                               List<ElectionsRow>>(
                                             future: ElectionsTable().queryRows(
-                                              queryFn: (q) => q.contains(
-                                                'committee_members',
-                                                '{${columnUsersRow
-                                                        .walletIdElectionCommittee}}',
-                                              ),
+                                              queryFn: (q) => q
+                                                  .contains(
+                                                    'committee_members',
+                                                    '{${columnUsersRow
+                                                            .walletIdElectionCommittee}}',
+                                                  )
+                                                  .gt(
+                                                    'startDate',
+                                                    getCurrentTimestamp
+                                                        .secondsSinceEpoch,
+                                                  ),
                                             ),
                                             builder: (context, snapshot) {
                                               // Customize what your widget looks like when it's loading.
@@ -443,6 +355,17 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                               List<ElectionsRow>
                                                   listViewElectionsRowList =
                                                   snapshot.data!;
+                                              if (listViewElectionsRowList
+                                                  .isEmpty) {
+                                                return const Center(
+                                                  child: SizedBox(
+                                                    width: 300.0,
+                                                    height: 300.0,
+                                                    child:
+                                                        OyPaneliComponentWidget(),
+                                                  ),
+                                                );
+                                              }
                                               return ListView.builder(
                                                 padding: EdgeInsets.zero,
                                                 shrinkWrap: true,
@@ -455,117 +378,159 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                   final listViewElectionsRow =
                                                       listViewElectionsRowList[
                                                           listViewIndex];
-                                                  return Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          context.pushNamed(
-                                                            'OyKullan',
-                                                            queryParameters: {
-                                                              'deneme':
-                                                                  serializeParam(
-                                                                listViewElectionsRow,
-                                                                ParamType
-                                                                    .SupabaseRow,
-                                                              ),
-                                                            }.withoutNulls,
-                                                          );
-                                                        },
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            Expanded(
-                                                              child: Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Text(
-                                                                    valueOrDefault<
-                                                                        String>(
-                                                                      listViewElectionsRow
-                                                                          .name,
-                                                                      'electionName',
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Montserrat',
-                                                                          letterSpacing:
-                                                                              0.0,
-                                                                        ),
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 15.0),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      20.0,
+                                                                      0.0,
+                                                                      20.0,
+                                                                      0.0),
+                                                          child: InkWell(
+                                                            splashColor: Colors
+                                                                .transparent,
+                                                            focusColor: Colors
+                                                                .transparent,
+                                                            hoverColor: Colors
+                                                                .transparent,
+                                                            highlightColor:
+                                                                Colors
+                                                                    .transparent,
+                                                            onTap: () async {
+                                                              context.pushNamed(
+                                                                'OyPaneliP2',
+                                                                queryParameters:
+                                                                    {
+                                                                  'oyPaneli':
+                                                                      serializeParam(
+                                                                    listViewElectionsRow,
+                                                                    ParamType
+                                                                        .SupabaseRow,
                                                                   ),
-                                                                  Text(
-                                                                    listViewElectionsRow
-                                                                        .startDate
-                                                                        .toString(),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Montserrat',
-                                                                          letterSpacing:
-                                                                              0.0,
-                                                                        ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                            Column(
+                                                                }.withoutNulls,
+                                                              );
+                                                            },
+                                                            child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
                                                                       .max,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceEvenly,
                                                               children: [
-                                                                FlutterFlowIconButton(
-                                                                  borderColor:
-                                                                      FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .mavi,
-                                                                  borderRadius:
-                                                                      20.0,
-                                                                  borderWidth:
-                                                                      1.0,
-                                                                  buttonSize:
-                                                                      35.0,
-                                                                  fillColor: const Color(
-                                                                      0x004B39EF),
-                                                                  icon: Icon(
-                                                                    Icons
-                                                                        .arrow_forward_ios_sharp,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryText,
-                                                                    size: 20.0,
+                                                                Flexible(
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Column(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .center,
+                                                                      children: [
+                                                                        Icon(
+                                                                          Icons
+                                                                              .circle,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).mavi,
+                                                                          size:
+                                                                              8.0,
+                                                                        ),
+                                                                      ],
+                                                                    ),
                                                                   ),
-                                                                  onPressed:
-                                                                      () {
-                                                                    print(
-                                                                        'IconButton pressed ...');
-                                                                  },
+                                                                ),
+                                                                Expanded(
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Text(
+                                                                        valueOrDefault<
+                                                                            String>(
+                                                                          listViewElectionsRow
+                                                                              .name,
+                                                                          'electionName',
+                                                                        ),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Montserrat',
+                                                                              color: FlutterFlowTheme.of(context).text1,
+                                                                              fontSize: 17.0,
+                                                                              letterSpacing: 0.0,
+                                                                            ),
+                                                                      ),
+                                                                      Text(
+                                                                        functions
+                                                                            .showDateTime(listViewElectionsRow.startDate),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Montserrat',
+                                                                              color: FlutterFlowTheme.of(context).text2,
+                                                                              letterSpacing: 0.0,
+                                                                            ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                                Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  children: [
+                                                                    FlutterFlowIconButton(
+                                                                      borderRadius:
+                                                                          20.0,
+                                                                      borderWidth:
+                                                                          0.0,
+                                                                      buttonSize:
+                                                                          35.0,
+                                                                      fillColor:
+                                                                          const Color(
+                                                                              0x004B39EF),
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .arrow_forward_ios_sharp,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primaryText,
+                                                                        size:
+                                                                            17.0,
+                                                                      ),
+                                                                      onPressed:
+                                                                          () {
+                                                                        print(
+                                                                            'IconButton pressed ...');
+                                                                      },
+                                                                    ),
+                                                                  ],
                                                                 ),
                                                               ],
                                                             ),
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ),
-                                                    ],
+                                                      ],
+                                                    ),
                                                   );
                                                 },
                                               );
@@ -582,7 +547,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 30.0),
+                              0.0, 20.0, 0.0, 30.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
