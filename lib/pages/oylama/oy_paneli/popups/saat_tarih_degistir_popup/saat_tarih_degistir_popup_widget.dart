@@ -5,10 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'saat_tarih_degistir_popup_model.dart';
 export 'saat_tarih_degistir_popup_model.dart';
 
@@ -62,17 +59,17 @@ class _SaatTarihDegistirPopupWidgetState
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -86,27 +83,27 @@ class _SaatTarihDegistirPopupWidgetState
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       // container that is for sign in button
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: Container(
                             width: 250.0,
                             height: 45.0,
                             decoration: BoxDecoration(
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -122,11 +119,11 @@ class _SaatTarihDegistirPopupWidgetState
                                   FlutterFlowTheme.of(context).graSet12,
                                   FlutterFlowTheme.of(context).graSet13
                                 ],
-                                stops: [0.0, 1.0, 1.0],
-                                begin: AlignmentDirectional(1.0, 0.0),
-                                end: AlignmentDirectional(-1.0, 0),
+                                stops: const [0.0, 1.0, 1.0],
+                                begin: const AlignmentDirectional(1.0, 0.0),
+                                end: const AlignmentDirectional(-1.0, 0),
                               ),
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(40.0),
                                 bottomRight: Radius.circular(40.0),
                                 topLeft: Radius.circular(40.0),
@@ -136,7 +133,7 @@ class _SaatTarihDegistirPopupWidgetState
                             child: FFButtonWidget(
                               onPressed: () async {
                                 // Start Date & Time
-                                final _datePicked1Date = await showDatePicker(
+                                final datePicked1Date = await showDatePicker(
                                   context: context,
                                   initialDate: getCurrentTimestamp,
                                   firstDate:
@@ -177,9 +174,9 @@ class _SaatTarihDegistirPopupWidgetState
                                   },
                                 );
 
-                                TimeOfDay? _datePicked1Time;
-                                if (_datePicked1Date != null) {
-                                  _datePicked1Time = await showTimePicker(
+                                TimeOfDay? datePicked1Time;
+                                if (datePicked1Date != null) {
+                                  datePicked1Time = await showTimePicker(
                                     context: context,
                                     initialTime: TimeOfDay.fromDateTime(
                                         getCurrentTimestamp),
@@ -219,15 +216,15 @@ class _SaatTarihDegistirPopupWidgetState
                                   );
                                 }
 
-                                if (_datePicked1Date != null &&
-                                    _datePicked1Time != null) {
+                                if (datePicked1Date != null &&
+                                    datePicked1Time != null) {
                                   safeSetState(() {
                                     _model.datePicked1 = DateTime(
-                                      _datePicked1Date.year,
-                                      _datePicked1Date.month,
-                                      _datePicked1Date.day,
-                                      _datePicked1Time!.hour,
-                                      _datePicked1Time.minute,
+                                      datePicked1Date.year,
+                                      datePicked1Date.month,
+                                      datePicked1Date.day,
+                                      datePicked1Time!.hour,
+                                      datePicked1Time.minute,
                                     );
                                   });
                                 }
@@ -242,11 +239,11 @@ class _SaatTarihDegistirPopupWidgetState
                                 '6vsdasak' /* Voting Start Date & Time */,
                               ),
                               options: FFButtonOptions(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0x00067BB7),
+                                color: const Color(0x00067BB7),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -257,7 +254,7 @@ class _SaatTarihDegistirPopupWidgetState
                                       fontWeight: FontWeight.w500,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
@@ -269,7 +266,7 @@ class _SaatTarihDegistirPopupWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'sl1aip89' /* Voting Start Date & Time: */,
@@ -299,21 +296,21 @@ class _SaatTarihDegistirPopupWidgetState
                   color: FlutterFlowTheme.of(context).mavi,
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 30.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 30.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       // container that is for sign in button
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: Container(
                             width: 250.0,
                             height: 45.0,
                             decoration: BoxDecoration(
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -329,11 +326,11 @@ class _SaatTarihDegistirPopupWidgetState
                                   FlutterFlowTheme.of(context).graSet12,
                                   FlutterFlowTheme.of(context).graSet13
                                 ],
-                                stops: [0.0, 1.0, 1.0],
-                                begin: AlignmentDirectional(1.0, 0.0),
-                                end: AlignmentDirectional(-1.0, 0),
+                                stops: const [0.0, 1.0, 1.0],
+                                begin: const AlignmentDirectional(1.0, 0.0),
+                                end: const AlignmentDirectional(-1.0, 0),
                               ),
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(40.0),
                                 bottomRight: Radius.circular(40.0),
                                 topLeft: Radius.circular(40.0),
@@ -343,7 +340,7 @@ class _SaatTarihDegistirPopupWidgetState
                             child: FFButtonWidget(
                               onPressed: () async {
                                 // End Date & Time
-                                final _datePicked2Date = await showDatePicker(
+                                final datePicked2Date = await showDatePicker(
                                   context: context,
                                   initialDate: getCurrentTimestamp,
                                   firstDate:
@@ -384,9 +381,9 @@ class _SaatTarihDegistirPopupWidgetState
                                   },
                                 );
 
-                                TimeOfDay? _datePicked2Time;
-                                if (_datePicked2Date != null) {
-                                  _datePicked2Time = await showTimePicker(
+                                TimeOfDay? datePicked2Time;
+                                if (datePicked2Date != null) {
+                                  datePicked2Time = await showTimePicker(
                                     context: context,
                                     initialTime: TimeOfDay.fromDateTime(
                                         getCurrentTimestamp),
@@ -426,15 +423,15 @@ class _SaatTarihDegistirPopupWidgetState
                                   );
                                 }
 
-                                if (_datePicked2Date != null &&
-                                    _datePicked2Time != null) {
+                                if (datePicked2Date != null &&
+                                    datePicked2Time != null) {
                                   safeSetState(() {
                                     _model.datePicked2 = DateTime(
-                                      _datePicked2Date.year,
-                                      _datePicked2Date.month,
-                                      _datePicked2Date.day,
-                                      _datePicked2Time!.hour,
-                                      _datePicked2Time.minute,
+                                      datePicked2Date.year,
+                                      datePicked2Date.month,
+                                      datePicked2Date.day,
+                                      datePicked2Time!.hour,
+                                      datePicked2Time.minute,
                                     );
                                   });
                                 }
@@ -449,11 +446,11 @@ class _SaatTarihDegistirPopupWidgetState
                                 '16ngl0u3' /* Voting End Date & Time */,
                               ),
                               options: FFButtonOptions(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0x00067BB7),
+                                color: const Color(0x00067BB7),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -464,7 +461,7 @@ class _SaatTarihDegistirPopupWidgetState
                                       fontWeight: FontWeight.w500,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
@@ -476,7 +473,7 @@ class _SaatTarihDegistirPopupWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             '2jx1yyr7' /* Voting End Date & Time: */,
@@ -490,7 +487,7 @@ class _SaatTarihDegistirPopupWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                         child: Text(
                           valueOrDefault<String>(
                             _model.endDateTime,
@@ -523,7 +520,7 @@ class _SaatTarihDegistirPopupWidgetState
                   width: 100.0,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -538,9 +535,9 @@ class _SaatTarihDegistirPopupWidgetState
                         FlutterFlowTheme.of(context).graSet23,
                         FlutterFlowTheme.of(context).graSet22
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(-1.0, 0.0),
-                      end: AlignmentDirectional(1.0, 0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(-1.0, 0.0),
+                      end: const AlignmentDirectional(1.0, 0),
                     ),
                     borderRadius: BorderRadius.circular(15.0),
                   ),
@@ -580,15 +577,15 @@ class _SaatTarihDegistirPopupWidgetState
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: Text(
+                                      title: const Text(
                                           'You can\'t change start - end date&time for a voting!'),
-                                      content: Text(
+                                      content: const Text(
                                           'A voting\'s start date cannot be later than or the same as the end date.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: Text('OK'),
+                                          child: const Text('OK'),
                                         ),
                                       ],
                                     );
@@ -600,15 +597,15 @@ class _SaatTarihDegistirPopupWidgetState
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: Text(
+                                      title: const Text(
                                           'Oylama için başlangıç - bitiş tarih&saatini değiştiremezsin!'),
-                                      content: Text(
+                                      content: const Text(
                                           'Bir oylamanın başlangıç tarihi, bitiş tarihinden daha geç veya aynı olamaz.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: Text('Tamam'),
+                                          child: const Text('Tamam'),
                                         ),
                                       ],
                                     );
@@ -624,15 +621,15 @@ class _SaatTarihDegistirPopupWidgetState
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: Text(
+                                    title: const Text(
                                         'You can\'t change end date&time for this election!'),
-                                    content: Text(
+                                    content: const Text(
                                         'To change the end date&time of an election, you must select the end date and time of the election.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: Text('OK'),
+                                        child: const Text('OK'),
                                       ),
                                     ],
                                   );
@@ -644,15 +641,15 @@ class _SaatTarihDegistirPopupWidgetState
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: Text(
+                                    title: const Text(
                                         'Oylamanın bitiş tarih&saatini değiştiremezsin!'),
-                                    content: Text(
+                                    content: const Text(
                                         'Oylamanın bitiş tarih&saatini değiştirmek için, oylamanın bitiş tarihi ve saatini seçmelisiniz.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: Text('Tamam'),
+                                        child: const Text('Tamam'),
                                       ),
                                     ],
                                   );
@@ -668,15 +665,15 @@ class _SaatTarihDegistirPopupWidgetState
                               context: context,
                               builder: (alertDialogContext) {
                                 return AlertDialog(
-                                  title: Text(
+                                  title: const Text(
                                       'You can\'t change start date&time for this election!'),
-                                  content: Text(
+                                  content: const Text(
                                       'To change start date&time of an election, the start date&time of the election must be later than the current date and time.'),
                                   actions: [
                                     TextButton(
                                       onPressed: () =>
                                           Navigator.pop(alertDialogContext),
-                                      child: Text('OK'),
+                                      child: const Text('OK'),
                                     ),
                                   ],
                                 );
@@ -688,15 +685,15 @@ class _SaatTarihDegistirPopupWidgetState
                               context: context,
                               builder: (alertDialogContext) {
                                 return AlertDialog(
-                                  title: Text(
+                                  title: const Text(
                                       'Oylama başlangıç tarih&saatini değiştiremezsin!'),
-                                  content: Text(
+                                  content: const Text(
                                       'Oylama başlangıç tarih&saatini değiştirmek için, oylamanın başlangıç tarihi şuanki tarih ve saat\'den geç olmalıdır.'),
                                   actions: [
                                     TextButton(
                                       onPressed: () =>
                                           Navigator.pop(alertDialogContext),
-                                      child: Text('Tamam'),
+                                      child: const Text('Tamam'),
                                     ),
                                   ],
                                 );
@@ -711,15 +708,15 @@ class _SaatTarihDegistirPopupWidgetState
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text(
+                                title: const Text(
                                     'You can\'t change the date&time of the election.'),
-                                content: Text(
+                                content: const Text(
                                     'To change the date&time of an election, you must select the start date and time of the vote.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('OK'),
+                                    child: const Text('OK'),
                                   ),
                                 ],
                               );
@@ -731,15 +728,15 @@ class _SaatTarihDegistirPopupWidgetState
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text(
+                                title: const Text(
                                     'Seçimin tarih ve saatini değiştiremezsiniz.'),
-                                content: Text(
+                                content: const Text(
                                     'Seçim tarih ve saatini değiştirmek için oylamanın başlangıç ​​tarihini ve saatini seçmelisiniz.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('Tamam'),
+                                    child: const Text('Tamam'),
                                   ),
                                 ],
                               );
@@ -753,9 +750,9 @@ class _SaatTarihDegistirPopupWidgetState
                     ),
                     options: FFButtonOptions(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(

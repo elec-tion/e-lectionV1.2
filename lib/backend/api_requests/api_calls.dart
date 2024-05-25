@@ -1,8 +1,6 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
@@ -51,7 +49,7 @@ class AddElectionCommitteeMemberCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addElectionCommitteeMember',
-      apiUrl: '${baseUrl}/${wallet}/${name}',
+      apiUrl: '$baseUrl/$wallet/$name',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -82,7 +80,7 @@ class RemoveElectionCommitteeMemberCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeElectionCommitteeMember',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -112,7 +110,7 @@ class RemoveElectionCommitteeMemberFromElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeElectionCommitteeMemberFromElection',
-      apiUrl: '${baseUrl}withelection/${electionID}/${wallet}',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -143,7 +141,7 @@ class GetElectionCommitteeMemberDetailsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getElectionCommitteeMemberDetails',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -173,7 +171,7 @@ class AddElectionCommitteeMemberToElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addElectionCommitteeMemberToElection',
-      apiUrl: '${baseUrl}withelection/${wallet}/${electionID}',
+      apiUrl: '${baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -228,7 +226,7 @@ class AddDistrictCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrict',
-      apiUrl: '${baseUrl}/${id}/${name}',
+      apiUrl: '$baseUrl/$id/$name',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -259,7 +257,7 @@ class RemoveDistrictCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrict',
-      apiUrl: '${baseUrl}/${id}',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -289,7 +287,7 @@ class GetDistrictCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getDistrict',
-      apiUrl: '${baseUrl}/${id}',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -319,7 +317,7 @@ class AddDistrictToElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrictToElection',
-      apiUrl: '${baseUrl}withelection/${electionID}/${id}',
+      apiUrl: '${baseUrl}withelection/$electionID/$id',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -350,7 +348,7 @@ class RemoveDistrictFromElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrictFromElection',
-      apiUrl: '${baseUrl}/${electionID}/${id}',
+      apiUrl: '$baseUrl/$electionID/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -417,7 +415,7 @@ class CreateElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'createElection',
-      apiUrl: '${baseUrl}/${name}/${startDate}/${endDate}',
+      apiUrl: '$baseUrl/$name/$startDate/$endDate',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -459,7 +457,7 @@ class RemoveElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeElection',
-      apiUrl: '${baseUrl}/${id}',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -500,7 +498,7 @@ class GetElectionDetailsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getElectionDetails',
-      apiUrl: '${baseUrl}/${id}',
+      apiUrl: '$baseUrl/$id',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -541,7 +539,7 @@ class EditElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'editElection',
-      apiUrl: '${baseUrl}/${id}/${name}/${startDate}/${endDate}',
+      apiUrl: '$baseUrl/$id/$name/$startDate/$endDate',
       callType: ApiCallType.PATCH,
       headers: {
         'x-api-key':
@@ -599,7 +597,7 @@ class AddCandidateCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addCandidate',
-      apiUrl: '${baseUrl}/${name}/${districtID}/${wallet}',
+      apiUrl: '$baseUrl/$name/$districtID/$wallet',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -632,7 +630,7 @@ class RemoveCandidateCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeCandidate',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -664,7 +662,7 @@ class AddCandidateToElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addCandidateToElection',
-      apiUrl: '${baseUrl}withelection/${electionID}/${wallet}',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -697,7 +695,7 @@ class RemoveCandidateFromElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeCandidateFromElection',
-      apiUrl: '${baseUrl}withelection/${electionID}/${wallet}',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -729,7 +727,7 @@ class GetCandidateCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getCandidate',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -789,7 +787,7 @@ class AddDistrictToVoterCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addDistrictToVoter',
-      apiUrl: '${baseUrl}withdistrict/${wallet}/${districtID}',
+      apiUrl: '${baseUrl}withdistrict/$wallet/$districtID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -822,7 +820,7 @@ class RemoveDistrictFromVoterCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeDistrictFromVoter',
-      apiUrl: '${baseUrl}withdistrict/${districtID}/${wallet}',
+      apiUrl: '${baseUrl}withdistrict/$districtID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -854,7 +852,7 @@ class AddVoterToElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'addVoterToElection',
-      apiUrl: '${baseUrl}withelection/${wallet}/${electionID}',
+      apiUrl: '${baseUrl}withelection/$wallet/$electionID',
       callType: ApiCallType.POST,
       headers: {
         'x-api-key':
@@ -887,7 +885,7 @@ class RemoveVoterFromElectionCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeVoterFromElection',
-      apiUrl: '${baseUrl}withelection/${electionID}/${wallet}',
+      apiUrl: '${baseUrl}withelection/$electionID/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -919,7 +917,7 @@ class RemoveVoterCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'removeVoter',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.DELETE,
       headers: {
         'x-api-key':
@@ -951,7 +949,7 @@ class GetVoterDetailsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getVoterDetails',
-      apiUrl: '${baseUrl}/${wallet}',
+      apiUrl: '$baseUrl/$wallet',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -1013,7 +1011,7 @@ class GetContractAddressCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getContractAddress',
-      apiUrl: '${baseUrl}/address',
+      apiUrl: '$baseUrl/address',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':
@@ -1041,7 +1039,7 @@ class GetContractAbiCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'getContractAbi',
-      apiUrl: '${baseUrl}/abi',
+      apiUrl: '$baseUrl/abi',
       callType: ApiCallType.GET,
       headers: {
         'x-api-key':

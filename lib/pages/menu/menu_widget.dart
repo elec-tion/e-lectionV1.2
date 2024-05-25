@@ -5,12 +5,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/oylama/oylama_olustur/popups/satisfaction/satisfaction_widget.dart';
-import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'menu_model.dart';
 export 'menu_model.dart';
@@ -161,7 +158,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -171,7 +168,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -183,12 +180,12 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: menuUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -206,7 +203,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -223,7 +220,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -238,9 +235,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       FlutterFlowTheme.of(context).graSet23,
                                       FlutterFlowTheme.of(context).graSet22
                                     ],
-                                    stops: [0.0, 1.0],
-                                    begin: AlignmentDirectional(-1.0, 0.0),
-                                    end: AlignmentDirectional(1.0, 0),
+                                    stops: const [0.0, 1.0],
+                                    begin: const AlignmentDirectional(-1.0, 0.0),
+                                    end: const AlignmentDirectional(1.0, 0),
                                   ),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
@@ -259,9 +256,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   options: FFButtonOptions(
                                     width: 350.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Colors.transparent,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -275,7 +272,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                           fontWeight: FontWeight.w600,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -288,7 +285,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                         ).animateOnPageLoad(
                             animationsMap['rowOnPageLoadAnimation1']!),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -298,7 +295,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: Color(0x00363636),
+                                    borderColor: const Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -314,7 +311,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -336,7 +333,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: Color(0x00363636),
+                                    borderColor: const Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -352,7 +349,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -374,7 +371,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: Color(0x00363636),
+                                    borderColor: const Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -390,7 +387,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -417,7 +414,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -430,7 +427,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           ),
                           child: Container(
                             decoration: BoxDecoration(
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -445,9 +442,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   FlutterFlowTheme.of(context).graSet23,
                                   FlutterFlowTheme.of(context).graSet22
                                 ],
-                                stops: [0.0, 1.0],
-                                begin: AlignmentDirectional(-1.0, 0.0),
-                                end: AlignmentDirectional(1.0, 0),
+                                stops: const [0.0, 1.0],
+                                begin: const AlignmentDirectional(-1.0, 0.0),
+                                end: const AlignmentDirectional(1.0, 0),
                               ),
                               borderRadius: BorderRadius.circular(15.0),
                             ),
@@ -466,9 +463,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               options: FFButtonOptions(
                                 width: 350.0,
                                 height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Colors.transparent,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -481,7 +478,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       fontWeight: FontWeight.w600,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -496,7 +493,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -509,7 +506,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           ),
                           child: Container(
                             decoration: BoxDecoration(
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -524,9 +521,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   FlutterFlowTheme.of(context).graSet23,
                                   FlutterFlowTheme.of(context).graSet22
                                 ],
-                                stops: [0.0, 1.0],
-                                begin: AlignmentDirectional(-1.0, 0.0),
-                                end: AlignmentDirectional(1.0, 0),
+                                stops: const [0.0, 1.0],
+                                begin: const AlignmentDirectional(-1.0, 0.0),
+                                end: const AlignmentDirectional(1.0, 0),
                               ),
                               borderRadius: BorderRadius.circular(15.0),
                             ),
@@ -545,9 +542,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               options: FFButtonOptions(
                                 width: 350.0,
                                 height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Colors.transparent,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -560,7 +557,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       fontWeight: FontWeight.w600,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -582,14 +579,14 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -597,16 +594,16 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.goNamed(
                                         'Giris',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
+                                          kTransitionInfoKey: const TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.scale,
@@ -637,15 +634,15 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     text: FFLocalizations.of(context).getText(
                                       '39bjex55' /* Log out from my e-lection acco... */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.logout,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -658,7 +655,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -668,16 +665,16 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
                                         'Ayarlar',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
+                                          kTransitionInfoKey: const TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.leftToRight,
@@ -690,15 +687,15 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     text: FFLocalizations.of(context).getText(
                                       'rcwzcytv' /* Settings */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.settings_outlined,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -711,7 +708,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -721,9 +718,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -732,15 +729,15 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     text: FFLocalizations.of(context).getText(
                                       '0h0880ti' /* Help Desk */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.contact_support_outlined,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -753,7 +750,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -763,10 +760,10 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Builder(
                                   builder: (context) => Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -779,7 +776,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  AlignmentDirectional(0.0, 0.0)
+                                                  const AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -791,7 +788,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                                             _model.unfocusNode)
                                                     : FocusScope.of(context)
                                                         .unfocus(),
-                                                child: Container(
+                                                child: const SizedBox(
                                                   height: 300.0,
                                                   width: 400.0,
                                                   child: SatisfactionWidget(),
@@ -804,15 +801,15 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       text: FFLocalizations.of(context).getText(
                                         'nbz09vwb' /* Give feedback about the app */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.chat_outlined,
                                         size: 20.0,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Colors.transparent,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -826,7 +823,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -838,7 +835,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -856,7 +853,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(

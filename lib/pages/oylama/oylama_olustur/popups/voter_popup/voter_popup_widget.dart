@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'voter_popup_model.dart';
 export 'voter_popup_model.dart';
 
@@ -51,17 +49,17 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -75,14 +73,14 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'dzfcx3h8' /* If you check "I want to create... */,
@@ -98,7 +96,7 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '9pz7mvfi' /* The created vote is shown to a... */,
@@ -118,7 +116,7 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 10.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 10.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '4lr72fdc' /* If you check "I want to create... */,
@@ -134,7 +132,7 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'w7tuwq4f' /* The created vote is displayed ... */,
@@ -156,7 +154,7 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                       width: 100.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -172,11 +170,11 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                             FlutterFlowTheme.of(context).graSet12,
                             FlutterFlowTheme.of(context).graSet13
                           ],
-                          stops: [0.0, 1.0, 1.0],
-                          begin: AlignmentDirectional(1.0, 0.0),
-                          end: AlignmentDirectional(-1.0, 0),
+                          stops: const [0.0, 1.0, 1.0],
+                          begin: const AlignmentDirectional(1.0, 0.0),
+                          end: const AlignmentDirectional(-1.0, 0),
                         ),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(40.0),
                           bottomRight: Radius.circular(40.0),
                           topLeft: Radius.circular(40.0),
@@ -191,11 +189,11 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                           'i8fwbn5q' /* OK */,
                         ),
                         options: FFButtonOptions(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x00067BB7),
+                          color: const Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -205,7 +203,7 @@ class _VoterPopupWidgetState extends State<VoterPopupWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),

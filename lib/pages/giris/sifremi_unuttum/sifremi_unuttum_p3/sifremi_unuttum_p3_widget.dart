@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sifremi_unuttum_p3_model.dart';
 export 'sifremi_unuttum_p3_model.dart';
@@ -96,7 +95,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                     fit: BoxFit.fill,
                   ),
                 ),
-                actions: [],
+                actions: const [],
                 centerTitle: true,
                 elevation: 0.0,
               ),
@@ -116,9 +115,9 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: [0.0, 1.0],
-                            begin: AlignmentDirectional(0.0, -1.0),
-                            end: AlignmentDirectional(0, 1.0),
+                            stops: const [0.0, 1.0],
+                            begin: const AlignmentDirectional(0.0, -1.0),
+                            end: const AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
@@ -126,7 +125,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -179,14 +178,14 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 40.0, 40.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -206,9 +205,9 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 30.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: double.infinity,
                                         child: TextFormField(
                                           controller: _model
@@ -281,7 +280,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                                 FlutterFlowTheme.of(context)
                                                     .customColor2,
                                             contentPadding:
-                                                EdgeInsets.all(10.0),
+                                                const EdgeInsets.all(10.0),
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => _model
@@ -320,9 +319,9 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 30.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: double.infinity,
                                         child: TextFormField(
                                           controller: _model
@@ -395,7 +394,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                                 FlutterFlowTheme.of(context)
                                                     .customColor2,
                                             contentPadding:
-                                                EdgeInsets.all(10.0),
+                                                const EdgeInsets.all(10.0),
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => _model
@@ -441,7 +440,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                               width: 230.0,
                               height: 52.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -457,11 +456,11 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                     FlutterFlowTheme.of(context).graSet12,
                                     FlutterFlowTheme.of(context).graSet13
                                   ],
-                                  stops: [0.0, 1.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(40.0),
                                   bottomRight: Radius.circular(40.0),
                                   topLeft: Radius.circular(40.0),
@@ -494,15 +493,15 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text('Şifreler aynı!'),
-                                              content: Text(
+                                              title: const Text('Şifreler aynı!'),
+                                              content: const Text(
                                                   'e-lection\'da bulunan hesabınızın şifresi ile girdiğiniz şifre aynı. Lüften farklı bir şifre giriniz.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('Tamam'),
+                                                  child: const Text('Tamam'),
                                                 ),
                                               ],
                                             );
@@ -513,16 +512,16 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text(
+                                              title: const Text(
                                                   'The passwords are same!'),
-                                              content: Text(
+                                              content: const Text(
                                                   'The password for your account in e-lection is the same as the password you entered. Please enter a different password.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('OK'),
+                                                  child: const Text('OK'),
                                                 ),
                                               ],
                                             );
@@ -551,14 +550,14 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text('Şifreler aynı değil!'),
-                                            content: Text(
+                                            title: const Text('Şifreler aynı değil!'),
+                                            content: const Text(
                                                 'Girdiğiniz şifreler aynı değil.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('Tamam'),
+                                                child: const Text('Tamam'),
                                               ),
                                             ],
                                           );
@@ -569,15 +568,15 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text(
+                                            title: const Text(
                                                 'The passwords are not the same!'),
-                                            content: Text(
+                                            content: const Text(
                                                 'The passwords you entered are not the same.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('OK'),
+                                                child: const Text('OK'),
                                               ),
                                             ],
                                           );
@@ -592,11 +591,11 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                   'sc5byoun' /* Next */,
                                 ),
                                 options: FFButtonOptions(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00067BB7),
+                                  color: const Color(0x00067BB7),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -607,7 +606,7 @@ class _SifremiUnuttumP3WidgetState extends State<SifremiUnuttumP3Widget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 0.0,
                                   ),

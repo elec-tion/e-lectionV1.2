@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p2devam_model.dart';
 export 'oy_kullan_p2devam_model.dart';
@@ -85,11 +84,11 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: Color(0x004B39EF),
+                borderColor: const Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: Color(0x004B39EF),
+                fillColor: const Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -100,7 +99,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                 },
               ),
               title: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -115,7 +114,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -125,7 +124,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -137,12 +136,12 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: oyKullanP2devamUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -167,9 +166,9 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, -1.0),
-                          end: AlignmentDirectional(0, 1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: SingleChildScrollView(
@@ -177,7 +176,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -185,7 +184,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Icon(
                                       Icons.error_outline_sharp,
                                       color: FlutterFlowTheme.of(context)
@@ -194,9 +193,9 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 150.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -217,7 +216,7 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 13.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -230,7 +229,7 @@ war... */
                                     .override(
                                       fontFamily: 'Montserrat',
                                       color: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                          .secondaryText,
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -238,7 +237,7 @@ war... */
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -249,7 +248,7 @@ war... */
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -283,9 +282,9 @@ war... */
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: FutureBuilder<List<UsersRow>>(
                                   future: UsersTable().queryRows(
@@ -313,7 +312,7 @@ war... */
                                     List<UsersRow> listViewUsersRowList =
                                         snapshot.data!;
                                     return ListView.builder(
-                                      padding: EdgeInsets.fromLTRB(
+                                      padding: const EdgeInsets.fromLTRB(
                                         0,
                                         10.0,
                                         0,
@@ -327,7 +326,7 @@ war... */
                                             listViewUsersRowList[listViewIndex];
                                         return Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               listViewUsersRow.name,
@@ -366,13 +365,13 @@ war... */
                                     ),
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(0.0, -1.0),
+                                          const AlignmentDirectional(0.0, -1.0),
                                       child: SingleChildScrollView(
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 17.0, 0.0),
                                               child: SingleChildScrollView(
@@ -387,7 +386,7 @@ war... */
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   30.0,
                                                                   0.0,
@@ -433,7 +432,7 @@ war... */
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -441,9 +440,9 @@ war... */
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Theme(
                                         data: ThemeData(
@@ -462,7 +461,7 @@ war... */
                                                   .primaryText,
                                         ),
                                         child: Checkbox(
-                                          key: ValueKey('confirm1'),
+                                          key: const ValueKey('confirm1'),
                                           value: _model.checkwarnValue ??=
                                               false,
                                           onChanged: (newValue) async {
@@ -484,7 +483,7 @@ war... */
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -506,7 +505,7 @@ war... */
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   50.0, 5.0, 0.0, 20.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -534,7 +533,7 @@ war... */
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -552,7 +551,7 @@ war... */
                                         ),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -569,10 +568,10 @@ war... */
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: [0.0, 1.0],
-                                              begin: AlignmentDirectional(
+                                              stops: const [0.0, 1.0],
+                                              begin: const AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              end: AlignmentDirectional(1.0, 0),
+                                              end: const AlignmentDirectional(1.0, 0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
@@ -598,16 +597,16 @@ war... */
                                                     builder:
                                                         (alertDialogContext) {
                                                       return AlertDialog(
-                                                        title: Text(
+                                                        title: const Text(
                                                             'Please read and accept to continue.'),
-                                                        content: Text(
+                                                        content: const Text(
                                                             'You need to approve the conditions.'),
                                                         actions: [
                                                           TextButton(
                                                             onPressed: () =>
                                                                 Navigator.pop(
                                                                     alertDialogContext),
-                                                            child: Text('OK'),
+                                                            child: const Text('OK'),
                                                           ),
                                                         ],
                                                       );
@@ -619,9 +618,9 @@ war... */
                                                     builder:
                                                         (alertDialogContext) {
                                                       return AlertDialog(
-                                                        title: Text(
+                                                        title: const Text(
                                                             'Okuyup Onaylamanız Gerekiyor!'),
-                                                        content: Text(
+                                                        content: const Text(
                                                             'Devam etmek için koşulları onaylamanız gerekiyor.'),
                                                         actions: [
                                                           TextButton(
@@ -629,7 +628,7 @@ war... */
                                                                 Navigator.pop(
                                                                     alertDialogContext),
                                                             child:
-                                                                Text('Tamam'),
+                                                                const Text('Tamam'),
                                                           ),
                                                         ],
                                                       );
@@ -653,10 +652,10 @@ war... */
                                             options: FFButtonOptions(
                                               width: 208.0,
                                               height: 50.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color: Colors.transparent,
                                               textStyle: FlutterFlowTheme.of(

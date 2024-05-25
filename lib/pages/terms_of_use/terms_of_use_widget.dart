@@ -2,9 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'terms_of_use_model.dart';
 export 'terms_of_use_model.dart';
@@ -78,11 +76,11 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: Color(0x004B39EF),
+                borderColor: const Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: Color(0x004B39EF),
+                fillColor: const Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -93,9 +91,9 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                 },
               ),
               title: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 56.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 56.0, 0.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
@@ -109,7 +107,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                   ),
                 ),
               ),
-              actions: [],
+              actions: const [],
               centerTitle: false,
             ),
             body: SafeArea(
@@ -126,23 +124,23 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Icon(
                                   Icons.description_outlined,
                                   color:
@@ -151,7 +149,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 20.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
@@ -171,7 +169,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -195,7 +193,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
@@ -216,7 +214,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 20.0, 20.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -246,9 +244,9 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 0.0, 0.0),
                                 child: Theme(
                                   data: ThemeData(
@@ -266,7 +264,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                             .primaryText,
                                   ),
                                   child: Checkbox(
-                                    key: ValueKey('confirm1'),
+                                    key: const ValueKey('confirm1'),
                                     value: _model.checkwarnValue ??= true,
                                     onChanged: true
                                         ? null
@@ -289,7 +287,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 13.0, 5.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -310,14 +308,14 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       128.0, 20.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -338,7 +336,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                         width: 150.0,
                                         height: 52.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -355,10 +353,10 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -371,7 +369,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child: Icon(
@@ -384,7 +382,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                             ),
                                             Flexible(
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)

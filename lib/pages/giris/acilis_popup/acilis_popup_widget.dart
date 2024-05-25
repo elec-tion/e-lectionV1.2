@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'acilis_popup_model.dart';
 export 'acilis_popup_model.dart';
 
@@ -51,12 +49,12 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '343ktr0t' /* You couldn't enter e-lection! */,
@@ -72,7 +70,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'vze7caba' /* Because you don't have an acti... */,
@@ -96,7 +94,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                       width: 120.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -112,11 +110,11 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                             FlutterFlowTheme.of(context).graSet12,
                             FlutterFlowTheme.of(context).graSet13
                           ],
-                          stops: [0.0, 1.0, 1.0],
-                          begin: AlignmentDirectional(1.0, 0.0),
-                          end: AlignmentDirectional(-1.0, 0),
+                          stops: const [0.0, 1.0, 1.0],
+                          begin: const AlignmentDirectional(1.0, 0.0),
+                          end: const AlignmentDirectional(-1.0, 0),
                         ),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(40.0),
                           bottomRight: Radius.circular(40.0),
                           topLeft: Radius.circular(40.0),
@@ -131,11 +129,11 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                           'mqgr86mw' /* Log Out */,
                         ),
                         options: FFButtonOptions(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x00067BB7),
+                          color: const Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -145,7 +143,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),
@@ -159,7 +157,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                       width: 120.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -175,11 +173,11 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                             FlutterFlowTheme.of(context).graSet12,
                             FlutterFlowTheme.of(context).graSet13
                           ],
-                          stops: [0.0, 1.0, 1.0],
-                          begin: AlignmentDirectional(1.0, 0.0),
-                          end: AlignmentDirectional(-1.0, 0),
+                          stops: const [0.0, 1.0, 1.0],
+                          begin: const AlignmentDirectional(1.0, 0.0),
+                          end: const AlignmentDirectional(-1.0, 0),
                         ),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(40.0),
                           bottomRight: Radius.circular(40.0),
                           topLeft: Radius.circular(40.0),
@@ -191,7 +189,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                           context.goNamed(
                             'Acilis',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                                 duration: Duration(milliseconds: 20),
@@ -205,11 +203,11 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                           '9p6suzi3' /* Try Again */,
                         ),
                         options: FFButtonOptions(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x00067BB7),
+                          color: const Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -219,7 +217,7 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),

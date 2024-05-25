@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'voting_desc_model.dart';
 export 'voting_desc_model.dart';
 
@@ -56,7 +54,7 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -64,10 +62,10 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
               children: [
                 Flexible(
                   child: Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       child: Icon(
                         Icons.description_outlined,
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -77,7 +75,7 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'ynm39k1h' /* Election Description */,
@@ -92,10 +90,10 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                   ),
                 ),
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -119,10 +117,10 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
                           widget.compdesc?.detail,
@@ -145,7 +143,7 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
             children: [
               // container goes back
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -159,7 +157,7 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                     height: 45.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).alternate,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
                         bottomRight: Radius.circular(40.0),
                         topLeft: Radius.circular(40.0),
@@ -178,7 +176,7 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 30.0, 0.0, 0.0, 0.0),
                             child: Icon(
                               Icons.chevron_left,
@@ -187,9 +185,9 @@ class _VotingDescWidgetState extends State<VotingDescWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   23.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(

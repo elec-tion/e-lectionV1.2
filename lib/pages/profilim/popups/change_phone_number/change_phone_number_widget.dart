@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'change_phone_number_model.dart';
 export 'change_phone_number_model.dart';
@@ -59,17 +57,17 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -83,12 +81,12 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'cnqpfzi5' /* Enter your new phone number: */,
@@ -102,8 +100,8 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
-                  child: Container(
+                      const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
+                  child: SizedBox(
                     width: double.infinity,
                     child: TextFormField(
                       controller: _model.guncelleTelefonTextController,
@@ -148,7 +146,7 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                         ),
                         filled: true,
                         fillColor: FlutterFlowTheme.of(context).customColor2,
-                        contentPadding: EdgeInsets.all(10.0),
+                        contentPadding: const EdgeInsets.all(10.0),
                       ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Montserrat',
@@ -170,7 +168,7 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                   width: 180.0,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -186,11 +184,11 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                         FlutterFlowTheme.of(context).graSet12,
                         FlutterFlowTheme.of(context).graSet13
                       ],
-                      stops: [0.0, 1.0, 1.0],
-                      begin: AlignmentDirectional(1.0, 0.0),
-                      end: AlignmentDirectional(-1.0, 0),
+                      stops: const [0.0, 1.0, 1.0],
+                      begin: const AlignmentDirectional(1.0, 0.0),
+                      end: const AlignmentDirectional(-1.0, 0),
                     ),
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(40.0),
                       bottomRight: Radius.circular(40.0),
                       topLeft: Radius.circular(40.0),
@@ -212,14 +210,14 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text('Telefon numarası kullanılamıyor!'),
-                                content: Text(
+                                title: const Text('Telefon numarası kullanılamıyor!'),
+                                content: const Text(
                                     'Girmiş olduğunuz telefon numarası başka birisi tarafından kullanılmaktadır.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('Tamam'),
+                                    child: const Text('Tamam'),
                                   ),
                                 ],
                               );
@@ -230,14 +228,14 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text('Phone number is unusable!'),
-                                content: Text(
+                                title: const Text('Phone number is unusable!'),
+                                content: const Text(
                                     'The phone number that you entered is used by someone else.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('OK'),
+                                    child: const Text('OK'),
                                   ),
                                 ],
                               );
@@ -260,14 +258,14 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text('Başarılı!'),
-                                content: Text(
+                                title: const Text('Başarılı!'),
+                                content: const Text(
                                     'Telefon numaranız başarıyla güncellendi.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('Tamam'),
+                                    child: const Text('Tamam'),
                                   ),
                                 ],
                               );
@@ -278,14 +276,14 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text('Successful!'),
-                                content: Text(
+                                title: const Text('Successful!'),
+                                content: const Text(
                                     'Your phone number has been successfully updated.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('OK'),
+                                    child: const Text('OK'),
                                   ),
                                 ],
                               );
@@ -303,10 +301,10 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                     ),
                     options: FFButtonOptions(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0x00067BB7),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: const Color(0x00067BB7),
                       textStyle:
                           FlutterFlowTheme.of(context).titleLarge.override(
                                 fontFamily: 'Montserrat',
@@ -316,7 +314,7 @@ class _ChangePhoneNumberWidgetState extends State<ChangePhoneNumberWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 0.0,
                       ),

@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'howvoting_works_p7_model.dart';
 export 'howvoting_works_p7_model.dart';
 
@@ -48,7 +45,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
             backgroundColor: FlutterFlowTheme.of(context).background1,
             automaticallyImplyLeading: false,
             title: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
@@ -61,7 +58,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                 ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: false,
           ),
           body: SafeArea(
@@ -78,9 +75,9 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Column(
@@ -88,7 +85,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -97,7 +94,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: CircularPercentIndicator(
                                     percent: 1.0,
                                     radius: 40.0,
@@ -122,7 +119,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -157,7 +154,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -183,7 +180,7 @@ class _HowvotingWorksP7WidgetState extends State<HowvotingWorksP7Widget> {
                                   width: 200.0,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -211,7 +208,7 @@ Next, you will see the confir... */
                 ),
                 Flexible(
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -227,13 +224,13 @@ Next, you will see the confir... */
                                   FlutterFlowTheme.of(context).alternate,
                                   FlutterFlowTheme.of(context).graSet23
                                 ],
-                                stops: [0.0, 1.0],
-                                begin: AlignmentDirectional(0.0, -1.0),
-                                end: AlignmentDirectional(0, 1.0),
+                                stops: const [0.0, 1.0],
+                                begin: const AlignmentDirectional(0.0, -1.0),
+                                end: const AlignmentDirectional(0, 1.0),
                               ),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -258,7 +255,7 @@ Next, you will see the confir... */
                                     width: 200.0,
                                     height: 70.0,
                                     decoration: BoxDecoration(
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -270,12 +267,12 @@ Next, you will see the confir... */
                                       ],
                                       gradient: LinearGradient(
                                         colors: [
-                                          Color(0xFF11942A),
+                                          const Color(0xFF11942A),
                                           FlutterFlowTheme.of(context).graSet11
                                         ],
-                                        stops: [0.0, 1.0],
-                                        begin: AlignmentDirectional(-1.0, 0.87),
-                                        end: AlignmentDirectional(1.0, -0.87),
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(-1.0, 0.87),
+                                        end: const AlignmentDirectional(1.0, -0.87),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                       border: Border.all(
@@ -284,13 +281,13 @@ Next, you will see the confir... */
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -302,7 +299,7 @@ Next, you will see the confir... */
                                                     .titleSmall
                                                     .override(
                                                       fontFamily: 'Montserrat',
-                                                      color: Color(0xFFF2F2F2),
+                                                      color: const Color(0xFFF2F2F2),
                                                       fontSize: 17.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -311,7 +308,7 @@ Next, you will see the confir... */
                                               ),
                                             ),
                                           ),
-                                          Padding(
+                                          const Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),

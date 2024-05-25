@@ -68,6 +68,8 @@ export '/pages/terms_of_use/terms_of_use_widget.dart' show TermsOfUseWidget;
 export '/pages/oylama/oylama_olustur/oylama_olustur_p3/oylama_olustur_p3_widget.dart'
     show OylamaOlusturP3Widget;
 export '/pages/how_to_vote/faq/faq_widget.dart' show FaqWidget;
+export '/pages/oylama/oy_kullan/oy_kullan/oy_kullan_widget.dart'
+    show OyKullanWidget;
 export '/pages/giris/dropdown_deneme/dropdown_deneme_widget.dart'
     show DropdownDenemeWidget;
 export '/pages/giris/bilgi_guncelleme_p2/bilgi_guncelleme_p2_widget.dart'

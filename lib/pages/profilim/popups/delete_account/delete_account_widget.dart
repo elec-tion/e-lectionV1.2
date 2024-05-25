@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'delete_account_model.dart';
 export 'delete_account_model.dart';
 
@@ -50,17 +48,17 @@ class _DeleteAccountWidgetState extends State<DeleteAccountWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -74,14 +72,14 @@ class _DeleteAccountWidgetState extends State<DeleteAccountWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '5poiecdo' /* For your e-lection account del... */,
@@ -97,7 +95,7 @@ class _DeleteAccountWidgetState extends State<DeleteAccountWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 30.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 30.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'q4gn2j7m' /* Contact us by e-mail "info@ele... */,

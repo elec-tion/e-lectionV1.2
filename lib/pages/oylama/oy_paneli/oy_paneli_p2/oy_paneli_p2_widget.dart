@@ -9,13 +9,10 @@ import '/pages/oylama/oy_paneli/popups/add_com_mem_oy_panel/add_com_mem_oy_panel
 import '/pages/oylama/oy_paneli/popups/delete_candidate_oy_panel/delete_candidate_oy_panel_widget.dart';
 import '/pages/oylama/oy_paneli/popups/delete_com_mem_oy_panel/delete_com_mem_oy_panel_widget.dart';
 import '/pages/oylama/oy_paneli/popups/saat_tarih_degistir_popup/saat_tarih_degistir_popup_widget.dart';
-import 'dart:math';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_paneli_p2_model.dart';
 export 'oy_paneli_p2_model.dart';
@@ -66,15 +63,15 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.8, 0.8),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.8, 0.8),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -158,7 +155,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -168,7 +165,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -180,12 +177,12 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: oyPaneliP2UsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -210,9 +207,9 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -220,7 +217,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -269,7 +266,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -307,16 +304,16 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Container(
                               width: 411.0,
                               height: 400.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0x001E1E1E),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -325,7 +322,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 12.0),
                                         child: Material(
                                           color: Colors.transparent,
@@ -337,12 +334,12 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                           child: Container(
                                             width: 390.0,
                                             height: 440.0,
-                                            constraints: BoxConstraints(
+                                            constraints: const BoxConstraints(
                                               maxWidth: 570.0,
                                             ),
                                             decoration: BoxDecoration(
                                               color: Colors.transparent,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 4.0,
                                                   color: Color(0x002B2B2B),
@@ -356,7 +353,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                   BorderRadius.circular(12.0),
                                               shape: BoxShape.rectangle,
                                               border: Border.all(
-                                                color: Color(0x00363636),
+                                                color: const Color(0x00363636),
                                                 width: 2.0,
                                               ),
                                             ),
@@ -365,7 +362,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                 Column(
                                               children: [
                                                 Align(
-                                                  alignment: Alignment(0.0, 0),
+                                                  alignment: const Alignment(0.0, 0),
                                                   child: TabBar(
                                                     isScrollable: true,
                                                     labelColor:
@@ -377,7 +374,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                 context)
                                                             .text1,
                                                     labelPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 8.0, 0.0),
                                                     labelStyle: FlutterFlowTheme
@@ -457,7 +454,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -534,7 +531,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -598,7 +595,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
@@ -664,11 +661,11 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                             // container that is for sign in button
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -680,7 +677,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                   height: 45.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    boxShadow: [
+                                                                    boxShadow: const [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -703,20 +700,20 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         FlutterFlowTheme.of(context)
                                                                             .graSet13
                                                                       ],
-                                                                      stops: [
+                                                                      stops: const [
                                                                         0.0,
                                                                         1.0,
                                                                         1.0
                                                                       ],
-                                                                      begin: AlignmentDirectional(
+                                                                      begin: const AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
-                                                                      end: AlignmentDirectional(
+                                                                      end: const AlignmentDirectional(
                                                                           -1.0,
                                                                           0),
                                                                     ),
                                                                     borderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -748,10 +745,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: Container(
+                                                                                child: SizedBox(
                                                                                   height: 500.0,
                                                                                   width: 350.0,
                                                                                   child: SaatTarihDegistirPopupWidget(
@@ -771,17 +768,17 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                       ),
                                                                       options:
                                                                           FFButtonOptions(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x00067BB7),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleLarge
@@ -795,7 +792,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -819,7 +816,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           30.0,
                                                                           20.0,
@@ -885,7 +882,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                           listViewUsersRowList[
                                                                               listViewIndex];
                                                                       return Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -896,7 +893,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                               child: Icon(
                                                                                 Icons.arrow_right,
                                                                                 color: FlutterFlowTheme.of(context).text1,
@@ -904,12 +901,12 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                               child: Container(
                                                                                 width: 40.0,
                                                                                 height: 40.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -938,7 +935,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                                 borderRadius: 20.0,
                                                                                 borderWidth: 1.0,
                                                                                 buttonSize: 35.0,
-                                                                                fillColor: Color(0x004B39EF),
+                                                                                fillColor: const Color(0x004B39EF),
                                                                                 icon: Icon(
                                                                                   Icons.person_remove,
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
@@ -952,10 +949,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                                         elevation: 0,
                                                                                         insetPadding: EdgeInsets.zero,
                                                                                         backgroundColor: Colors.transparent,
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                         child: GestureDetector(
                                                                                           onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                          child: Container(
+                                                                                          child: SizedBox(
                                                                                             height: 300.0,
                                                                                             width: 300.0,
                                                                                             child: DeleteComMemOyPanelWidget(
@@ -982,10 +979,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                             // container that is for sign in button
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -997,7 +994,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                   height: 45.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    boxShadow: [
+                                                                    boxShadow: const [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -1020,20 +1017,20 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         FlutterFlowTheme.of(context)
                                                                             .graSet13
                                                                       ],
-                                                                      stops: [
+                                                                      stops: const [
                                                                         0.0,
                                                                         1.0,
                                                                         1.0
                                                                       ],
-                                                                      begin: AlignmentDirectional(
+                                                                      begin: const AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
-                                                                      end: AlignmentDirectional(
+                                                                      end: const AlignmentDirectional(
                                                                           -1.0,
                                                                           0),
                                                                     ),
                                                                     borderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -1065,10 +1062,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: Container(
+                                                                                child: const SizedBox(
                                                                                   height: 350.0,
                                                                                   width: 300.0,
                                                                                   child: AddComMemOyPanelWidget(),
@@ -1099,12 +1096,12 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                             300.0,
                                                                         height:
                                                                             50.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1123,7 +1120,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1147,7 +1144,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           30.0,
                                                                           20.0,
@@ -1213,7 +1210,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                           listViewCandidatesRowList[
                                                                               listViewIndex];
                                                                       return Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1224,7 +1221,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                               child: Icon(
                                                                                 Icons.arrow_right,
                                                                                 color: FlutterFlowTheme.of(context).text1,
@@ -1248,7 +1245,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                                 borderRadius: 20.0,
                                                                                 borderWidth: 1.0,
                                                                                 buttonSize: 35.0,
-                                                                                fillColor: Color(0x004B39EF),
+                                                                                fillColor: const Color(0x004B39EF),
                                                                                 icon: Icon(
                                                                                   Icons.person_remove,
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
@@ -1262,10 +1259,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                                         elevation: 0,
                                                                                         insetPadding: EdgeInsets.zero,
                                                                                         backgroundColor: Colors.transparent,
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                         child: GestureDetector(
                                                                                           onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                          child: Container(
+                                                                                          child: SizedBox(
                                                                                             height: 300.0,
                                                                                             width: 300.0,
                                                                                             child: DeleteCandidateOyPanelWidget(
@@ -1292,10 +1289,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                             // container that is for sign in button
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -1307,7 +1304,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                   height: 45.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    boxShadow: [
+                                                                    boxShadow: const [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -1330,20 +1327,20 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         FlutterFlowTheme.of(context)
                                                                             .graSet13
                                                                       ],
-                                                                      stops: [
+                                                                      stops: const [
                                                                         0.0,
                                                                         1.0,
                                                                         1.0
                                                                       ],
-                                                                      begin: AlignmentDirectional(
+                                                                      begin: const AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
-                                                                      end: AlignmentDirectional(
+                                                                      end: const AlignmentDirectional(
                                                                           -1.0,
                                                                           0),
                                                                     ),
                                                                     borderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -1375,10 +1372,10 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: Container(
+                                                                                child: const SizedBox(
                                                                                   height: 350.0,
                                                                                   width: 300.0,
                                                                                   child: AddCandidateOyPanelWidget(),
@@ -1409,12 +1406,12 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                             300.0,
                                                                         height:
                                                                             50.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1433,7 +1430,7 @@ class _OyPaneliP2WidgetState extends State<OyPaneliP2Widget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:

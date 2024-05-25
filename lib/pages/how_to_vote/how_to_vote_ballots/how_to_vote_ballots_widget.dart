@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'how_to_vote_ballots_model.dart';
 export 'how_to_vote_ballots_model.dart';
 
@@ -48,7 +46,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -75,7 +73,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -103,7 +101,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
               ),
             ],
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
         ),
         body: SafeArea(
@@ -121,9 +119,9 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: SingleChildScrollView(
@@ -131,7 +129,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -141,7 +139,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -170,7 +168,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -188,7 +186,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 50.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -211,7 +209,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                         ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -227,9 +225,9 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 0.0),
                                               child: Material(
@@ -242,7 +240,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                 ),
                                                 child: Container(
                                                   decoration: BoxDecoration(
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 4.0,
                                                         color:
@@ -262,11 +260,11 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                                 context)
                                                             .graSet22
                                                       ],
-                                                      stops: [0.0, 1.0],
+                                                      stops: const [0.0, 1.0],
                                                       begin:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
-                                                      end: AlignmentDirectional(
+                                                      end: const AlignmentDirectional(
                                                           1.0, 0),
                                                     ),
                                                     borderRadius:
@@ -285,7 +283,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -301,11 +299,11 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       3.0,
                                                                       0.0,
@@ -326,14 +324,14 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                               width: 223.0,
                                                               height: 50.0,
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -359,7 +357,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                                                       ),
                                                               elevation: 0.0,
                                                               borderSide:
-                                                                  BorderSide(
+                                                                  const BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -406,7 +404,7 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                   ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -421,9 +419,9 @@ class _HowToVoteBallotsWidgetState extends State<HowToVoteBallotsWidget> {
                                           FlutterFlowTheme.of(context).graSet23,
                                           FlutterFlowTheme.of(context).graSet22
                                         ],
-                                        stops: [0.0, 1.0],
-                                        begin: AlignmentDirectional(-1.0, 0.0),
-                                        end: AlignmentDirectional(1.0, 0),
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(-1.0, 0.0),
+                                        end: const AlignmentDirectional(1.0, 0),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),

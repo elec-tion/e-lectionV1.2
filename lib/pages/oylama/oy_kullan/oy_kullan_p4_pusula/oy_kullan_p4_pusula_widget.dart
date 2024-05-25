@@ -4,16 +4,12 @@ import '/flutter_flow/flutter_flow_radio_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p4_pusula_model.dart';
 export 'oy_kullan_p4_pusula_model.dart';
@@ -58,8 +54,8 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 47.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 47.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -128,47 +124,24 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                 backgroundColor: FlutterFlowTheme.of(context).background1,
                 automaticallyImplyLeading: false,
                 title: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
-                    child: Hero(
-                      tag: 'b1',
-                      transitionOnUserGestures: true,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          Theme.of(context).brightness == Brightness.dark
-                              ? 'assets/images/e-lection-logo-beyaz.png'
-                              : 'assets/images/e-lection-logo-siyah.png',
-                          width: 95.0,
-                          height: 50.0,
-                          fit: BoxFit.cover,
-                        ),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Hero(
+                    tag: 'b1',
+                    transitionOnUserGestures: true,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        Theme.of(context).brightness == Brightness.dark
+                            ? 'assets/images/e-lection-logo-beyaz.png'
+                            : 'assets/images/e-lection-logo-siyah.png',
+                        width: 95.0,
+                        height: 50.0,
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
                 ),
-                actions: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                    child: Container(
-                      width: 40.0,
-                      height: 40.0,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                      ),
-                      child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
-                        imageUrl: oyKullanP4PusulaUsersRow!.photoUrl,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ],
+                actions: const [],
                 centerTitle: false,
               ),
               body: SafeArea(
@@ -185,19 +158,19 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, -1.0),
-                          end: AlignmentDirectional(0, 1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   13.0, 13.0, 13.0, 0.0),
                               child: Text(
                                 valueOrDefault<String>(
@@ -210,10 +183,10 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                     .override(
                                       fontFamily: 'Montserrat',
                                       color: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                          .secondaryText,
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                     ),
                               ),
                             ),
@@ -241,10 +214,10 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 15.0),
                               child: FlutterFlowTimer(
-                                key: ValueKey('votetimer'),
+                                key: const ValueKey('votetimer'),
                                 initialTime: _model.timerInitialTimeMs,
                                 getDisplayTime: (value) =>
                                     StopWatchTimer.getDisplayTime(
@@ -254,28 +227,26 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                 ),
                                 controller: _model.timerController,
                                 updateStateInterval:
-                                    Duration(milliseconds: 1000),
+                                    const Duration(milliseconds: 1000),
                                 onChanged: (value, displayTime, shouldUpdate) {
                                   _model.timerMilliseconds = value;
                                   _model.timerValue = displayTime;
                                   if (shouldUpdate) setState(() {});
                                 },
                                 onEnded: () async {
-                                  context.pushNamed('OyKullanP6Final');
-
                                   await showDialog(
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        title: Text(
+                                        title: const Text(
                                             'Alert! Voting Timer Has Ended.'),
-                                        content: Text(
+                                        content: const Text(
                                             'Your Vote is not saved and may invalidated by your election commitee.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: Text('NOOOOOOOOO'),
+                                            child: const Text('NOOOOOOOOO'),
                                           ),
                                         ],
                                       );
@@ -300,36 +271,38 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Container(
                                         width: 360.0,
-                                        height: 522.0,
+                                        height: 632.0,
                                         decoration: BoxDecoration(
                                           gradient: LinearGradient(
                                             colors: [
                                               FlutterFlowTheme.of(context)
                                                   .background2,
-                                              Color(0x08313131)
+                                              const Color(0x08313131)
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(0.0, -1.0),
-                                            end: AlignmentDirectional(0, 1.0),
+                                                const AlignmentDirectional(0.0, -1.0),
+                                            end: const AlignmentDirectional(0, 1.0),
                                           ),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(0.0),
                                             bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(19.0),
                                             topRight: Radius.circular(19.0),
                                           ),
                                         ),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, -1.0),
+                                              const AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 20.0),
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 5.0),
                                             child: SingleChildScrollView(
                                               primary: false,
                                               child: Column(
@@ -339,61 +312,59 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.center,
                                                 children: [
-                                                  Flexible(
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceEvenly,
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          15.0,
-                                                                          0.0,
-                                                                          5.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'rf3eqp4w' /* Electronic Voting Ballot */,
-                                                                ),
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Montserrat',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          20.0,
-                                                                      letterSpacing:
-                                                                          2.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                    ),
+                                                  Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceEvenly,
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        20.0,
+                                                                        0.0,
+                                                                        5.0),
+                                                            child: Text(
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'rf3eqp4w' /* Electronic Voting Ballot */,
                                                               ),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Montserrat',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                    fontSize:
+                                                                        20.0,
+                                                                    letterSpacing:
+                                                                        2.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                  ),
                                                             ),
                                                           ),
-                                                        ],
-                                                      ),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
                                                   Opacity(
@@ -424,270 +395,139 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 10.0,
-                                                                0.0, 10.0),
-                                                    child: FutureBuilder<
-                                                        List<CandidatesRow>>(
-                                                      future: CandidatesTable()
-                                                          .queryRows(
-                                                        queryFn: (q) => q.in_(
-                                                          'wallet_id',
-                                                          widget.ballot1!
-                                                              .candidatesWalletId,
-                                                        ),
-                                                      ),
-                                                      builder:
-                                                          (context, snapshot) {
-                                                        // Customize what your widget looks like when it's loading.
-                                                        if (!snapshot.hasData) {
-                                                          return Center(
-                                                            child: SizedBox(
-                                                              width: 50.0,
-                                                              height: 50.0,
-                                                              child:
-                                                                  CircularProgressIndicator(
-                                                                valueColor:
-                                                                    AlwaysStoppedAnimation<
-                                                                        Color>(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .mavi,
-                                                                ),
-                                                              ),
+                                                  Flexible(
+                                                    child: Align(
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              -1.0, 0.0),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    25.0,
+                                                                    0.0,
+                                                                    25.0,
+                                                                    10.0),
+                                                        child: FutureBuilder<
+                                                            List<
+                                                                CandidatesRow>>(
+                                                          future:
+                                                              CandidatesTable()
+                                                                  .querySingleRow(
+                                                            queryFn: (q) =>
+                                                                q.in_(
+                                                              'wallet_id',
+                                                              widget.ballot1!
+                                                                  .committeeMembers,
                                                             ),
-                                                          );
-                                                        }
-                                                        List<CandidatesRow>
-                                                            listViewCandidatesRowList =
-                                                            snapshot.data!;
-                                                        return ListView.builder(
-                                                          padding:
-                                                              EdgeInsets.zero,
-                                                          shrinkWrap: true,
-                                                          scrollDirection:
-                                                              Axis.vertical,
-                                                          itemCount:
-                                                              listViewCandidatesRowList
-                                                                  .length,
-                                                          itemBuilder: (context,
-                                                              listViewIndex) {
-                                                            final listViewCandidatesRow =
-                                                                listViewCandidatesRowList[
-                                                                    listViewIndex];
-                                                            return Theme(
-                                                              data: ThemeData(
-                                                                checkboxTheme:
-                                                                    CheckboxThemeData(
-                                                                  visualDensity:
-                                                                      VisualDensity
-                                                                          .standard,
-                                                                  materialTapTargetSize:
-                                                                      MaterialTapTargetSize
-                                                                          .padded,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            25),
+                                                          ),
+                                                          builder: (context,
+                                                              snapshot) {
+                                                            // Customize what your widget looks like when it's loading.
+                                                            if (!snapshot
+                                                                .hasData) {
+                                                              return Center(
+                                                                child: SizedBox(
+                                                                  width: 50.0,
+                                                                  height: 50.0,
+                                                                  child:
+                                                                      CircularProgressIndicator(
+                                                                    valueColor:
+                                                                        AlwaysStoppedAnimation<
+                                                                            Color>(
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .mavi,
+                                                                    ),
                                                                   ),
                                                                 ),
-                                                                unselectedWidgetColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                              ),
-                                                              child:
-                                                                  CheckboxListTile(
-                                                                value: _model
-                                                                        .check1ValueMap[
-                                                                    listViewCandidatesRow] ??= true,
-                                                                onChanged:
-                                                                    (newValue) async {
-                                                                  setState(() =>
-                                                                      _model.check1ValueMap[
-                                                                              listViewCandidatesRow] =
-                                                                          newValue!);
-                                                                },
-                                                                title: Text(
-                                                                  listViewCandidatesRow
-                                                                      .name,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleLarge
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
-                                                                ),
-                                                                subtitle: Text(
-                                                                  listViewIndex
-                                                                      .toString(),
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .labelMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Montserrat',
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
-                                                                ),
-                                                                tileColor: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryBackground,
-                                                                activeColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .mavi,
-                                                                checkColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .info,
-                                                                dense: true,
-                                                                controlAffinity:
-                                                                    ListTileControlAffinity
-                                                                        .trailing,
-                                                                shape:
-                                                                    RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .only(
-                                                                    bottomLeft:
-                                                                        Radius.circular(
-                                                                            0.0),
-                                                                    bottomRight:
-                                                                        Radius.circular(
-                                                                            0.0),
-                                                                    topLeft: Radius
-                                                                        .circular(
-                                                                            0.0),
-                                                                    topRight: Radius
-                                                                        .circular(
-                                                                            0.0),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            );
-                                                          },
-                                                        );
-                                                      },
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(10.0, 0.0,
-                                                                10.0, 0.0),
-                                                    child: FutureBuilder<
-                                                        List<CandidatesRow>>(
-                                                      future: CandidatesTable()
-                                                          .querySingleRow(
-                                                        queryFn: (q) => q.in_(
-                                                          'wallet_id',
-                                                          widget.ballot1!
-                                                              .committeeMembers,
-                                                        ),
-                                                      ),
-                                                      builder:
-                                                          (context, snapshot) {
-                                                        // Customize what your widget looks like when it's loading.
-                                                        if (!snapshot.hasData) {
-                                                          return Center(
-                                                            child: SizedBox(
-                                                              width: 50.0,
-                                                              height: 50.0,
-                                                              child:
-                                                                  CircularProgressIndicator(
-                                                                valueColor:
-                                                                    AlwaysStoppedAnimation<
-                                                                        Color>(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .mavi,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          );
-                                                        }
-                                                        List<CandidatesRow>
-                                                            radioButtonCandidatesRowList =
-                                                            snapshot.data!;
-                                                        final radioButtonCandidatesRow =
-                                                            radioButtonCandidatesRowList
-                                                                    .isNotEmpty
-                                                                ? radioButtonCandidatesRowList
-                                                                    .first
-                                                                : null;
-                                                        return FlutterFlowRadioButton(
-                                                          options: widget
-                                                              .ballot1!
-                                                              .candidatesWalletId
-                                                              .toList(),
-                                                          onChanged:
-                                                              (_model.timerValue ==
+                                                              );
+                                                            }
+                                                            List<CandidatesRow>
+                                                                radioButtonCandidatesRowList =
+                                                                snapshot.data!;
+                                                            final radioButtonCandidatesRow =
+                                                                radioButtonCandidatesRowList
+                                                                        .isNotEmpty
+                                                                    ? radioButtonCandidatesRowList
+                                                                        .first
+                                                                    : null;
+                                                            return FlutterFlowRadioButton(
+                                                              options: widget
+                                                                  .ballot1!
+                                                                  .candidateName
+                                                                  .toList(),
+                                                              onChanged: (_model
+                                                                          .timerValue ==
                                                                       '0')
                                                                   ? null
                                                                   : (val) =>
                                                                       setState(
                                                                           () {}),
-                                                          controller: _model
-                                                                  .radioButtonValueController ??=
-                                                              FormFieldController<
-                                                                  String>(null),
-                                                          optionHeight: 55.0,
-                                                          textStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Montserrat',
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                  ),
-                                                          selectedTextStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Montserrat',
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                  ),
-                                                          buttonPosition:
-                                                              RadioButtonPosition
-                                                                  .right,
-                                                          direction:
-                                                              Axis.vertical,
-                                                          radioButtonColor:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .graSet11,
-                                                          inactiveRadioButtonColor:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .secondaryText,
-                                                          toggleable: false,
-                                                          horizontalAlignment:
-                                                              WrapAlignment
-                                                                  .start,
-                                                          verticalAlignment:
-                                                              WrapCrossAlignment
-                                                                  .center,
-                                                        );
-                                                      },
+                                                              controller: _model
+                                                                      .radioButtonValueController ??=
+                                                                  FormFieldController<
+                                                                          String>(
+                                                                      null),
+                                                              optionHeight:
+                                                                  95.0,
+                                                              textStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLarge
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                      ),
+                                                              selectedTextStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLarge
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: const Color(
+                                                                            0xFF4CA2CE),
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight:
+                                                                            FontWeight.bold,
+                                                                      ),
+                                                              textPadding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          10.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              buttonPosition:
+                                                                  RadioButtonPosition
+                                                                      .left,
+                                                              direction:
+                                                                  Axis.vertical,
+                                                              radioButtonColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .graSet11,
+                                                              inactiveRadioButtonColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryText,
+                                                              toggleable: false,
+                                                              horizontalAlignment:
+                                                                  WrapAlignment
+                                                                      .start,
+                                                              verticalAlignment:
+                                                                  WrapCrossAlignment
+                                                                      .center,
+                                                            );
+                                                          },
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                   Opacity(
@@ -737,7 +577,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(height: 2.0)),
+                                                ].divide(const SizedBox(height: 2.0)),
                                               ),
                                             ),
                                           ),
@@ -763,21 +603,21 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                               FlutterFlowTheme.of(context).customColor2,
                               FlutterFlowTheme.of(context).graSet23
                             ],
-                            stops: [0.0, 1.0],
-                            begin: AlignmentDirectional(0.0, -1.0),
-                            end: AlignmentDirectional(0, 1.0),
+                            stops: const [0.0, 1.0],
+                            begin: const AlignmentDirectional(0.0, -1.0),
+                            end: const AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 50.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       27.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -798,7 +638,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                         width: 76.0,
                                         height: 70.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -815,10 +655,10 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -831,7 +671,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       17.0, 0.0, 0.0, 0.0),
                                               child: Icon(
@@ -850,75 +690,123 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       33.0, 0.0, 0.0, 0.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      await _model.stoptimer(context);
-
-                                      context.pushNamed(
-                                        'OyKullanP5Pusula',
-                                        queryParameters: {
-                                          'ballot2': serializeParam(
-                                            widget.ballot1,
-                                            ParamType.SupabaseRow,
-                                          ),
-                                        }.withoutNulls,
-                                      );
-                                    },
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 0.0,
-                                      shape: RoundedRectangleBorder(
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 0.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Container(
+                                      width: 245.0,
+                                      height: 70.0,
+                                      decoration: BoxDecoration(
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            color: Color(0x33000000),
+                                            offset: Offset(
+                                              0.0,
+                                              2.0,
+                                            ),
+                                          )
+                                        ],
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            FlutterFlowTheme.of(context)
+                                                .graSet11,
+                                            FlutterFlowTheme.of(context)
+                                                .graSet12,
+                                            FlutterFlowTheme.of(context)
+                                                .graSet13
+                                          ],
+                                          stops: const [0.0, 1.0, 1.0],
+                                          begin:
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          end: const AlignmentDirectional(1.0, 0),
+                                        ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
-                                      ),
-                                      child: Container(
-                                        width: 245.0,
-                                        height: 70.0,
-                                        decoration: BoxDecoration(
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 4.0,
-                                              color: Color(0x33000000),
-                                              offset: Offset(
-                                                0.0,
-                                                2.0,
-                                              ),
-                                            )
-                                          ],
-                                          gradient: LinearGradient(
-                                            colors: [
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet11,
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet12,
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet13
-                                            ],
-                                            stops: [0.0, 1.0, 1.0],
-                                            begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                          border: Border.all(
-                                            color: FlutterFlowTheme.of(context)
-                                                .graSet22,
-                                          ),
+                                        border: Border.all(
+                                          color: FlutterFlowTheme.of(context)
+                                              .graSet22,
                                         ),
+                                      ),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          if (_model.radioButtonValue != null &&
+                                              _model.radioButtonValue != '') {
+                                            context.pushNamed(
+                                              'OyKullanP5Pusula',
+                                              queryParameters: {
+                                                'ballot2': serializeParam(
+                                                  widget.ballot1,
+                                                  ParamType.SupabaseRow,
+                                                ),
+                                                'state': serializeParam(
+                                                  _model.radioButtonValue,
+                                                  ParamType.String,
+                                                ),
+                                              }.withoutNulls,
+                                            );
+                                          } else {
+                                            if (FFLocalizations.of(context)
+                                                    .languageCode ==
+                                                'en') {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    title: const Text(
+                                                        'You can not submit empty ballot!'),
+                                                    content: const Text(
+                                                        'You must select a candidate to give vote.'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: const Text('OK'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            } else {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    title: const Text(
+                                                        'Oy pusulasını boş yollayamazsınız.'),
+                                                    content: const Text(
+                                                        'Oy verebilmek için bir aday seçmeniz gerekiyor.'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: const Text('Tamam'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            }
+                                          }
+                                        },
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       40.0, 0.0, 5.0, 0.0),
                                               child: Text(
@@ -931,7 +819,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Montserrat',
-                                                      color: Color(0xFFF4F4F4),
+                                                      color: const Color(0xFFF4F4F4),
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -939,7 +827,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     ),
                                               ),
                                             ),
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 10.0, 0.0),

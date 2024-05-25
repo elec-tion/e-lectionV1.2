@@ -9,7 +9,7 @@ class AdminsTable extends SupabaseTable<AdminsRow> {
 }
 
 class AdminsRow extends SupabaseDataRow {
-  AdminsRow(Map<String, dynamic> data) : super(data);
+  AdminsRow(super.data);
 
   @override
   SupabaseTable get table => AdminsTable();

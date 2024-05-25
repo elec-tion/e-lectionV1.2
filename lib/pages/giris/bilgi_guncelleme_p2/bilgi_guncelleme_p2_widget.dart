@@ -8,7 +8,6 @@ import '/flutter_flow/form_field_controller.dart';
 import '/pages/giris/to_scomp/to_scomp_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'bilgi_guncelleme_p2_model.dart';
 export 'bilgi_guncelleme_p2_model.dart';
@@ -98,7 +97,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                   ),
                 ),
               ),
-              actions: [],
+              actions: const [],
               centerTitle: true,
               elevation: 0.0,
             ),
@@ -118,9 +117,9 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, -1.0),
-                          end: AlignmentDirectional(0, 1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: SingleChildScrollView(
@@ -129,7 +128,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -181,13 +180,13 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 30.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -205,7 +204,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -301,7 +300,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                       .mavi,
                                               borderWidth: 1.0,
                                               borderRadius: 15.0,
-                                              margin: EdgeInsetsDirectional
+                                              margin: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -315,7 +314,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -454,7 +453,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                         .mavi,
                                                 borderWidth: 1.0,
                                                 borderRadius: 15.0,
-                                                margin: EdgeInsetsDirectional
+                                                margin: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 4.0, 16.0, 4.0),
                                                 hidesUnderline: true,
@@ -468,7 +467,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -615,7 +614,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                         .mavi,
                                                 borderWidth: 1.0,
                                                 borderRadius: 15.0,
-                                                margin: EdgeInsetsDirectional
+                                                margin: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 4.0, 16.0, 4.0),
                                                 hidesUnderline: true,
@@ -770,7 +769,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                       .mavi,
                                               borderWidth: 1.0,
                                               borderRadius: 15.0,
-                                              margin: EdgeInsetsDirectional
+                                              margin: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -790,9 +789,9 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 0.0, 0.0, 0.0),
                                     child: Theme(
                                       data: ThemeData(
@@ -810,7 +809,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                 .primaryText,
                                       ),
                                       child: Checkbox(
-                                        key: ValueKey('confirm1'),
+                                        key: const ValueKey('confirm1'),
                                         value: _model.checkwarnValue ??= false,
                                         onChanged: (newValue) async {
                                           setState(() => _model.checkwarnValue =
@@ -831,7 +830,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 40.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -853,7 +852,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                             ),
                             Builder(
                               builder: (context) => Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     45.0, 5.0, 0.0, 28.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -868,7 +867,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -880,7 +879,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: Container(
+                                            child: const SizedBox(
                                               height: 600.0,
                                               width: 300.0,
                                               child: ToScompWidget(),
@@ -912,7 +911,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                               width: 230.0,
                               height: 52.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -928,11 +927,11 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     FlutterFlowTheme.of(context).graSet12,
                                     FlutterFlowTheme.of(context).graSet13
                                   ],
-                                  stops: [0.0, 1.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(40.0),
                                   bottomRight: Radius.circular(40.0),
                                   topLeft: Radius.circular(40.0),
@@ -941,14 +940,10 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                               ),
                               child: FFButtonWidget(
                                 onPressed: () async {
-                                  if ((FFAppState().countryID != null &&
-                                          FFAppState().countryID != '') &&
-                                      (FFAppState().cityID != null &&
-                                          FFAppState().cityID != '') &&
-                                      (FFAppState().districtID != null &&
-                                          FFAppState().districtID != '') &&
-                                      (FFAppState().neighborhoodID != null &&
-                                          FFAppState().neighborhoodID != '') &&
+                                  if ((FFAppState().countryID != '') &&
+                                      (FFAppState().cityID != '') &&
+                                      (FFAppState().districtID != '') &&
+                                      (FFAppState().neighborhoodID != '') &&
                                       _model.checkwarnValue!) {
                                     setState(() {
                                       FFAppState().addToUserDistrictIDs(
@@ -1044,7 +1039,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     context.goNamed(
                                       'HowvotingWorksP1',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -1060,15 +1055,15 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text(
+                                            title: const Text(
                                                 'Tüm alanları doldurunuz!'),
-                                            content: Text(
+                                            content: const Text(
                                                 'Lütfen her alanı eksiksiz doldurduğunuzdan emin olun. '),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('Tamam'),
+                                                child: const Text('Tamam'),
                                               ),
                                             ],
                                           );
@@ -1079,15 +1074,15 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text(
+                                            title: const Text(
                                                 'Please fill in all fields!'),
-                                            content: Text(
+                                            content: const Text(
                                                 'Please make sure you entered all of the adress information and accepted the terms of use form.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('OK'),
+                                                child: const Text('OK'),
                                               ),
                                             ],
                                           );
@@ -1102,11 +1097,11 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                   '69w1mgr7' /* Register */,
                                 ),
                                 options: FFButtonOptions(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00067BB7),
+                                  color: const Color(0x00067BB7),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -1117,7 +1112,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 0.0,
                                   ),

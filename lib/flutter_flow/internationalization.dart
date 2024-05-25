@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v.1.1',
+      'en': 'v1.1',
       'tr': 'Dropdown deneme',
     },
     '2nusyfli': {
@@ -193,6 +193,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7ck4ukmf': {
       'en': 'Good Evening!',
       'tr': 'İyi Akşamlar,',
+    },
+    '4tpi9f5n': {
+      'en': 'oyver',
+      'tr': '',
     },
     'db31qvx9': {
       'en': 'Give Vote',
@@ -812,7 +816,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': '',
     },
     'kkwl5bk3': {
-      'en': 'This voting ballot is provided by e-lection.\n-End of ballot-',
+      'en': 'This voting ballot is provided by e-lection.\n-End Of Ballot-\n',
       'tr':
           'Bu oy pusulası e-lection tarafından sağlanmaktadır.\n\n-Oy Pusulasının Sonu-',
     },
@@ -1673,6 +1677,41 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
+  // OyKullan
+  {
+    '0h54kruu': {
+      'en': 'Voting Has Not Started Yet.',
+      'tr': 'Oylama İşlemi Başlamadı',
+    },
+    'ca6x2p8g': {
+      'en': 'Voting Has\nNot Started',
+      'tr': 'Oylama\nBaşlamadı',
+    },
+    's8yhjjvu': {
+      'en': 'Until voting will start:',
+      'tr': 'Oylamanın Başlamasına Kalan:',
+    },
+    'jgywkzqq': {
+      'en': '... hour ... minutes',
+      'tr': '... saat ... dakika',
+    },
+    'roi906ae': {
+      'en': 'Candidates',
+      'tr': '    Adaylar',
+    },
+    'o8pnwa7h': {
+      'en': 'Statistics',
+      'tr': 'İstatistikler',
+    },
+    'tl3i1b2u': {
+      'en': 'How voting works?',
+      'tr': 'Oylama Süreci Nasıl İşliyor?',
+    },
+    'l0dcr5s4': {
+      'en': 'Voting',
+      'tr': 'Oylama',
+    },
+  },
   // dropdownDeneme
   {
     '10pveiu2': {
@@ -1777,7 +1816,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '69w1mgr7': {
       'en': 'Register',
-      'tr': 'İleri',
+      'tr': 'Kayıt Ol',
     },
     'thoan4ut': {
       'en': 'Voting',

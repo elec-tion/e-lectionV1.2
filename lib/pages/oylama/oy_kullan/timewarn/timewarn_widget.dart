@@ -4,9 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:local_auth/local_auth.dart';
-import 'package:provider/provider.dart';
 import 'timewarn_model.dart';
 export 'timewarn_model.dart';
 
@@ -58,17 +55,17 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: Color(0x004B39EF),
+                  borderColor: const Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: Color(0x004B39EF),
+                  fillColor: const Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -85,7 +82,7 @@ class _TimewarnWidgetState extends State<TimewarnWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '42rx8464' /* Warning!
@@ -102,7 +99,7 @@ This Voting Has Time ... */
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '06ixus75' /* After Continue for ballot, you... */,
@@ -120,7 +117,7 @@ This Voting Has Time ... */
                 width: 180.0,
                 height: 45.0,
                 decoration: BoxDecoration(
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 4.0,
                       color: Color(0x33000000),
@@ -136,11 +133,11 @@ This Voting Has Time ... */
                       FlutterFlowTheme.of(context).graSet12,
                       FlutterFlowTheme.of(context).graSet13
                     ],
-                    stops: [0.0, 1.0, 1.0],
-                    begin: AlignmentDirectional(1.0, 0.0),
-                    end: AlignmentDirectional(-1.0, 0),
+                    stops: const [0.0, 1.0, 1.0],
+                    begin: const AlignmentDirectional(1.0, 0.0),
+                    end: const AlignmentDirectional(-1.0, 0),
                   ),
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(40.0),
                     bottomRight: Radius.circular(40.0),
                     topLeft: Radius.circular(40.0),
@@ -149,21 +146,6 @@ This Voting Has Time ... */
                 ),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    final _localAuth = LocalAuthentication();
-                    bool _isBiometricSupported =
-                        await _localAuth.isDeviceSupported();
-                    bool canCheckBiometrics =
-                        await _localAuth.canCheckBiometrics;
-                    if (_isBiometricSupported && canCheckBiometrics) {
-                      _model.ballotverification = await _localAuth.authenticate(
-                          localizedReason: FFLocalizations.of(context).getText(
-                            'jpokye27' /* Please verify yourself before ... */,
-                          ),
-                          options:
-                              const AuthenticationOptions(biometricOnly: true));
-                      setState(() {});
-                    }
-
                     context.pushNamed(
                       'OyKullanP4Pusula',
                       queryParameters: {
@@ -173,17 +155,15 @@ This Voting Has Time ... */
                         ),
                       }.withoutNulls,
                     );
-
-                    setState(() {});
                   },
                   text: FFLocalizations.of(context).getText(
                     'b7ez0huk' /* Continue to Ballot */,
                   ),
                   options: FFButtonOptions(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0x00067BB7),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0x00067BB7),
                     textStyle: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Montserrat',
                           color: FlutterFlowTheme.of(context).info,
@@ -192,7 +172,7 @@ This Voting Has Time ... */
                           fontWeight: FontWeight.bold,
                         ),
                     elevation: 0.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 0.0,
                     ),
@@ -201,7 +181,7 @@ This Voting Has Time ... */
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -215,7 +195,7 @@ This Voting Has Time ... */
                     height: 45.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).alternate,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
                         bottomRight: Radius.circular(40.0),
                         topLeft: Radius.circular(40.0),
@@ -234,7 +214,7 @@ This Voting Has Time ... */
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 30.0, 0.0, 0.0, 0.0),
                             child: Icon(
                               Icons.chevron_left,
@@ -243,9 +223,9 @@ This Voting Has Time ... */
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   23.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(

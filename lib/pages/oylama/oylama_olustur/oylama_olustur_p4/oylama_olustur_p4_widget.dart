@@ -10,7 +10,6 @@ import '/pages/oylama/oylama_olustur/popups/delete_candidate/delete_candidate_wi
 import '/pages/oylama/oylama_olustur/popups/delete_elec_com_member/delete_elec_com_member_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_olustur_p4_model.dart';
 export 'oylama_olustur_p4_model.dart';
@@ -96,17 +95,17 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: Container(
                     width: 40.0,
                     height: 40.0,
                     clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
                     child: CachedNetworkImage(
-                      fadeInDuration: Duration(milliseconds: 500),
-                      fadeOutDuration: Duration(milliseconds: 500),
+                      fadeInDuration: const Duration(milliseconds: 500),
+                      fadeOutDuration: const Duration(milliseconds: 500),
                       imageUrl: oylamaOlusturP4UsersRow!.photoUrl,
                       fit: BoxFit.fill,
                     ),
@@ -135,9 +134,9 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                   FlutterFlowTheme.of(context).background1,
                                   FlutterFlowTheme.of(context).background2
                                 ],
-                                stops: [0.0, 1.0],
-                                begin: AlignmentDirectional(0.0, -1.0),
-                                end: AlignmentDirectional(0, 1.0),
+                                stops: const [0.0, 1.0],
+                                begin: const AlignmentDirectional(0.0, -1.0),
+                                end: const AlignmentDirectional(0, 1.0),
                               ),
                             ),
                             child: Column(
@@ -145,7 +144,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -194,9 +193,9 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                 Expanded(
                                   child: Container(
                                     height: double.infinity,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           40.0, 30.0, 40.0, 0.0),
                                       child: SingleChildScrollView(
                                         child: Column(
@@ -205,7 +204,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 30.0),
                                               child: Column(
@@ -217,7 +216,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 10.0),
                                                     child: Row(
@@ -308,7 +307,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                       listViewIndex];
                                                               return Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -320,7 +319,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                           .max,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           10.0,
@@ -336,7 +335,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           20.0,
@@ -350,7 +349,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         clipBehavior:
                                                                             Clip.antiAlias,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           shape:
                                                                               BoxShape.circle,
                                                                         ),
@@ -395,7 +394,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         buttonSize:
                                                                             40.0,
                                                                         fillColor:
-                                                                            Color(0x004B39EF),
+                                                                            const Color(0x004B39EF),
                                                                         icon:
                                                                             Icon(
                                                                           Icons
@@ -416,10 +415,10 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                  child: Container(
+                                                                                  child: SizedBox(
                                                                                     height: 300.0,
                                                                                     width: 300.0,
                                                                                     child: DeleteElecComMemberWidget(
@@ -445,7 +444,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(40.0, 5.0,
                                                                 40.0, 20.0),
                                                     child: Column(
@@ -454,7 +453,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Material(
                                                             color: Colors
@@ -470,7 +469,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             child: Container(
                                                               decoration:
                                                                   BoxDecoration(
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         4.0,
@@ -493,16 +492,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                             context)
                                                                         .graSet22
                                                                   ],
-                                                                  stops: [
+                                                                  stops: const [
                                                                     0.0,
                                                                     1.0
                                                                   ],
                                                                   begin:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   end:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           1.0,
                                                                           0),
                                                                 ),
@@ -530,14 +529,14 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                           backgroundColor:
                                                                               Colors.transparent,
                                                                           alignment:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           child:
                                                                               GestureDetector(
                                                                             onTap: () => _model.unfocusNode.canRequestFocus
                                                                                 ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                                                                                 : FocusScope.of(context).unfocus(),
                                                                             child:
-                                                                                Container(
+                                                                                const SizedBox(
                                                                               height: 350.0,
                                                                               width: 300.0,
                                                                               child: AddCommitteeMemberWidget(),
@@ -568,14 +567,14 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         300.0,
                                                                     height:
                                                                         50.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -600,7 +599,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -620,7 +619,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 10.0),
                                                     child: Row(
@@ -693,7 +692,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -726,7 +725,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 30.0),
                                               child: Column(
@@ -749,7 +748,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 40.0,
                                                                 0.0, 10.0),
                                                     child: Row(
@@ -841,7 +840,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                       listViewIndex];
                                                               return Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -853,7 +852,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                           .max,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           10.0,
@@ -896,7 +895,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         buttonSize:
                                                                             40.0,
                                                                         fillColor:
-                                                                            Color(0x004B39EF),
+                                                                            const Color(0x004B39EF),
                                                                         icon:
                                                                             Icon(
                                                                           Icons
@@ -917,10 +916,10 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                  child: Container(
+                                                                                  child: SizedBox(
                                                                                     height: 300.0,
                                                                                     width: 300.0,
                                                                                     child: DeleteCandidateWidget(
@@ -946,11 +945,11 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -970,7 +969,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                         child: Container(
                                                           decoration:
                                                               BoxDecoration(
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -991,13 +990,13 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         context)
                                                                     .graSet22
                                                               ],
-                                                              stops: [0.0, 1.0],
+                                                              stops: const [0.0, 1.0],
                                                               begin:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               end:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0),
                                                             ),
                                                             borderRadius:
@@ -1024,7 +1023,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: AlignmentDirectional(
+                                                                      alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -1035,7 +1034,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                             ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                                                                             : FocusScope.of(context).unfocus(),
                                                                         child:
-                                                                            Container(
+                                                                            const SizedBox(
                                                                           height:
                                                                               450.0,
                                                                           width:
@@ -1067,14 +1066,14 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1101,7 +1100,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -1127,7 +1126,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                   ),
                                 ),
                                 Container(
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -1141,7 +1140,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 20.0, 40.0, 20.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1207,7 +1206,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -1246,7 +1245,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                             ),
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 4.0,
                                                     color: Color(0x33000000),
@@ -1263,10 +1262,10 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                     FlutterFlowTheme.of(context)
                                                         .graSet22
                                                   ],
-                                                  stops: [0.0, 1.0],
-                                                  begin: AlignmentDirectional(
+                                                  stops: const [0.0, 1.0],
+                                                  begin: const AlignmentDirectional(
                                                       -1.0, 0.0),
-                                                  end: AlignmentDirectional(
+                                                  end: const AlignmentDirectional(
                                                       1.0, 0),
                                                 ),
                                                 borderRadius:
@@ -1286,9 +1285,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                 .isNotEmpty) ==
                                                             true)) {
                                                       if (FFAppState()
-                                                              .addElecComtoElection
-                                                              .length >=
-                                                          1) {
+                                                              .addElecComtoElection.isNotEmpty) {
                                                         if (FFAppState()
                                                                 .addCandidateToElection
                                                                 .length >=
@@ -1299,7 +1296,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             FFAppState()
                                                                 .update(() {
                                                               FFAppState().addToAddElecComtoElection(
-                                                                  oylamaOlusturP4UsersRow!
+                                                                  oylamaOlusturP4UsersRow
                                                                       .walletIdElectionCommittee);
                                                             });
                                                             await ElectionsTable()
@@ -1324,7 +1321,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                   FFAppState()
                                                                       .electionID,
                                                               wallet: oylamaOlusturP4UsersRow
-                                                                  ?.walletIdElectionCommittee,
+                                                                  .walletIdElectionCommittee,
                                                             );
                                                             await ElectionsTable()
                                                                 .update(
@@ -1347,7 +1344,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                               extra: <String,
                                                                   dynamic>{
                                                                 kTransitionInfoKey:
-                                                                    TransitionInfo(
+                                                                    const TransitionInfo(
                                                                   hasTransition:
                                                                       true,
                                                                   transitionType:
@@ -1397,7 +1394,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                               extra: <String,
                                                                   dynamic>{
                                                                 kTransitionInfoKey:
-                                                                    TransitionInfo(
+                                                                    const TransitionInfo(
                                                                   hasTransition:
                                                                       true,
                                                                   transitionType:
@@ -1436,16 +1433,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: Text(
+                                                                  title: const Text(
                                                                       'You can\'t create a voting!'),
-                                                                  content: Text(
+                                                                  content: const Text(
                                                                       'You must add at least two candidates to the election.'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: Text(
+                                                                      child: const Text(
                                                                           'OK'),
                                                                     ),
                                                                   ],
@@ -1458,16 +1455,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: Text(
+                                                                  title: const Text(
                                                                       'Oylama Oluşturamazsın!'),
-                                                                  content: Text(
+                                                                  content: const Text(
                                                                       'Oylamaya en az iki aday eklemeniz gerekmektedir.'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: Text(
+                                                                      child: const Text(
                                                                           'Tamam'),
                                                                     ),
                                                                   ],
@@ -1486,16 +1483,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             builder:
                                                                 (alertDialogContext) {
                                                               return AlertDialog(
-                                                                title: Text(
+                                                                title: const Text(
                                                                     'You can\'t create a voting!'),
-                                                                content: Text(
+                                                                content: const Text(
                                                                     'Even if you do not add yourself as an election committee member, you must add at least 1 person as an election committee member.'),
                                                                 actions: [
                                                                   TextButton(
                                                                     onPressed: () =>
                                                                         Navigator.pop(
                                                                             alertDialogContext),
-                                                                    child: Text(
+                                                                    child: const Text(
                                                                         'OK'),
                                                                   ),
                                                                 ],
@@ -1508,16 +1505,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             builder:
                                                                 (alertDialogContext) {
                                                               return AlertDialog(
-                                                                title: Text(
+                                                                title: const Text(
                                                                     'Oylama Oluşturamazsın!'),
-                                                                content: Text(
+                                                                content: const Text(
                                                                     'Oylamaya kendinizi oylama sorumlusu olarak eklemeseniz bile, en az 1 kişiyi oylama sorumlusu olarak eklemelisiniz.'),
                                                                 actions: [
                                                                   TextButton(
                                                                     onPressed: () =>
                                                                         Navigator.pop(
                                                                             alertDialogContext),
-                                                                    child: Text(
+                                                                    child: const Text(
                                                                         'Tamam'),
                                                                   ),
                                                                 ],
@@ -1536,16 +1533,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: Text(
+                                                              title: const Text(
                                                                   'You can\'t create a voting!'),
-                                                              content: Text(
+                                                              content: const Text(
                                                                   'You need to enter some people as election committee member and candidate.'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'OK'),
                                                                 ),
                                                               ],
@@ -1558,16 +1555,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: Text(
+                                                              title: const Text(
                                                                   'Oylama Oluşturamazsın!'),
-                                                              content: Text(
+                                                              content: const Text(
                                                                   'Oylama sorumlusu ve aday olarak kişiler girmen gerekmektedir.'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Tamam'),
                                                                 ),
                                                               ],
@@ -1586,9 +1583,9 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                         builder:
                                                             (alertDialogContext) {
                                                           return AlertDialog(
-                                                            title: Text(
+                                                            title: const Text(
                                                                 'You can\'t create a voting!'),
-                                                            content: Text(
+                                                            content: const Text(
                                                                 'You need to approve the conditions to create a voting.'),
                                                             actions: [
                                                               TextButton(
@@ -1596,7 +1593,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                     Navigator.pop(
                                                                         alertDialogContext),
                                                                 child:
-                                                                    Text('OK'),
+                                                                    const Text('OK'),
                                                               ),
                                                             ],
                                                           );
@@ -1608,16 +1605,16 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                         builder:
                                                             (alertDialogContext) {
                                                           return AlertDialog(
-                                                            title: Text(
+                                                            title: const Text(
                                                                 'Oylama Oluşturamazsın!'),
-                                                            content: Text(
+                                                            content: const Text(
                                                                 'Oylama oluşturmak için koşulları onaylaman gerekiyor.'),
                                                             actions: [
                                                               TextButton(
                                                                 onPressed: () =>
                                                                     Navigator.pop(
                                                                         alertDialogContext),
-                                                                child: Text(
+                                                                child: const Text(
                                                                     'Tamam'),
                                                               ),
                                                             ],
@@ -1643,11 +1640,11 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                 options: FFButtonOptions(
                                                   width: 350.0,
                                                   height: 50.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: Colors.transparent,
@@ -1667,7 +1664,7 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             FontWeight.w600,
                                                       ),
                                                   elevation: 0.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),

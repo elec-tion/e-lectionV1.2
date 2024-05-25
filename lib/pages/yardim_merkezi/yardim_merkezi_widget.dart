@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'yardim_merkezi_model.dart';
 export 'yardim_merkezi_model.dart';
@@ -105,7 +104,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -115,7 +114,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -127,12 +126,12 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: yardimMerkeziUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -157,9 +156,9 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -167,7 +166,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -216,7 +215,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 30.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -234,14 +233,14 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -256,7 +255,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -273,10 +272,10 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -297,10 +296,10 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                             width: 350.0,
                                             height: 50.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.transparent,
                                             textStyle: FlutterFlowTheme.of(
@@ -316,7 +315,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                             elevation: 0.0,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -330,9 +329,9 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -350,7 +349,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -365,7 +364,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -382,10 +381,10 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -406,10 +405,10 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                             width: 350.0,
                                             height: 50.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.transparent,
                                             textStyle: FlutterFlowTheme.of(
@@ -425,7 +424,7 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                             elevation: 0.0,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -439,9 +438,9 @@ class _YardimMerkeziWidgetState extends State<YardimMerkeziWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -461,7 +460,7 @@ You can co... */
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -476,7 +475,7 @@ You can co... */
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -493,10 +492,10 @@ You can co... */
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -518,10 +517,10 @@ You can co... */
                                             width: 350.0,
                                             height: 50.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.transparent,
                                             textStyle: FlutterFlowTheme.of(
@@ -537,7 +536,7 @@ You can co... */
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                             elevation: 0.0,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -551,9 +550,9 @@ You can co... */
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -583,7 +582,7 @@ look o... */
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 20.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -591,16 +590,16 @@ look o... */
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
                                         'YardimMerkezi',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
+                                          kTransitionInfoKey: const TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.leftToRight,
@@ -611,15 +610,15 @@ look o... */
                                     text: FFLocalizations.of(context).getText(
                                       'am920q9n' /* Give feedback about the app */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.chat_outlined,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -632,7 +631,7 @@ look o... */
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -642,9 +641,9 @@ look o... */
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -653,15 +652,15 @@ look o... */
                                     text: FFLocalizations.of(context).getText(
                                       '4a4ccop0' /* e-lection Terms of Use and Use... */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.layers,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -674,7 +673,7 @@ look o... */
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -684,7 +683,7 @@ look o... */
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -702,7 +701,7 @@ look o... */
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(

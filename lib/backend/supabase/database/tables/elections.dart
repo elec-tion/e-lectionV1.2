@@ -9,7 +9,7 @@ class ElectionsTable extends SupabaseTable<ElectionsRow> {
 }
 
 class ElectionsRow extends SupabaseDataRow {
-  ElectionsRow(Map<String, dynamic> data) : super(data);
+  ElectionsRow(super.data);
 
   @override
   SupabaseTable get table => ElectionsTable();

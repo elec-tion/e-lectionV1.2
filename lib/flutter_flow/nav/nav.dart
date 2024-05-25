@@ -1,19 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '/backend/supabase/supabase.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -51,7 +45,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : GirisWidget(),
+          : const GirisWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -69,19 +63,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : GirisWidget(),
+              : const GirisWidget(),
         ),
         FFRoute(
           name: 'Giris',
           path: '/giris',
-          builder: (context, params) => GirisWidget(),
+          builder: (context, params) => const GirisWidget(),
         ),
         FFRoute(
           name: 'Anasayfa',
           path: '/anasayfa',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Anasayfa')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'Anasayfa')
+              : const NavBarPage(
                   initialPage: 'Anasayfa',
                   page: AnasayfaWidget(),
                 ),
@@ -90,8 +84,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Menu',
           path: '/menu',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Menu')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'Menu')
+              : const NavBarPage(
                   initialPage: 'Menu',
                   page: MenuWidget(),
                 ),
@@ -100,13 +94,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OyIslemleri',
           path: '/oyIslemleri',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'OyIslemleri')
-              : OyIslemleriWidget(),
+              ? const NavBarPage(initialPage: 'OyIslemleri')
+              : const OyIslemleriWidget(),
         ),
         FFRoute(
           name: 'Ayarlar',
           path: '/ayarlar',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: AyarlarWidget(),
           ),
@@ -114,7 +108,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Profilim',
           path: '/profilim',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: ProfilimWidget(),
           ),
@@ -122,17 +116,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'BilgiGuncellemeP1',
           path: '/bilgiGuncellemeP1',
-          builder: (context, params) => BilgiGuncellemeP1Widget(),
+          builder: (context, params) => const BilgiGuncellemeP1Widget(),
         ),
         FFRoute(
           name: 'SifremiUnuttumP4',
           path: '/sifremiUnuttumP4',
-          builder: (context, params) => SifremiUnuttumP4Widget(),
+          builder: (context, params) => const SifremiUnuttumP4Widget(),
         ),
         FFRoute(
           name: 'OyVer',
           path: '/oyVer',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: OyVerWidget(),
           ),
@@ -166,7 +160,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OyPaneli',
           path: '/oyPaneli',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: OyPaneliWidget(),
           ),
@@ -174,7 +168,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OylamaOlusturP1',
           path: '/oylamaOlusturP1',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: OylamaOlusturP1Widget(),
           ),
@@ -182,17 +176,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OylamaOlusturP2',
           path: '/oylamaOlusturP2',
-          builder: (context, params) => OylamaOlusturP2Widget(),
+          builder: (context, params) => const OylamaOlusturP2Widget(),
         ),
         FFRoute(
           name: 'OylamaOlusturP5',
           path: '/oylamaOlusturP5',
-          builder: (context, params) => OylamaOlusturP5Widget(),
+          builder: (context, params) => const OylamaOlusturP5Widget(),
         ),
         FFRoute(
           name: 'Secimler',
           path: '/secimler',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: SecimlerWidget(),
           ),
@@ -215,6 +209,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'ballot2',
               ParamType.SupabaseRow,
             ),
+            state: params.getParam(
+              'state',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
@@ -233,17 +231,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'SifremiUnuttumP1',
           path: '/sifremiUnuttumP1',
-          builder: (context, params) => SifremiUnuttumP1Widget(),
+          builder: (context, params) => const SifremiUnuttumP1Widget(),
         ),
         FFRoute(
           name: 'SifremiUnuttumP2',
           path: '/sifremiUnuttumP2',
-          builder: (context, params) => SifremiUnuttumP2Widget(),
+          builder: (context, params) => const SifremiUnuttumP2Widget(),
         ),
         FFRoute(
           name: 'SifremiUnuttumP3',
           path: '/sifremiUnuttumP3',
-          builder: (context, params) => SifremiUnuttumP3Widget(),
+          builder: (context, params) => const SifremiUnuttumP3Widget(),
         ),
         FFRoute(
           name: 'OyKullanP1notstarted',
@@ -261,42 +259,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HowvotingWorksP1',
           path: '/howvotingWorksP1',
-          builder: (context, params) => HowvotingWorksP1Widget(),
+          builder: (context, params) => const HowvotingWorksP1Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP2',
           path: '/howvotingWorksP2',
-          builder: (context, params) => HowvotingWorksP2Widget(),
+          builder: (context, params) => const HowvotingWorksP2Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP3',
           path: '/howvotingWorksP3',
-          builder: (context, params) => HowvotingWorksP3Widget(),
+          builder: (context, params) => const HowvotingWorksP3Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP4',
           path: '/howvotingWorksP4',
-          builder: (context, params) => HowvotingWorksP4Widget(),
+          builder: (context, params) => const HowvotingWorksP4Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP5',
           path: '/howvotingWorksP5',
-          builder: (context, params) => HowvotingWorksP5Widget(),
+          builder: (context, params) => const HowvotingWorksP5Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP6',
           path: '/howvotingWorksP6',
-          builder: (context, params) => HowvotingWorksP6Widget(),
+          builder: (context, params) => const HowvotingWorksP6Widget(),
         ),
         FFRoute(
           name: 'HowvotingWorksP7',
           path: '/howvotingWorksP7',
-          builder: (context, params) => HowvotingWorksP7Widget(),
+          builder: (context, params) => const HowvotingWorksP7Widget(),
         ),
         FFRoute(
           name: 'YardimMerkezi',
           path: '/yardimMerkezi',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: YardimMerkeziWidget(),
           ),
@@ -304,7 +302,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ContactUs',
           path: '/contactUs',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: ContactUsWidget(),
           ),
@@ -312,12 +310,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HowToVoteBallots',
           path: '/howToVoteBallots',
-          builder: (context, params) => HowToVoteBallotsWidget(),
+          builder: (context, params) => const HowToVoteBallotsWidget(),
         ),
         FFRoute(
           name: 'SifremiDegistir',
           path: '/sifremiDegistir',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: SifremiDegistirWidget(),
           ),
@@ -325,7 +323,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Hakkimda',
           path: '/hakkimda',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: HakkimdaWidget(),
           ),
@@ -359,30 +357,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'termsOfUse',
           path: '/termsOfUse',
-          builder: (context, params) => TermsOfUseWidget(),
+          builder: (context, params) => const TermsOfUseWidget(),
         ),
         FFRoute(
           name: 'OylamaOlusturP3',
           path: '/oylamaOlusturP3',
-          builder: (context, params) => OylamaOlusturP3Widget(),
+          builder: (context, params) => const OylamaOlusturP3Widget(),
         ),
         FFRoute(
           name: 'FAQ',
           path: '/faq',
-          builder: (context, params) => NavBarPage(
+          builder: (context, params) => const NavBarPage(
             initialPage: '',
             page: FaqWidget(),
           ),
         ),
         FFRoute(
+          name: 'OyKullan',
+          path: '/oyKullan',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: OyKullanWidget(
+              deneme: params.getParam<ElectionsRow>(
+                'deneme',
+                ParamType.SupabaseRow,
+              ),
+            ),
+          ),
+        ),
+        FFRoute(
           name: 'dropdownDeneme',
           path: '/dropdownDeneme',
-          builder: (context, params) => DropdownDenemeWidget(),
+          builder: (context, params) => const DropdownDenemeWidget(),
         ),
         FFRoute(
           name: 'BilgiGuncellemeP2',
           path: '/bilgiGuncellemeP2',
-          builder: (context, params) => BilgiGuncellemeP2Widget(),
+          builder: (context, params) => const BilgiGuncellemeP2Widget(),
         ),
         FFRoute(
           name: 'OyKullanP1devam',
@@ -400,12 +411,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Acilis',
           path: '/acilis',
-          builder: (context, params) => AcilisWidget(),
+          builder: (context, params) => const AcilisWidget(),
         ),
         FFRoute(
           name: 'OylamaOlusturP4',
           path: '/oylamaOlusturP4',
-          builder: (context, params) => OylamaOlusturP4Widget(),
+          builder: (context, params) => const OylamaOlusturP4Widget(),
         ),
         FFRoute(
           name: 'OyPaneliP2',
@@ -621,7 +632,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -1,12 +1,9 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/giris/acilis_popup/acilis_popup_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'acilis_model.dart';
 export 'acilis_model.dart';
 
@@ -35,7 +32,7 @@ class _AcilisWidgetState extends State<AcilisWidget> {
         context.goNamed(
           'Giris',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
               duration: Duration(milliseconds: 20),
@@ -51,13 +48,13 @@ class _AcilisWidgetState extends State<AcilisWidget> {
               elevation: 0,
               insetPadding: EdgeInsets.zero,
               backgroundColor: Colors.transparent,
-              alignment: AlignmentDirectional(0.0, 0.0)
+              alignment: const AlignmentDirectional(0.0, 0.0)
                   .resolve(Directionality.of(context)),
               child: GestureDetector(
                 onTap: () => _model.unfocusNode.canRequestFocus
                     ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                     : FocusScope.of(context).unfocus(),
-                child: Container(
+                child: const SizedBox(
                   height: 350.0,
                   width: 350.0,
                   child: AcilisPopupWidget(),
@@ -122,7 +119,7 @@ class _AcilisWidgetState extends State<AcilisWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'ycn5zutu' /* Electronic voting solutions */,

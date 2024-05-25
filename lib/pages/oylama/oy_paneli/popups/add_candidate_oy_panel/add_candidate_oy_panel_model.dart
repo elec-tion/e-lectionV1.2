@@ -1,15 +1,6 @@
-import '/backend/api_requests/api_calls.dart';
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
-import '/flutter_flow/random_data_util.dart' as random_data;
 import 'add_candidate_oy_panel_widget.dart' show AddCandidateOyPanelWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class AddCandidateOyPanelModel
     extends FlutterFlowModel<AddCandidateOyPanelWidget> {

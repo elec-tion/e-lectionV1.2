@@ -1,11 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'howvoting_works_p3_widget.dart' show HowvotingWorksP3Widget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 
 class HowvotingWorksP3Model extends FlutterFlowModel<HowvotingWorksP3Widget> {
   ///  State fields for stateful widgets in this page.

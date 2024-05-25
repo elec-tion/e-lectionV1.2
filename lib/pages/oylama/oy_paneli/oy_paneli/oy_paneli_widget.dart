@@ -7,7 +7,6 @@ import '/pages/oylama/oy_paneli/popups/oy_paneli_component/oy_paneli_component_w
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_paneli_model.dart';
 export 'oy_paneli_model.dart';
@@ -106,7 +105,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -116,7 +115,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -128,12 +127,12 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: oyPaneliUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -158,9 +157,9 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -168,7 +167,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -220,7 +219,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                           child: Container(
                             width: 411.0,
                             height: 400.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0x001E1E1E),
                             ),
                             child: Column(
@@ -228,7 +227,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -262,7 +261,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 20.0, 30.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -324,10 +323,8 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                               queryFn: (q) => q
                                                   .contains(
                                                     'committee_members',
-                                                    '{' +
-                                                        columnUsersRow
-                                                            .walletIdElectionCommittee +
-                                                        '}',
+                                                    '{${columnUsersRow
+                                                            .walletIdElectionCommittee}}',
                                                   )
                                                   .gt(
                                                     'startDate',
@@ -360,8 +357,8 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                   snapshot.data!;
                                               if (listViewElectionsRowList
                                                   .isEmpty) {
-                                                return Center(
-                                                  child: Container(
+                                                return const Center(
+                                                  child: SizedBox(
                                                     width: 300.0,
                                                     height: 300.0,
                                                     child:
@@ -383,7 +380,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                           listViewIndex];
                                                   return Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Column(
@@ -392,7 +389,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -433,7 +430,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                                 Flexible(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -509,7 +506,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                                                       buttonSize:
                                                                           35.0,
                                                                       fillColor:
-                                                                          Color(
+                                                                          const Color(
                                                                               0x004B39EF),
                                                                       icon:
                                                                           Icon(
@@ -549,7 +546,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 30.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -563,7 +560,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                 ),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -578,9 +575,9 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: [0.0, 1.0],
-                                      begin: AlignmentDirectional(-1.0, 0.0),
-                                      end: AlignmentDirectional(1.0, 0),
+                                      stops: const [0.0, 1.0],
+                                      begin: const AlignmentDirectional(-1.0, 0.0),
+                                      end: const AlignmentDirectional(1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -599,10 +596,10 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                     options: FFButtonOptions(
                                       width: 350.0,
                                       height: 50.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -616,7 +613,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                             fontWeight: FontWeight.w600,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -640,7 +637,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -655,9 +652,9 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                       FlutterFlowTheme.of(context).graSet23,
                                       FlutterFlowTheme.of(context).graSet22
                                     ],
-                                    stops: [0.0, 1.0],
-                                    begin: AlignmentDirectional(-1.0, 0.0),
-                                    end: AlignmentDirectional(1.0, 0),
+                                    stops: const [0.0, 1.0],
+                                    begin: const AlignmentDirectional(-1.0, 0.0),
+                                    end: const AlignmentDirectional(1.0, 0),
                                   ),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
@@ -676,9 +673,9 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                   options: FFButtonOptions(
                                     width: 350.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Colors.transparent,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -692,7 +689,7 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
                                           fontWeight: FontWeight.w600,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),

@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'profilim_model.dart';
 export 'profilim_model.dart';
@@ -105,13 +104,13 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: FlutterFlowIconButton(
-                    borderColor: Color(0x004B39EF),
+                    borderColor: const Color(0x004B39EF),
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    fillColor: Color(0x004B39EF),
+                    fillColor: const Color(0x004B39EF),
                     icon: Icon(
                       Icons.contact_support_outlined,
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -140,9 +139,9 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -158,7 +157,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -180,7 +179,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                             ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -292,14 +291,14 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                     width: 90.0,
                                     height: 90.0,
                                     clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
                                     child: CachedNetworkImage(
                                       fadeInDuration:
-                                          Duration(milliseconds: 500),
+                                          const Duration(milliseconds: 500),
                                       fadeOutDuration:
-                                          Duration(milliseconds: 500),
+                                          const Duration(milliseconds: 500),
                                       imageUrl: profilimUsersRow!.photoUrl,
                                       fit: BoxFit.fill,
                                     ),
@@ -318,7 +317,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -336,7 +335,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                     ),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -353,10 +352,10 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: [0.0, 1.0],
+                                          stops: const [0.0, 1.0],
                                           begin:
-                                              AlignmentDirectional(-1.0, 0.0),
-                                          end: AlignmentDirectional(1.0, 0),
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          end: const AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -373,10 +372,10 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -392,7 +391,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                                 fontWeight: FontWeight.w600,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -408,7 +407,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 60.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -426,7 +425,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                     ),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -443,10 +442,10 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: [0.0, 1.0],
+                                          stops: const [0.0, 1.0],
                                           begin:
-                                              AlignmentDirectional(-1.0, 0.0),
-                                          end: AlignmentDirectional(1.0, 0),
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          end: const AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -463,10 +462,10 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -482,7 +481,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                                 fontWeight: FontWeight.w600,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -505,7 +504,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 35.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -513,16 +512,16 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
                                         'Profilim',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
+                                          kTransitionInfoKey: const TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.leftToRight,
@@ -533,15 +532,15 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                     text: FFLocalizations.of(context).getText(
                                       'nxrl5ghc' /* Give feedback about the app */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.chat_outlined,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -554,7 +553,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -564,9 +563,9 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -575,15 +574,15 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                     text: FFLocalizations.of(context).getText(
                                       's0jv7808' /* e-lection Terms of Use and Use... */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.layers,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -596,7 +595,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -606,7 +605,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -624,7 +623,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(

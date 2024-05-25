@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sifremi_degistir_model.dart';
 export 'sifremi_degistir_model.dart';
@@ -114,13 +113,13 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: FlutterFlowIconButton(
-                    borderColor: Color(0x004B39EF),
+                    borderColor: const Color(0x004B39EF),
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    fillColor: Color(0x004B39EF),
+                    fillColor: const Color(0x004B39EF),
                     icon: Icon(
                       Icons.contact_support_outlined,
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -150,9 +149,9 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, -1.0),
-                          end: AlignmentDirectional(0, 1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: Column(
@@ -206,14 +205,14 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 40.0, 40.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -232,9 +231,9 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 30.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -304,7 +303,7 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: EdgeInsets.all(10.0),
+                                          contentPadding: const EdgeInsets.all(10.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model.eskiSifreVisibility =
@@ -341,9 +340,9 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 30.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -413,7 +412,7 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: EdgeInsets.all(10.0),
+                                          contentPadding: const EdgeInsets.all(10.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model
@@ -451,9 +450,9 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 30.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -523,7 +522,7 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: EdgeInsets.all(10.0),
+                                          contentPadding: const EdgeInsets.all(10.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model
@@ -564,7 +563,7 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                     width: 230.0,
                                     height: 52.0,
                                     decoration: BoxDecoration(
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -580,11 +579,11 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                           FlutterFlowTheme.of(context).graSet12,
                                           FlutterFlowTheme.of(context).graSet13
                                         ],
-                                        stops: [0.0, 1.0, 1.0],
-                                        begin: AlignmentDirectional(1.0, 0.0),
-                                        end: AlignmentDirectional(-1.0, 0),
+                                        stops: const [0.0, 1.0, 1.0],
+                                        begin: const AlignmentDirectional(1.0, 0.0),
+                                        end: const AlignmentDirectional(-1.0, 0),
                                       ),
-                                      borderRadius: BorderRadius.only(
+                                      borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(40.0),
                                         bottomRight: Radius.circular(40.0),
                                         topLeft: Radius.circular(40.0),
@@ -622,16 +621,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'Şifreler aynı!'),
-                                                      content: Text(
+                                                      content: const Text(
                                                           'e-lection\'da bulunan hesabınızın şifresi ile yeni girdiğiniz şifre aynı. Lüften farklı bir şifre giriniz.'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('Tamam'),
+                                                          child: const Text('Tamam'),
                                                         ),
                                                       ],
                                                     );
@@ -643,16 +642,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'The passwords are same!'),
-                                                      content: Text(
+                                                      content: const Text(
                                                           'The password for your account in e-lection is the same as the new password that you entered. Please enter a different password.'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('OK'),
+                                                          child: const Text('OK'),
                                                         ),
                                                       ],
                                                     );
@@ -678,16 +677,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'Şifreniz değiştirildi!'),
-                                                      content: Text(
+                                                      content: const Text(
                                                           'Şifrenizi başarıyla değiştirdiniz. Lütfen e-lection\'a tekrar giriş yapın.'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('Tamam'),
+                                                          child: const Text('Tamam'),
                                                         ),
                                                       ],
                                                     );
@@ -699,16 +698,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'Your password has been changed!'),
-                                                      content: Text(
+                                                      content: const Text(
                                                           'You have successfully changed your password. Please log in to e-lection again.'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('OK'),
+                                                          child: const Text('OK'),
                                                         ),
                                                       ],
                                                     );
@@ -731,16 +730,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                 context: context,
                                                 builder: (alertDialogContext) {
                                                   return AlertDialog(
-                                                    title: Text(
+                                                    title: const Text(
                                                         'Şifreler aynı değil!'),
-                                                    content: Text(
+                                                    content: const Text(
                                                         'Girdiğiniz şifreler aynı değil.'),
                                                     actions: [
                                                       TextButton(
                                                         onPressed: () =>
                                                             Navigator.pop(
                                                                 alertDialogContext),
-                                                        child: Text('Tamam'),
+                                                        child: const Text('Tamam'),
                                                       ),
                                                     ],
                                                   );
@@ -751,16 +750,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                 context: context,
                                                 builder: (alertDialogContext) {
                                                   return AlertDialog(
-                                                    title: Text(
+                                                    title: const Text(
                                                         'The passwords are not the same!'),
-                                                    content: Text(
+                                                    content: const Text(
                                                         'The passwords you entered are not the same.'),
                                                     actions: [
                                                       TextButton(
                                                         onPressed: () =>
                                                             Navigator.pop(
                                                                 alertDialogContext),
-                                                        child: Text('OK'),
+                                                        child: const Text('OK'),
                                                       ),
                                                     ],
                                                   );
@@ -776,16 +775,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                               context: context,
                                               builder: (alertDialogContext) {
                                                 return AlertDialog(
-                                                  title: Text(
+                                                  title: const Text(
                                                       'Eski şifreniz hatalı!'),
-                                                  content: Text(
+                                                  content: const Text(
                                                       'Eski şifrenizi yanlış girdiniz.'),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: Text('Tamam'),
+                                                      child: const Text('Tamam'),
                                                     ),
                                                   ],
                                                 );
@@ -796,16 +795,16 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                               context: context,
                                               builder: (alertDialogContext) {
                                                 return AlertDialog(
-                                                  title: Text(
+                                                  title: const Text(
                                                       'Your old password is incorrect!'),
-                                                  content: Text(
+                                                  content: const Text(
                                                       'You entered your old password incorrectly.'),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: Text('OK'),
+                                                      child: const Text('OK'),
                                                     ),
                                                   ],
                                                 );
@@ -820,12 +819,12 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                         'abj15fg2' /* Next */,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0x00067BB7),
+                                        color: const Color(0x00067BB7),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleLarge
                                             .override(
@@ -837,7 +836,7 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                               fontWeight: FontWeight.bold,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 0.0,
                                         ),

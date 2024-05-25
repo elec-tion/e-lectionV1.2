@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_adaylar_model.dart';
 export 'oylama_adaylar_model.dart';
@@ -89,11 +88,11 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: Color(0x004B39EF),
+                borderColor: const Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: Color(0x004B39EF),
+                fillColor: const Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -104,7 +103,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                 },
               ),
               title: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -119,7 +118,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -129,7 +128,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -141,12 +140,12 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: oylamaAdaylarUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -171,9 +170,9 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, -1.0),
-                          end: AlignmentDirectional(0, 1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: SingleChildScrollView(
@@ -181,7 +180,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -189,7 +188,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Icon(
                                       Icons.people_alt,
                                       color: FlutterFlowTheme.of(context)
@@ -198,7 +197,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'p81j1c6n' /* Candidates and Committee */,
@@ -217,7 +216,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   13.0, 13.0, 13.0, 0.0),
                               child: Text(
                                 valueOrDefault<String>(
@@ -237,7 +236,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -248,7 +247,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -282,7 +281,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: FutureBuilder<List<UsersRow>>(
                                 future: UsersTable().queryRows(
                                   queryFn: (q) => q.in_(
@@ -309,7 +308,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                   List<UsersRow> listViewUsersRowList =
                                       snapshot.data!;
                                   return ListView.builder(
-                                    padding: EdgeInsets.fromLTRB(
+                                    padding: const EdgeInsets.fromLTRB(
                                       0,
                                       10.0,
                                       0,
@@ -323,7 +322,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                           listViewUsersRowList[listViewIndex];
                                       return Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           valueOrDefault<String>(
                                             listViewUsersRow.name,
@@ -348,7 +347,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -376,7 +375,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -387,13 +386,13 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                     child: Container(
                                       width: 426.0,
                                       height: 266.0,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: SingleChildScrollView(
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 10.0),
                                               child: FutureBuilder<
@@ -453,7 +452,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             50.0,
                                                                             0.0,
@@ -487,7 +486,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             20.0,
                                                                             0.0,
@@ -553,7 +552,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -570,10 +569,10 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: [0.0, 1.0],
+                                            stops: const [0.0, 1.0],
                                             begin:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            end: AlignmentDirectional(1.0, 0),
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            end: const AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -585,17 +584,17 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                               ],
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             125.0, 10.0, 0.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -614,7 +613,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                             ),
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 4.0,
                                                     color: Color(0x33000000),
@@ -631,10 +630,10 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .graSet22
                                                   ],
-                                                  stops: [0.0, 1.0],
-                                                  begin: AlignmentDirectional(
+                                                  stops: const [0.0, 1.0],
+                                                  begin: const AlignmentDirectional(
                                                       -1.0, 0.0),
-                                                  end: AlignmentDirectional(
+                                                  end: const AlignmentDirectional(
                                                       1.0, 0),
                                                 ),
                                                 borderRadius:
@@ -660,7 +659,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -678,11 +677,11 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -702,14 +701,14 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                             width: 100.0,
                                                             height: 50.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -737,7 +736,7 @@ class _OylamaAdaylarWidgetState extends State<OylamaAdaylarWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,

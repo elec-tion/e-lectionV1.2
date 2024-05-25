@@ -6,12 +6,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/oylama/oylama_olustur/popups/satisfaction/satisfaction_widget.dart';
-import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'ayarlar_model.dart';
 export 'ayarlar_model.dart';
@@ -45,8 +42,8 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(-40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(-40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -135,7 +132,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -145,7 +142,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -157,12 +154,12 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: ayarlarUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -187,9 +184,9 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -197,7 +194,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -246,7 +243,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -264,7 +261,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                     ),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -281,10 +278,10 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: [0.0, 1.0],
+                                          stops: const [0.0, 1.0],
                                           begin:
-                                              AlignmentDirectional(-1.0, 0.0),
-                                          end: AlignmentDirectional(1.0, 0),
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          end: const AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -301,10 +298,10 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -320,7 +317,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                 fontWeight: FontWeight.w600,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -333,7 +330,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                 ],
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 20.0, 0.0, 40.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -345,7 +342,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 12.0, 0.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -397,13 +394,13 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(2.0),
+                                                padding: const EdgeInsets.all(2.0),
                                                 child: Stack(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   children: [
-                                                    Align(
+                                                    const Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               -0.9, 0.0),
@@ -424,7 +421,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                         ),
                                                       ),
                                                     ),
-                                                    Align(
+                                                    const Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               1.0, 0.0),
@@ -447,7 +444,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Container(
                                                         width: 36.0,
@@ -457,7 +454,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .text1,
-                                                          boxShadow: [
+                                                          boxShadow: const [
                                                             BoxShadow(
                                                               blurRadius: 4.0,
                                                               color: Color(
@@ -488,7 +485,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -511,7 +508,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.5, 0.0, 12.5),
                                           child: FlutterFlowLanguageSelector(
                                             width: 110.0,
@@ -552,7 +549,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -584,7 +581,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 20.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -592,10 +589,10 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Builder(
                                   builder: (context) => Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -608,7 +605,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  AlignmentDirectional(0.0, 0.0)
+                                                  const AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -620,7 +617,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                                             _model.unfocusNode)
                                                     : FocusScope.of(context)
                                                         .unfocus(),
-                                                child: Container(
+                                                child: const SizedBox(
                                                   height: 300.0,
                                                   width: 400.0,
                                                   child: SatisfactionWidget(),
@@ -633,15 +630,15 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                       text: FFLocalizations.of(context).getText(
                                         'cluweqi1' /* Give feedback about the app */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.chat_outlined,
                                         size: 20.0,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Colors.transparent,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -655,7 +652,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -667,9 +664,9 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -678,15 +675,15 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                     text: FFLocalizations.of(context).getText(
                                       'nk920zn2' /* e-lection Terms of Use and Use... */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.layers,
                                       size: 20.0,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -699,7 +696,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -709,7 +706,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -727,7 +724,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(

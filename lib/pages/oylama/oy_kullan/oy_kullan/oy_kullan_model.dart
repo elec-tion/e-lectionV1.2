@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'oy_kullan_p3devam_widget.dart' show OyKullanP3devamWidget;
+import 'oy_kullan_widget.dart' show OyKullanWidget;
 import 'package:flutter/material.dart';
 
-class OyKullanP3devamModel extends FlutterFlowModel<OyKullanP3devamWidget> {
+class OyKullanModel extends FlutterFlowModel<OyKullanWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

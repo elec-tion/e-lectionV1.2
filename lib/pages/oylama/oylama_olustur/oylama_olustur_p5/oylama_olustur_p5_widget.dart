@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_olustur_p5_model.dart';
 export 'oylama_olustur_p5_model.dart';
@@ -90,7 +89,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -100,7 +99,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                       context.goNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -112,12 +111,12 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: oylamaOlusturP5UsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -145,9 +144,9 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: [0.0, 1.0],
-                            begin: AlignmentDirectional(0.0, -1.0),
-                            end: AlignmentDirectional(0, 1.0),
+                            stops: const [0.0, 1.0],
+                            begin: const AlignmentDirectional(0.0, -1.0),
+                            end: const AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
@@ -155,7 +154,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -209,9 +208,9 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                             Flexible(
                               child: Container(
                                 height: 330.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -220,7 +219,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 20.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -228,7 +227,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 10.0, 0.0),
                                               child: Icon(
@@ -261,7 +260,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 10.0, 20.0, 10.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -296,7 +295,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 10.0, 20.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -314,7 +313,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -370,7 +369,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                   ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -385,9 +384,9 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                           FlutterFlowTheme.of(context).graSet23,
                                           FlutterFlowTheme.of(context).graSet22
                                         ],
-                                        stops: [0.0, 1.0],
-                                        begin: AlignmentDirectional(-1.0, 0.0),
-                                        end: AlignmentDirectional(1.0, 0),
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(-1.0, 0.0),
+                                        end: const AlignmentDirectional(1.0, 0),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
@@ -407,10 +406,10 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                       options: FFButtonOptions(
                                         width: 350.0,
                                         height: 50.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Colors.transparent,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -425,7 +424,7 @@ class _OylamaOlusturP5WidgetState extends State<OylamaOlusturP5Widget> {
                                               fontWeight: FontWeight.w600,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
