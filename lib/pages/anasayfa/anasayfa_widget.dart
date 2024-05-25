@@ -1,15 +1,16 @@
-import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
+import 'dart:math';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'anasayfa_model.dart';
 export 'anasayfa_model.dart';
@@ -42,8 +43,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 700.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -54,8 +55,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 700.0.ms,
-            begin: const Offset(100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -78,8 +79,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             curve: Curves.easeOut,
             delay: 100.0.ms,
             duration: 750.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -102,8 +103,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             curve: Curves.easeOut,
             delay: 100.0.ms,
             duration: 750.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -159,25 +160,29 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             appBar: AppBar(
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
-              title: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? 'assets/images/e-lection-logo-beyaz.png'
-                      : 'assets/images/e-lection-logo-siyah.png',
-                  width: 95.0,
-                  height: 50.0,
-                  fit: BoxFit.fill,
+              title: Hero(
+                tag: 'b2',
+                transitionOnUserGestures: true,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? 'assets/images/e-lection-logo-beyaz.png'
+                        : 'assets/images/e-lection-logo-siyah.png',
+                    width: 95.0,
+                    height: 50.0,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: FlutterFlowIconButton(
-                    borderColor: const Color(0x00363636),
+                    borderColor: Color(0x00363636),
                     borderRadius: 20.0,
                     buttonSize: 40.0,
-                    fillColor: const Color(0x00FFFFFF),
+                    fillColor: Color(0x00FFFFFF),
                     icon: Icon(
                       Icons.contact_support_outlined,
                       color: FlutterFlowTheme.of(context).text1,
@@ -205,9 +210,9 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -215,7 +220,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                       children: [
                         // the row of the "welcome ***** & photo" of the user
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -288,7 +293,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 5.0, 0.0),
                                             child: Text(
                                               valueOrDefault<String>(
@@ -309,73 +314,6 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                                   ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 5.0, 0.0),
-                                            child: InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                await Future.wait([
-                                                  Future(() async {
-                                                    _model.contractAddressJSON =
-                                                        await ContractGroup
-                                                            .getContractAddressCall
-                                                            .call();
-                                                  }),
-                                                  Future(() async {
-                                                    _model.contractAbiJSON =
-                                                        await ContractGroup
-                                                            .getContractAbiCall
-                                                            .call();
-                                                  }),
-                                                ]);
-                                                await actions.addVote(
-                                                  anasayfaUsersRow!.key!,
-                                                  'aebfdfdb-4e0e-4709-b8ea-fb316bed593b',
-                                                  '0xae2705A6e86b06a232204925b03a18D572F33099',
-                                                  getJsonField(
-                                                    (_model.contractAddressJSON
-                                                            ?.jsonBody ??
-                                                        ''),
-                                                    r'''$["address"]''',
-                                                  ).toString(),
-                                                  getJsonField(
-                                                    (_model.contractAbiJSON
-                                                            ?.jsonBody ??
-                                                        ''),
-                                                    r'''$["abi"]''',
-                                                  ),
-                                                );
-
-                                                setState(() {});
-                                              },
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '4tpi9f5n' /* oyver */,
-                                                ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .titleLarge
-                                                    .override(
-                                                      fontFamily: 'Montserrat',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .text1,
-                                                      fontSize: 18.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                              ),
-                                            ),
-                                          ),
                                         ],
                                       ),
                                     ],
@@ -392,7 +330,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   context.pushNamed(
                                     'Profilim',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 10),
@@ -404,13 +342,13 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   width: 80.0,
                                   height: 80.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: CachedNetworkImage(
-                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeInDuration: Duration(milliseconds: 500),
                                     fadeOutDuration:
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                     imageUrl: anasayfaUsersRow!.photoUrl,
                                     fit: BoxFit.fill,
                                   ),
@@ -433,7 +371,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -459,7 +397,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                         width: 110.0,
                                         height: 110.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -478,10 +416,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet13
                                             ],
-                                            stops: const [0.0, 1.0, 1.0],
+                                            stops: [0.0, 1.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(0.0, -1.0),
-                                            end: const AlignmentDirectional(0, 1.0),
+                                                AlignmentDirectional(0.0, -1.0),
+                                            end: AlignmentDirectional(0, 1.0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -540,7 +478,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                         width: 110.0,
                                         height: 110.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -559,10 +497,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet13
                                             ],
-                                            stops: const [0.0, 1.0, 1.0],
+                                            stops: [0.0, 1.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(0.0, -1.0),
-                                            end: const AlignmentDirectional(0, 1.0),
+                                                AlignmentDirectional(0.0, -1.0),
+                                            end: AlignmentDirectional(0, 1.0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -608,7 +546,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   animationsMap['rowOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -625,7 +563,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                       width: 290.0,
                                       height: 60.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -644,10 +582,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                             FlutterFlowTheme.of(context)
                                                 .graSet13
                                           ],
-                                          stops: const [0.0, 1.0, 1.0],
+                                          stops: [0.0, 1.0, 1.0],
                                           begin:
-                                              const AlignmentDirectional(0.0, -1.0),
-                                          end: const AlignmentDirectional(0, 1.0),
+                                              AlignmentDirectional(0.0, -1.0),
+                                          end: AlignmentDirectional(0, 1.0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -670,10 +608,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -689,7 +627,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                                 fontWeight: FontWeight.w500,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -704,7 +642,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   animationsMap['rowOnPageLoadAnimation2']!),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -730,7 +668,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                         width: 110.0,
                                         height: 110.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -749,10 +687,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet13
                                             ],
-                                            stops: const [0.0, 1.0, 1.0],
+                                            stops: [0.0, 1.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(0.0, -1.0),
-                                            end: const AlignmentDirectional(0, 1.0),
+                                                AlignmentDirectional(0.0, -1.0),
+                                            end: AlignmentDirectional(0, 1.0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -811,7 +749,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                         width: 110.0,
                                         height: 110.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -830,10 +768,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet13
                                             ],
-                                            stops: const [0.0, 1.0, 1.0],
+                                            stops: [0.0, 1.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(0.0, -1.0),
-                                            end: const AlignmentDirectional(0, 1.0),
+                                                AlignmentDirectional(0.0, -1.0),
+                                            end: AlignmentDirectional(0, 1.0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -878,7 +816,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   animationsMap['rowOnPageLoadAnimation3']!),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -895,7 +833,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                       width: 290.0,
                                       height: 60.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -914,10 +852,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                             FlutterFlowTheme.of(context)
                                                 .graSet13
                                           ],
-                                          stops: const [0.0, 1.0, 1.0],
+                                          stops: [0.0, 1.0, 1.0],
                                           begin:
-                                              const AlignmentDirectional(0.0, -1.0),
-                                          end: const AlignmentDirectional(0, 1.0),
+                                              AlignmentDirectional(0.0, -1.0),
+                                          end: AlignmentDirectional(0, 1.0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -940,10 +878,10 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -959,7 +897,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                                 fontWeight: FontWeight.w500,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),

@@ -5,7 +5,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_olustur_p2_model.dart';
 export 'oylama_olustur_p2_model.dart';
@@ -98,17 +100,17 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: Container(
                     width: 40.0,
                     height: 40.0,
                     clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
                     ),
                     child: CachedNetworkImage(
-                      fadeInDuration: const Duration(milliseconds: 500),
-                      fadeOutDuration: const Duration(milliseconds: 500),
+                      fadeInDuration: Duration(milliseconds: 500),
+                      fadeOutDuration: Duration(milliseconds: 500),
                       imageUrl: oylamaOlusturP2UsersRow!.photoUrl,
                       fit: BoxFit.fill,
                     ),
@@ -137,9 +139,9 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                   FlutterFlowTheme.of(context).background1,
                                   FlutterFlowTheme.of(context).background2
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(0.0, -1.0),
-                                end: const AlignmentDirectional(0, 1.0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(0.0, -1.0),
+                                end: AlignmentDirectional(0, 1.0),
                               ),
                             ),
                             child: Column(
@@ -147,7 +149,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -194,9 +196,9 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                   ),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         40.0, 10.0, 40.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -205,7 +207,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 30.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -213,7 +215,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Text(
@@ -235,7 +237,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                       ),
                                                 ),
                                               ),
-                                              SizedBox(
+                                              Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -318,7 +320,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                 context)
                                                             .customColor2,
                                                     contentPadding:
-                                                        const EdgeInsets.all(10.0),
+                                                        EdgeInsets.all(10.0),
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -347,7 +349,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 30.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -355,7 +357,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Text(
@@ -377,7 +379,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                       ),
                                                 ),
                                               ),
-                                              SizedBox(
+                                              Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -460,7 +462,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                 context)
                                                             .customColor2,
                                                     contentPadding:
-                                                        const EdgeInsets.all(10.0),
+                                                        EdgeInsets.all(10.0),
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -490,24 +492,24 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 30.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               // container that is for sign in button
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Container(
                                                     width: 290.0,
                                                     height: 45.0,
                                                     decoration: BoxDecoration(
-                                                      boxShadow: const [
+                                                      boxShadow: [
                                                         BoxShadow(
                                                           blurRadius: 4.0,
                                                           color:
@@ -530,16 +532,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                   context)
                                                               .graSet13
                                                         ],
-                                                        stops: const [0.0, 1.0, 1.0],
+                                                        stops: [0.0, 1.0, 1.0],
                                                         begin:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         end:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0),
                                                       ),
                                                       borderRadius:
-                                                          const BorderRadius.only(
+                                                          BorderRadius.only(
                                                         bottomLeft:
                                                             Radius.circular(
                                                                 40.0),
@@ -557,7 +559,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                     child: FFButtonWidget(
                                                       onPressed: () async {
                                                         // Start Date & Time
-                                                        final datePicked1Date =
+                                                        final _datePicked1Date =
                                                             await showDatePicker(
                                                           context: context,
                                                           initialDate:
@@ -621,10 +623,10 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                         );
 
                                                         TimeOfDay?
-                                                            datePicked1Time;
-                                                        if (datePicked1Date !=
+                                                            _datePicked1Time;
+                                                        if (_datePicked1Date !=
                                                             null) {
-                                                          datePicked1Time =
+                                                          _datePicked1Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
@@ -683,22 +685,22 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                           );
                                                         }
 
-                                                        if (datePicked1Date !=
+                                                        if (_datePicked1Date !=
                                                                 null &&
-                                                            datePicked1Time !=
+                                                            _datePicked1Time !=
                                                                 null) {
                                                           safeSetState(() {
                                                             _model.datePicked1 =
                                                                 DateTime(
-                                                              datePicked1Date
+                                                              _datePicked1Date
                                                                   .year,
-                                                              datePicked1Date
+                                                              _datePicked1Date
                                                                   .month,
-                                                              datePicked1Date
+                                                              _datePicked1Date
                                                                   .day,
-                                                              datePicked1Time!
+                                                              _datePicked1Time!
                                                                   .hour,
-                                                              datePicked1Time
+                                                              _datePicked1Time
                                                                   .minute,
                                                             );
                                                           });
@@ -719,21 +721,21 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                       ),
                                                       options: FFButtonOptions(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            const Color(0x00067BB7),
+                                                            Color(0x00067BB7),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -753,7 +755,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                           .w500,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -767,7 +769,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 5.0),
                                                 child: Text(
@@ -804,24 +806,24 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 30.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               // container that is for sign in button
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Container(
                                                     width: 290.0,
                                                     height: 45.0,
                                                     decoration: BoxDecoration(
-                                                      boxShadow: const [
+                                                      boxShadow: [
                                                         BoxShadow(
                                                           blurRadius: 4.0,
                                                           color:
@@ -844,16 +846,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                   context)
                                                               .graSet13
                                                         ],
-                                                        stops: const [0.0, 1.0, 1.0],
+                                                        stops: [0.0, 1.0, 1.0],
                                                         begin:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         end:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0),
                                                       ),
                                                       borderRadius:
-                                                          const BorderRadius.only(
+                                                          BorderRadius.only(
                                                         bottomLeft:
                                                             Radius.circular(
                                                                 40.0),
@@ -871,7 +873,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                     child: FFButtonWidget(
                                                       onPressed: () async {
                                                         // End Date & Time
-                                                        final datePicked2Date =
+                                                        final _datePicked2Date =
                                                             await showDatePicker(
                                                           context: context,
                                                           initialDate:
@@ -935,10 +937,10 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                         );
 
                                                         TimeOfDay?
-                                                            datePicked2Time;
-                                                        if (datePicked2Date !=
+                                                            _datePicked2Time;
+                                                        if (_datePicked2Date !=
                                                             null) {
-                                                          datePicked2Time =
+                                                          _datePicked2Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
@@ -997,22 +999,22 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                           );
                                                         }
 
-                                                        if (datePicked2Date !=
+                                                        if (_datePicked2Date !=
                                                                 null &&
-                                                            datePicked2Time !=
+                                                            _datePicked2Time !=
                                                                 null) {
                                                           safeSetState(() {
                                                             _model.datePicked2 =
                                                                 DateTime(
-                                                              datePicked2Date
+                                                              _datePicked2Date
                                                                   .year,
-                                                              datePicked2Date
+                                                              _datePicked2Date
                                                                   .month,
-                                                              datePicked2Date
+                                                              _datePicked2Date
                                                                   .day,
-                                                              datePicked2Time!
+                                                              _datePicked2Time!
                                                                   .hour,
-                                                              datePicked2Time
+                                                              _datePicked2Time
                                                                   .minute,
                                                             );
                                                           });
@@ -1033,21 +1035,21 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                       ),
                                                       options: FFButtonOptions(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            const Color(0x00067BB7),
+                                                            Color(0x00067BB7),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1067,7 +1069,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                           .w500,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -1081,7 +1083,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 5.0),
                                                 child: Text(
@@ -1100,7 +1102,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 5.0),
                                                 child: Text(
@@ -1126,7 +1128,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                   ),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -1140,7 +1142,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1156,7 +1158,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                               ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  boxShadow: const [
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x33000000),
@@ -1175,10 +1177,10 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                               context)
                                                           .graSet22
                                                     ],
-                                                    stops: const [0.0, 1.0],
-                                                    begin: const AlignmentDirectional(
+                                                    stops: [0.0, 1.0],
+                                                    begin: AlignmentDirectional(
                                                         -1.0, 0.0),
-                                                    end: const AlignmentDirectional(
+                                                    end: AlignmentDirectional(
                                                         1.0, 0),
                                                   ),
                                                   borderRadius:
@@ -1189,8 +1191,14 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                   onPressed: () async {
                                                     if ((_model.createVotingNameOfVotingTextController
                                                                     .text !=
+                                                                null &&
+                                                            _model.createVotingNameOfVotingTextController
+                                                                    .text !=
                                                                 '') &&
                                                         (_model.createVotingDetailsOfVotingTextController
+                                                                    .text !=
+                                                                null &&
+                                                            _model.createVotingDetailsOfVotingTextController
                                                                     .text !=
                                                                 '')) {
                                                       _model.electionNameCheck =
@@ -1217,16 +1225,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                             builder:
                                                                 (alertDialogContext) {
                                                               return AlertDialog(
-                                                                title: const Text(
+                                                                title: Text(
                                                                     'You can\'t create a voting!'),
-                                                                content: const Text(
+                                                                content: Text(
                                                                     'The voting name you used to create a poll has already been used, please try again.'),
                                                                 actions: [
                                                                   TextButton(
                                                                     onPressed: () =>
                                                                         Navigator.pop(
                                                                             alertDialogContext),
-                                                                    child: const Text(
+                                                                    child: Text(
                                                                         'OK'),
                                                                   ),
                                                                 ],
@@ -1240,16 +1248,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                             builder:
                                                                 (alertDialogContext) {
                                                               return AlertDialog(
-                                                                title: const Text(
+                                                                title: Text(
                                                                     'Oylama Oluşturamazsın!'),
-                                                                content: const Text(
+                                                                content: Text(
                                                                     'Oylama oluşturmak için kullanmış olduğun oylama ismi daha önce kullanılmış, lütfen tekrar deneyin.'),
                                                                 actions: [
                                                                   TextButton(
                                                                     onPressed: () =>
                                                                         Navigator.pop(
                                                                             alertDialogContext),
-                                                                    child: const Text(
+                                                                    child: Text(
                                                                         'Tamam'),
                                                                   ),
                                                                 ],
@@ -1353,16 +1361,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'You can\'t create a voting!'),
                                                                         content:
-                                                                            const Text('A voting\'s start date cannot be later than or the same as the end date.'),
+                                                                            Text('A voting\'s start date cannot be later than or the same as the end date.'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('OK'),
+                                                                                Text('OK'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -1376,16 +1384,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Oylama Oluşturamazsın!'),
                                                                         content:
-                                                                            const Text('Bir oylamanın başlangıç tarihi, bitiş tarihinden daha geç veya aynı olamaz.'),
+                                                                            Text('Bir oylamanın başlangıç tarihi, bitiş tarihinden daha geç veya aynı olamaz.'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Tamam'),
+                                                                                Text('Tamam'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -1405,16 +1413,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                   builder:
                                                                       (alertDialogContext) {
                                                                     return AlertDialog(
-                                                                      title: const Text(
+                                                                      title: Text(
                                                                           'You can\'t create a voting!'),
-                                                                      content: const Text(
+                                                                      content: Text(
                                                                           'To create a vote, you must select the end date and time of the vote.'),
                                                                       actions: [
                                                                         TextButton(
                                                                           onPressed: () =>
                                                                               Navigator.pop(alertDialogContext),
                                                                           child:
-                                                                              const Text('OK'),
+                                                                              Text('OK'),
                                                                         ),
                                                                       ],
                                                                     );
@@ -1428,16 +1436,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                   builder:
                                                                       (alertDialogContext) {
                                                                     return AlertDialog(
-                                                                      title: const Text(
+                                                                      title: Text(
                                                                           'Oylama Oluşturamazsın!'),
-                                                                      content: const Text(
+                                                                      content: Text(
                                                                           'Oylama oluşturmak için, oylamanın bitiş tarihi ve saatini seçmelisiniz.'),
                                                                       actions: [
                                                                         TextButton(
                                                                           onPressed: () =>
                                                                               Navigator.pop(alertDialogContext),
                                                                           child:
-                                                                              const Text('Tamam'),
+                                                                              Text('Tamam'),
                                                                         ),
                                                                       ],
                                                                     );
@@ -1457,16 +1465,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                 builder:
                                                                     (alertDialogContext) {
                                                                   return AlertDialog(
-                                                                    title: const Text(
+                                                                    title: Text(
                                                                         'You can\'t create a voting!'),
-                                                                    content: const Text(
+                                                                    content: Text(
                                                                         'To create a vote, the start date of the vote must be later than the current date and time.'),
                                                                     actions: [
                                                                       TextButton(
                                                                         onPressed:
                                                                             () =>
                                                                                 Navigator.pop(alertDialogContext),
-                                                                        child: const Text(
+                                                                        child: Text(
                                                                             'OK'),
                                                                       ),
                                                                     ],
@@ -1481,16 +1489,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                 builder:
                                                                     (alertDialogContext) {
                                                                   return AlertDialog(
-                                                                    title: const Text(
+                                                                    title: Text(
                                                                         'Oylama Oluşturamazsın!'),
-                                                                    content: const Text(
+                                                                    content: Text(
                                                                         'Oylama oluşturmak için, oylamanın başlangıç tarihi şuanki tarih ve saat\'den geç olmalıdır.'),
                                                                     actions: [
                                                                       TextButton(
                                                                         onPressed:
                                                                             () =>
                                                                                 Navigator.pop(alertDialogContext),
-                                                                        child: const Text(
+                                                                        child: Text(
                                                                             'Tamam'),
                                                                       ),
                                                                     ],
@@ -1510,16 +1518,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: const Text(
+                                                                  title: Text(
                                                                       'You can\'t create a voting!'),
-                                                                  content: const Text(
+                                                                  content: Text(
                                                                       'To create a vote, you must select the start date and time of the vote.'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'OK'),
                                                                     ),
                                                                   ],
@@ -1533,16 +1541,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: const Text(
+                                                                  title: Text(
                                                                       'Oylama Oluşturamazsın!'),
-                                                                  content: const Text(
+                                                                  content: Text(
                                                                       'Oylama oluşturmak için, oylamanın başlangıç tarihi ve saatini seçmelisiniz.'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'Tamam'),
                                                                     ),
                                                                   ],
@@ -1563,16 +1571,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: const Text(
+                                                              title: Text(
                                                                   'You can\'t create a voting!'),
-                                                              content: const Text(
+                                                              content: Text(
                                                                   'You need to fill the fields about the voting.'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: const Text(
+                                                                  child: Text(
                                                                       'OK'),
                                                                 ),
                                                               ],
@@ -1586,16 +1594,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: const Text(
+                                                              title: Text(
                                                                   'Oylama Oluşturamazsın!'),
-                                                              content: const Text(
+                                                              content: Text(
                                                                   'Bir oylama oluşturmak için oylama ile ilgili alanları doldurmanız gerekir.'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: const Text(
+                                                                  child: Text(
                                                                       'Tamam'),
                                                                 ),
                                                               ],
@@ -1624,11 +1632,11 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                     width: 350.0,
                                                     height: 50.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: Colors.transparent,
@@ -1647,7 +1655,7 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                               FontWeight.w600,
                                                         ),
                                                     elevation: 0.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),

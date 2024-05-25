@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'howvoting_works_p3_model.dart';
 export 'howvoting_works_p3_model.dart';
 
@@ -45,7 +48,7 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
             backgroundColor: FlutterFlowTheme.of(context).background1,
             automaticallyImplyLeading: false,
             title: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
@@ -58,7 +61,7 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                 ),
               ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: false,
           ),
           body: SafeArea(
@@ -75,9 +78,9 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: const [0.0, 1.0],
-                      begin: const AlignmentDirectional(0.0, -1.0),
-                      end: const AlignmentDirectional(0, 1.0),
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(0.0, -1.0),
+                      end: AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: SingleChildScrollView(
@@ -85,7 +88,7 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -95,7 +98,7 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: CircularPercentIndicator(
                                       percent: 0.4,
                                       radius: 40.0,
@@ -121,7 +124,7 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -186,7 +189,7 @@ upc... */
                 ),
                 Flexible(
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -202,13 +205,13 @@ upc... */
                                   FlutterFlowTheme.of(context).alternate,
                                   FlutterFlowTheme.of(context).graSet23
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(0.0, -1.0),
-                                end: const AlignmentDirectional(0, 1.0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(0.0, -1.0),
+                                end: AlignmentDirectional(0, 1.0),
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -227,7 +230,7 @@ upc... */
                                     width: 200.0,
                                     height: 70.0,
                                     decoration: BoxDecoration(
-                                      boxShadow: const [
+                                      boxShadow: [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -242,9 +245,9 @@ upc... */
                                           FlutterFlowTheme.of(context).graSet23,
                                           FlutterFlowTheme.of(context).graSet22
                                         ],
-                                        stops: const [0.0, 1.0],
-                                        begin: const AlignmentDirectional(-1.0, 0.87),
-                                        end: const AlignmentDirectional(1.0, -0.87),
+                                        stops: [0.0, 1.0],
+                                        begin: AlignmentDirectional(-1.0, 0.87),
+                                        end: AlignmentDirectional(1.0, -0.87),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                       border: Border.all(
@@ -253,13 +256,13 @@ upc... */
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -285,7 +288,7 @@ upc... */
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_arrow_right_sharp,

@@ -5,6 +5,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'sifremi_unuttum_p1_model.dart';
 export 'sifremi_unuttum_p1_model.dart';
 
@@ -61,7 +63,7 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                 fit: BoxFit.fill,
               ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -81,9 +83,9 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -91,7 +93,7 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -142,14 +144,14 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 40.0, 40.0, 40.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -171,9 +173,9 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
 
                                 // log in, id number textField
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
-                                  child: SizedBox(
+                                  child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
                                       controller:
@@ -234,7 +236,7 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                         filled: true,
                                         fillColor: FlutterFlowTheme.of(context)
                                             .customColor2,
-                                        contentPadding: const EdgeInsets.all(10.0),
+                                        contentPadding: EdgeInsets.all(10.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall
@@ -270,7 +272,7 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                           width: 230.0,
                           height: 52.0,
                           decoration: BoxDecoration(
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -286,11 +288,11 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                 FlutterFlowTheme.of(context).graSet12,
                                 FlutterFlowTheme.of(context).graSet13
                               ],
-                              stops: const [0.0, 1.0, 1.0],
-                              begin: const AlignmentDirectional(1.0, 0.0),
-                              end: const AlignmentDirectional(-1.0, 0),
+                              stops: [0.0, 1.0, 1.0],
+                              begin: AlignmentDirectional(1.0, 0.0),
+                              end: AlignmentDirectional(-1.0, 0),
                             ),
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(40.0),
                               bottomRight: Radius.circular(40.0),
                               topLeft: Radius.circular(40.0),
@@ -300,6 +302,8 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                           child: FFButtonWidget(
                             onPressed: () async {
                               if (_model.sifreUnuttumIDTextController.text !=
+                                      null &&
+                                  _model.sifreUnuttumIDTextController.text !=
                                       '') {
                                 _model.hashedIDCheck =
                                     await actions.hashingIDPassword(
@@ -328,15 +332,15 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                       context: context,
                                       builder: (alertDialogContext) {
                                         return AlertDialog(
-                                          title: const Text(
+                                          title: Text(
                                               'Kimlik numarası bulunamadı!'),
-                                          content: const Text(
+                                          content: Text(
                                               'e-lection\'da böyle bir kimlik numarası bulunmamaktadır.'),
                                           actions: [
                                             TextButton(
                                               onPressed: () => Navigator.pop(
                                                   alertDialogContext),
-                                              child: const Text('Tamam'),
+                                              child: Text('Tamam'),
                                             ),
                                           ],
                                         );
@@ -347,14 +351,14 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                       context: context,
                                       builder: (alertDialogContext) {
                                         return AlertDialog(
-                                          title: const Text('ID number not found!'),
-                                          content: const Text(
+                                          title: Text('ID number not found!'),
+                                          content: Text(
                                               'There is no such ID number in e-lection.'),
                                           actions: [
                                             TextButton(
                                               onPressed: () => Navigator.pop(
                                                   alertDialogContext),
-                                              child: const Text('OK'),
+                                              child: Text('OK'),
                                             ),
                                           ],
                                         );
@@ -369,15 +373,15 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        title: const Text(
+                                        title: Text(
                                             'Kimlik Numaranızı Girmediniz!'),
-                                        content: const Text(
+                                        content: Text(
                                             'Şifrenizi sıfırlamak için lütfen kimlik numaranızı giriniz.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: const Text('Tamam'),
+                                            child: Text('Tamam'),
                                           ),
                                         ],
                                       );
@@ -388,15 +392,15 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        title: const Text(
+                                        title: Text(
                                             'You did not enter your ID number!'),
-                                        content: const Text(
+                                        content: Text(
                                             'Please enter your ID number to reset your password.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: const Text('OK'),
+                                            child: Text('OK'),
                                           ),
                                         ],
                                       );
@@ -411,11 +415,11 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                               '2dwoorks' /* Next */,
                             ),
                             options: FFButtonOptions(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0x00067BB7),
+                              color: Color(0x00067BB7),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
@@ -425,7 +429,7 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                               elevation: 0.0,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),

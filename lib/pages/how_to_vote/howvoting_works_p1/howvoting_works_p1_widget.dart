@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'howvoting_works_p1_model.dart';
 export 'howvoting_works_p1_model.dart';
 
@@ -45,20 +48,24 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
             backgroundColor: FlutterFlowTheme.of(context).background1,
             automaticallyImplyLeading: false,
             title: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? 'assets/images/e-lection-logo-beyaz.png'
-                      : 'assets/images/e-lection-logo-siyah.png',
-                  width: 95.0,
-                  height: 50.0,
-                  fit: BoxFit.cover,
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Hero(
+                tag: 'b3',
+                transitionOnUserGestures: true,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? 'assets/images/e-lection-logo-beyaz.png'
+                        : 'assets/images/e-lection-logo-siyah.png',
+                    width: 95.0,
+                    height: 50.0,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: false,
           ),
           body: SafeArea(
@@ -75,9 +82,9 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: const [0.0, 1.0],
-                      begin: const AlignmentDirectional(0.0, -1.0),
-                      end: const AlignmentDirectional(0, 1.0),
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(0.0, -1.0),
+                      end: AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Column(
@@ -85,7 +92,7 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -94,7 +101,7 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: CircularPercentIndicator(
                                     percent: 0.0,
                                     radius: 40.0,
@@ -119,7 +126,7 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       5.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -154,7 +161,7 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -181,7 +188,7 @@ In this quick tutoria... */
                                   width: 200.0,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -221,7 +228,7 @@ Voting on e-lection is easy.
                                 ),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -236,9 +243,9 @@ Voting on e-lection is easy.
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 1.0],
-                                      begin: const AlignmentDirectional(-1.0, 0.0),
-                                      end: const AlignmentDirectional(1.0, 0),
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(-1.0, 0.0),
+                                      end: AlignmentDirectional(1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -261,13 +268,13 @@ Voting on e-lection is easy.
                           FlutterFlowTheme.of(context).alternate,
                           FlutterFlowTheme.of(context).graSet23
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -286,7 +293,7 @@ Voting on e-lection is easy.
                             width: 200.0,
                             height: 70.0,
                             decoration: BoxDecoration(
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -298,12 +305,12 @@ Voting on e-lection is easy.
                               ],
                               gradient: LinearGradient(
                                 colors: [
-                                  const Color(0xFF11942A),
+                                  Color(0xFF11942A),
                                   FlutterFlowTheme.of(context).graSet11
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(-1.0, 0.87),
-                                end: const AlignmentDirectional(1.0, -0.87),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(-1.0, 0.87),
+                                end: AlignmentDirectional(1.0, -0.87),
                               ),
                               borderRadius: BorderRadius.circular(15.0),
                               border: Border.all(
@@ -311,13 +318,13 @@ Voting on e-lection is easy.
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Flexible(
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'gcs6w6su' /* Start */,
@@ -326,7 +333,7 @@ Voting on e-lection is easy.
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Montserrat',
-                                              color: const Color(0xFFF2F2F2),
+                                              color: Color(0xFFF2F2F2),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -334,7 +341,7 @@ Voting on e-lection is easy.
                                       ),
                                     ),
                                   ),
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 20.0, 0.0),
                                     child: Icon(

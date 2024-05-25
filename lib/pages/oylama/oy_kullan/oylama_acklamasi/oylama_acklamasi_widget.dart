@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_acklamasi_model.dart';
 export 'oylama_acklamasi_model.dart';
@@ -83,11 +84,11 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: const Color(0x004B39EF),
+                borderColor: Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: const Color(0x004B39EF),
+                fillColor: Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -98,7 +99,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                 },
               ),
               title: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -113,7 +114,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -123,7 +124,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -135,12 +136,12 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oylamaAcklamasiUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -165,23 +166,23 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: const [0.0, 1.0],
-                          begin: const AlignmentDirectional(0.0, -1.0),
-                          end: const AlignmentDirectional(0, 1.0),
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(0.0, -1.0),
+                          end: AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Icon(
                                     Icons.description_outlined,
                                     color: FlutterFlowTheme.of(context)
@@ -190,7 +191,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -210,8 +211,8 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 13.0, 0.0, 0.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                13.0, 13.0, 13.0, 0.0),
                             child: Text(
                               valueOrDefault<String>(
                                 widget.votedesc?.name,
@@ -230,7 +231,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -240,7 +241,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -274,7 +275,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -294,10 +295,10 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 20.0, 20.0, 0.0),
                                                 child: Text(
@@ -327,14 +328,14 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         125.0, 10.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -353,7 +354,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                         ),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -370,10 +371,10 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
+                                              stops: [0.0, 1.0],
+                                              begin: AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              end: const AlignmentDirectional(1.0, 0),
+                                              end: AlignmentDirectional(1.0, 0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
@@ -395,7 +396,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 0.0),
                                                   child: Icon(
@@ -409,7 +410,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
@@ -424,14 +425,14 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                                       width: 100.0,
                                                       height: 50.0,
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -456,7 +457,7 @@ class _OylamaAcklamasiWidgetState extends State<OylamaAcklamasiWidget> {
                                                                         .bold,
                                                               ),
                                                       elevation: 0.0,
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,

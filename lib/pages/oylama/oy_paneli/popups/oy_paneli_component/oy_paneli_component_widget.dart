@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'oy_paneli_component_model.dart';
 export 'oy_paneli_component_model.dart';
 
@@ -47,14 +49,14 @@ class _OyPaneliComponentWidgetState extends State<OyPaneliComponentWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '3mms5epz' /* The election(s) that you are e... */,

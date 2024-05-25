@@ -4,10 +4,13 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'secimler_model.dart';
 export 'secimler_model.dart';
@@ -56,15 +59,15 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 80.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 80.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.8, 0.8),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -147,7 +150,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -157,7 +160,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -169,12 +172,12 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: secimlerUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -202,9 +205,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: const [0.0, 1.0],
-                            begin: const AlignmentDirectional(0.0, -1.0),
-                            end: const AlignmentDirectional(0, 1.0),
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
@@ -212,7 +215,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -254,13 +257,13 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(
+                                  Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.7,
                                     child: TextFormField(
@@ -324,7 +327,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                         filled: true,
                                         fillColor: FlutterFlowTheme.of(context)
                                             .customColor2,
-                                        contentPadding: const EdgeInsets.all(10.0),
+                                        contentPadding: EdgeInsets.all(10.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall
@@ -346,7 +349,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -379,7 +382,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 0.0),
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -388,7 +391,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: Material(
                                         color: Colors.transparent,
@@ -399,7 +402,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                         ),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -416,10 +419,10 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
+                                              stops: [0.0, 1.0],
+                                              begin: AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              end: const AlignmentDirectional(1.0, 0),
+                                              end: AlignmentDirectional(1.0, 0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
@@ -443,10 +446,10 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                             options: FFButtonOptions(
                                               width: 280.0,
                                               height: 50.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color: Colors.transparent,
                                               textStyle: FlutterFlowTheme.of(
@@ -462,7 +465,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                     fontWeight: FontWeight.w600,
                                                   ),
                                               elevation: 0.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -482,7 +485,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -499,10 +502,10 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: const [0.0, 1.0],
+                                            stops: [0.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(-1.0, 0.0),
-                                            end: const AlignmentDirectional(1.0, 0),
+                                                AlignmentDirectional(-1.0, 0.0),
+                                            end: AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -525,10 +528,10 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                             width: 280.0,
                                             height: 50.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.transparent,
                                             textStyle: FlutterFlowTheme.of(
@@ -544,7 +547,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                             elevation: 0.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -560,7 +563,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -569,7 +572,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 12.0),
                                         child: FutureBuilder<List<UsersRow>>(
                                           future: UsersTable().queryRows(
@@ -611,12 +614,12 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                               child: Container(
                                                 width: 390.0,
                                                 height: 440.0,
-                                                constraints: const BoxConstraints(
+                                                constraints: BoxConstraints(
                                                   maxWidth: 570.0,
                                                 ),
                                                 decoration: BoxDecoration(
                                                   color: Colors.transparent,
-                                                  boxShadow: const [
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x002B2B2B),
@@ -631,7 +634,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                           12.0),
                                                   shape: BoxShape.rectangle,
                                                   border: Border.all(
-                                                    color: const Color(0x00363636),
+                                                    color: Color(0x00363636),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -641,7 +644,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          const Alignment(0.0, 0),
+                                                          Alignment(0.0, 0),
                                                       child: TabBar(
                                                         isScrollable: true,
                                                         labelColor:
@@ -653,7 +656,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                     context)
                                                                 .text1,
                                                         labelPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -749,7 +752,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         )
                                                                         .contains(
                                                                           'voters_wallet_id',
-                                                                          '{${containerUsersRowList.first.walletIdVoter}}',
+                                                                          '{' +
+                                                                              containerUsersRowList.first.walletIdVoter +
+                                                                              '}',
                                                                         )
                                                                         .order('startDate', ascending: true),
                                                                   ),
@@ -797,7 +802,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -838,7 +843,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -853,7 +858,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -869,7 +874,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.startDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -957,7 +962,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -998,7 +1003,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1013,7 +1018,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1029,7 +1034,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.startDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1117,7 +1122,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1158,7 +1163,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1173,7 +1178,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1189,7 +1194,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.startDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1277,7 +1282,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1318,7 +1323,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1333,7 +1338,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1349,7 +1354,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.startDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1437,7 +1442,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1478,7 +1483,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1493,7 +1498,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1509,7 +1514,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.startDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1562,7 +1567,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         )
                                                                         .contains(
                                                                           'voters_wallet_id',
-                                                                          '{${containerUsersRowList.first.walletIdVoter}}',
+                                                                          '{' +
+                                                                              containerUsersRowList.first.walletIdVoter +
+                                                                              '}',
                                                                         )
                                                                         .order('endDate', ascending: true),
                                                                   ),
@@ -1610,7 +1617,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1644,14 +1651,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    const Icon(
+                                                                                    Icon(
                                                                                       Icons.arrow_right,
                                                                                       color: Color(0xFF00FF48),
                                                                                       size: 29.0,
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1666,7 +1673,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1682,7 +1689,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.endDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1774,7 +1781,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1808,14 +1815,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    const Icon(
+                                                                                    Icon(
                                                                                       Icons.arrow_right,
                                                                                       color: Color(0xFF00FF48),
                                                                                       size: 29.0,
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1830,7 +1837,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1846,7 +1853,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.endDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1938,7 +1945,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1972,14 +1979,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    const Icon(
+                                                                                    Icon(
                                                                                       Icons.arrow_right,
                                                                                       color: Color(0xFF00FF48),
                                                                                       size: 29.0,
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1994,7 +2001,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -2010,7 +2017,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.endDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2102,7 +2109,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2136,14 +2143,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    const Icon(
+                                                                                    Icon(
                                                                                       Icons.arrow_right,
                                                                                       color: Color(0xFF00FF48),
                                                                                       size: 29.0,
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2158,7 +2165,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -2174,7 +2181,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.endDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2266,7 +2273,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2300,14 +2307,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    const Icon(
+                                                                                    Icon(
                                                                                       Icons.arrow_right,
                                                                                       color: Color(0xFF00FF48),
                                                                                       size: 29.0,
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewElectionsRow.name,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2322,7 +2329,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                   ],
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -2338,7 +2345,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                             ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           functions.showDateTime(listViewElectionsRow.endDate),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2386,7 +2393,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         )
                                                                         .contains(
                                                                           'voters_wallet_id',
-                                                                          '{${containerUsersRowList.first.walletIdVoter}}',
+                                                                          '{' +
+                                                                              containerUsersRowList.first.walletIdVoter +
+                                                                              '}',
                                                                         )
                                                                         .order('endDate'),
                                                                   ),
@@ -2434,7 +2443,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2447,14 +2456,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
-                                                                                  const Icon(
+                                                                                  Icon(
                                                                                     Icons.arrow_right,
                                                                                     color: Color(0xFFFF0000),
                                                                                     size: 29.0,
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         listViewElectionsRow.name,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2469,7 +2478,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2485,7 +2494,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2571,7 +2580,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2584,14 +2593,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
-                                                                                  const Icon(
+                                                                                  Icon(
                                                                                     Icons.arrow_right,
                                                                                     color: Color(0xFFFF0000),
                                                                                     size: 29.0,
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         listViewElectionsRow.name,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2606,7 +2615,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2622,7 +2631,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2708,7 +2717,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2721,14 +2730,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
-                                                                                  const Icon(
+                                                                                  Icon(
                                                                                     Icons.arrow_right,
                                                                                     color: Color(0xFFFF0000),
                                                                                     size: 29.0,
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         listViewElectionsRow.name,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2743,7 +2752,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2759,7 +2768,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2845,7 +2854,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2858,14 +2867,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
-                                                                                  const Icon(
+                                                                                  Icon(
                                                                                     Icons.arrow_right,
                                                                                     color: Color(0xFFFF0000),
                                                                                     size: 29.0,
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         listViewElectionsRow.name,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2880,7 +2889,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2896,7 +2905,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2982,7 +2991,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                         final listViewElectionsRow =
                                                                             listViewElectionsRowList[listViewIndex];
                                                                         return Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -2995,14 +3004,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
-                                                                                  const Icon(
+                                                                                  Icon(
                                                                                     Icons.arrow_right,
                                                                                     color: Color(0xFFFF0000),
                                                                                     size: 29.0,
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         listViewElectionsRow.name,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3017,7 +3026,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -3033,7 +3042,7 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         functions.showDateTime(listViewElectionsRow.endDate),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(

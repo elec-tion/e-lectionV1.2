@@ -9,7 +9,7 @@ class ElectionsTable extends SupabaseTable<ElectionsRow> {
 }
 
 class ElectionsRow extends SupabaseDataRow {
-  ElectionsRow(super.data);
+  ElectionsRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => ElectionsTable();
@@ -45,4 +45,8 @@ class ElectionsRow extends SupabaseDataRow {
 
   String? get districtId => getField<String>('district_id');
   set districtId(String? value) => setField<String>('district_id', value);
+
+  List<String> get candidateName => getListField<String>('candidate_name');
+  set candidateName(List<String>? value) =>
+      setListField<String>('candidate_name', value);
 }

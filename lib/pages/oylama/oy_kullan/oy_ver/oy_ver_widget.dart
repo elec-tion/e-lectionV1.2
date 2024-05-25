@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_ver_model.dart';
 export 'oy_ver_model.dart';
@@ -78,11 +79,11 @@ class _OyVerWidgetState extends State<OyVerWidget> {
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: const Color(0x004B39EF),
+                borderColor: Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: const Color(0x004B39EF),
+                fillColor: Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -93,7 +94,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                 },
               ),
               title: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -108,7 +109,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -118,7 +119,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -130,12 +131,12 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oyVerUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -159,16 +160,16 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -181,7 +182,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 100.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -229,7 +230,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'uqyci65q' /* My Last Started Election 69 4 */,
+                                    'uqyci65q' /* My Last Started Election */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -245,7 +246,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -289,7 +290,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
@@ -297,7 +298,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                   Flexible(
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: FutureBuilder<
                                                           List<ElectionsRow>>(
@@ -306,9 +307,11 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                           queryFn: (q) => q
                                                               .contains(
                                                                 'committee_members',
-                                                                '{${containerUsersRowList
+                                                                '{' +
+                                                                    containerUsersRowList
                                                                         .first
-                                                                        .walletIdElectionCommittee}}',
+                                                                        .walletIdElectionCommittee +
+                                                                    '}',
                                                               )
                                                               .lt(
                                                                 'startDate',
@@ -319,9 +322,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                                 'endDate',
                                                                 getCurrentTimestamp
                                                                     .secondsSinceEpoch,
-                                                              )
-                                                              .order(
-                                                                  'startDate'),
+                                                              ),
                                                           limit: 1,
                                                         ),
                                                         builder: (context,
@@ -401,7 +402,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           45.0,
                                                                           0.0,
@@ -411,70 +412,77 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            crossAxisAlignment:
-                                                                                CrossAxisAlignment.start,
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 15.0),
-                                                                                  child: Text(
-                                                                                    valueOrDefault<String>(
-                                                                                      listViewElectionsRow.name,
-                                                                                      'No Election Found So Far...',
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                0.0,
+                                                                                20.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                Align(
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  child: Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 15.0),
+                                                                                    child: Text(
+                                                                                      valueOrDefault<String>(
+                                                                                        listViewElectionsRow.name,
+                                                                                        'No Election Found So Far...',
+                                                                                      ),
+                                                                                      textAlign: TextAlign.center,
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            fontSize: 20.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                            fontWeight: FontWeight.w600,
+                                                                                          ),
                                                                                     ),
-                                                                                    textAlign: TextAlign.start,
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Montserrat',
-                                                                                          fontSize: 20.0,
-                                                                                          letterSpacing: 0.0,
-                                                                                          fontWeight: FontWeight.w600,
-                                                                                        ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'xr6of2eg' /* End Date and Time: */,
+                                                                                Align(
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  child: Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                                                                                    child: Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        'xr6of2eg' /* End Date and Time: */,
+                                                                                      ),
+                                                                                      textAlign: TextAlign.start,
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
                                                                                     ),
-                                                                                    textAlign: TextAlign.start,
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Montserrat',
-                                                                                          letterSpacing: 0.0,
-                                                                                        ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    functions.showDateTime(listViewElectionsRow.endDate),
-                                                                                    textAlign: TextAlign.start,
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Montserrat',
-                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                          fontSize: 16.0,
-                                                                                          letterSpacing: 0.0,
-                                                                                          fontWeight: FontWeight.normal,
-                                                                                        ),
+                                                                                Align(
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  child: Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                                                                                    child: Text(
+                                                                                      functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                      textAlign: TextAlign.start,
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                            fontSize: 16.0,
+                                                                                            letterSpacing: 0.0,
+                                                                                            fontWeight: FontWeight.normal,
+                                                                                          ),
+                                                                                    ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
-                                                                            ],
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                           Flexible(
                                                                             child:
                                                                                 Align(
-                                                                              alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(1.0, 0.0),
                                                                               child: Icon(
                                                                                 Icons.keyboard_arrow_right,
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -508,7 +516,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -526,7 +534,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                     ),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -543,10 +551,10 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: const [0.0, 1.0],
+                                          stops: [0.0, 1.0],
                                           begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
+                                              AlignmentDirectional(-1.0, 0.0),
+                                          end: AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -563,10 +571,10 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                           width: 350.0,
                                           height: 50.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.transparent,
                                           textStyle: FlutterFlowTheme.of(
@@ -582,7 +590,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                                 fontWeight: FontWeight.w600,
                                               ),
                                           elevation: 0.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -614,9 +622,9 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).graSet22,
                             textStyle: FlutterFlowTheme.of(context)
@@ -627,7 +635,7 @@ class _OyVerWidgetState extends State<OyVerWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

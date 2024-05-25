@@ -1,9 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'howvoting_works_p2_model.dart';
 export 'howvoting_works_p2_model.dart';
 
@@ -47,7 +50,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
             backgroundColor: FlutterFlowTheme.of(context).background1,
             automaticallyImplyLeading: false,
             title: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
@@ -60,7 +63,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                 ),
               ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: false,
           ),
           body: SafeArea(
@@ -77,9 +80,9 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: const [0.0, 1.0],
-                      begin: const AlignmentDirectional(0.0, -1.0),
-                      end: const AlignmentDirectional(0, 1.0),
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(0.0, -1.0),
+                      end: AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Column(
@@ -87,7 +90,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -96,7 +99,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: CircularPercentIndicator(
                                     percent: 0.25,
                                     radius: 40.0,
@@ -122,7 +125,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       5.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -157,15 +160,15 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             height: 500.0,
                             child: Stack(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 40.0),
                                   child: PageView(
                                     controller: _model.pageViewController ??=
@@ -196,9 +199,9 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 1.0),
+                                  alignment: AlignmentDirectional(-1.0, 1.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 16.0),
                                     child: smooth_page_indicator
                                         .SmoothPageIndicator(
@@ -210,7 +213,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                         await _model.pageViewController!
                                             .animateToPage(
                                           i,
-                                          duration: const Duration(milliseconds: 500),
+                                          duration: Duration(milliseconds: 500),
                                           curve: Curves.ease,
                                         );
                                         setState(() {});
@@ -222,7 +225,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                         radius: 16.0,
                                         dotWidth: 16.0,
                                         dotHeight: 8.0,
-                                        dotColor: const Color(0x590F638D),
+                                        dotColor: Color(0x590F638D),
                                         activeDotColor:
                                             FlutterFlowTheme.of(context)
                                                 .graSet11,
@@ -238,7 +241,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -260,9 +263,9 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                       ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 30.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -271,10 +274,10 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Material(
                                               color: Colors.transparent,
@@ -285,7 +288,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                               ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  boxShadow: const [
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x33000000),
@@ -304,10 +307,10 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                                               context)
                                                           .graSet22
                                                     ],
-                                                    stops: const [0.0, 1.0],
-                                                    begin: const AlignmentDirectional(
+                                                    stops: [0.0, 1.0],
+                                                    begin: AlignmentDirectional(
                                                         -1.0, 0.0),
-                                                    end: const AlignmentDirectional(
+                                                    end: AlignmentDirectional(
                                                         1.0, 0),
                                                   ),
                                                   borderRadius:
@@ -351,7 +354,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                 ),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -366,9 +369,9 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 1.0],
-                                      begin: const AlignmentDirectional(-1.0, 0.0),
-                                      end: const AlignmentDirectional(1.0, 0),
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(-1.0, 0.0),
+                                      end: AlignmentDirectional(1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -383,7 +386,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                 ),
                 Flexible(
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -399,13 +402,13 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                   FlutterFlowTheme.of(context).alternate,
                                   FlutterFlowTheme.of(context).graSet23
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(0.0, -1.0),
-                                end: const AlignmentDirectional(0, 1.0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(0.0, -1.0),
+                                end: AlignmentDirectional(0, 1.0),
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -424,7 +427,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                     width: 200.0,
                                     height: 70.0,
                                     decoration: BoxDecoration(
-                                      boxShadow: const [
+                                      boxShadow: [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -439,9 +442,9 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                           FlutterFlowTheme.of(context).graSet23,
                                           FlutterFlowTheme.of(context).graSet22
                                         ],
-                                        stops: const [0.0, 1.0],
-                                        begin: const AlignmentDirectional(-1.0, 0.87),
-                                        end: const AlignmentDirectional(1.0, -0.87),
+                                        stops: [0.0, 1.0],
+                                        begin: AlignmentDirectional(-1.0, 0.87),
+                                        end: AlignmentDirectional(1.0, -0.87),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                       border: Border.all(
@@ -450,13 +453,13 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -482,7 +485,7 @@ class _HowvotingWorksP2WidgetState extends State<HowvotingWorksP2Widget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_arrow_right_sharp,

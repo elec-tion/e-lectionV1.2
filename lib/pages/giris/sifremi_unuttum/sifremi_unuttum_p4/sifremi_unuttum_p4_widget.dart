@@ -2,8 +2,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'sifremi_unuttum_p4_model.dart';
 export 'sifremi_unuttum_p4_model.dart';
 
@@ -75,7 +79,7 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                 fit: BoxFit.fill,
               ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -95,9 +99,9 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -105,7 +109,7 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -156,14 +160,14 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                         ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 40.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -181,9 +185,9 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 30.0),
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.check_circle,
                                     color: Color(0xFF047A0C),
                                     size: 80.0,
@@ -198,7 +202,7 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                           width: 230.0,
                           height: 52.0,
                           decoration: BoxDecoration(
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -214,11 +218,11 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                                 FlutterFlowTheme.of(context).graSet12,
                                 FlutterFlowTheme.of(context).graSet13
                               ],
-                              stops: const [0.0, 1.0, 1.0],
-                              begin: const AlignmentDirectional(1.0, 0.0),
-                              end: const AlignmentDirectional(-1.0, 0),
+                              stops: [0.0, 1.0, 1.0],
+                              begin: AlignmentDirectional(1.0, 0.0),
+                              end: AlignmentDirectional(-1.0, 0),
                             ),
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(40.0),
                               bottomRight: Radius.circular(40.0),
                               topLeft: Radius.circular(40.0),
@@ -233,11 +237,11 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                               'cc7fkj1e' /* Go to Login */,
                             ),
                             options: FFButtonOptions(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0x00067BB7),
+                              color: Color(0x00067BB7),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
@@ -247,7 +251,7 @@ class _SifremiUnuttumP4WidgetState extends State<SifremiUnuttumP4Widget>
                                     fontWeight: FontWeight.bold,
                                   ),
                               elevation: 0.0,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),

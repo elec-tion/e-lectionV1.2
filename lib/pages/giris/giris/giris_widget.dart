@@ -5,11 +5,14 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'giris_model.dart';
 export 'giris_model.dart';
@@ -67,15 +70,15 @@ class _GirisWidgetState extends State<GirisWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 80.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 80.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.8, 0.8),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -94,8 +97,8 @@ class _GirisWidgetState extends State<GirisWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 20.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 20.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -114,8 +117,8 @@ class _GirisWidgetState extends State<GirisWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 20.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 20.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -127,8 +130,8 @@ class _GirisWidgetState extends State<GirisWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: const Offset(-40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -193,14 +196,14 @@ class _GirisWidgetState extends State<GirisWidget>
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SizedBox(
+                    Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
                       child: Stack(
                         children: [
                           // for logo and e-lection text
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 32.0, 12.0, 32.0, 32.0),
                             child: Container(
                               width: double.infinity,
@@ -209,21 +212,25 @@ class _GirisWidgetState extends State<GirisWidget>
                                 color: FlutterFlowTheme.of(context).background1,
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.asset(
-                                      Theme.of(context).brightness ==
-                                              Brightness.dark
-                                          ? 'assets/images/e-lection-logo-beyaz.png'
-                                          : 'assets/images/e-lection-logo-siyah.png',
-                                      width: 150.0,
-                                      height: 80.0,
-                                      fit: BoxFit.fill,
+                                  Hero(
+                                    tag: 'b2',
+                                    transitionOnUserGestures: true,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        Theme.of(context).brightness ==
+                                                Brightness.dark
+                                            ? 'assets/images/e-lection-logo-beyaz.png'
+                                            : 'assets/images/e-lection-logo-siyah.png',
+                                        width: 150.0,
+                                        height: 80.0,
+                                        fit: BoxFit.fill,
+                                      ),
                                     ),
                                   ),
                                   Text(
@@ -241,7 +248,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -252,7 +259,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                         context.pushNamed(
                                           'dropdownDeneme',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
+                                            kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,
                                               transitionType:
                                                   PageTransitionType.fade,
@@ -264,7 +271,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                       },
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '72y6svrw' /* kaydet 1112222 */,
+                                          '72y6svrw' /* v.1.1 */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -274,7 +281,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .text2,
-                                              fontSize: 15.0,
+                                              fontSize: 13.0,
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -285,16 +292,16 @@ class _GirisWidgetState extends State<GirisWidget>
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 200.0, 0.0, 260.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.all(12.0),
+                                    padding: EdgeInsets.all(12.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 0.0,
@@ -305,13 +312,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                       child: Container(
                                         width: 390.0,
                                         height: 384.0,
-                                        constraints: const BoxConstraints(
+                                        constraints: BoxConstraints(
                                           maxWidth: 570.0,
                                         ),
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .background1,
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x662B2B2B),
@@ -325,7 +332,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                               BorderRadius.circular(12.0),
                                           shape: BoxShape.rectangle,
                                           border: Border.all(
-                                            color: const Color(0x00363636),
+                                            color: Color(0x00363636),
                                             width: 2.0,
                                           ),
                                         ),
@@ -333,12 +340,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                             // tabBar of Log In & Sign Up
                                             Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: Column(
                                             children: [
                                               Align(
-                                                alignment: const Alignment(0.0, 0),
+                                                alignment: Alignment(0.0, 0),
                                                 child: TabBar(
                                                   isScrollable: true,
                                                   labelColor:
@@ -350,7 +357,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                               context)
                                                           .text1,
                                                   labelPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(32.0, 0.0,
                                                               32.0, 0.0),
                                                   labelStyle:
@@ -413,11 +420,11 @@ class _GirisWidgetState extends State<GirisWidget>
                                                     // column of log in tab
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, -1.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     16.0,
@@ -432,7 +439,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -530,7 +537,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                 width: 230.0,
                                                                 height: 40.0,
                                                                 decoration:
-                                                                    const BoxDecoration(
+                                                                    BoxDecoration(
                                                                   color: Colors
                                                                       .white,
                                                                 ),
@@ -539,13 +546,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                             // log in, id number textField
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           20.0),
-                                                              child: SizedBox(
+                                                              child: Container(
                                                                 width: double
                                                                     .infinity,
                                                                 child:
@@ -634,7 +641,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             context)
                                                                         .customColor2,
                                                                     contentPadding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             10.0),
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
@@ -678,13 +685,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                             // log in, password textField
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           10.0),
-                                                              child: SizedBox(
+                                                              child: Container(
                                                                 width: double
                                                                     .infinity,
                                                                 child:
@@ -776,7 +783,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             context)
                                                                         .customColor2,
                                                                     contentPadding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             10.0),
                                                                     suffixIcon:
                                                                         InkWell(
@@ -823,7 +830,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -847,7 +854,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                     extra: <String,
                                                                         dynamic>{
                                                                       kTransitionInfoKey:
-                                                                          const TransitionInfo(
+                                                                          TransitionInfo(
                                                                         hasTransition:
                                                                             true,
                                                                         transitionType:
@@ -862,7 +869,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'y12ln0n7' /* I forgot my password ( ͡° ͜ʖ ͡... */,
+                                                                    'y12ln0n7' /* I forgot my password */,
                                                                   ),
                                                                   textAlign:
                                                                       TextAlign
@@ -890,7 +897,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                               height: 52.0,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                boxShadow: const [
+                                                                boxShadow: [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         4.0,
@@ -916,22 +923,22 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             context)
                                                                         .graSet13
                                                                   ],
-                                                                  stops: const [
+                                                                  stops: [
                                                                     0.0,
                                                                     1.0,
                                                                     1.0
                                                                   ],
                                                                   begin:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
                                                                   end:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           -1.0,
                                                                           0),
                                                                 ),
                                                                 borderRadius:
-                                                                    const BorderRadius
+                                                                    BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1020,12 +1027,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: const Text('Şifreniz Hatalı!'),
-                                                                              content: const Text('Girmiş olduğunuz şifre hatalı. Lütfen tekrar deneyiniz.'),
+                                                                              title: Text('Şifreniz Hatalı!'),
+                                                                              content: Text('Girmiş olduğunuz şifre hatalı. Lütfen tekrar deneyiniz.'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: const Text('Tamam'),
+                                                                                  child: Text('Tamam'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -1038,12 +1045,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: const Text('Your password is incorrect!'),
-                                                                              content: const Text('The password you entered is incorrect. Please try again.'),
+                                                                              title: Text('Your password is incorrect!'),
+                                                                              content: Text('The password you entered is incorrect. Please try again.'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: const Text('OK'),
+                                                                                  child: Text('OK'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -1078,13 +1085,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             (alertDialogContext) {
                                                                           return AlertDialog(
                                                                             title:
-                                                                                const Text('Kayıtlı Değilsiniz!'),
+                                                                                Text('Kayıtlı Değilsiniz!'),
                                                                             content:
-                                                                                const Text('Girmiş olduğunuz TC Kimlik Numarası sistemde kayıtlı değil. Lütfen hesap oluşturun.'),
+                                                                                Text('Girmiş olduğunuz TC Kimlik Numarası sistemde kayıtlı değil. Lütfen hesap oluşturun.'),
                                                                             actions: [
                                                                               TextButton(
                                                                                 onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                child: const Text('Tamam'),
+                                                                                child: Text('Tamam'),
                                                                               ),
                                                                             ],
                                                                           );
@@ -1107,13 +1114,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             (alertDialogContext) {
                                                                           return AlertDialog(
                                                                             title:
-                                                                                const Text('You are not registered!'),
+                                                                                Text('You are not registered!'),
                                                                             content:
-                                                                                const Text('The Identity Number you entered is not registered in the system. Please create an account.'),
+                                                                                Text('The Identity Number you entered is not registered in the system. Please create an account.'),
                                                                             actions: [
                                                                               TextButton(
                                                                                 onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                child: const Text('OK'),
+                                                                                child: Text('OK'),
                                                                               ),
                                                                             ],
                                                                           );
@@ -1148,19 +1155,19 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                 ),
                                                                 options:
                                                                     FFButtonOptions(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  iconPadding: const EdgeInsetsDirectional
+                                                                  iconPadding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x00067BB7),
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -1178,7 +1185,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   elevation:
                                                                       0.0,
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 0.0,
@@ -1200,11 +1207,11 @@ class _GirisWidgetState extends State<GirisWidget>
                                                     // column of sign up tab
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, -1.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     16.0,
@@ -1229,14 +1236,14 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                 width: 230.0,
                                                                 height: 40.0,
                                                                 decoration:
-                                                                    const BoxDecoration(
+                                                                    BoxDecoration(
                                                                   color: Colors
                                                                       .white,
                                                                 ),
                                                               ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1267,13 +1274,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           20.0),
-                                                              child: SizedBox(
+                                                              child: Container(
                                                                 width: double
                                                                     .infinity,
                                                                 child:
@@ -1364,7 +1371,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             context)
                                                                         .customColor2,
                                                                     contentPadding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             10.0),
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
@@ -1406,13 +1413,13 @@ class _GirisWidgetState extends State<GirisWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           30.0),
-                                                              child: SizedBox(
+                                                              child: Container(
                                                                 width: double
                                                                     .infinity,
                                                                 child:
@@ -1504,7 +1511,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                             context)
                                                                         .customColor2,
                                                                     contentPadding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             10.0),
                                                                     suffixIcon:
                                                                         InkWell(
@@ -1554,7 +1561,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   .transparent,
                                                               elevation: 0.0,
                                                               shape:
-                                                                  const RoundedRectangleBorder(
+                                                                  RoundedRectangleBorder(
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .only(
@@ -1577,7 +1584,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                 height: 52.0,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  boxShadow: const [
+                                                                  boxShadow: [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           4.0,
@@ -1603,21 +1610,21 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                               context)
                                                                           .graSet13
                                                                     ],
-                                                                    stops: const [
+                                                                    stops: [
                                                                       0.0,
                                                                       1.0,
                                                                       1.0
                                                                     ],
                                                                     begin:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
-                                                                    end: const AlignmentDirectional(
+                                                                    end: AlignmentDirectional(
                                                                         -1.0,
                                                                         0),
                                                                   ),
                                                                   borderRadius:
-                                                                      const BorderRadius
+                                                                      BorderRadius
                                                                           .only(
                                                                     bottomLeft:
                                                                         Radius.circular(
@@ -1669,12 +1676,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: const Text('Kayıt oluşturamazsınız!'),
-                                                                              content: const Text('Girmiş olduğunuz TC Kimlik Numarası sistemde kayıtlıdır.'),
+                                                                              title: Text('Kayıt oluşturamazsınız!'),
+                                                                              content: Text('Girmiş olduğunuz TC Kimlik Numarası sistemde kayıtlıdır.'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: const Text('Tamam'),
+                                                                                  child: Text('Tamam'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -1696,12 +1703,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: const Text('You cannot create an account!'),
-                                                                              content: const Text('The Identity Number you entered is registered in the system.'),
+                                                                              title: Text('You cannot create an account!'),
+                                                                              content: Text('The Identity Number you entered is registered in the system.'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: const Text('OK'),
+                                                                                  child: Text('OK'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -1844,19 +1851,19 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                   ),
                                                                   options:
                                                                       FFButtonOptions(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0x00067BB7),
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
@@ -1874,7 +1881,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -1908,7 +1915,7 @@ class _GirisWidgetState extends State<GirisWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 700.0, 0.0, 40.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1964,12 +1971,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: Stack(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             children: [
-                                              const Align(
+                                              Align(
                                                 alignment: AlignmentDirectional(
                                                     -0.9, 0.0),
                                                 child: Padding(
@@ -1983,7 +1990,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                   ),
                                                 ),
                                               ),
-                                              const Align(
+                                              Align(
                                                 alignment: AlignmentDirectional(
                                                     1.0, 0.0),
                                                 child: Padding(
@@ -1998,7 +2005,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     1.0, 0.0),
                                                 child: Container(
                                                   width: 36.0,
@@ -2007,7 +2014,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .text1,
-                                                    boxShadow: const [
+                                                    boxShadow: [
                                                       BoxShadow(
                                                         blurRadius: 4.0,
                                                         color:
@@ -2034,7 +2041,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -2088,7 +2095,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                           setAppLanguage(context, lang),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(

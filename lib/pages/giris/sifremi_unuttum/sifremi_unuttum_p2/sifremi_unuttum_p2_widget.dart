@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sifremi_unuttum_p2_model.dart';
 export 'sifremi_unuttum_p2_model.dart';
@@ -92,7 +93,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                     fit: BoxFit.fill,
                   ),
                 ),
-                actions: const [],
+                actions: [],
                 centerTitle: true,
                 elevation: 0.0,
               ),
@@ -112,9 +113,9 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: const [0.0, 1.0],
-                            begin: const AlignmentDirectional(0.0, -1.0),
-                            end: const AlignmentDirectional(0, 1.0),
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
@@ -122,7 +123,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -175,14 +176,14 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 40.0, 40.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -202,7 +203,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         valueOrDefault<String>(
@@ -224,7 +225,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -246,9 +247,9 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
 
                                     // log in, id number textField
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
-                                      child: SizedBox(
+                                      child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
                                           controller: _model
@@ -319,7 +320,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                                 FlutterFlowTheme.of(context)
                                                     .customColor2,
                                             contentPadding:
-                                                const EdgeInsets.all(10.0),
+                                                EdgeInsets.all(10.0),
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleSmall
@@ -350,7 +351,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                               width: 230.0,
                               height: 52.0,
                               decoration: BoxDecoration(
-                                boxShadow: const [
+                                boxShadow: [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -366,11 +367,11 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                     FlutterFlowTheme.of(context).graSet12,
                                     FlutterFlowTheme.of(context).graSet13
                                   ],
-                                  stops: const [0.0, 1.0, 1.0],
-                                  begin: const AlignmentDirectional(1.0, 0.0),
-                                  end: const AlignmentDirectional(-1.0, 0),
+                                  stops: [0.0, 1.0, 1.0],
+                                  begin: AlignmentDirectional(1.0, 0.0),
+                                  end: AlignmentDirectional(-1.0, 0),
                                 ),
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(40.0),
                                   bottomRight: Radius.circular(40.0),
                                   topLeft: Radius.circular(40.0),
@@ -380,6 +381,9 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                               child: FFButtonWidget(
                                 onPressed: () async {
                                   if (_model.sifreUnuttumEmailTextController
+                                              .text !=
+                                          null &&
+                                      _model.sifreUnuttumEmailTextController
                                               .text !=
                                           '') {
                                     _model.emailVarMi =
@@ -401,16 +405,16 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: const Text(
+                                              title: Text(
                                                   'Mail adresi bulunamadı!'),
-                                              content: const Text(
+                                              content: Text(
                                                   'e-lection\'da böyle bir mail adresi bulunmamaktadır.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: const Text('Tamam'),
+                                                  child: Text('Tamam'),
                                                 ),
                                               ],
                                             );
@@ -421,15 +425,15 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: const Text('E-mail not found!'),
-                                              content: const Text(
+                                              title: Text('E-mail not found!'),
+                                              content: Text(
                                                   'There is no such e-mail in e-lection.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: const Text('OK'),
+                                                  child: Text('OK'),
                                                 ),
                                               ],
                                             );
@@ -445,15 +449,15 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: const Text(
+                                            title: Text(
                                                 'Mail Adresini Girmediniz!'),
-                                            content: const Text(
+                                            content: Text(
                                                 'Şifrenizi sıfırlamak için lütfen mail adresinizi giriniz.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: const Text('Tamam'),
+                                                child: Text('Tamam'),
                                               ),
                                             ],
                                           );
@@ -464,15 +468,15 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: const Text(
+                                            title: Text(
                                                 'You did not enter the mail address!'),
-                                            content: const Text(
+                                            content: Text(
                                                 'Please enter your e-mail address to reset your password.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: const Text('OK'),
+                                                child: Text('OK'),
                                               ),
                                             ],
                                           );
@@ -487,11 +491,11 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                   'z9cipzrd' /* Next */,
                                 ),
                                 options: FFButtonOptions(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0x00067BB7),
+                                  color: Color(0x00067BB7),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -502,7 +506,7 @@ class _SifremiUnuttumP2WidgetState extends State<SifremiUnuttumP2Widget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 0.0,
                                   ),

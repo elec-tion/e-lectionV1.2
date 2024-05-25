@@ -11,11 +11,7 @@ export '/pages/giris/bilgi_guncelleme_p1/bilgi_guncelleme_p1_widget.dart'
 export '/pages/giris/sifremi_unuttum/sifremi_unuttum_p4/sifremi_unuttum_p4_widget.dart'
     show SifremiUnuttumP4Widget;
 export '/pages/oylama/oy_kullan/oy_ver/oy_ver_widget.dart' show OyVerWidget;
-export '/pages/oylama/oy_kullan/oy_kullan_p1given/oy_kullan_p1given_widget.dart'
-    show OyKullanP1givenWidget;
-export '/pages/oylama/oy_kullan/oy_kullan_p1res/oy_kullan_p1res_widget.dart'
-    show OyKullanP1resWidget;
-export '/pages/oylama/oy_kullan_p2devam/oy_kullan_p2devam_widget.dart'
+export '/pages/oylama/oy_kullan/oy_kullan_p2devam/oy_kullan_p2devam_widget.dart'
     show OyKullanP2devamWidget;
 export '/pages/oylama/oy_kullan/oy_kullan_p3devam/oy_kullan_p3devam_widget.dart'
     show OyKullanP3devamWidget;
@@ -72,8 +68,6 @@ export '/pages/terms_of_use/terms_of_use_widget.dart' show TermsOfUseWidget;
 export '/pages/oylama/oylama_olustur/oylama_olustur_p3/oylama_olustur_p3_widget.dart'
     show OylamaOlusturP3Widget;
 export '/pages/how_to_vote/faq/faq_widget.dart' show FaqWidget;
-export '/pages/oylama/oy_kullan/oy_kullan/oy_kullan_widget.dart'
-    show OyKullanWidget;
 export '/pages/giris/dropdown_deneme/dropdown_deneme_widget.dart'
     show DropdownDenemeWidget;
 export '/pages/giris/bilgi_guncelleme_p2/bilgi_guncelleme_p2_widget.dart'
@@ -85,3 +79,9 @@ export '/pages/oylama/oylama_olustur/oylama_olustur_p4/oylama_olustur_p4_widget.
     show OylamaOlusturP4Widget;
 export '/pages/oylama/oy_paneli/oy_paneli_p2/oy_paneli_p2_widget.dart'
     show OyPaneliP2Widget;
+export '/pages/oylama/oy_kullan/oy_kullan_p1given/oy_kullan_p1given_widget.dart'
+    show OyKullanP1givenWidget;
+export '/pages/oylama/oy_kullan/oy_kullan_p1notstartednew/oy_kullan_p1notstartednew_widget.dart'
+    show OyKullanP1notstartednewWidget;
+export '/pages/oylama/oy_kullan/oy_kullan_p1res/oy_kullan_p1res_widget.dart'
+    show OyKullanP1resWidget;

@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'bilgi_guncelleme_p1_model.dart';
 export 'bilgi_guncelleme_p1_model.dart';
@@ -90,18 +92,22 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
             appBar: AppBar(
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
-              title: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? 'assets/images/e-lection-logo-beyaz.png'
-                      : 'assets/images/e-lection-logo-siyah.png',
-                  width: 95.0,
-                  height: 50.0,
-                  fit: BoxFit.fill,
+              title: Hero(
+                tag: 'b2',
+                transitionOnUserGestures: true,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? 'assets/images/e-lection-logo-beyaz.png'
+                        : 'assets/images/e-lection-logo-siyah.png',
+                    width: 95.0,
+                    height: 50.0,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: true,
               elevation: 0.0,
             ),
@@ -121,9 +127,9 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: const [0.0, 1.0],
-                          begin: const AlignmentDirectional(0.0, -1.0),
-                          end: const AlignmentDirectional(0, 1.0),
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(0.0, -1.0),
+                          end: AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: SingleChildScrollView(
@@ -132,7 +138,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -184,19 +190,20 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 40.0, 20.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'hfphpy8f' /* Please enter the informations ... */,
                                       ),
+                                      textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -209,9 +216,9 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         50.0, 0.0, 50.0, 30.0),
-                                    child: SizedBox(
+                                    child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -279,7 +286,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: const EdgeInsets.all(10.0),
+                                          contentPadding: EdgeInsets.all(10.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
@@ -301,9 +308,9 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         50.0, 0.0, 50.0, 30.0),
-                                    child: SizedBox(
+                                    child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -372,7 +379,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: const EdgeInsets.all(10.0),
+                                          contentPadding: EdgeInsets.all(10.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
@@ -394,9 +401,9 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         50.0, 0.0, 50.0, 30.0),
-                                    child: SizedBox(
+                                    child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller:
@@ -465,7 +472,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: const EdgeInsets.all(10.0),
+                                          contentPadding: EdgeInsets.all(10.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
@@ -488,9 +495,9 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         50.0, 0.0, 50.0, 30.0),
-                                    child: SizedBox(
+                                    child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller: _model
@@ -561,7 +568,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .customColor2,
-                                          contentPadding: const EdgeInsets.all(10.0),
+                                          contentPadding: EdgeInsets.all(10.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
@@ -592,7 +599,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                               width: 230.0,
                               height: 52.0,
                               decoration: BoxDecoration(
-                                boxShadow: const [
+                                boxShadow: [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -608,11 +615,11 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     FlutterFlowTheme.of(context).graSet12,
                                     FlutterFlowTheme.of(context).graSet13
                                   ],
-                                  stops: const [0.0, 1.0, 1.0],
-                                  begin: const AlignmentDirectional(1.0, 0.0),
-                                  end: const AlignmentDirectional(-1.0, 0),
+                                  stops: [0.0, 1.0, 1.0],
+                                  begin: AlignmentDirectional(1.0, 0.0),
+                                  end: AlignmentDirectional(-1.0, 0),
                                 ),
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(40.0),
                                   bottomRight: Radius.circular(40.0),
                                   topLeft: Radius.circular(40.0),
@@ -621,16 +628,27 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                               ),
                               child: FFButtonWidget(
                                 onPressed: () async {
-                                  if ((_model.guncelleIsimTextController
+                                  if ((_model.guncelleIsimTextController.text !=
+                                              null &&
+                                          _model.guncelleIsimTextController
                                                   .text !=
                                               '') &&
                                       (_model.guncelleSoyadTextController
                                                   .text !=
+                                              null &&
+                                          _model.guncelleSoyadTextController
+                                                  .text !=
                                               '') &&
                                       (_model.guncelleEmailTextController
                                                   .text !=
+                                              null &&
+                                          _model.guncelleEmailTextController
+                                                  .text !=
                                               '') &&
                                       (_model.guncelleTelefonTextController
+                                                  .text !=
+                                              null &&
+                                          _model.guncelleTelefonTextController
                                                   .text !=
                                               '')) {
                                     _model.mailTest =
@@ -649,16 +667,16 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: const Text(
+                                              title: Text(
                                                   'Mail adresi kullanılamıyor!'),
-                                              content: const Text(
+                                              content: Text(
                                                   'Girmiş olduğunuz mail adresi başka birisi tarafından kullanılmaktadır.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: const Text('Tamam'),
+                                                  child: Text('Tamam'),
                                                 ),
                                               ],
                                             );
@@ -669,16 +687,16 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: const Text(
+                                              title: Text(
                                                   'Mail address unusable!'),
-                                              content: const Text(
+                                              content: Text(
                                                   'The e-mail address you entered is used by someone else.'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: const Text('OK'),
+                                                  child: Text('OK'),
                                                 ),
                                               ],
                                             );
@@ -703,16 +721,16 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                             context: context,
                                             builder: (alertDialogContext) {
                                               return AlertDialog(
-                                                title: const Text(
+                                                title: Text(
                                                     'Telefon numarası kullanılamıyor!'),
-                                                content: const Text(
+                                                content: Text(
                                                     'Girmiş olduğunuz telefon numarası başka birisi tarafından kullanılmaktadır.'),
                                                 actions: [
                                                   TextButton(
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: const Text('Tamam'),
+                                                    child: Text('Tamam'),
                                                   ),
                                                 ],
                                               );
@@ -723,16 +741,16 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                             context: context,
                                             builder: (alertDialogContext) {
                                               return AlertDialog(
-                                                title: const Text(
+                                                title: Text(
                                                     'Phone number unusable!'),
-                                                content: const Text(
+                                                content: Text(
                                                     'The phone number you entered is used by someone else.'),
                                                 actions: [
                                                   TextButton(
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: const Text('OK'),
+                                                    child: Text('OK'),
                                                   ),
                                                 ],
                                               );
@@ -776,15 +794,15 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: const Text(
+                                            title: Text(
                                                 'Tüm alanları doldurunuz!'),
-                                            content: const Text(
+                                            content: Text(
                                                 'Tüm alanlara verilerinizi giriniz.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: const Text('Tamam'),
+                                                child: Text('Tamam'),
                                               ),
                                             ],
                                           );
@@ -795,15 +813,15 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: const Text(
+                                            title: Text(
                                                 'Please fill in all fields!'),
-                                            content: const Text(
+                                            content: Text(
                                                 'Enter your data into all fields.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: const Text('OK'),
+                                                child: Text('OK'),
                                               ),
                                             ],
                                           );
@@ -818,11 +836,11 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                   '44giohjb' /* Next */,
                                 ),
                                 options: FFButtonOptions(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0x00067BB7),
+                                  color: Color(0x00067BB7),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -833,7 +851,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 0.0,
                                   ),

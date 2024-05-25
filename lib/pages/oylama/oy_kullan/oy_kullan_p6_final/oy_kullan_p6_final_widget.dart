@@ -4,12 +4,18 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p6_final_model.dart';
 export 'oy_kullan_p6_final_model.dart';
 
 class OyKullanP6FinalWidget extends StatefulWidget {
-  const OyKullanP6FinalWidget({super.key});
+  const OyKullanP6FinalWidget({
+    super.key,
+    this.p6,
+  });
+
+  final ElectionsRow? p6;
 
   @override
   State<OyKullanP6FinalWidget> createState() => _OyKullanP6FinalWidgetState();
@@ -79,10 +85,10 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                 backgroundColor: FlutterFlowTheme.of(context).background1,
                 automaticallyImplyLeading: false,
                 title: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
@@ -99,17 +105,17 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                 actions: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Container(
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oyKullanP6FinalUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -132,23 +138,23 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                             FlutterFlowTheme.of(context).background1,
                             FlutterFlowTheme.of(context).background2
                           ],
-                          stops: const [0.0, 1.0],
-                          begin: const AlignmentDirectional(0.0, -1.0),
-                          end: const AlignmentDirectional(0, 1.0),
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(0.0, -1.0),
+                          end: AlignmentDirectional(0, 1.0),
                         ),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 13.0, 0.0, 0.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                13.0, 13.0, 13.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'zwx1l7zk' /* [Seçim İsmi]
-.................... */
-                                ,
+                              valueOrDefault<String>(
+                                widget.p6?.name,
+                                'NAME',
                               ),
+                              textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -162,7 +168,7 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -182,9 +188,9 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: Icon(
                                           Icons.check_circle_outline,
@@ -195,7 +201,7 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -222,7 +228,7 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                           ),
                           Flexible(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -239,12 +245,12 @@ class _OyKullanP6FinalWidgetState extends State<OyKullanP6FinalWidget> {
                                       ),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 0.0),
                                               child: Text(
@@ -279,9 +285,9 @@ Your vote ha... */
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -300,7 +306,7 @@ Your vote ha... */
                                         ),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -317,10 +323,10 @@ Your vote ha... */
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
+                                              stops: [0.0, 1.0],
+                                              begin: AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              end: const AlignmentDirectional(1.0, 0),
+                                              end: AlignmentDirectional(1.0, 0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
@@ -343,10 +349,10 @@ Your vote ha... */
                                             options: FFButtonOptions(
                                               width: 208.0,
                                               height: 50.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 10.0, 0.0),
                                               color: Colors.transparent,
@@ -363,8 +369,10 @@ Your vote ha... */
                                                     fontWeight: FontWeight.w600,
                                                   ),
                                               elevation: 0.0,
-                                              borderSide: const BorderSide(
-                                                color: Colors.transparent,
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .background1,
                                                 width: 1.0,
                                               ),
                                               borderRadius:

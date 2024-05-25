@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p1notstarted_model.dart';
 export 'oy_kullan_p1notstarted_model.dart';
@@ -86,11 +87,11 @@ class _OyKullanP1notstartedWidgetState
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: const Color(0x004B39EF),
+                borderColor: Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: const Color(0x004B39EF),
+                fillColor: Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -101,7 +102,7 @@ class _OyKullanP1notstartedWidgetState
                 },
               ),
               title: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -116,7 +117,7 @@ class _OyKullanP1notstartedWidgetState
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -126,7 +127,7 @@ class _OyKullanP1notstartedWidgetState
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -138,12 +139,12 @@ class _OyKullanP1notstartedWidgetState
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oyKullanP1notstartedUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -159,7 +160,7 @@ class _OyKullanP1notstartedWidgetState
                 future: ElectionsTable().querySingleRow(
                   queryFn: (q) => q.contains(
                     'committee_members',
-                    '{${oyKullanP1notstartedUsersRow.walletIdElectionCommittee}}',
+                    '{${oyKullanP1notstartedUsersRow?.walletIdElectionCommittee}}',
                   ),
                 ),
                 builder: (context, snapshot) {
@@ -193,16 +194,16 @@ class _OyKullanP1notstartedWidgetState
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: const [0.0, 1.0],
-                            begin: const AlignmentDirectional(0.0, -1.0),
-                            end: const AlignmentDirectional(0, 1.0),
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -217,9 +218,9 @@ class _OyKullanP1notstartedWidgetState
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -288,7 +289,7 @@ class _OyKullanP1notstartedWidgetState
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -305,12 +306,12 @@ class _OyKullanP1notstartedWidgetState
                                       ),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, -1.0),
+                                            AlignmentDirectional(0.0, -1.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 0.0, 0.0),
                                               child: Row(
@@ -332,7 +333,7 @@ class _OyKullanP1notstartedWidgetState
                                                       width: 290.0,
                                                       height: 83.0,
                                                       decoration: BoxDecoration(
-                                                        boxShadow: const [
+                                                        boxShadow: [
                                                           BoxShadow(
                                                             blurRadius: 4.0,
                                                             color: Color(
@@ -344,7 +345,7 @@ class _OyKullanP1notstartedWidgetState
                                                           )
                                                         ],
                                                         gradient:
-                                                            const LinearGradient(
+                                                            LinearGradient(
                                                           colors: [
                                                             Color(0x000F638D),
                                                             Color(0x4D123648),
@@ -375,17 +376,17 @@ class _OyKullanP1notstartedWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.11, 0.0),
                                                             child:
                                                                 FlutterFlowIconButton(
-                                                              borderColor: const Color(
+                                                              borderColor: Color(
                                                                   0x004B39EF),
                                                               borderRadius:
                                                                   15.0,
                                                               borderWidth: 1.0,
                                                               buttonSize: 96.0,
-                                                              fillColor: const Color(
+                                                              fillColor: Color(
                                                                   0x00067BB7),
                                                               icon: Icon(
                                                                 Icons
@@ -403,11 +404,11 @@ class _OyKullanP1notstartedWidgetState
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.24, 0.05),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           30.0,
                                                                           0.0,
@@ -427,7 +428,7 @@ Not Started */
                                                                     .override(
                                                                       fontFamily:
                                                                           'Montserrat',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFFECECEC),
                                                                       fontSize:
                                                                           24.0,
@@ -448,7 +449,7 @@ Not Started */
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -473,7 +474,7 @@ Not Started */
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 5.0, 0.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -505,7 +506,7 @@ Not Started */
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -522,7 +523,7 @@ Not Started */
                                       width: 110.0,
                                       height: 110.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -541,10 +542,10 @@ Not Started */
                                             FlutterFlowTheme.of(context)
                                                 .graSet23
                                           ],
-                                          stops: const [0.3, 0.8, 1.0],
+                                          stops: [0.3, 0.8, 1.0],
                                           begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
+                                              AlignmentDirectional(-1.0, 0.0),
+                                          end: AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -560,7 +561,7 @@ Not Started */
                                         child: Stack(
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       30.0, 20.0, 0.0, 0.0),
                                               child: FlutterFlowIconButton(
@@ -583,7 +584,7 @@ Not Started */
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 80.0, 0.0, 0.0),
                                               child: Text(
@@ -619,7 +620,7 @@ Not Started */
                                       width: 110.0,
                                       height: 110.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -638,9 +639,9 @@ Not Started */
                                             FlutterFlowTheme.of(context)
                                                 .graSet23
                                           ],
-                                          stops: const [0.3, 0.8, 1.0],
-                                          begin: const AlignmentDirectional(1.0, 0.0),
-                                          end: const AlignmentDirectional(-1.0, 0),
+                                          stops: [0.3, 0.8, 1.0],
+                                          begin: AlignmentDirectional(1.0, 0.0),
+                                          end: AlignmentDirectional(-1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -649,7 +650,7 @@ Not Started */
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     28.0, 20.0, 0.0, 0.0),
                                             child: FlutterFlowIconButton(
                                               borderColor: Colors.transparent,
@@ -671,7 +672,7 @@ Not Started */
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     25.0, 80.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -713,7 +714,7 @@ Not Started */
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -730,10 +731,10 @@ Not Started */
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: const [0.0, 1.0],
+                                            stops: [0.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(-1.0, 0.0),
-                                            end: const AlignmentDirectional(1.0, 0),
+                                                AlignmentDirectional(-1.0, 0.0),
+                                            end: AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -745,12 +746,12 @@ Not Started */
                               ],
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -771,7 +772,7 @@ Not Started */
                                               ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  boxShadow: const [
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x33000000),
@@ -790,10 +791,10 @@ Not Started */
                                                               context)
                                                           .graSet22
                                                     ],
-                                                    stops: const [0.0, 1.0],
-                                                    begin: const AlignmentDirectional(
+                                                    stops: [0.0, 1.0],
+                                                    begin: AlignmentDirectional(
                                                         -1.0, 0.0),
-                                                    end: const AlignmentDirectional(
+                                                    end: AlignmentDirectional(
                                                         1.0, 0),
                                                   ),
                                                   borderRadius:
@@ -808,7 +809,7 @@ Not Started */
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -821,7 +822,7 @@ Not Started */
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       28.0, 0.0, 0.0, 0.0),
                                               child: Material(
@@ -834,7 +835,7 @@ Not Started */
                                                 ),
                                                 child: Container(
                                                   decoration: BoxDecoration(
-                                                    boxShadow: const [
+                                                    boxShadow: [
                                                       BoxShadow(
                                                         blurRadius: 4.0,
                                                         color:
@@ -854,11 +855,11 @@ Not Started */
                                                                 context)
                                                             .graSet22
                                                       ],
-                                                      stops: const [0.0, 1.0],
+                                                      stops: [0.0, 1.0],
                                                       begin:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
-                                                      end: const AlignmentDirectional(
+                                                      end: AlignmentDirectional(
                                                           1.0, 0),
                                                     ),
                                                     borderRadius:
@@ -867,7 +868,7 @@ Not Started */
                                                   ),
                                                   child: Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: FFButtonWidget(
                                                       onPressed: () async {
@@ -883,14 +884,14 @@ Not Started */
                                                         width: 350.0,
                                                         height: 50.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -917,7 +918,7 @@ Not Started */
                                                                           .w600,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -957,9 +958,9 @@ Not Started */
                               ),
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).graSet22,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -970,7 +971,7 @@ Not Started */
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),

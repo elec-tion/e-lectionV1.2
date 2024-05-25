@@ -2,9 +2,11 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'dropdown_deneme_model.dart';
 export 'dropdown_deneme_model.dart';
@@ -59,7 +61,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
               fit: BoxFit.fill,
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -79,9 +81,9 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                         FlutterFlowTheme.of(context).background1,
                         FlutterFlowTheme.of(context).background2
                       ],
-                      stops: const [0.0, 1.0],
-                      begin: const AlignmentDirectional(0.0, -1.0),
-                      end: const AlignmentDirectional(0, 1.0),
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(0.0, -1.0),
+                      end: AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Column(
@@ -104,7 +106,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -186,7 +188,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                                           FlutterFlowTheme.of(context).mavi,
                                       borderWidth: 1.0,
                                       borderRadius: 15.0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                      margin: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,
@@ -199,7 +201,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -315,7 +317,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                                             FlutterFlowTheme.of(context).mavi,
                                         borderWidth: 1.0,
                                         borderRadius: 15.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
@@ -328,7 +330,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -446,7 +448,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                                             FlutterFlowTheme.of(context).mavi,
                                         borderWidth: 1.0,
                                         borderRadius: 15.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
@@ -555,7 +557,7 @@ class _DropdownDenemeWidgetState extends State<DropdownDenemeWidget> {
                                           FlutterFlowTheme.of(context).mavi,
                                       borderWidth: 1.0,
                                       borderRadius: 15.0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                      margin: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,

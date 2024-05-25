@@ -3,10 +3,14 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/oylama/oy_kullan/timewarn/timewarn_widget.dart';
+import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p3devam_model.dart';
 export 'oy_kullan_p3devam_model.dart';
@@ -44,8 +48,8 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 21.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 21.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -56,8 +60,8 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 10.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 10.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -115,11 +119,11 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: const Color(0x004B39EF),
+                borderColor: Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: const Color(0x004B39EF),
+                fillColor: Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -130,7 +134,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                 },
               ),
               title: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -145,7 +149,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -155,7 +159,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -167,12 +171,12 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oyKullanP3devamUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -196,22 +200,23 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 13.0, 0.0, 0.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              13.0, 13.0, 13.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
                               widget.p3?.name,
                               'can not get name',
                             ),
+                            textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -226,7 +231,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                               animationsMap['textOnPageLoadAnimation']!),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -245,9 +250,9 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Icon(
                                         Icons.error_outline_sharp,
@@ -258,7 +263,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -284,13 +289,13 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Flexible(
+                              Expanded(
                                 child: Container(
                                   width: 426.0,
                                   height: 284.0,
@@ -299,79 +304,89 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                         .background2,
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 15.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.0, 0.0),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          30.0, 5.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'nevybw4m' /* If you proceed to the next pag... */,
+                                    alignment: AlignmentDirectional(0.0, -1.0),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 15.0, 15.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          0.0, 0.0),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(15.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'nevybw4m' /* If you proceed to the next pag... */,
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Montserrat',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .text1,
+                                                                fontSize: 16.0,
+                                                                letterSpacing:
+                                                                    0.4,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                              ),
                                                     ),
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .text1,
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.4,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    15.0, 10.0, 15.0, 0.0),
-                                            child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'rknpp0py' /* If you believe you have reache... */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: const Color(0xFFFF2B2B),
-                                                    fontSize: 16.0,
-                                                    letterSpacing: 0.4,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
+                                              ],
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(0.0, 0.0),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      15.0, 15.0, 15.0, 0.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'rknpp0py' /* If you believe you have reache... */,
+                                                ),
+                                                textAlign: TextAlign.center,
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFFFF2B2B),
+                                                      fontSize: 16.0,
+                                                      letterSpacing: 0.4,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -380,14 +395,14 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       38.0, 20.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -408,7 +423,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                         width: 150.0,
                                         height: 52.0,
                                         decoration: BoxDecoration(
-                                          boxShadow: const [
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
@@ -425,10 +440,10 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                               FlutterFlowTheme.of(context)
                                                   .graSet22
                                             ],
-                                            stops: const [0.0, 1.0],
+                                            stops: [0.0, 1.0],
                                             begin:
-                                                const AlignmentDirectional(-1.0, 0.0),
-                                            end: const AlignmentDirectional(1.0, 0),
+                                                AlignmentDirectional(-1.0, 0.0),
+                                            end: AlignmentDirectional(1.0, 0),
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
@@ -441,7 +456,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child: Icon(
@@ -454,7 +469,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                             ),
                                             Flexible(
                                               child: Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
@@ -487,10 +502,10 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Builder(
                                   builder: (context) => Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         38.0, 20.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -507,7 +522,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -519,7 +534,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                             _model.unfocusNode)
                                                     : FocusScope.of(context)
                                                         .unfocus(),
-                                                child: const TimewarnWidget(),
+                                                child: TimewarnWidget(),
                                               ),
                                             );
                                           },
@@ -536,7 +551,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                           width: 150.0,
                                           height: 52.0,
                                           decoration: BoxDecoration(
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -553,10 +568,10 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
+                                              stops: [0.0, 1.0],
+                                              begin: AlignmentDirectional(
                                                   -1.0, 0.87),
-                                              end: const AlignmentDirectional(
+                                              end: AlignmentDirectional(
                                                   1.0, -0.87),
                                             ),
                                             borderRadius:
@@ -577,7 +592,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                               onTap: () async {
                                                 await showDialog(
                                                   barrierColor:
-                                                      const Color(0x48020202),
+                                                      Color(0x48020202),
                                                   context: context,
                                                   builder: (dialogContext) {
                                                     return Dialog(
@@ -587,7 +602,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -603,7 +618,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                             : FocusScope.of(
                                                                     context)
                                                                 .unfocus(),
-                                                        child: SizedBox(
+                                                        child: Container(
                                                           height: 375.0,
                                                           width: 350.0,
                                                           child: TimewarnWidget(
@@ -622,7 +637,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                   Flexible(
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Text(
                                                         FFLocalizations.of(
@@ -653,7 +668,7 @@ class _OyKullanP3devamWidgetState extends State<OyKullanP3devamWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: Icon(

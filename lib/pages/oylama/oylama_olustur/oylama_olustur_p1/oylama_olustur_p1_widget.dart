@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oylama_olustur_p1_model.dart';
 export 'oylama_olustur_p1_model.dart';
@@ -104,7 +105,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -114,7 +115,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -126,12 +127,12 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oylamaOlusturP1UsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -159,9 +160,9 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                               FlutterFlowTheme.of(context).background1,
                               FlutterFlowTheme.of(context).background2
                             ],
-                            stops: const [0.0, 1.0],
-                            begin: const AlignmentDirectional(0.0, -1.0),
-                            end: const AlignmentDirectional(0, 1.0),
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
                           ),
                         ),
                         child: Column(
@@ -169,7 +170,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -223,15 +224,15 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                             Flexible(
                               child: Container(
                                 height: 410.0,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 20.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -239,7 +240,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 10.0, 0.0),
                                               child: Icon(
@@ -272,7 +273,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 10.0, 20.0, 10.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -307,7 +308,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 10.0, 20.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -325,7 +326,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -359,7 +360,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -393,7 +394,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -464,7 +465,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
 
                             // onaylama için checkbox & text
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   40.0, 30.0, 40.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -520,7 +521,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -541,7 +542,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 0.0, 25.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -580,7 +581,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                   ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      boxShadow: const [
+                                      boxShadow: [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -595,9 +596,9 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                           FlutterFlowTheme.of(context).graSet23,
                                           FlutterFlowTheme.of(context).graSet22
                                         ],
-                                        stops: const [0.0, 1.0],
-                                        begin: const AlignmentDirectional(-1.0, 0.0),
-                                        end: const AlignmentDirectional(1.0, 0),
+                                        stops: [0.0, 1.0],
+                                        begin: AlignmentDirectional(-1.0, 0.0),
+                                        end: AlignmentDirectional(1.0, 0),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
@@ -615,16 +616,16 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                               context: context,
                                               builder: (alertDialogContext) {
                                                 return AlertDialog(
-                                                  title: const Text(
+                                                  title: Text(
                                                       'You can\'t create a voting!'),
-                                                  content: const Text(
+                                                  content: Text(
                                                       'You need to approve the conditions to create a voting.'),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: const Text('OK'),
+                                                      child: Text('OK'),
                                                     ),
                                                   ],
                                                 );
@@ -635,16 +636,16 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                               context: context,
                                               builder: (alertDialogContext) {
                                                 return AlertDialog(
-                                                  title: const Text(
+                                                  title: Text(
                                                       'Oylama Oluşturamazsın!'),
-                                                  content: const Text(
+                                                  content: Text(
                                                       'Oylama oluşturmak için koşulları onaylaman gerekiyor.'),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: const Text('Tamam'),
+                                                      child: Text('Tamam'),
                                                     ),
                                                   ],
                                                 );
@@ -665,10 +666,10 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                       options: FFButtonOptions(
                                         width: 350.0,
                                         height: 50.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Colors.transparent,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -683,7 +684,7 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                               fontWeight: FontWeight.w600,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),

@@ -4,9 +4,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'oy_islemleri_model.dart';
 export 'oy_islemleri_model.dart';
@@ -39,8 +42,8 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 200.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -58,8 +61,8 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 360.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -77,8 +80,8 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 460.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -115,8 +118,8 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 200.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -174,11 +177,11 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
               backgroundColor: FlutterFlowTheme.of(context).background1,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
-                borderColor: const Color(0x004B39EF),
+                borderColor: Color(0x004B39EF),
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                fillColor: const Color(0x004B39EF),
+                fillColor: Color(0x004B39EF),
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -189,7 +192,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                 },
               ),
               title: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -204,7 +207,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -214,7 +217,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -226,12 +229,12 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: oyIslemleriUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -255,16 +258,16 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -277,7 +280,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 40.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -320,7 +323,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -337,7 +340,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                       width: 110.0,
                                       height: 110.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -354,10 +357,10 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: const [0.0, 0.7],
+                                          stops: [0.0, 0.7],
                                           begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
+                                              AlignmentDirectional(-1.0, 0.0),
+                                          end: AlignmentDirectional(1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -373,7 +376,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                         child: Stack(
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.71),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -397,7 +400,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, -0.34),
                                               child: Icon(
                                                 Icons.how_to_vote_rounded,
@@ -422,7 +425,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                       width: 110.0,
                                       height: 110.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -439,9 +442,9 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                             FlutterFlowTheme.of(context)
                                                 .graSet22
                                           ],
-                                          stops: const [0.0, 0.5],
-                                          begin: const AlignmentDirectional(1.0, 0.0),
-                                          end: const AlignmentDirectional(-1.0, 0),
+                                          stops: [0.0, 0.5],
+                                          begin: AlignmentDirectional(1.0, 0.0),
+                                          end: AlignmentDirectional(-1.0, 0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(15.0),
@@ -457,7 +460,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                         child: Stack(
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.71),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -479,7 +482,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.08, -0.34),
                                               child: Icon(
                                                 Icons.how_to_reg,
@@ -501,7 +504,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -517,7 +520,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                   width: 110.0,
                                   height: 110.0,
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -532,9 +535,9 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 0.7],
-                                      begin: const AlignmentDirectional(-1.0, 0.0),
-                                      end: const AlignmentDirectional(1.0, 0),
+                                      stops: [0.0, 0.7],
+                                      begin: AlignmentDirectional(-1.0, 0.0),
+                                      end: AlignmentDirectional(1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -550,11 +553,11 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Stack(
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, -0.34),
                                                 child: Icon(
                                                   Icons.add_rounded,
@@ -569,7 +572,7 @@ class _OyIslemleriWidgetState extends State<OyIslemleriWidget>
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.81),
+                                              AlignmentDirectional(0.0, 0.81),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'k17eihfq' /* Create 
@@ -602,7 +605,7 @@ Election */
                                   width: 110.0,
                                   height: 110.0,
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -617,42 +620,51 @@ Election */
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 0.7],
-                                      begin: const AlignmentDirectional(1.0, 0.0),
-                                      end: const AlignmentDirectional(-1.0, 0),
+                                      stops: [0.0, 0.7],
+                                      begin: AlignmentDirectional(1.0, 0.0),
+                                      end: AlignmentDirectional(-1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
-                                  child: Stack(
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.71),
-                                        child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'jnfa6i4g' /* Elections */,
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('Secimler');
+                                    },
+                                    child: Stack(
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.71),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'jnfa6i4g' /* Elections */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                fontSize: 12.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
                                         ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, -0.34),
-                                        child: Icon(
-                                          Icons.campaign_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          size: 50.0,
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, -0.34),
+                                          child: Icon(
+                                            Icons.campaign_rounded,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 50.0,
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -661,7 +673,7 @@ Election */
                               animationsMap['rowOnPageLoadAnimation2']!),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -677,7 +689,7 @@ Election */
                                   width: 110.0,
                                   height: 110.0,
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -692,9 +704,9 @@ Election */
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 0.7],
-                                      begin: const AlignmentDirectional(-1.0, 0.0),
-                                      end: const AlignmentDirectional(1.0, 0),
+                                      stops: [0.0, 0.7],
+                                      begin: AlignmentDirectional(-1.0, 0.0),
+                                      end: AlignmentDirectional(1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -702,7 +714,7 @@ Election */
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.71),
+                                            AlignmentDirectional(0.0, 0.71),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'rrhf20d1' /*  Statistics */,
@@ -719,7 +731,7 @@ Election */
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, -0.34),
+                                            AlignmentDirectional(0.0, -0.34),
                                         child: Icon(
                                           Icons.auto_graph_rounded,
                                           color: FlutterFlowTheme.of(context)
@@ -741,7 +753,7 @@ Election */
                                   width: 110.0,
                                   height: 110.0,
                                   decoration: BoxDecoration(
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -756,9 +768,9 @@ Election */
                                         FlutterFlowTheme.of(context).graSet23,
                                         FlutterFlowTheme.of(context).graSet22
                                       ],
-                                      stops: const [0.0, 0.7],
-                                      begin: const AlignmentDirectional(1.0, 0.0),
-                                      end: const AlignmentDirectional(-1.0, 0),
+                                      stops: [0.0, 0.7],
+                                      begin: AlignmentDirectional(1.0, 0.0),
+                                      end: AlignmentDirectional(-1.0, 0),
                                     ),
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
@@ -774,7 +786,7 @@ Election */
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.71),
+                                              AlignmentDirectional(0.0, 0.71),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'x5yzhokh' /*  Help Center */,
@@ -792,10 +804,10 @@ Election */
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, -0.34),
+                                              AlignmentDirectional(0.0, -0.34),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     2.0, 0.0, 0.0, 0.0),
                                             child: Icon(
                                               Icons.contact_support,
@@ -833,9 +845,9 @@ Election */
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).graSet22,
                             textStyle: FlutterFlowTheme.of(context)
@@ -846,7 +858,7 @@ Election */
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_candidate_oy_panel_model.dart';
 export 'add_candidate_oy_panel_model.dart';
@@ -63,17 +64,17 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: const Color(0x004B39EF),
+                  borderColor: Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: const Color(0x004B39EF),
+                  fillColor: Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -87,12 +88,12 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '4d7bl84y' /* Enter the candidate informatio... */,
@@ -107,8 +108,8 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
-                  child: SizedBox(
+                      EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
+                  child: Container(
                     width: double.infinity,
                     child: TextFormField(
                       controller: _model.comMemNameTextController,
@@ -156,7 +157,7 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                         ),
                         filled: true,
                         fillColor: FlutterFlowTheme.of(context).customColor2,
-                        contentPadding: const EdgeInsets.all(10.0),
+                        contentPadding: EdgeInsets.all(10.0),
                       ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Montserrat',
@@ -173,8 +174,8 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
-                  child: SizedBox(
+                      EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
+                  child: Container(
                     width: double.infinity,
                     child: TextFormField(
                       controller: _model.comMemSurnameTextController,
@@ -222,7 +223,7 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                         ),
                         filled: true,
                         fillColor: FlutterFlowTheme.of(context).customColor2,
-                        contentPadding: const EdgeInsets.all(10.0),
+                        contentPadding: EdgeInsets.all(10.0),
                       ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Montserrat',
@@ -243,7 +244,7 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                   width: 180.0,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -259,11 +260,11 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                         FlutterFlowTheme.of(context).graSet12,
                         FlutterFlowTheme.of(context).graSet13
                       ],
-                      stops: const [0.0, 1.0, 1.0],
-                      begin: const AlignmentDirectional(1.0, 0.0),
-                      end: const AlignmentDirectional(-1.0, 0),
+                      stops: [0.0, 1.0, 1.0],
+                      begin: AlignmentDirectional(1.0, 0.0),
+                      end: AlignmentDirectional(-1.0, 0),
                     ),
-                    borderRadius: const BorderRadius.only(
+                    borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(40.0),
                       bottomRight: Radius.circular(40.0),
                       topLeft: Radius.circular(40.0),
@@ -272,8 +273,10 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                   ),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      if ((_model.comMemNameTextController.text != '') &&
-                          (_model.comMemSurnameTextController.text != '')) {
+                      if ((_model.comMemNameTextController.text != null &&
+                              _model.comMemNameTextController.text != '') &&
+                          (_model.comMemSurnameTextController.text != null &&
+                              _model.comMemSurnameTextController.text != '')) {
                         _model.candidatePrivateKey =
                             await actions.createCandidatePrivateKey(
                           '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
@@ -292,7 +295,8 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                           FFAppState().addToAddCandidateToElection(
                               _model.candidateWalletID!);
                         });
-                        if (FFAppState().electionDistrict != '') {
+                        if (FFAppState().electionDistrict != null &&
+                            FFAppState().electionDistrict != '') {
                           await CandidatesTable().insert({
                             'name':
                                 '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
@@ -358,14 +362,14 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: const Text('You didn\'t add candidate!'),
-                                content: const Text(
+                                title: Text('You didn\'t add candidate!'),
+                                content: Text(
                                     'You didn\'t add candidate, please add a committee member.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: const Text('OK'),
+                                    child: Text('OK'),
                                   ),
                                 ],
                               );
@@ -377,14 +381,14 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: const Text('Aday Eklemedin!'),
-                                content: const Text(
+                                title: Text('Aday Eklemedin!'),
+                                content: Text(
                                     'Oylamanıza aday eklemediniz. Lütfen tekrar deneyin.'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: const Text('Tamam'),
+                                    child: Text('Tamam'),
                                   ),
                                 ],
                               );
@@ -400,10 +404,10 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                     ),
                     options: FFButtonOptions(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0x00067BB7),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Color(0x00067BB7),
                       textStyle:
                           FlutterFlowTheme.of(context).titleLarge.override(
                                 fontFamily: 'Montserrat',
@@ -413,7 +417,7 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 0.0,
                       ),

@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'delete_candidate_oy_panel_model.dart';
 export 'delete_candidate_oy_panel_model.dart';
@@ -63,17 +64,17 @@ class _DeleteCandidateOyPanelWidgetState
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: const Color(0x004B39EF),
+                  borderColor: Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: const Color(0x004B39EF),
+                  fillColor: Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -87,14 +88,14 @@ class _DeleteCandidateOyPanelWidgetState
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                      EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'bitgnxfx' /* Are you sure you want to remov... */,
@@ -116,7 +117,7 @@ class _DeleteCandidateOyPanelWidgetState
                       width: 100.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -132,11 +133,11 @@ class _DeleteCandidateOyPanelWidgetState
                             FlutterFlowTheme.of(context).graSet12,
                             FlutterFlowTheme.of(context).graSet13
                           ],
-                          stops: const [0.0, 1.0, 1.0],
-                          begin: const AlignmentDirectional(1.0, 0.0),
-                          end: const AlignmentDirectional(-1.0, 0),
+                          stops: [0.0, 1.0, 1.0],
+                          begin: AlignmentDirectional(1.0, 0.0),
+                          end: AlignmentDirectional(-1.0, 0),
                         ),
-                        borderRadius: const BorderRadius.only(
+                        borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(40.0),
                           bottomRight: Radius.circular(40.0),
                           topLeft: Radius.circular(40.0),
@@ -161,7 +162,7 @@ class _DeleteCandidateOyPanelWidgetState
                               true,
                             ) as List)
                                 .map<String>((s) => s.toString())
-                                .toList()
+                                .toList()!
                                 .toList()
                                 .cast<String>();
                           });
@@ -193,11 +194,11 @@ class _DeleteCandidateOyPanelWidgetState
                           '2ojysj4e' /* Yes */,
                         ),
                         options: FFButtonOptions(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0x00067BB7),
+                          color: Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -207,7 +208,7 @@ class _DeleteCandidateOyPanelWidgetState
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),
@@ -219,7 +220,7 @@ class _DeleteCandidateOyPanelWidgetState
                       width: 100.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -235,11 +236,11 @@ class _DeleteCandidateOyPanelWidgetState
                             FlutterFlowTheme.of(context).graSet12,
                             FlutterFlowTheme.of(context).graSet13
                           ],
-                          stops: const [0.0, 1.0, 1.0],
-                          begin: const AlignmentDirectional(1.0, 0.0),
-                          end: const AlignmentDirectional(-1.0, 0),
+                          stops: [0.0, 1.0, 1.0],
+                          begin: AlignmentDirectional(1.0, 0.0),
+                          end: AlignmentDirectional(-1.0, 0),
                         ),
-                        borderRadius: const BorderRadius.only(
+                        borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(40.0),
                           bottomRight: Radius.circular(40.0),
                           topLeft: Radius.circular(40.0),
@@ -254,11 +255,11 @@ class _DeleteCandidateOyPanelWidgetState
                           'x29bidsn' /* No */,
                         ),
                         options: FFButtonOptions(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0x00067BB7),
+                          color: Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -268,7 +269,7 @@ class _DeleteCandidateOyPanelWidgetState
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),

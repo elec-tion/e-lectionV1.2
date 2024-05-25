@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_committee_member_model.dart';
 export 'add_committee_member_model.dart';
@@ -58,17 +59,17 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlutterFlowIconButton(
-                  borderColor: const Color(0x004B39EF),
+                  borderColor: Color(0x004B39EF),
                   borderRadius: 20.0,
                   buttonSize: 50.0,
-                  fillColor: const Color(0x004B39EF),
+                  fillColor: Color(0x004B39EF),
                   icon: Icon(
                     Icons.close,
                     color: FlutterFlowTheme.of(context).mavi,
@@ -82,12 +83,12 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 40.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 40.0, 10.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'pytsrzxe' /* Enter the committee member's w... */,
@@ -102,8 +103,8 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
-                  child: SizedBox(
+                      EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 30.0),
+                  child: Container(
                     width: double.infinity,
                     child: TextFormField(
                       controller: _model.comMemWalletIDTextController,
@@ -148,7 +149,7 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                         ),
                         filled: true,
                         fillColor: FlutterFlowTheme.of(context).customColor2,
-                        contentPadding: const EdgeInsets.all(10.0),
+                        contentPadding: EdgeInsets.all(10.0),
                       ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Montserrat',
@@ -168,7 +169,7 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                   width: 180.0,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -184,11 +185,11 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                         FlutterFlowTheme.of(context).graSet12,
                         FlutterFlowTheme.of(context).graSet13
                       ],
-                      stops: const [0.0, 1.0, 1.0],
-                      begin: const AlignmentDirectional(1.0, 0.0),
-                      end: const AlignmentDirectional(-1.0, 0),
+                      stops: [0.0, 1.0, 1.0],
+                      begin: AlignmentDirectional(1.0, 0.0),
+                      end: AlignmentDirectional(-1.0, 0),
                     ),
-                    borderRadius: const BorderRadius.only(
+                    borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(40.0),
                       bottomRight: Radius.circular(40.0),
                       topLeft: Radius.circular(40.0),
@@ -230,15 +231,15 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text(
+                                    title: Text(
                                         'You can\'t add this election committe member!'),
-                                    content: const Text(
+                                    content: Text(
                                         'You have already added this person to the election.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: const Text('OK'),
+                                        child: Text('OK'),
                                       ),
                                     ],
                                   );
@@ -250,14 +251,14 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Bu Sorumluyu Ekleyemezsin!'),
-                                    content: const Text(
+                                    title: Text('Bu Sorumluyu Ekleyemezsin!'),
+                                    content: Text(
                                         'Bu sorumluyu zaten oylamaya eklediniz.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: const Text('Tamam'),
+                                        child: Text('Tamam'),
                                       ),
                                     ],
                                   );
@@ -266,6 +267,8 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                             }
                           } else {
                             if (_model.comMemWalletIDTextController.text !=
+                                    null &&
+                                _model.comMemWalletIDTextController.text !=
                                     '') {
                               _model.comVarMi = await CommitteeMemberGroup
                                   .getElectionCommitteeMemberDetailsCall
@@ -308,15 +311,15 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        title: const Text(
+                                        title: Text(
                                             'You cannot add committee member!'),
-                                        content: const Text(
+                                        content: Text(
                                             'The election committee member\'s wallet number you want to add is not available in e-lection. Please try again.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: const Text('OK'),
+                                            child: Text('OK'),
                                           ),
                                         ],
                                       );
@@ -328,14 +331,14 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        title: const Text('Sorumlu Ekleyemezsin!'),
-                                        content: const Text(
+                                        title: Text('Sorumlu Ekleyemezsin!'),
+                                        content: Text(
                                             'Eklemek istediğiniz sorumlu cüzdan numarası e-lection\'da bulunmamaktadır. Lütfen tekrar deneyin.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: const Text('Tamam'),
+                                            child: Text('Tamam'),
                                           ),
                                         ],
                                       );
@@ -355,15 +358,15 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: const Text(
+                                      title: Text(
                                           'You didn\'t add committee member!'),
-                                      content: const Text(
+                                      content: Text(
                                           'You didn\'t add committee member, please add a committee member.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: const Text('OK'),
+                                          child: Text('OK'),
                                         ),
                                       ],
                                     );
@@ -375,14 +378,14 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: const Text('Sorumlu Eklemedin!'),
-                                      content: const Text(
+                                      title: Text('Sorumlu Eklemedin!'),
+                                      content: Text(
                                           'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: const Text('Tamam'),
+                                          child: Text('Tamam'),
                                         ),
                                       ],
                                     );
@@ -398,11 +401,11 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                           'idzapqlr' /* Save */,
                         ),
                         options: FFButtonOptions(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0x00067BB7),
+                          color: Color(0x00067BB7),
                           textStyle:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
@@ -412,7 +415,7 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           elevation: 0.0,
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),

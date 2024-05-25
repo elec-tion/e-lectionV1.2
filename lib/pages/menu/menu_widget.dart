@@ -4,9 +4,13 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/oylama/oylama_olustur/popups/satisfaction/satisfaction_widget.dart';
+import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'menu_model.dart';
 export 'menu_model.dart';
@@ -157,7 +161,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -167,7 +171,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       context.pushNamed(
                         'Profilim',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 10),
@@ -179,12 +183,12 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       width: 40.0,
                       height: 40.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: menuUsersRow!.photoUrl,
                         fit: BoxFit.fill,
                       ),
@@ -202,7 +206,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -219,7 +223,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  boxShadow: const [
+                                  boxShadow: [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -234,9 +238,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       FlutterFlowTheme.of(context).graSet23,
                                       FlutterFlowTheme.of(context).graSet22
                                     ],
-                                    stops: const [0.0, 1.0],
-                                    begin: const AlignmentDirectional(-1.0, 0.0),
-                                    end: const AlignmentDirectional(1.0, 0),
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(-1.0, 0.0),
+                                    end: AlignmentDirectional(1.0, 0),
                                   ),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
@@ -255,9 +259,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   options: FFButtonOptions(
                                     width: 350.0,
                                     height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Colors.transparent,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -271,7 +275,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                           fontWeight: FontWeight.w600,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -284,7 +288,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                         ).animateOnPageLoad(
                             animationsMap['rowOnPageLoadAnimation1']!),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -294,7 +298,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: const Color(0x00363636),
+                                    borderColor: Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -310,7 +314,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -332,7 +336,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: const Color(0x00363636),
+                                    borderColor: Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -348,7 +352,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -370,7 +374,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowIconButton(
-                                    borderColor: const Color(0x00363636),
+                                    borderColor: Color(0x00363636),
                                     borderRadius: 15.0,
                                     borderWidth: 1.0,
                                     buttonSize: 65.0,
@@ -386,7 +390,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                     },
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
@@ -413,7 +417,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -426,7 +430,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           ),
                           child: Container(
                             decoration: BoxDecoration(
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -441,9 +445,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   FlutterFlowTheme.of(context).graSet23,
                                   FlutterFlowTheme.of(context).graSet22
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(-1.0, 0.0),
-                                end: const AlignmentDirectional(1.0, 0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(-1.0, 0.0),
+                                end: AlignmentDirectional(1.0, 0),
                               ),
                               borderRadius: BorderRadius.circular(15.0),
                             ),
@@ -462,9 +466,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               options: FFButtonOptions(
                                 width: 350.0,
                                 height: 50.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Colors.transparent,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -477,7 +481,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       fontWeight: FontWeight.w600,
                                     ),
                                 elevation: 0.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -492,7 +496,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -505,7 +509,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           ),
                           child: Container(
                             decoration: BoxDecoration(
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -520,9 +524,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                   FlutterFlowTheme.of(context).graSet23,
                                   FlutterFlowTheme.of(context).graSet22
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(-1.0, 0.0),
-                                end: const AlignmentDirectional(1.0, 0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(-1.0, 0.0),
+                                end: AlignmentDirectional(1.0, 0),
                               ),
                               borderRadius: BorderRadius.circular(15.0),
                             ),
@@ -541,9 +545,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                               options: FFButtonOptions(
                                 width: 350.0,
                                 height: 50.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Colors.transparent,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -556,7 +560,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                       fontWeight: FontWeight.w600,
                                     ),
                                 elevation: 0.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -578,220 +582,306 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 10.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    context.goNamed(
-                                      'Giris',
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.scale,
-                                          alignment: Alignment.bottomCenter,
-                                          duration: Duration(milliseconds: 10),
-                                        ),
-                                      },
-                                    );
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              10.0, 0.0, 0.0, 0.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.goNamed(
+                                        'Giris',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.scale,
+                                            alignment: Alignment.bottomCenter,
+                                            duration:
+                                                Duration(milliseconds: 10),
+                                          ),
+                                        },
+                                      );
 
-                                    FFAppState().update(() {
-                                      FFAppState().userPassword = '';
-                                      FFAppState().userIDNum = '';
-                                      FFAppState().electionName = '';
-                                      FFAppState().addCandidateToElection = [];
-                                      FFAppState().addElecComtoElection = [];
-                                      FFAppState().addVoterToElection = [];
-                                      FFAppState().electionID = '';
-                                      FFAppState().addedElecComWalletID = '';
-                                      FFAppState().cityID = '';
-                                      FFAppState().districtID = '';
-                                      FFAppState().countryID = '';
-                                      FFAppState().neighborhoodID = '';
-                                      FFAppState().userDistrictIDs = [];
-                                    });
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    '39bjex55' /* Log out from my e-lection acco... */,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.logout,
-                                    size: 20.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Colors.transparent,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text3,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
+                                      FFAppState().update(() {
+                                        FFAppState().userPassword = '';
+                                        FFAppState().userIDNum = '';
+                                        FFAppState().electionName = '';
+                                        FFAppState().addCandidateToElection =
+                                            [];
+                                        FFAppState().addElecComtoElection = [];
+                                        FFAppState().addVoterToElection = [];
+                                        FFAppState().electionID = '';
+                                        FFAppState().addedElecComWalletID = '';
+                                        FFAppState().cityID = '';
+                                        FFAppState().districtID = '';
+                                        FFAppState().countryID = '';
+                                        FFAppState().neighborhoodID = '';
+                                        FFAppState().userDistrictIDs = [];
+                                      });
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      '39bjex55' /* Log out from my e-lection acco... */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.logout,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
                                       color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 10.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed(
-                                      'Ayarlar',
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.leftToRight,
-                                          duration: Duration(milliseconds: 10),
-                                        ),
-                                      },
-                                    );
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'rcwzcytv' /* Settings */,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.settings_outlined,
-                                    size: 20.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Colors.transparent,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text3,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 10.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('YardimMerkezi');
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    '0h0880ti' /* Help Desk */,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.contact_support_outlined,
-                                    size: 20.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Colors.transparent,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text3,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 0.0, 0.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.asset(
-                                      Theme.of(context).brightness ==
-                                              Brightness.dark
-                                          ? 'assets/images/e-lection-logo-beyaz.png'
-                                          : 'assets/images/e-lection-logo-siyah.png',
-                                      width: 60.0,
-                                      height: 30.0,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'xrg92gon' /* © 2024, e-lection. Electronic ... */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
                                           .override(
                                             fontFamily: 'Montserrat',
                                             color: FlutterFlowTheme.of(context)
                                                 .text3,
-                                            fontSize: 12.0,
+                                            fontSize: 13.0,
                                             letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w500,
                                           ),
+                                      elevation: 0.0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                   ),
-                                ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ).animateOnPageLoad(
-                            animationsMap['columnOnPageLoadAnimation']!),
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                        'Ayarlar',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.leftToRight,
+                                            duration:
+                                                Duration(milliseconds: 10),
+                                          ),
+                                        },
+                                      );
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'rcwzcytv' /* Settings */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.settings_outlined,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Colors.transparent,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Montserrat',
+                                            color: FlutterFlowTheme.of(context)
+                                                .text3,
+                                            fontSize: 13.0,
+                                            letterSpacing: 0.0,
+                                          ),
+                                      elevation: 0.0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('YardimMerkezi');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      '0h0880ti' /* Help Desk */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.contact_support_outlined,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Colors.transparent,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Montserrat',
+                                            color: FlutterFlowTheme.of(context)
+                                                .text3,
+                                            fontSize: 13.0,
+                                            letterSpacing: 0.0,
+                                          ),
+                                      elevation: 0.0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                child: Builder(
+                                  builder: (context) => Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 10.0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (dialogContext) {
+                                            return Dialog(
+                                              elevation: 0,
+                                              insetPadding: EdgeInsets.zero,
+                                              backgroundColor:
+                                                  Colors.transparent,
+                                              alignment:
+                                                  AlignmentDirectional(0.0, 0.0)
+                                                      .resolve(
+                                                          Directionality.of(
+                                                              context)),
+                                              child: GestureDetector(
+                                                onTap: () => _model.unfocusNode
+                                                        .canRequestFocus
+                                                    ? FocusScope.of(context)
+                                                        .requestFocus(
+                                                            _model.unfocusNode)
+                                                    : FocusScope.of(context)
+                                                        .unfocus(),
+                                                child: Container(
+                                                  height: 300.0,
+                                                  width: 400.0,
+                                                  child: SatisfactionWidget(),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ).then((value) => setState(() {}));
+                                      },
+                                      text: FFLocalizations.of(context).getText(
+                                        'nbz09vwb' /* Give feedback about the app */,
+                                      ),
+                                      icon: Icon(
+                                        Icons.chat_outlined,
+                                        size: 20.0,
+                                      ),
+                                      options: FFButtonOptions(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: Colors.transparent,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text3,
+                                              fontSize: 13.0,
+                                              letterSpacing: 0.0,
+                                            ),
+                                        elevation: 0.0,
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 0.0, 0.0, 0.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        Theme.of(context).brightness ==
+                                                Brightness.dark
+                                            ? 'assets/images/e-lection-logo-beyaz.png'
+                                            : 'assets/images/e-lection-logo-siyah.png',
+                                        width: 60.0,
+                                        height: 30.0,
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5.0, 0.0, 0.0, 0.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'xrg92gon' /* © 2024, e-lection. Electronic ... */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text3,
+                                              fontSize: 12.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ).animateOnPageLoad(
+                              animationsMap['columnOnPageLoadAnimation']!),
+                        ),
                       ],
                     ),
                   ),

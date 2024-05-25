@@ -9,6 +9,7 @@ import '/pages/profilim/popups/delete_account/delete_account_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'hakkimda_model.dart';
 export 'hakkimda_model.dart';
@@ -113,13 +114,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: FlutterFlowIconButton(
-                    borderColor: const Color(0x004B39EF),
+                    borderColor: Color(0x004B39EF),
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    fillColor: const Color(0x004B39EF),
+                    fillColor: Color(0x004B39EF),
                     icon: Icon(
                       Icons.contact_support_outlined,
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -148,9 +149,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                           FlutterFlowTheme.of(context).background1,
                           FlutterFlowTheme.of(context).background2
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                     child: Column(
@@ -159,7 +160,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -200,7 +201,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   context.pushNamed(
                                     'Profilim',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 10),
@@ -212,13 +213,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   width: 80.0,
                                   height: 80.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: CachedNetworkImage(
-                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeInDuration: Duration(milliseconds: 500),
                                     fadeOutDuration:
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                     imageUrl: hakkimdaUsersRow!.photoUrl,
                                     fit: BoxFit.fill,
                                   ),
@@ -236,7 +237,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 20.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -261,13 +262,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -308,13 +309,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -337,9 +338,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
 
                                       // log in, password textField
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 10.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller: _model
@@ -352,9 +353,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             decoration: InputDecoration(
                                               alignLabelWithHint: false,
                                               hintText: hakkimdaUsersRow
-                                                  .walletIdVoter,
+                                                  ?.walletIdVoter,
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x002D789F),
                                                   width: 1.0,
                                                 ),
@@ -362,7 +363,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00067BB7),
                                                   width: 1.0,
                                                 ),
@@ -370,7 +371,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               errorBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00FF5963),
                                                   width: 1.0,
                                                 ),
@@ -379,7 +380,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                               ),
                                               focusedErrorBorder:
                                                   OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00FF5963),
                                                   width: 1.0,
                                                 ),
@@ -387,9 +388,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               filled: true,
-                                              fillColor: const Color(0x00363636),
+                                              fillColor: Color(0x00363636),
                                               contentPadding:
-                                                  const EdgeInsets.all(10.0),
+                                                  EdgeInsets.all(10.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .titleSmall
@@ -408,7 +409,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 20.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -418,7 +419,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                           onTap: () async {
                                             await Clipboard.setData(
                                                 ClipboardData(
-                                                    text: hakkimdaUsersRow
+                                                    text: hakkimdaUsersRow!
                                                         .walletIdVoter));
                                           },
                                           child: Text(
@@ -444,13 +445,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -472,9 +473,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
 
                                       // log in, password textField
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 10.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller: _model
@@ -487,9 +488,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             decoration: InputDecoration(
                                               alignLabelWithHint: false,
                                               hintText: hakkimdaUsersRow
-                                                  .walletIdElectionCommittee,
+                                                  ?.walletIdElectionCommittee,
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x002D789F),
                                                   width: 1.0,
                                                 ),
@@ -497,7 +498,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00067BB7),
                                                   width: 1.0,
                                                 ),
@@ -505,7 +506,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               errorBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00FF5963),
                                                   width: 1.0,
                                                 ),
@@ -514,7 +515,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                               ),
                                               focusedErrorBorder:
                                                   OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00FF5963),
                                                   width: 1.0,
                                                 ),
@@ -522,9 +523,9 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     BorderRadius.circular(15.0),
                                               ),
                                               filled: true,
-                                              fillColor: const Color(0x00363636),
+                                              fillColor: Color(0x00363636),
                                               contentPadding:
-                                                  const EdgeInsets.all(10.0),
+                                                  EdgeInsets.all(10.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .titleSmall
@@ -543,7 +544,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 20.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -552,7 +553,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
                                             await Clipboard.setData(ClipboardData(
-                                                text: hakkimdaUsersRow
+                                                text: hakkimdaUsersRow!
                                                     .walletIdElectionCommittee));
                                           },
                                           child: Text(
@@ -579,13 +580,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -607,7 +608,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                       ),
                                       Text(
                                         valueOrDefault<String>(
-                                          hakkimdaUsersRow.name,
+                                          hakkimdaUsersRow?.name,
                                           'name',
                                         ),
                                         textAlign: TextAlign.center,
@@ -627,7 +628,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 5.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -635,7 +636,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -656,11 +657,11 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           valueOrDefault<String>(
-                                            hakkimdaUsersRow.email,
+                                            hakkimdaUsersRow?.email,
                                             'email',
                                           ),
                                           textAlign: TextAlign.center,
@@ -680,7 +681,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                       Builder(
                                         builder: (context) => Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 20.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -689,7 +690,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               await showDialog(
-                                                barrierColor: const Color(0x85000000),
+                                                barrierColor: Color(0x85000000),
                                                 context: context,
                                                 builder: (dialogContext) {
                                                   return Dialog(
@@ -699,7 +700,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     backgroundColor:
                                                         Colors.transparent,
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                                 0.0, 0.0)
                                                             .resolve(
                                                                 Directionality.of(
@@ -715,7 +716,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                           : FocusScope.of(
                                                                   context)
                                                               .unfocus(),
-                                                      child: const SizedBox(
+                                                      child: Container(
                                                         height: 350.0,
                                                         width: 300.0,
                                                         child:
@@ -755,13 +756,13 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 5.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -781,11 +782,11 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           valueOrDefault<String>(
-                                            hakkimdaUsersRow.phoneNumber,
+                                            hakkimdaUsersRow?.phoneNumber,
                                             'phone_number',
                                           ),
                                           style: FlutterFlowTheme.of(context)
@@ -804,7 +805,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                       Builder(
                                         builder: (context) => Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 20.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -813,7 +814,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               await showDialog(
-                                                barrierColor: const Color(0x85000000),
+                                                barrierColor: Color(0x85000000),
                                                 context: context,
                                                 builder: (dialogContext) {
                                                   return Dialog(
@@ -823,7 +824,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                     backgroundColor:
                                                         Colors.transparent,
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                                 0.0, 0.0)
                                                             .resolve(
                                                                 Directionality.of(
@@ -839,7 +840,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                           : FocusScope.of(
                                                                   context)
                                                               .unfocus(),
-                                                      child: const SizedBox(
+                                                      child: Container(
                                                         height: 350.0,
                                                         width: 300.0,
                                                         child:
@@ -878,7 +879,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 40.0, 5.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -893,7 +894,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                         ),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -910,10 +911,10 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .graSet22
                                               ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
+                                              stops: [0.0, 1.0],
+                                              begin: AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              end: const AlignmentDirectional(1.0, 0),
+                                              end: AlignmentDirectional(1.0, 0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
@@ -924,7 +925,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                               onPressed: () async {
                                                 await showDialog(
                                                   barrierColor:
-                                                      const Color(0x85000000),
+                                                      Color(0x85000000),
                                                   context: context,
                                                   builder: (dialogContext) {
                                                     return Dialog(
@@ -934,7 +935,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -950,7 +951,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                             : FocusScope.of(
                                                                     context)
                                                                 .unfocus(),
-                                                        child: const SizedBox(
+                                                        child: Container(
                                                           height: 400.0,
                                                           width: 300.0,
                                                           child:
@@ -966,18 +967,18 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                   .getText(
                                                 'hbvuotzo' /* Delete my e-lection account */,
                                               ),
-                                              icon: const Icon(
+                                              icon: Icon(
                                                 Icons.delete_outline,
                                                 size: 15.0,
                                               ),
                                               options: FFButtonOptions(
                                                 width: 280.0,
                                                 height: 50.0,
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    const EdgeInsetsDirectional
+                                                    EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color: Colors.transparent,
@@ -996,7 +997,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                                           FontWeight.w600,
                                                     ),
                                                 elevation: 0.0,
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
