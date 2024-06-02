@@ -113,7 +113,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '72y6svrw': {
       'en': 'v1.0.2 stable',
-      'tr': 'v1.0.0 stable',
+      'tr': 'v1.0.2 stable',
     },
     '2nusyfli': {
       'en': 'Log In',
@@ -255,7 +255,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4nedjskb': {
       'en': 'v1.0.2 stable',
-      'tr': 'v1.0.0 stable',
+      'tr': 'v1.0.2 stable',
     },
     '39bjex55': {
       'en': 'Log out from my e-lection account',
@@ -337,7 +337,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'flxteqcf': {
       'en': 'v1.0.2 stable',
-      'tr': 'v1.0.0 stable',
+      'tr': 'v1.0.2 stable',
     },
     'cluweqi1': {
       'en': 'Give feedback about the app',
@@ -1230,7 +1230,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1c9c3nej': {
       'en': 'v1.0.2 stable',
-      'tr': 'v1.0.0 stable',
+      'tr': 'v1.0.2 stable',
     },
     'am920q9n': {
       'en': 'Give feedback about the app',
@@ -2240,6 +2240,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b7ez0huk': {
       'en': 'Continue to Ballot',
       'tr': 'Oy Pusulasına Git',
+    },
+    'v276ol21': {
+      'en': 'Please verify yourself before voting.',
+      'tr': '',
     },
     'w5v6831d': {
       'en': 'Back',

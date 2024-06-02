@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:local_auth/local_auth.dart';
 import 'timewarn_model.dart';
 export 'timewarn_model.dart';
 
@@ -146,6 +147,21 @@ This Voting Has Time ... */
                 ),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    final localAuth = LocalAuthentication();
+                    bool isBiometricSupported =
+                        await localAuth.isDeviceSupported();
+                    bool canCheckBiometrics =
+                        await localAuth.canCheckBiometrics;
+                    if (isBiometricSupported && canCheckBiometrics) {
+                      _model.ballotverification = await localAuth.authenticate(
+                          localizedReason: FFLocalizations.of(context).getText(
+                            'v276ol21' /* Please verify yourself before ... */,
+                          ),
+                          options:
+                              const AuthenticationOptions(biometricOnly: true));
+                      setState(() {});
+                    }
+
                     FFAppState().timerCheck = 1;
                     FFAppState().update(() {});
 
@@ -158,6 +174,8 @@ This Voting Has Time ... */
                         ),
                       }.withoutNulls,
                     );
+
+                    setState(() {});
                   },
                   text: FFLocalizations.of(context).getText(
                     'b7ez0huk' /* Continue to Ballot */,

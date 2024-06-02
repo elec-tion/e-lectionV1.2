@@ -272,7 +272,15 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                       },
                                     );
 
-                                    context.pushNamed('OyKullanP6Final');
+                                    context.pushNamed(
+                                      'OyKullanP6Final',
+                                      queryParameters: {
+                                        'p6': serializeParam(
+                                          widget.ballot1,
+                                          ParamType.SupabaseRow,
+                                        ),
+                                      }.withoutNulls,
+                                    );
                                   }
                                 },
                                 textAlign: TextAlign.start,
@@ -619,260 +627,287 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                         ),
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        width: 416.0,
-                        height: 176.0,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              FlutterFlowTheme.of(context).customColor2,
-                              FlutterFlowTheme.of(context).graSet23
-                            ],
-                            stops: const [0.0, 1.0],
-                            begin: const AlignmentDirectional(0.0, -1.0),
-                            end: const AlignmentDirectional(0, 1.0),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 50.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      27.0, 0.0, 0.0, 0.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed('HowToVoteBallots');
-                                    },
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 0.0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                      child: Container(
-                                        width: 76.0,
-                                        height: 70.0,
-                                        decoration: BoxDecoration(
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 4.0,
-                                              color: Color(0x33000000),
-                                              offset: Offset(
-                                                0.0,
-                                                2.0,
+                    Flexible(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 416.0,
+                              height: 176.0,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    FlutterFlowTheme.of(context).customColor2,
+                                    FlutterFlowTheme.of(context).graSet23
+                                  ],
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(0.0, -1.0),
+                                  end: const AlignmentDirectional(0, 1.0),
+                                ),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 10.0, 0.0, 50.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            27.0, 0.0, 0.0, 0.0),
+                                        child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            context
+                                                .pushNamed('HowToVoteBallots');
+                                          },
+                                          child: Material(
+                                            color: Colors.transparent,
+                                            elevation: 0.0,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Container(
+                                              width: 76.0,
+                                              height: 70.0,
+                                              decoration: BoxDecoration(
+                                                boxShadow: const [
+                                                  BoxShadow(
+                                                    blurRadius: 4.0,
+                                                    color: Color(0x33000000),
+                                                    offset: Offset(
+                                                      0.0,
+                                                      2.0,
+                                                    ),
+                                                  )
+                                                ],
+                                                gradient: LinearGradient(
+                                                  colors: [
+                                                    FlutterFlowTheme.of(context)
+                                                        .graSet23,
+                                                    FlutterFlowTheme.of(context)
+                                                        .graSet22
+                                                  ],
+                                                  stops: const [0.0, 1.0],
+                                                  begin: const AlignmentDirectional(
+                                                      -1.0, 0.0),
+                                                  end: const AlignmentDirectional(
+                                                      1.0, 0),
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .graSet22,
+                                                ),
                                               ),
-                                            )
-                                          ],
-                                          gradient: LinearGradient(
-                                            colors: [
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet23,
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet22
-                                            ],
-                                            stops: const [0.0, 1.0],
-                                            begin:
-                                                const AlignmentDirectional(-1.0, 0.0),
-                                            end: const AlignmentDirectional(1.0, 0),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                          border: Border.all(
-                                            color: FlutterFlowTheme.of(context)
-                                                .graSet22,
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(17.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Icon(
+                                                      Icons.contact_support,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      size: 40.0,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      17.0, 0.0, 0.0, 0.0),
-                                              child: Icon(
-                                                Icons.contact_support,
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            33.0, 0.0, 0.0, 0.0),
+                                        child: Material(
+                                          color: Colors.transparent,
+                                          elevation: 0.0,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
+                                          ),
+                                          child: Container(
+                                            width: 245.0,
+                                            height: 70.0,
+                                            decoration: BoxDecoration(
+                                              boxShadow: const [
+                                                BoxShadow(
+                                                  blurRadius: 4.0,
+                                                  color: Color(0x33000000),
+                                                  offset: Offset(
+                                                    0.0,
+                                                    2.0,
+                                                  ),
+                                                )
+                                              ],
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet11,
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet12,
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet13
+                                                ],
+                                                stops: const [0.0, 1.0, 1.0],
+                                                begin: const AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                end: const AlignmentDirectional(
+                                                    1.0, 0),
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                              border: Border.all(
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                size: 40.0,
+                                                        .graSet22,
                                               ),
                                             ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      33.0, 0.0, 0.0, 0.0),
-                                  child: Material(
-                                    color: Colors.transparent,
-                                    elevation: 0.0,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    child: Container(
-                                      width: 245.0,
-                                      height: 70.0,
-                                      decoration: BoxDecoration(
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            color: Color(0x33000000),
-                                            offset: Offset(
-                                              0.0,
-                                              2.0,
-                                            ),
-                                          )
-                                        ],
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            FlutterFlowTheme.of(context)
-                                                .graSet11,
-                                            FlutterFlowTheme.of(context)
-                                                .graSet12,
-                                            FlutterFlowTheme.of(context)
-                                                .graSet13
-                                          ],
-                                          stops: const [0.0, 1.0, 1.0],
-                                          begin:
-                                              const AlignmentDirectional(-1.0, 0.0),
-                                          end: const AlignmentDirectional(1.0, 0),
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                        border: Border.all(
-                                          color: FlutterFlowTheme.of(context)
-                                              .graSet22,
-                                        ),
-                                      ),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          if (_model.radioButtonValue != null &&
-                                              _model.radioButtonValue != '') {
-                                            context.pushNamed(
-                                              'OyKullanP5Pusula',
-                                              queryParameters: {
-                                                'ballot2': serializeParam(
-                                                  widget.ballot1,
-                                                  ParamType.SupabaseRow,
-                                                ),
-                                                'state': serializeParam(
-                                                  _model.radioButtonValue,
-                                                  ParamType.String,
-                                                ),
-                                              }.withoutNulls,
-                                            );
-                                          } else {
-                                            if (FFLocalizations.of(context)
-                                                    .languageCode ==
-                                                'en') {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    title: const Text(
-                                                        'You can not submit empty ballot!'),
-                                                    content: const Text(
-                                                        'You must select a candidate to give vote.'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: const Text('OK'),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                if (_model.radioButtonValue !=
+                                                        null &&
+                                                    _model.radioButtonValue !=
+                                                        '') {
+                                                  context.pushNamed(
+                                                    'OyKullanP5Pusula',
+                                                    queryParameters: {
+                                                      'ballot2': serializeParam(
+                                                        widget.ballot1,
+                                                        ParamType.SupabaseRow,
                                                       ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
-                                            } else {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    title: const Text(
-                                                        'Oy pusulasını boş yollayamazsınız.'),
-                                                    content: const Text(
-                                                        'Oy verebilmek için bir aday seçmeniz gerekiyor.'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: const Text('Tamam'),
+                                                      'state': serializeParam(
+                                                        _model.radioButtonValue,
+                                                        ParamType.String,
                                                       ),
-                                                    ],
+                                                    }.withoutNulls,
                                                   );
-                                                },
-                                              );
-                                            }
-                                          }
-                                        },
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      40.0, 0.0, 5.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '95m2r08k' /* Review Vote     */,
-                                                ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Montserrat',
-                                                      color: const Color(0xFFF4F4F4),
-                                                      fontSize: 20.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
+                                                } else {
+                                                  if (FFLocalizations.of(
+                                                              context)
+                                                          .languageCode ==
+                                                      'en') {
+                                                    await showDialog(
+                                                      context: context,
+                                                      builder:
+                                                          (alertDialogContext) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                              'You can not submit empty ballot!'),
+                                                          content: const Text(
+                                                              'You must select a candidate to give vote.'),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      alertDialogContext),
+                                                              child: const Text('OK'),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  } else {
+                                                    await showDialog(
+                                                      context: context,
+                                                      builder:
+                                                          (alertDialogContext) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                              'Oy pusulasını boş yollayamazsınız.'),
+                                                          content: const Text(
+                                                              'Oy verebilmek için bir aday seçmeniz gerekiyor.'),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      alertDialogContext),
+                                                              child:
+                                                                  const Text('Tamam'),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  }
+                                                }
+                                              },
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(40.0, 0.0,
+                                                                5.0, 0.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '95m2r08k' /* Review Vote     */,
+                                                      ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Montserrat',
+                                                            color: const Color(
+                                                                0xFFF4F4F4),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
                                                     ),
+                                                  ),
+                                                  const Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                10.0, 0.0),
+                                                    child: Icon(
+                                                      Icons
+                                                          .keyboard_arrow_right_sharp,
+                                                      color: Color(0xFFF4F4F4),
+                                                      size: 35.0,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                            const Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 10.0, 0.0),
-                                              child: Icon(
-                                                Icons
-                                                    .keyboard_arrow_right_sharp,
-                                                color: Color(0xFFF4F4F4),
-                                                size: 35.0,
-                                              ),
-                                            ),
-                                          ],
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
