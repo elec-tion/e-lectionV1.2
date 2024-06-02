@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v1.0.2 stable',
+      'en': 'v1.0.2 ios stable',
       'tr': 'v1.0.2 stable',
     },
     '2nusyfli': {
@@ -254,7 +254,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Profilim',
     },
     '4nedjskb': {
-      'en': 'v1.0.2 stable',
+      'en': 'v1.0.2 ios stable ',
       'tr': 'v1.0.2 stable',
     },
     '39bjex55': {
@@ -608,10 +608,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           '3. Changes can be made about the ballot after the ballot creation process.',
       'tr':
           '3. Oylama oluşturma işlemi sonrasında oylama hakkında değişiklik yapılabilir.',
-    },
-    'ojbqhzup': {
-      'en': '4. Once you click the Continue button, you can never go back.',
-      'tr': '4. İlerle butonuna tıkladıktan sonra bir daha geri dönemezsiniz.',
     },
     'th6zdtcu': {
       'en': 'I confirm that I have carefully read and understood the warnings.',
@@ -2240,10 +2236,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b7ez0huk': {
       'en': 'Continue to Ballot',
       'tr': 'Oy Pusulasına Git',
-    },
-    'v276ol21': {
-      'en': 'Please verify yourself before voting.',
-      'tr': '',
     },
     'w5v6831d': {
       'en': 'Back',

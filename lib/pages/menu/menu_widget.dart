@@ -606,7 +606,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            '4nedjskb' /* v1.0.2 stable */,
+                            '4nedjskb' /* v1.0.2 ios stable  */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(

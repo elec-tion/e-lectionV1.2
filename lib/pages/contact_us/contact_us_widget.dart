@@ -511,7 +511,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget>
                             children: [
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 0.0, 0.0, 100.0),
+                                    20.0, 0.0, 0.0, 90.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [

@@ -117,7 +117,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: MediaQuery.sizeOf(context).height * 0.83,
+                    height: MediaQuery.sizeOf(context).height * 0.74,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
