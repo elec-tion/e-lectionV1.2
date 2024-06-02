@@ -591,7 +591,7 @@ look o... */
                                   0.0, 0.0, 40.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  '1c9c3nej' /* v1.0.0 stable */,
+                                  '1c9c3nej' /* v1.0.2 stable */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -737,7 +737,7 @@ look o... */
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 0.0, 0.0, 300.0),
+                                      10.0, 0.0, 0.0, 150.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [

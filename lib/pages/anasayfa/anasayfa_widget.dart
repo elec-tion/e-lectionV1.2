@@ -834,7 +834,7 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 400.0),
+                                          0.0, 0.0, 0.0, 150.0),
                                       child: Material(
                                         color: Colors.transparent,
                                         elevation: 0.0,

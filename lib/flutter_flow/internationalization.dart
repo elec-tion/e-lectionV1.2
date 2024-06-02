@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v1.0.0 stable ',
+      'en': 'v1.0.2 stable',
       'tr': 'v1.0.0 stable',
     },
     '2nusyfli': {
@@ -254,7 +254,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Profilim',
     },
     '4nedjskb': {
-      'en': 'v1.0.0 stable',
+      'en': 'v1.0.2 stable',
       'tr': 'v1.0.0 stable',
     },
     '39bjex55': {
@@ -336,7 +336,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Dil',
     },
     'flxteqcf': {
-      'en': 'v1.0.0 stable',
+      'en': 'v1.0.2 stable',
       'tr': 'v1.0.0 stable',
     },
     'cluweqi1': {
@@ -1229,7 +1229,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Oylama ile ilgili aklınızdaki sorular için\nrehberimize bakmanızı tavsiye ediyoruz.',
     },
     '1c9c3nej': {
-      'en': 'v1.0.0 stable',
+      'en': 'v1.0.2 stable',
       'tr': 'v1.0.0 stable',
     },
     'am920q9n': {
@@ -1525,10 +1525,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'You Have Already Accepted Terms Of Use \nand User Consent.',
       'tr':
           'Kullanım Koşulları ve Rıza Onayını Kayıt \nOlduğunuzda Kabul Ettiniz.',
-    },
-    'gd0t8rar': {
-      'en': 'Back',
-      'tr': 'Geri',
     },
     'e3pw0e5r': {
       'en': 'Voting',
@@ -2244,10 +2240,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b7ez0huk': {
       'en': 'Continue to Ballot',
       'tr': 'Oy Pusulasına Git',
-    },
-    'jpokye27': {
-      'en': 'Please verify yourself before voting.',
-      'tr': '',
     },
     'w5v6831d': {
       'en': 'Back',

@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p5_pusula_model.dart';
@@ -40,11 +39,6 @@ class _OyKullanP5PusulaWidgetState extends State<OyKullanP5PusulaWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => OyKullanP5PusulaModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await actions.blockScreenRecordingAndScreenshots();
-    });
 
     animationsMap.addAll({
       'columnOnPageLoadAnimation': AnimationInfo(

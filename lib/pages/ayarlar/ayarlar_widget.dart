@@ -585,7 +585,7 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                 0.0, 0.0, 40.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'flxteqcf' /* v1.0.0 stable */,
+                                'flxteqcf' /* v1.0.2 stable */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
