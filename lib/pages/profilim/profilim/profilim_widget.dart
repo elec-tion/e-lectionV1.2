@@ -626,7 +626,7 @@ class _ProfilimWidgetState extends State<ProfilimWidget> {
                               ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 0.0, 0.0, 0.0),
+                                    20.0, 0.0, 0.0, 100.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [

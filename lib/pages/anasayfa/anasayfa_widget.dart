@@ -195,24 +195,24 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
             ),
             body: SafeArea(
               top: true,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: MediaQuery.sizeOf(context).height * 0.85,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            FlutterFlowTheme.of(context).background1,
-                            FlutterFlowTheme.of(context).background2
-                          ],
-                          stops: const [0.0, 1.0],
-                          begin: const AlignmentDirectional(0.0, -1.0),
-                          end: const AlignmentDirectional(0, 1.0),
-                        ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 0.85,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          FlutterFlowTheme.of(context).background1,
+                          FlutterFlowTheme.of(context).background2
+                        ],
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
+                    ),
+                    child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -832,88 +832,92 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Material(
-                                      color: Colors.transparent,
-                                      elevation: 0.0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                      child: Container(
-                                        width: 290.0,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 4.0,
-                                              color: Color(0x33000000),
-                                              offset: Offset(
-                                                0.0,
-                                                2.0,
-                                              ),
-                                            )
-                                          ],
-                                          gradient: LinearGradient(
-                                            colors: [
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet11,
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet12,
-                                              FlutterFlowTheme.of(context)
-                                                  .graSet13
-                                            ],
-                                            stops: const [0.0, 1.0, 1.0],
-                                            begin:
-                                                const AlignmentDirectional(0.0, -1.0),
-                                            end: const AlignmentDirectional(0, 1.0),
-                                          ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 400.0),
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        elevation: 0.0,
+                                        shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(15.0),
                                         ),
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            context
-                                                .pushNamed('OylamaOlusturP1');
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '39e93srh' /* Create Election */,
-                                          ),
-                                          icon: Icon(
-                                            Icons.add,
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
-                                            size: 28.0,
-                                          ),
-                                          options: FFButtonOptions(
-                                            width: 350.0,
-                                            height: 50.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 24.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: Colors.transparent,
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .titleSmall
-                                                .override(
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .info,
-                                                  fontSize: 17.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w500,
+                                        child: Container(
+                                          width: 290.0,
+                                          height: 60.0,
+                                          decoration: BoxDecoration(
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 4.0,
+                                                color: Color(0x33000000),
+                                                offset: Offset(
+                                                  0.0,
+                                                  2.0,
                                                 ),
-                                            elevation: 0.0,
-                                            borderSide: const BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1.0,
+                                              )
+                                            ],
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                FlutterFlowTheme.of(context)
+                                                    .graSet11,
+                                                FlutterFlowTheme.of(context)
+                                                    .graSet12,
+                                                FlutterFlowTheme.of(context)
+                                                    .graSet13
+                                              ],
+                                              stops: const [0.0, 1.0, 1.0],
+                                              begin: const AlignmentDirectional(
+                                                  0.0, -1.0),
+                                              end: const AlignmentDirectional(0, 1.0),
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
+                                          ),
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              context
+                                                  .pushNamed('OylamaOlusturP1');
+                                            },
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              '39e93srh' /* Create Election */,
+                                            ),
+                                            icon: Icon(
+                                              Icons.add,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .info,
+                                              size: 28.0,
+                                            ),
+                                            options: FFButtonOptions(
+                                              width: 350.0,
+                                              height: 50.0,
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding: const EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color: Colors.transparent,
+                                              textStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Montserrat',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .info,
+                                                    fontSize: 17.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                              elevation: 0.0,
+                                              borderSide: const BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -927,8 +931,8 @@ class _AnasayfaWidgetState extends State<AnasayfaWidget>
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -534,7 +534,7 @@ war... */
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  50.0, 5.0, 0.0, 20.0),
+                                  50.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -562,169 +562,180 @@ war... */
                             ),
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Material(
-                                        color: Colors.transparent,
-                                        elevation: 0.0,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            boxShadow: const [
-                                              BoxShadow(
-                                                blurRadius: 4.0,
-                                                color: Color(0x33000000),
-                                                offset: Offset(
-                                                  0.0,
-                                                  2.0,
-                                                ),
-                                              )
-                                            ],
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                FlutterFlowTheme.of(context)
-                                                    .graSet23,
-                                                FlutterFlowTheme.of(context)
-                                                    .graSet22
-                                              ],
-                                              stops: const [0.0, 1.0],
-                                              begin: const AlignmentDirectional(
-                                                  -1.0, 0.0),
-                                              end: const AlignmentDirectional(1.0, 0),
-                                            ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 300.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Material(
+                                          color: Colors.transparent,
+                                          elevation: 0.0,
+                                          shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
                                           ),
-                                          child: FFButtonWidget(
-                                            onPressed: () async {
-                                              if (_model.checkwarnValue!) {
-                                                if (widget.p2?.districtId ==
-                                                    '00') {
-                                                  FFAppState().regionalMi =
-                                                      false;
-                                                  FFAppState().update(() {});
-                                                } else {
-                                                  FFAppState().regionalMi =
-                                                      true;
-                                                  FFAppState().update(() {});
-                                                }
-
-                                                context.pushNamed(
-                                                  'OyKullanP3devam',
-                                                  queryParameters: {
-                                                    'p3': serializeParam(
-                                                      widget.p2,
-                                                      ParamType.SupabaseRow,
-                                                    ),
-                                                  }.withoutNulls,
-                                                );
-                                              } else {
-                                                if (FFLocalizations.of(context)
-                                                        .languageCode ==
-                                                    'en') {
-                                                  await showDialog(
-                                                    context: context,
-                                                    builder:
-                                                        (alertDialogContext) {
-                                                      return AlertDialog(
-                                                        title: const Text(
-                                                            'Please read and accept to continue.'),
-                                                        content: const Text(
-                                                            'You need to approve the conditions.'),
-                                                        actions: [
-                                                          TextButton(
-                                                            onPressed: () =>
-                                                                Navigator.pop(
-                                                                    alertDialogContext),
-                                                            child: const Text('OK'),
-                                                          ),
-                                                        ],
-                                                      );
-                                                    },
-                                                  );
-                                                } else {
-                                                  await showDialog(
-                                                    context: context,
-                                                    builder:
-                                                        (alertDialogContext) {
-                                                      return AlertDialog(
-                                                        title: const Text(
-                                                            'Okuyup Onaylamanız Gerekiyor!'),
-                                                        content: const Text(
-                                                            'Devam etmek için koşulları onaylamanız gerekiyor.'),
-                                                        actions: [
-                                                          TextButton(
-                                                            onPressed: () =>
-                                                                Navigator.pop(
-                                                                    alertDialogContext),
-                                                            child:
-                                                                const Text('Tamam'),
-                                                          ),
-                                                        ],
-                                                      );
-                                                    },
-                                                  );
-                                                }
-                                              }
-                                            },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '1c77iiss' /* Continue */,
-                                            ),
-                                            icon: Icon(
-                                              Icons
-                                                  .keyboard_arrow_right_outlined,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .text1,
-                                              size: 28.0,
-                                            ),
-                                            options: FFButtonOptions(
-                                              width: 208.0,
-                                              height: 50.0,
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Colors.transparent,
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .text1,
-                                                    fontSize: 17.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              boxShadow: const [
+                                                BoxShadow(
+                                                  blurRadius: 4.0,
+                                                  color: Color(0x33000000),
+                                                  offset: Offset(
+                                                    0.0,
+                                                    2.0,
                                                   ),
-                                              elevation: 0.0,
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .graSet22,
-                                                width: 1.0,
+                                                )
+                                              ],
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet23,
+                                                  FlutterFlowTheme.of(context)
+                                                      .graSet22
+                                                ],
+                                                stops: const [0.0, 1.0],
+                                                begin: const AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                end: const AlignmentDirectional(
+                                                    1.0, 0),
                                               ),
                                               borderRadius:
                                                   BorderRadius.circular(15.0),
                                             ),
+                                            child: FFButtonWidget(
+                                              onPressed: () async {
+                                                if (_model.checkwarnValue!) {
+                                                  if (widget.p2?.districtId ==
+                                                      '00') {
+                                                    FFAppState().regionalMi =
+                                                        false;
+                                                    FFAppState().update(() {});
+                                                  } else {
+                                                    FFAppState().regionalMi =
+                                                        true;
+                                                    FFAppState().update(() {});
+                                                  }
+
+                                                  context.pushNamed(
+                                                    'OyKullanP3devam',
+                                                    queryParameters: {
+                                                      'p3': serializeParam(
+                                                        widget.p2,
+                                                        ParamType.SupabaseRow,
+                                                      ),
+                                                    }.withoutNulls,
+                                                  );
+                                                } else {
+                                                  if (FFLocalizations.of(
+                                                              context)
+                                                          .languageCode ==
+                                                      'en') {
+                                                    await showDialog(
+                                                      context: context,
+                                                      builder:
+                                                          (alertDialogContext) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                              'Please read and accept to continue.'),
+                                                          content: const Text(
+                                                              'You need to approve the conditions.'),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      alertDialogContext),
+                                                              child: const Text('OK'),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  } else {
+                                                    await showDialog(
+                                                      context: context,
+                                                      builder:
+                                                          (alertDialogContext) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                              'Okuyup Onaylamanız Gerekiyor!'),
+                                                          content: const Text(
+                                                              'Devam etmek için koşulları onaylamanız gerekiyor.'),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      alertDialogContext),
+                                                              child:
+                                                                  const Text('Tamam'),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  }
+                                                }
+                                              },
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                '1c77iiss' /* Continue */,
+                                              ),
+                                              icon: Icon(
+                                                Icons
+                                                    .keyboard_arrow_right_outlined,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .text1,
+                                                size: 28.0,
+                                              ),
+                                              options: FFButtonOptions(
+                                                width: 208.0,
+                                                height: 50.0,
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                            0.0, 0.0, 0.0, 0.0),
+                                                color: Colors.transparent,
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .text1,
+                                                      fontSize: 17.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
+                                                elevation: 0.0,
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .graSet22,
+                                                  width: 1.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(15.0),
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],

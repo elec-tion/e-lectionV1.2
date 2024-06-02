@@ -246,7 +246,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      '72y6svrw' /* v1.0.0 stable 1 */,
+                                      '72y6svrw' /* v1.0.0 stable  */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
@@ -267,7 +267,7 @@ class _GirisWidgetState extends State<GirisWidget>
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 200.0, 0.0, 260.0),
+                                  0.0, 200.0, 0.0, 244.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,

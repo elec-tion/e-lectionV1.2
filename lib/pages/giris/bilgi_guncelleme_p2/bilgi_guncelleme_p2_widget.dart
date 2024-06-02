@@ -878,7 +878,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                     .unfocus(),
                                             child: const SizedBox(
                                               height: 600.0,
-                                              width: 300.0,
+                                              width: 400.0,
                                               child: ToScompWidget(),
                                             ),
                                           ),

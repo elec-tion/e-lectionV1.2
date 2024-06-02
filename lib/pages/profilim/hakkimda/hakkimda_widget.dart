@@ -837,7 +837,7 @@ class _HakkimdaWidgetState extends State<HakkimdaWidget> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      40.0, 0.0, 40.0, 5.0),
+                                      40.0, 0.0, 40.0, 300.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,

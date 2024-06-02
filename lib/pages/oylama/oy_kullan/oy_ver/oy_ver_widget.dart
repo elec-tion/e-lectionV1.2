@@ -736,7 +736,9 @@ class _OyVerWidgetState extends State<OyVerWidget>
                                                                   'endDate',
                                                                   getCurrentTimestamp
                                                                       .secondsSinceEpoch,
-                                                                ),
+                                                                )
+                                                                .order(
+                                                                    'startDate'),
                                                             limit: 1,
                                                           ),
                                                           builder: (context,
@@ -1088,33 +1090,37 @@ class _OyVerWidgetState extends State<OyVerWidget>
                               color: FlutterFlowTheme.of(context).customColor2,
                             ),
                           ),
-                          FFButtonWidget(
-                            onPressed: () async {
-                              context.pushNamed('HowvotingWorksP1');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '5051mwv7' /* How voting works? */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).graSet22,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Montserrat',
-                                    color: FlutterFlowTheme.of(context).text1,
-                                    letterSpacing: 0.0,
-                                  ),
-                              elevation: 0.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 50.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed('HowvotingWorksP1');
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '5051mwv7' /* How voting works? */,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    24.0, 0.0, 24.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).graSet22,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Montserrat',
+                                      color: FlutterFlowTheme.of(context).text1,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             ),
                           ),
                         ],

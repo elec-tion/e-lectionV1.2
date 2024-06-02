@@ -737,7 +737,7 @@ look o... */
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 0.0, 0.0, 0.0),
+                                      10.0, 0.0, 0.0, 300.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [

@@ -307,7 +307,7 @@ Voting on e-lection is easy.
                 Expanded(
                   child: Container(
                     width: 415.0,
-                    height: 182.0,
+                    height: 382.0,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
