@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v1.0.2 ios h3 ',
+      'en': 'v1.0.2 ios h4',
       'tr': 'v1.0.2 stable',
     },
     '2nusyfli': {
