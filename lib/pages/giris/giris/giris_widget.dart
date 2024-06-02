@@ -246,7 +246,7 @@ class _GirisWidgetState extends State<GirisWidget>
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      '72y6svrw' /* v1.0.2 ios stable */,
+                                      '72y6svrw' /* v1.0.2 ios h3  */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
