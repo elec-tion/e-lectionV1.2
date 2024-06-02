@@ -769,6 +769,7 @@ class VoterGroup {
       RemoveVoterFromElectionCall();
   static RemoveVoterCall removeVoterCall = RemoveVoterCall();
   static GetVoterDetailsCall getVoterDetailsCall = GetVoterDetailsCall();
+  static IsVoterElectedCall isVoterElectedCall = IsVoterElectedCall();
 }
 
 class AddDistrictToVoterCall {
@@ -965,6 +966,38 @@ class GetVoterDetailsCall {
   }
 }
 
+class IsVoterElectedCall {
+  Future<ApiCallResponse> call({
+    String? wallet = '',
+    String? districtID = '',
+    String? name = '',
+    String? electionID = '',
+  }) async {
+    final baseUrl = VoterGroup.getBaseUrl(
+      wallet: wallet,
+      districtID: districtID,
+      name: name,
+      electionID: electionID,
+    );
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'isVoterElected',
+      apiUrl: '${baseUrl}withelection/$wallet/$electionID',
+      callType: ApiCallType.GET,
+      headers: {
+        'x-api-key':
+            'F7DC013C18F1C42D317EBA8D83873C5E2C3187C4C2477CE6EE9E43C19F4BD581',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 /// End Voter Group Code
 
 /// Start Balance Group Code
@@ -1073,10 +1106,14 @@ class ApiPagingParams {
       'PagingParams(nextPageNumber: $nextPageNumber, numItems: $numItems, lastResponse: $lastResponse,)';
 }
 
+String _toEncodable(dynamic item) {
+  return item;
+}
+
 String _serializeList(List? list) {
   list ??= <String>[];
   try {
-    return json.encode(list);
+    return json.encode(list, toEncodable: _toEncodable);
   } catch (_) {
     if (kDebugMode) {
       print("List serialization failed. Returning empty list.");
@@ -1088,7 +1125,7 @@ String _serializeList(List? list) {
 String _serializeJson(dynamic jsonVar, [bool isList = false]) {
   jsonVar ??= (isList ? [] : {});
   try {
-    return json.encode(jsonVar);
+    return json.encode(jsonVar, toEncodable: _toEncodable);
   } catch (_) {
     if (kDebugMode) {
       print("Json serialization failed. Returning empty json.");

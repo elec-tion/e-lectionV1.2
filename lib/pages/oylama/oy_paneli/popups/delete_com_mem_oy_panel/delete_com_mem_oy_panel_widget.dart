@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'delete_com_mem_oy_panel_model.dart';
@@ -154,17 +155,17 @@ class _DeleteComMemOyPanelWidgetState extends State<DeleteComMemOyPanelWidget> {
                               await ElectionGroup.getElectionDetailsCall.call(
                             id: widget.electionPara?.id,
                           );
-                          setState(() {
-                            FFAppState().addElecComtoElection = (getJsonField(
-                              (_model.comMemAlma?.jsonBody ?? ''),
-                              r'''$["electionCommittee"]''',
-                              true,
-                            ) as List)
-                                .map<String>((s) => s.toString())
-                                .toList()
-                                .toList()
-                                .cast<String>();
-                          });
+                          FFAppState().addElecComtoElection = functions
+                              .toLowerCaseList((getJsonField(
+                                (_model.comMemAlma?.jsonBody ?? ''),
+                                r'''$["electionCommittee"]''',
+                                true,
+                              ) as List)
+                                  .map<String>((s) => s.toString())
+                                  .toList())!
+                              .toList()
+                              .cast<String>();
+                          setState(() {});
                           await ElectionsTable().update(
                             data: {
                               'committee_members':
@@ -175,7 +176,51 @@ class _DeleteComMemOyPanelWidgetState extends State<DeleteComMemOyPanelWidget> {
                               widget.electionPara?.id,
                             ),
                           );
-                          Navigator.pop(context);
+                          if (FFLocalizations.of(context).languageCode ==
+                              'en') {
+                            // enAlert
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  title: const Text('Your transaction is complete!'),
+                                  content: const Text(
+                                      'You are directing to the voting panel page.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: const Text('OK'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          } else {
+                            // trAlert
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  title: const Text('İşleminiz Tamamlandı!'),
+                                  content: const Text(
+                                      'Oy paneli sayfasına yönlendiriliyorsunuz.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: const Text('Tamam'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
+
+                          FFAppState().addElecComtoElection = [];
+                          setState(() {});
+
+                          context.goNamed('OyPaneli');
 
                           setState(() {});
                         },

@@ -314,10 +314,9 @@ class _SifremiUnuttumP1WidgetState extends State<SifremiUnuttumP1Widget> {
                                 );
                                 if (_model.iDvarMi != null &&
                                     (_model.iDvarMi)!.isNotEmpty) {
-                                  FFAppState().update(() {
-                                    FFAppState().userIDNum =
-                                        _model.hashedIDCheck!;
-                                  });
+                                  FFAppState().userIDNum =
+                                      _model.hashedIDCheck!;
+                                  FFAppState().update(() {});
 
                                   context.goNamed('SifremiUnuttumP2');
                                 } else {

@@ -40,6 +40,25 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
     _model = createModel(context, () => OyKullanP1devamModel());
 
     animationsMap.addAll({
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -213,8 +232,7 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: MediaQuery.sizeOf(context).height * 0.89,
+                          height: MediaQuery.sizeOf(context).height * 0.796,
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
@@ -252,7 +270,8 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
-                                        ),
+                                        ).animateOnPageLoad(animationsMap[
+                                            'textOnPageLoadAnimation']!),
                                       ),
                                     ),
                                   ),
@@ -319,7 +338,7 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                               SizedBox(
                                 width: 340.0,
                                 child: Divider(
-                                  height: 50.0,
+                                  height: 25.0,
                                   thickness: 1.0,
                                   color:
                                       FlutterFlowTheme.of(context).customColor2,
@@ -658,6 +677,10 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .graSet21,
+                                          ),
                                         ),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -798,6 +821,11 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .graSet21,
+                                                ),
                                               ),
                                               child: Stack(
                                                 children: [
@@ -1080,9 +1108,10 @@ class _OyKullanP1devamWidgetState extends State<OyKullanP1devamWidget>
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        const BorderSide(
-                                                                      color: Colors
-                                                                          .transparent,
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .graSet21,
                                                                       width:
                                                                           1.0,
                                                                     ),

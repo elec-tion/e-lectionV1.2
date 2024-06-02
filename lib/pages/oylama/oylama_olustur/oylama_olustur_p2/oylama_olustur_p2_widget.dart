@@ -1184,6 +1184,12 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           15.0),
+                                                  border: Border.all(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor2,
+                                                    width: 0.5,
+                                                  ),
                                                 ),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
@@ -1291,13 +1297,12 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                       .datePicked2
                                                                       ?.secondsSinceEpoch,
                                                                 });
-                                                                setState(() {
-                                                                  FFAppState()
-                                                                          .electionName =
-                                                                      _model
-                                                                          .createVotingNameOfVotingTextController
-                                                                          .text;
-                                                                });
+                                                                FFAppState()
+                                                                        .electionName =
+                                                                    _model
+                                                                        .createVotingNameOfVotingTextController
+                                                                        .text;
+                                                                setState(() {});
                                                                 _model.getElectionID =
                                                                     await ElectionGroup
                                                                         .createElectionCall
@@ -1313,16 +1318,16 @@ class _OylamaOlusturP2WidgetState extends State<OylamaOlusturP2Widget> {
                                                                       ?.secondsSinceEpoch,
                                                                 );
                                                                 FFAppState()
-                                                                    .update(() {
-                                                                  FFAppState()
-                                                                          .electionID =
-                                                                      getJsonField(
-                                                                    (_model.getElectionID
-                                                                            ?.jsonBody ??
-                                                                        ''),
-                                                                    r'''$["id"]''',
-                                                                  ).toString();
-                                                                });
+                                                                        .electionID =
+                                                                    getJsonField(
+                                                                  (_model.getElectionID
+                                                                          ?.jsonBody ??
+                                                                      ''),
+                                                                  r'''$["id"]''',
+                                                                ).toString();
+                                                                FFAppState()
+                                                                    .update(
+                                                                        () {});
                                                                 await ElectionsTable()
                                                                     .update(
                                                                   data: {

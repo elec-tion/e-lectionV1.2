@@ -291,7 +291,7 @@ class _TermsOfUseWidgetState extends State<TermsOfUseWidget> {
                                   0.0, 13.0, 5.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  '9xr8trgc' /* You Have Accepted Terms Of Use... */,
+                                  '9xr8trgc' /* You Have Already Accepted Term... */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

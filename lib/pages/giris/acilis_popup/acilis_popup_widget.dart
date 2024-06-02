@@ -138,9 +138,9 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
                                     color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 18.0,
+                                    fontSize: 17.0,
                                     letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w600,
                                   ),
                           elevation: 0.0,
                           borderSide: const BorderSide(
@@ -212,9 +212,9 @@ class _AcilisPopupWidgetState extends State<AcilisPopupWidget> {
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Montserrat',
                                     color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 18.0,
+                                    fontSize: 17.0,
                                     letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w600,
                                   ),
                           elevation: 0.0,
                           borderSide: const BorderSide(

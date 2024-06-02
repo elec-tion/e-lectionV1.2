@@ -600,6 +600,11 @@ class _OylamaOlusturP1WidgetState extends State<OylamaOlusturP1Widget> {
                                         end: const AlignmentDirectional(1.0, 0),
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
+                                      border: Border.all(
+                                        color: FlutterFlowTheme.of(context)
+                                            .background1,
+                                        width: 0.5,
+                                      ),
                                     ),
                                     child: FFButtonWidget(
                                       onPressed: () async {

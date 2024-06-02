@@ -1,6 +1,8 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'howvoting_works_p3_model.dart';
 export 'howvoting_works_p3_model.dart';
@@ -12,15 +14,59 @@ class HowvotingWorksP3Widget extends StatefulWidget {
   State<HowvotingWorksP3Widget> createState() => _HowvotingWorksP3WidgetState();
 }
 
-class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
+class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget>
+    with TickerProviderStateMixin {
   late HowvotingWorksP3Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HowvotingWorksP3Model());
+
+    animationsMap.addAll({
+      'progressBarOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -118,7 +164,8 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                                             ),
                                       ),
                                       startAngle: 0.0,
-                                    ),
+                                    ).animateOnPageLoad(animationsMap[
+                                        'progressBarOnPageLoadAnimation']!),
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -138,7 +185,8 @@ class _HowvotingWorksP3WidgetState extends State<HowvotingWorksP3Widget> {
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                           ),
-                                    ),
+                                    ).animateOnPageLoad(animationsMap[
+                                        'textOnPageLoadAnimation']!),
                                   ),
                                   SizedBox(
                                     width: 340.0,

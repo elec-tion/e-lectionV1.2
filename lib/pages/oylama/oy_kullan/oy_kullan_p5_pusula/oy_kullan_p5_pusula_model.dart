@@ -11,9 +11,9 @@ class OyKullanP5PusulaModel extends FlutterFlowModel<OyKullanP5PusulaWidget> {
   bool? checkboxListTileValue;
   // State field(s) for givevotecheckbox widget.
   bool? givevotecheckboxValue;
-  // Stores action output result for [Backend Call - API (getContractAddress)] action in Row widget.
+  // Stores action output result for [Backend Call - API (getContractAddress)] action in Button widget.
   ApiCallResponse? contractAddressJSON;
-  // Stores action output result for [Backend Call - API (getContractAbi)] action in Row widget.
+  // Stores action output result for [Backend Call - API (getContractAbi)] action in Button widget.
   ApiCallResponse? contractAbiJSON;
 
   @override

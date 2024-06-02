@@ -34,6 +34,25 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
     _model = createModel(context, () => AyarlarModel());
 
     animationsMap.addAll({
+      'rowOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
       'containerOnActionTriggerAnimation': AnimationInfo(
         trigger: AnimationTrigger.onActionTrigger,
         applyInitialState: true,
@@ -227,12 +246,13 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                 ],
                               ),
                               Icon(
-                                Icons.settings_outlined,
+                                Icons.settings_sharp,
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 size: 58.0,
                               ),
                             ],
-                          ),
+                          ).animateOnPageLoad(
+                              animationsMap['rowOnPageLoadAnimation']!),
                         ),
                         SizedBox(
                           width: 340.0,
@@ -286,44 +306,21 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                                         borderRadius:
                                             BorderRadius.circular(15.0),
                                       ),
-                                      child: FFButtonWidget(
-                                        onPressed: () {
-                                          print('Button pressed ...');
-                                        },
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          'ipuuure2' /* Application Settings */,
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'yw4uux9z' /* Application Settings */,
                                         ),
-                                        options: FFButtonOptions(
-                                          width: 350.0,
-                                          height: 50.0,
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 0.0, 24.0, 0.0),
-                                          iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: Colors.transparent,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .text1,
-                                                fontSize: 17.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                          elevation: 0.0,
-                                          borderSide: const BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text1,
+                                              fontSize: 23.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -576,13 +573,35 @@ class _AyarlarWidgetState extends State<AyarlarWidget>
                         SizedBox(
                           width: 320.0,
                           child: Divider(
+                            height: 5.0,
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).text3,
                           ),
                         ),
+                        Align(
+                          alignment: const AlignmentDirectional(1.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 40.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'flxteqcf' /* v1.0.0 stable */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    color: FlutterFlowTheme.of(context).text3,
+                                    fontSize: 10.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                            ),
+                          ),
+                        ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              10.0, 20.0, 0.0, 0.0),
+                              10.0, 10.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,

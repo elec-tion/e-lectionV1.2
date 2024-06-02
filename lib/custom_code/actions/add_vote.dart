@@ -20,6 +20,7 @@ Future addVote(
   String candidateWalletID,
   String contractAddress,
   dynamic contractAbi,
+  bool isRegional,
 ) async {
   // Add your function code here!
   var apiUrl = "https://chain.e-lection.babico.name.tr"; //Replace with your API
@@ -35,14 +36,16 @@ Future addVote(
   var gasEstimate = await ethClient.estimateGas(
       sender: userPriv.address,
       to: EthereumAddress.fromHex(contractAddress),
-      data: contractInstance.function("vote").encodeCall(
-          [electionID, EthereumAddress.fromHex(candidateWalletID)]));
+      data: contractInstance.function("vote").encodeCall([
+        electionID,
+        EthereumAddress.fromHex(candidateWalletID),
+        isRegional
+      ]));
   var rawTx = Transaction(
       from: userPriv.address,
       to: EthereumAddress.fromHex(contractAddress),
-      data: contractInstance
-          .function("vote")
-          .encodeCall([electionID, EthereumAddress.fromHex(candidateWalletID)]),
+      data: contractInstance.function("vote").encodeCall(
+          [electionID, EthereumAddress.fromHex(candidateWalletID), isRegional]),
       maxGas: gasEstimate.toInt(),
       gasPrice: EtherAmount.zero());
 

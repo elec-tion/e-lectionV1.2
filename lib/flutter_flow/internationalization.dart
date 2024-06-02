@@ -112,8 +112,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v1.1',
-      'tr': 'Dropdown deneme',
+      'en': 'v1.0.0 stable 1',
+      'tr': 'v1.0.0 stable',
     },
     '2nusyfli': {
       'en': 'Log In',
@@ -194,10 +194,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Good Evening!',
       'tr': 'İyi Akşamlar,',
     },
-    '4tpi9f5n': {
-      'en': 'oyver',
-      'tr': '',
-    },
     'db31qvx9': {
       'en': 'Give Vote',
       'tr': 'Oy Ver',
@@ -219,7 +215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ayarlar',
     },
     '39e93srh': {
-      'en': 'Create Voting',
+      'en': 'Create Election',
       'tr': 'Oylama Yarat',
     },
     'clym15pi': {
@@ -257,6 +253,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Profile',
       'tr': 'Profilim',
     },
+    '4nedjskb': {
+      'en': 'v1.0.0 stable',
+      'tr': 'v1.0.0 stable',
+    },
     '39bjex55': {
       'en': 'Log out from my e-lection account',
       'tr': 'e-lection hesabımdan çıkış yap',
@@ -290,7 +290,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'yzcu55zv': {
       'en': 'Give Vote',
-      'tr': '  Oy Ver',
+      'tr': 'Oy Ver',
     },
     'zoe9j1c7': {
       'en': ' Voting Panel',
@@ -298,18 +298,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'k17eihfq': {
       'en': 'Create \nElection',
-      'tr': 'Oylama Oluştur',
+      'tr': 'Oylama\n Oluştur',
     },
     'jnfa6i4g': {
       'en': 'Elections',
       'tr': 'Seçimler',
     },
-    'rrhf20d1': {
-      'en': ' Statistics',
-      'tr': 'İstatistikler',
-    },
-    'x5yzhokh': {
-      'en': ' Help Center',
+    '2lf6sx3o': {
+      'en': 'Help Center',
       'tr': 'Yardım Merkezi',
     },
     'u8xt6qab': {
@@ -327,7 +323,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Settings',
       'tr': 'Ayarlar',
     },
-    'ipuuure2': {
+    'yw4uux9z': {
       'en': 'Application Settings',
       'tr': 'Uygulama Ayarları',
     },
@@ -338,6 +334,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ud5exg4j': {
       'en': 'Language',
       'tr': 'Dil',
+    },
+    'flxteqcf': {
+      'en': 'v1.0.0 stable',
+      'tr': 'v1.0.0 stable',
     },
     'cluweqi1': {
       'en': 'Give feedback about the app',
@@ -452,12 +452,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
     'uqyci65q': {
-      'en': 'My Last Started Election',
-      'tr': 'En Son Başlamış Seçimim',
+      'en': 'My Last Started Custom Election',
+      'tr': 'En Son Başlamış Özel Seçimim',
     },
     'xr6of2eg': {
       'en': 'End Date and Time:',
-      'tr': '',
+      'tr': 'Bitiş Tarihi ve Saati:',
+    },
+    'jlkbykxd': {
+      'en': 'My Last Started Regional Election',
+      'tr': 'En Son Başlamış Özel Seçimim',
+    },
+    'c8l6y5o8': {
+      'en': 'End Date and Time:',
+      'tr': 'Bitiş Tarihi ve Saati:',
     },
     'nmfy3l1z': {
       'en': 'My All Elections',
@@ -557,10 +565,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'This page shows the elections which is not started and that you are assigned as election committee member.',
       'tr':
           'Bu sayfada seçim sorumlusu olarak görevlendirildiğiniz başlamamış seçimler gösterilmektedir.',
-    },
-    'tg5053i6': {
-      'en': 'Voting Statistics',
-      'tr': 'Oylama İstatistikleri',
     },
     'rmbbqwhr': {
       'en': 'Create a Voting',
@@ -708,21 +712,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Elections',
       'tr': 'Seçimler',
     },
-    '921a7izv': {
-      'en': 'Search Election',
-      'tr': 'TC Kimlik Numarası',
-    },
-    'v1fqhy0x': {
-      'en': 'To ****: 9 days, 27 hours.',
-      'tr': '**** adlı seçime: 9 gün, 27 saat.',
-    },
     's692ylzb': {
       'en': 'Voting Panel',
       'tr': 'Oylama Paneli',
     },
     'oyuux3d8': {
-      'en': 'Voting Panel',
-      'tr': 'Oylama Paneli',
+      'en': 'Create Election',
+      'tr': 'Oylama Oluştur',
     },
     '4p614ajp': {
       'en': 'Not Started',
@@ -805,7 +801,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'jy9q6vu5': {
       'en': 'Time left:',
-      'tr': '',
+      'tr': 'Kalan Süre:',
     },
     'rf3eqp4w': {
       'en': 'Electronic Voting Ballot',
@@ -818,7 +814,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kkwl5bk3': {
       'en': 'This voting ballot is provided by e-lection.\n-End Of Ballot-\n',
       'tr':
-          'Bu oy pusulası e-lection tarafından sağlanmaktadır.\n\n-Oy Pusulasının Sonu-',
+          'Bu oy pusulası e-lection tarafından sağlanmaktadır.\n-Oy Pusulasının Sonu-',
     },
     '95m2r08k': {
       'en': 'Review Vote    ',
@@ -837,11 +833,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'lkfx1s5k': {
       'en': 'Contact E-mail',
-      'tr': 'TC Kimlik No',
+      'tr': 'e-mail',
     },
     '5rx9hshl': {
       'en': 'Contact Phone',
-      'tr': 'TC Kimlik No',
+      'tr': 'Telefon numarası',
+    },
+    'nojbqh5c': {
+      'en': 'My Wallet id',
+      'tr': 'Cüzdan adresim',
     },
     '4vk0vjpg': {
       'en': 'The Candidate You Are Voting For',
@@ -861,9 +861,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Back',
       'tr': 'Geri',
     },
-    'teal6w80': {
+    'lxs8hq5i': {
       'en': 'Give Vote',
-      'tr': '  Oy Ver',
+      'tr': 'Oy Ver',
     },
     'nyqx0ta2': {
       'en': '- Ongoing Election -',
@@ -889,6 +889,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'popoty35': {
       'en': 'Finish',
       'tr': 'Bitir',
+    },
+    'kk12equt': {
+      'en': 'From 1 to 5, how would you rate\nyour voting experience today?',
+      'tr':
+          'Bugünkü oy verme deneyiminize 1 ile 5\narasında kaç puan verirdiniz?',
+    },
+    'rqgs9wwy': {
+      'en': '1 Not Satisfied',
+      'tr': '1',
+    },
+    '6xhcwveb': {
+      'en': '2',
+      'tr': '2',
+    },
+    '7kd1xx3u': {
+      'en': '3',
+      'tr': '3',
+    },
+    'hbv1ce40': {
+      'en': '4',
+      'tr': '4',
+    },
+    '5mv8r364': {
+      'en': '5 Satisfied',
+      'tr': '5',
+    },
+    '5iwc0ngh': {
+      'en': '3',
+      'tr': '',
     },
     'lepo6kre': {
       'en': 'Voting',
@@ -972,45 +1001,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
-  // OyKullanP1notstarted
-  {
-    'ib9lcc1k': {
-      'en': 'Voting Has Not Started Yet.',
-      'tr': 'Oylama İşlemi Başlamadı',
-    },
-    'nsg4upd9': {
-      'en': 'Voting Has\nNot Started',
-      'tr': 'Oylama\nBaşlamadı',
-    },
-    'uj0l5ovf': {
-      'en': 'Until voting will start:',
-      'tr': 'Oylamanın Başlamasına Kalan:',
-    },
-    '0bnkw5ty': {
-      'en': '... hour ... minutes',
-      'tr': '... saat ... dakika',
-    },
-    'v4lwgql8': {
-      'en': 'Candidates',
-      'tr': '    Adaylar',
-    },
-    '8i85u445': {
-      'en': 'Statistics',
-      'tr': 'İstatistikler',
-    },
-    'mofwsnnf': {
-      'en': 'Election Description',
-      'tr': 'Seçim Açıklaması',
-    },
-    '84sn29h7': {
-      'en': 'How voting works?',
-      'tr': 'Oylama Süreci Nasıl İşliyor?',
-    },
-    'kcuv9x2d': {
-      'en': 'Voting',
-      'tr': 'Oylama',
-    },
-  },
   // HowvotingWorksP1
   {
     'sjd172fg': {
@@ -1018,20 +1008,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': '0%',
     },
     'vdq4klgd': {
-      'en': 'How Voting Works',
-      'tr': 'Oylama Süreci Nasıl İşliyor?',
+      'en': 'Tutorial',
+      'tr': 'Eğitim',
     },
     'bh30p9wp': {
       'en':
-          'Welcome!\nIn this quick tutorial you will find\nvarious information about\nvoting process in e-lection.',
+          'Welcome to e-lection!\n\nIn this quick tutorial you will find\nvarious information about\nvoting process in e-lection.',
       'tr':
-          'Hoş Geldiniz!\nBu kısa eğitimde e-lection\nuygulaması üzerinden\noy kullanma süreci ile\nalakalı bilgiler bulacaksınız.',
+          'Hoş Geldiniz!\n\nBu kısa eğitimde e-lection\nuygulaması üzerinden\noy kullanma süreci ile\nalakalı bilgiler bulacaksınız.',
     },
     'ffm861c7': {
       'en':
           '\nVoting on e-lection is easy.\nFirstly let\'s proceed with finding\na election.',
       'tr':
-          '\nE-lection ile oy kullanmak basittir.\nÖncelikle aradığınız seçimi\nbulmak ile başlayalım.',
+          '\ne-lection ile oy kullanmak basittir.\nÖncelikle aradığınız seçimi\nbulmak ile başlayalım.',
     },
     'gcs6w6su': {
       'en': 'Start',
@@ -1131,7 +1121,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'In the above you can see a \nexample ballot.\nSimply tap on the circle next\nto your desired candidate.\nRemember to check your timer \n(may not exist for your election)\n located right above the ballot.\nThen tap to \"Next\" after.',
       'tr':
-          'Yukarıdaki resimde örnek bir oy \npusulası görebilirsiniz.\nİstediğiniz adayın yanındaki \ndaireye dokunmanız yeterlidir.\nEğer varsa sayacınızı kontrol\netmeyi unutmayın.\nArdından \"İleri\" seçeneğine dokunun.',
+          'Yukarıdaki resimde örnek bir oy \npusulası görebilirsiniz.\nİstediğiniz adayın yanındaki \ndaireye dokunmanız yeterlidir.\nEğer varsa sayacınızı kontrol\netmeyi unutmayın.\n\nArdından \"İleri\" seçeneğine\n dokunun.',
     },
     'eqj14tn0': {
       'en': 'Next',
@@ -1159,7 +1149,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'İleri butonuna tıkladıktan\n sonra bilgilerinizi ve oyunuzu \nkontrol etme şansınız olacak.\n\nGördüğünüz tüm bilgilerin doğru \nolduğundan eminseniz, \n\"Oy Ver\" butonuna tıklayınız.',
     },
     '56e9d83e': {
-      'en': 'Remember you CAN NOT change\nyour vote after clicking.',
+      'en':
+          'Remember you CAN NOT change\nyour vote after clicking \"Give Vote\".',
       'tr': 'Tıkladıktan sonra oyunuzu\n değiştiremeyeceğinizi unutmayın.',
     },
     'hyxtiyh5': {
@@ -1223,10 +1214,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Contact us',
       'tr': 'Bize Ulaşın',
     },
-    'nojbqh5c': {
+    '3l8utzbz': {
       'en': 'We\'re here to help.\nYou can contact us anytime you need.',
       'tr':
-          'Yardımcı olmak için buradayız.\nİstediğiniz zaman bize ulaşabilirsiniz',
+          'Size yardım etmek için buradayız. \nİhtiyacınız olduğu her an bize ulaşabilirsiniz.',
     },
     'tm7vk67t': {
       'en': 'How Voting Works?',
@@ -1236,6 +1227,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'We recommend to take a \nlook on our guide.',
       'tr':
           'Oylama ile ilgili aklınızdaki sorular için\nrehberimize bakmanızı tavsiye ediyoruz.',
+    },
+    '1c9c3nej': {
+      'en': 'v1.0.0 stable',
+      'tr': 'v1.0.0 stable',
     },
     'am920q9n': {
       'en': 'Give feedback about the app',
@@ -1276,7 +1271,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '701jvz1g': {
       'en':
-          'Adress: Kızılcaşar Mahallesi, 1184. Cad No:13, 06830 İncek, Gölbaşı - Ankara - Türkiye\n\n\nPhone:  +90 (312) 586 80 00 Pbx\n\n\nMail:  support@e-lection.com',
+          'Adress: Kızılcaşar Mahallesi, 1184. Cad No:13, 06830 İncek, Gölbaşı - Ankara - Türkiye\n\n\nPhone:  +90 (312) 353 28 46\n\n\nMail:  support@e-lection.com',
       'tr':
           'Adres: Kızılcaşar Mahallesi, 1184. Cad No:13, 06830 İncek, Gölbaşı - Ankara - Türkiye\n\n\nTelefon:  +90 (312) 586 80 00 Pbx\n\nMail: support@e-lection.com',
     },
@@ -1305,9 +1300,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           'Yukarıdaki resimde örnek bir oy \npusulası görebilirsiniz.\nİstediğiniz adayın yanındaki \ndaireye dokunmanız yeterlidir.\nArdından \"İleri\" seçeneğine dokunun.\nOyunuzu kontrol edin ve \"Oy ver\"\nseçeneğine dokunun.\nOylama işlemi tamamlanmadan\nuygulamadan ayrrılmayıınıız.',
     },
-    'g28qipnc': {
-      'en': 'Return To Ballot',
-      'tr': 'Seçime Geri Dön',
+    'pc84poeo': {
+      'en': 'Back',
+      'tr': 'Geri',
     },
     'sjfghpb9': {
       'en': 'Voting',
@@ -1354,14 +1349,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mii4s14h': {
       'en': 'My information on e-lection',
       'tr': 'e-lection\'daki bilgilerim',
-    },
-    'iakns8qn': {
-      'en': 'ID Number:',
-      'tr': 'TC Kimlik No:',
-    },
-    'sle7jumd': {
-      'en': 'Please enter your new password.',
-      'tr': 'Lütfen yeni şifrenizi girin.',
     },
     '39yj81ul': {
       'en': 'Wallet ID as a Voter:',
@@ -1426,11 +1413,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Election Committee',
       'tr': 'Seçim Kurulu',
     },
+    'jck3l03s': {
+      'en': 'This committee has',
+      'tr': 'Bu komitede',
+    },
+    'm4xpe9mq': {
+      'en': 'members.',
+      'tr': 'üye var.',
+    },
     'tg1jzyrt': {
       'en': 'Candidates',
-      'tr': 'Seçim Sorumlusu',
+      'tr': 'Adaylar',
     },
-    'u3cw7es0': {
+    '4hqfxn22': {
+      'en': 'There are',
+      'tr': 'Bu oylamada',
+    },
+    '93h6q1nv': {
+      'en': 'candidates in this election',
+      'tr': 'aday bulunuyor',
+    },
+    'yinytk69': {
       'en': 'Back',
       'tr': 'Geri',
     },
@@ -1439,19 +1442,67 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oylama',
     },
   },
-  // OylamaAcklamasi
+  // Oylamastats
   {
     '3zx346i1': {
-      'en': 'Election Description',
-      'tr': 'Oylama Açıklaması',
+      'en': 'Statistic & Result',
+      'tr': 'İstatistik & Sonuç',
     },
-    'n6mzyogs': {
-      'en': 'Voting Supervisor(s)',
-      'tr': 'Seçim Sorumlusu',
+    'dpu20828': {
+      'en': 'Percent',
+      'tr': 'Yüzde',
     },
-    'vin2wnws': {
-      'en': 'Back',
-      'tr': 'İlerle',
+    'd3ykk7ry': {
+      'en': 'won the election',
+      'tr': 'İstatistik & Sonuç',
+    },
+    'e6fiwdks': {
+      'en': 'with',
+      'tr': 'İstatistik & Sonuç',
+    },
+    'pff6m7p0': {
+      'en': 'votes.',
+      'tr': 'İstatistik & Sonuç',
+    },
+    'kw2sqkg7': {
+      'en': 'won the election',
+      'tr': 'adlı aday,',
+    },
+    '2h4iayyy': {
+      'en': 'won the election',
+      'tr': 'oy ile',
+    },
+    'flyupn2i': {
+      'en': 'with',
+      'tr': 'oylamayı kazandı.',
+    },
+    'xzk0pceq': {
+      'en': 'Count',
+      'tr': 'Sayısal',
+    },
+    'puyt4noi': {
+      'en': 'won the election',
+      'tr': 'İstatistik & Sonuç',
+    },
+    'yj72k41s': {
+      'en': 'with',
+      'tr': 'İstatistik & Sonuç',
+    },
+    '55q0c315': {
+      'en': 'votes.',
+      'tr': 'İstatistik & Sonuç',
+    },
+    'o54hue38': {
+      'en': 'won the election',
+      'tr': 'adlı aday,',
+    },
+    'pldidyl2': {
+      'en': 'won the election',
+      'tr': 'oy ile',
+    },
+    'cvn68t6c': {
+      'en': 'with',
+      'tr': 'oylamayı kazandı.',
     },
     'pc30v98z': {
       'en': 'Voting',
@@ -1471,7 +1522,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Kullanım Koşulları ve Rıza Onayı\n\n1. Giriş\n\ne-lection\'a hoş geldiniz, blok zinciri entegreli oy verme uygulaması (\"Uygulama\"). Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları (\"Koşullar\") uyarınca uymanızı ve bağlı olmanızı kabul edersiniz. Bu Koşullar, Uygulama aracılığıyla sunulan içerik, işlevsellik ve hizmetleri de içeren erişiminizi ve Uygulama\'yı kullanımınızı yönetir.\n\n2. Kullanıcı Kaydı\n\na. Uygulamanın belirli özelliklerini kullanabilmek için kaydolmanız ve bir hesap oluşturmanız gerekebilir. Kayıt sürecinde doğru, güncel ve eksiksiz bilgi vermeyi kabul edersiniz.\n\nb. Hesap kimlik bilgilerinizin gizliliğini korumak ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuzdur. Hesabınızın yetkisiz kullanımını veya herhangi bir güvenlik ihlalini derhal bize bildirmeyi kabul edersiniz.\n\n3. Kullanıcı Onayı\n\na. Uygulamayı kullanarak, adınız, e-posta adresiniz, oy tercihleriniz ve kayıt sırasında veya Uygulama\'yı kullanırken tarafınızdan sağlanan diğer bilgiler de dahil olmak üzere kişisel verilerinizin toplanmasına, işlenmesine ve depolanmasına onay verirsiniz.\n\nb. e-lection\'ın, ticari amaçlar da dahil olmak üzere oy verme verilerinizi toplamasına, işlemesine ve kullanmasına onay verdiğinizi anlıyor ve kabul ediyorsunuz.\n\n4. Blok Zinciri Teknolojisinin Kullanımı\n\na. Uygulama, oy verme verilerinin güvenliği, şeffaflığı ve değişmezliğini sağlamak için blok zinciri teknolojisini kullanır. Uygulamayı kullanarak, bu amaçlarla blok zinciri teknolojisinin kullanımına onay verirsiniz.\n\n5. Fikri Mülkiyet\n\na. Uygulama ve içeriğindeki tüm fikri mülkiyet hakları, metin, grafikler, logolar, görüntüler ve yazılım dahil ancak bunlarla sınırlı olmamak üzere, e-lection\'a veya lisans verenlerine aittir. e-lection\'ın önceden yazılı izni olmaksızın, Uygulama veya içeriğine dayalı türev eserler oluşturmamanızı kabul edersiniz.\n\n6. Garanti Reddi\n\na. Uygulama, \"olduğu gibi\" ve \"mevcut olduğu şekliyle\" sunulur, herhangi bir türdeki, açık veya zımni tüm garantiler dahil olmak üzere, hiçbir garantinin olmadığı bir temelde sunulur. e-lection, ticari amaç için uygunluk, belirli bir amaca uygunluk ve ihlal etmeme konusundaki zımni garantiler de dahil olmak üzere, tüm garantileri reddeder.\n\n7. Sorumluluk Sınırlaması\n\na. Hiçbir durumda e-lection, Uygulama\'nın kullanımından kaynaklanan veya Uygulama\'nın kullanımının imkansızlaşmasından kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu değildir, karlılık kaybı, veri veya iyi niyet kaybı dahil ancak bunlarla sınırlı olmamak üzere.\n\n8. Yürürlükteki Hukuk\n\na. Bu Koşullar, Sizin yargı alanınız yasalarına uygun olarak yürürlüğe konulacak ve yorumlanacaktır, çelişme hükümleri olmaksızın.\n\n9. Koşulların Değiştirilmesi\n\na. e-lection, bu Koşulları önceden bildirim yapmaksızın herhangi bir zamanda değiştirme hakkını saklı tutar. Bu Koşullardaki değişikliklerin yayınlanmasını takiben Uygulama\'nın kullanımınız, bu değişiklikleri kabul ettiğiniz anlamına gelir.\n\n10. Bizimle İletişime Geçin\n\na. Bu Koşullar veya Uygulama ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bizimle şu adresten iletişime geçin: support@e-lection.com.\n\n\"Kabul Ediyorum\" düğmesini tıklayarak veya Uygulamaya erişerek veya kullanarak, bu Kullanım Koşulları ve Kullanıcı Onayını okuduğunuzu, anladığınızı ve bağlı olmayı kabul ettiğinizi beyan edersiniz.',
     },
     '9xr8trgc': {
-      'en': 'You Have Accepted Terms Of Use and User Consent',
+      'en': 'You Have Already Accepted Terms Of Use \nand User Consent.',
       'tr':
           'Kullanım Koşulları ve Rıza Onayını Kayıt \nOlduğunuzda Kabul Ettiniz.',
     },
@@ -1598,15 +1649,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr':
           'Çeşitli Sorular ve Cevaplarını Aşağıda Bulabilirsiniz.\n\nKartlara dokunarak cevaplarını gorebilirsiniz.',
     },
-    't6b8o119': {
+    '7mc15a6i': {
+      'en': 'Blockchain Questions',
+      'tr': 'Blokzinciri Soruları',
+    },
+    '4x43ij4c': {
+      'en':
+          'Isn\'t that blockchain and wallets\nrelated to crypto currencies? What is\nthe relation with e-lection?',
+      'tr':
+          'Blockchain ve cüzdanlar kripto para\nbirimleri ile ilgili değil miydi?\n e-lection ile ilişkisi nedir?',
+    },
+    'v0ox1pie': {
+      'en':
+          'While blockchain and wallets are commonly associated with cryptocurrencies, their use in the e-lection app serves a different purpose.  Blockchain wallets provide a secure, transparent, and reliable method for electronic voting.',
+      'tr':
+          'Blok zinciri ve cüzdanlar genellikle kripto para birimleriyle ilişkilendirilse de, e-seçim uygulamasında kullanımları farklı bir amaca hizmet etmektedir.  Blok zinciri cüzdanları elektronik oylama için güvenli, şeffaf ve güvenilir bir yöntem sağlar.',
+    },
+    'xb5j801w': {
       'en': 'General Questions',
       'tr': 'Genel Sorular',
     },
-    't8s10m1p': {
+    '84im62dv': {
       'en': '1. What is e-lection?',
       'tr': 'e-lection nedir?',
     },
-    'u9qlbgyt': {
+    'uoauxw57': {
       'en':
           'e-lection is a blockchain-integrated voting application that allows users to securely cast their votes for various elections using blockchain technology.\n\n',
       'tr':
@@ -1618,9 +1685,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'diuhj9cj': {
       'en':
-          'e-lection utilizes blockchain technology, which provides security, transparency, and immutability to the voting process. Each vote is recorded as a transaction on the blockchain, making it tamper-proof and verifiable.',
+          'e-lection utilizes blockchain technology, which provides security, transparency, and immutability to the voting process. Each vote is recorded as a transaction on the blockchain, making it tamper-proof.',
       'tr':
-          'e-lection, her bir oy işlemini blok zinciri teknolojisi kullanarak kaydederek güvenlik, şeffaflık ve değişmezlik sağlar. Her oy, blok zinciri üzerinde bir işlem olarak kaydedilir, bu da onu müdahale edilemez ve doğrulanabilir hale getirir.',
+          'e-lection, her bir oy işlemini blok zinciri teknolojisi kullanarak kaydederek güvenlik sağlar. Her oy, blok zinciri üzerinde bir işlem olarak kaydedilir, bu oyları müdahale edilemez ve doğrulanabilir hale getirir.',
     },
     '3z9vn7lu': {
       'en': '3. Is my personal data safe with e-lection?',
@@ -1638,9 +1705,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1cwma8r3': {
       'en':
-          'Yes, e-lection ensures the integrity of election results by leveraging blockchain technology, which prevents tampering or manipulation of votes. Additionally, our platform undergoes regular audits to maintain transparency and trustworthiness.',
+          'Yes, e-lection ensures the integrity of election results by leveraging blockchain technology, which prevents tampering or manipulation of votes. Additionally, our platform undergoes regular audits to maintain transparency.',
       'tr':
-          'Evet, e-lection, blok zinciri teknolojisini kullanarak seçim sonuçlarının bütünlüğünü sağlar; bu da oy kullanımını engelleyen veya manipüle eden bir sistemdir. Ayrıca, platformumuz düzenli denetimlere tabi tutularak şeffaflığı ve güvenilirliği korur.',
+          'Evet, e-lection, blok zinciri teknolojisini kullanarak seçim sonuçlarının bütünlüğünü sağlar; bu da oy kullanımını engelleyen veya manipüle eden bir sistemdir. Ayrıca, platformumuz düzenli denetimlere tabidir.',
     },
     'mkx3066r': {
       'en': '5. Can I change my vote after casting it?',
@@ -1658,9 +1725,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3qdrjujc': {
       'en':
-          'Your voting data may be used for commercial purposes, including research, analysis, and marketing by e-lection. However, rest assured that your personal data will be handled in accordance with our privacy policy and applicable laws.',
+          'Your voting data may be used for commercial purposes, including research, analysis, and marketing by e-lection. Other data may handled in accordance with our privacy policy and applicable laws.',
       'tr':
-          'Oy verme verileriniz, e-lection tarafından araştırma, analiz ve pazarlama gibi ticari amaçlar için kullanılabilir. Ancak, kişisel verilerinizin gizliliği politikamız ve ilgili yasalara uygun olarak işleneceğinden emin olabilirsiniz.',
+          'Oy verme verileriniz, e-lection tarafından araştırma, analiz ve pazarlama gibi ticari amaçlar için kullanılabilir. Kişisel verilerinizin gizliliği ilgili yasalara uygun olarak işlenir.',
     },
     'lh7t418i': {
       'en':
@@ -1673,88 +1740,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Bize Ulaşın',
     },
     'dg0qh907': {
-      'en': 'Voting',
-      'tr': 'Oylama',
-    },
-  },
-  // OyKullan
-  {
-    '0h54kruu': {
-      'en': 'Voting Has Not Started Yet.',
-      'tr': 'Oylama İşlemi Başlamadı',
-    },
-    'ca6x2p8g': {
-      'en': 'Voting Has\nNot Started',
-      'tr': 'Oylama\nBaşlamadı',
-    },
-    's8yhjjvu': {
-      'en': 'Until voting will start:',
-      'tr': 'Oylamanın Başlamasına Kalan:',
-    },
-    'jgywkzqq': {
-      'en': '... hour ... minutes',
-      'tr': '... saat ... dakika',
-    },
-    'roi906ae': {
-      'en': 'Candidates',
-      'tr': '    Adaylar',
-    },
-    'o8pnwa7h': {
-      'en': 'Statistics',
-      'tr': 'İstatistikler',
-    },
-    'tl3i1b2u': {
-      'en': 'How voting works?',
-      'tr': 'Oylama Süreci Nasıl İşliyor?',
-    },
-    'l0dcr5s4': {
-      'en': 'Voting',
-      'tr': 'Oylama',
-    },
-  },
-  // dropdownDeneme
-  {
-    '10pveiu2': {
-      'en': 'KANDIRDIM DISTRICT SEÇ',
-      'tr': 'District\'i yedim',
-    },
-    '09icxkl3': {
-      'en': 'Please select your country.',
-      'tr': 'Lütfen ülkenizi seçin.',
-    },
-    '2bo9xodr': {
-      'en': 'Search for an item...',
-      'tr': '',
-    },
-    'c8kirnq8': {
-      'en': 'Please select your city.',
-      'tr': 'Lütfen şehrinizi seçin.',
-    },
-    '6n038rnk': {
-      'en': 'Search for a city...',
-      'tr': 'Bir şehir arayın...',
-    },
-    '3sv0gkh1': {
-      'en': 'Please select your district.',
-      'tr': 'Lütfen ilçenizi seçin.',
-    },
-    '4hwi01jk': {
-      'en': 'Search for a district...',
-      'tr': 'Bir ilçe arayın...',
-    },
-    '5gme7tpn': {
-      'en': 'Option 1',
-      'tr': '',
-    },
-    '1iqatnfw': {
-      'en': 'Please select your neighbourhood or village.',
-      'tr': 'Lütfen mahallenizi veya köyünüzü seçiniz.',
-    },
-    'v0mkx94z': {
-      'en': 'Search for a neighbourhood or village...',
-      'tr': 'Bir mahalle veya köy arayın...',
-    },
-    'wjo5edwk': {
       'en': 'Voting',
       'tr': 'Oylama',
     },
@@ -1807,12 +1792,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'gaaugy0k': {
       'en':
-          'I confirm that I have carefully read \nand understood the Terms Of Use \nand User Consent Form.',
-      'tr': 'Uyarıları dikkatlice okuduğumu ve \nanladığımı onaylıyorum',
+          'I confirm that I have carefully read \nand accept the Terms Of Use \nand User Consent Form.',
+      'tr':
+          '  Kullanım Koşullarını ve Rıza Onayını\n  dikkatlice okudum ve kabul ediyorum.',
     },
     'a7fjhsxb': {
       'en': 'View Terms of Use and User Consent Form',
-      'tr': '   Kullanım Koşulları ve Rıza Onayını Görüntüle',
+      'tr': ' Kullanım Koşulları ve Rıza Onayını Görüntüle',
     },
     '69w1mgr7': {
       'en': 'Register',
@@ -1835,7 +1821,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fqrg6tqq': {
       'en': 'Give Vote',
-      'tr': 'Oy Ver',
+      'tr': ' Oy Ver',
     },
     'tz03r0zb': {
       'en': 'Voting Period Ends at:',
@@ -1843,7 +1829,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8upzzory': {
       'en': 'Candidates',
-      'tr': '    Adaylar',
+      'tr': ' Adaylar',
     },
     '59i6gofy': {
       'en': 'Statistics',
@@ -1929,7 +1915,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Detaylar',
     },
     'i1bez1n0': {
-      'en': 'Election Detail 1',
+      'en': 'Election Detail',
       'tr': 'Oylama Açıklaması',
     },
     'f711na4g': {
@@ -1985,7 +1971,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qd2erabs': {
       'en': 'Candidates',
-      'tr': '    Adaylar',
+      'tr': '  Adaylar',
     },
     'oy7tx1lq': {
       'en': 'Statistics',
@@ -2024,7 +2010,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'wxwsb83i': {
       'en': 'Candidates',
-      'tr': '    Adaylar',
+      'tr': ' Adaylar',
     },
     'd3nqnkeo': {
       'en': 'Statistics',
@@ -2058,12 +2044,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Sonuçları \nGörüntüle',
     },
     'i9i2k1ko': {
-      'en': 'Number Of Valid Votes',
-      'tr': 'Geçerli Oy Sayısı',
+      'en': 'Voting was finished at:',
+      'tr': 'Oylamanın bittiği tarih:',
     },
     'r2e5xq4e': {
       'en': 'Candidates',
-      'tr': '    Adaylar',
+      'tr': ' Adaylar',
     },
     '6gz6k0pd': {
       'en': 'Statistics',
@@ -2260,8 +2246,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Oy Pusulasına Git',
     },
     'jpokye27': {
-      'en': 'Please verify yourself before voting',
-      'tr': 'Oylama işleminden önce lütfen kendinizi doğrulayın.',
+      'en': 'Please verify yourself before voting.',
+      'tr': '',
     },
     'w5v6831d': {
       'en': 'Back',
@@ -2451,6 +2437,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '5 Satisfied',
       'tr': '5',
     },
+    '6xvo058q': {
+      'en': '',
+      'tr': '',
+    },
     'f9awqk8a': {
       'en': 'Save',
       'tr': 'Kaydet',
@@ -2473,11 +2463,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Geri',
     },
   },
-  // candidateradio
+  // ElectionEmptyCustom
   {
-    'g1ccapg5': {
-      'en': 'Option 1',
-      'tr': '',
+    'sgqa1et2': {
+      'en': 'You\'re All Caught Up For Now',
+      'tr': 'Şu Anlık Her Şey Tamam',
+    },
+    'nmesbi47': {
+      'en':
+          'There are no ongoing custom election \nleft that you did not participated.\nPlease check later.',
+      'tr':
+          'Katılmamış oldunuz devam eden bir \nseçim yok.\nDaha sonra tekrar kontol ediniz.',
+    },
+  },
+  // ElectionEmptyRegional
+  {
+    'tu2k7nv8': {
+      'en': 'You\'re All Caught Up For Now',
+      'tr': 'Şu Anlık Her Şey Tamam',
+    },
+    '2qfzhpj7': {
+      'en':
+          'There are no ongoing regional election \nleft that you did not participated.\nPlease check later.',
+      'tr':
+          'Katılmamış oldunuz devam eden bir \nseçim yok.\nDaha sonra tekrar kontol ediniz.',
     },
   },
   // Miscellaneous
@@ -2489,6 +2498,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'm1l5m469': {
       'en': '',
       'tr': '',
+    },
+    '4j8t1bl1': {
+      'en': '',
+      'tr': 'Oylama işleminden önce lütfen kendinizi doğrulayın.',
     },
     'fdb0u31s': {
       'en': '',

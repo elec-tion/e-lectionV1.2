@@ -10,10 +10,10 @@ class OyKullanP4PusulaModel extends FlutterFlowModel<OyKullanP4PusulaWidget> {
 
   final unfocusNode = FocusNode();
   // State field(s) for Timer widget.
-  final timerInitialTimeMs = 600000;
-  int timerMilliseconds = 600000;
+  final timerInitialTimeMs = 300000;
+  int timerMilliseconds = 300000;
   String timerValue = StopWatchTimer.getDisplayTime(
-    600000,
+    300000,
     hours: false,
     milliSecond: false,
   );

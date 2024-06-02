@@ -688,6 +688,8 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                         onPressed:
                                                                             () async {
                                                                           await showDialog(
+                                                                            barrierDismissible:
+                                                                                false,
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -793,6 +795,13 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                       BorderRadius
                                                                           .circular(
                                                                               15.0),
+                                                                  border: Border
+                                                                      .all(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .customColor2,
+                                                                    width: 0.5,
+                                                                  ),
                                                                 ),
                                                                 child: Builder(
                                                                   builder:
@@ -801,6 +810,8 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                     onPressed:
                                                                         () async {
                                                                       await showDialog(
+                                                                        barrierDismissible:
+                                                                            false,
                                                                         context:
                                                                             context,
                                                                         builder:
@@ -1528,9 +1539,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                                 _model.dropDownValue1,
                                                                               ),
                                                                             );
-                                                                            setState(() {
-                                                                              FFAppState().countryID = _model.countryIDOut!.first.districtID;
-                                                                            });
+                                                                            FFAppState().countryID =
+                                                                                _model.countryIDOut!.first.districtID;
+                                                                            setState(() {});
 
                                                                             setState(() {});
                                                                           },
@@ -1710,9 +1721,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                                 _model.dropDownValue2,
                                                                               ),
                                                                             );
-                                                                            setState(() {
-                                                                              FFAppState().cityID = _model.cityIDOut!.first.districtID;
-                                                                            });
+                                                                            FFAppState().cityID =
+                                                                                _model.cityIDOut!.first.districtID;
+                                                                            setState(() {});
 
                                                                             setState(() {});
                                                                           },
@@ -1915,9 +1926,9 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                                     functions.districtIDGenerator(FFAppState().cityID)!,
                                                                                   ),
                                                                             );
-                                                                            setState(() {
-                                                                              FFAppState().districtID = _model.districtIDOut!.first.districtID;
-                                                                            });
+                                                                            FFAppState().districtID =
+                                                                                _model.districtIDOut!.first.districtID;
+                                                                            setState(() {});
 
                                                                             setState(() {});
                                                                           },
@@ -2117,11 +2128,12 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                                   functions.neighborhoodIDGenerator(FFAppState().districtID)!,
                                                                                 ),
                                                                           );
+                                                                          FFAppState().neighborhoodID = _model
+                                                                              .neighIDOut!
+                                                                              .first
+                                                                              .districtID;
                                                                           setState(
-                                                                              () {
-                                                                            FFAppState().neighborhoodID =
-                                                                                _model.neighIDOut!.first.districtID;
-                                                                          });
+                                                                              () {});
 
                                                                           setState(
                                                                               () {});
@@ -2394,6 +2406,12 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor2,
+                                                  width: 0.5,
+                                                ),
                                               ),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -2414,6 +2432,11 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                           id: FFAppState()
                                                               .countryID,
                                                         );
+                                                        FFAppState()
+                                                            .addToAddVoterToElection(
+                                                                'a');
+                                                        FFAppState()
+                                                            .update(() {});
                                                         if (!(_model
                                                                 .countryVarMi
                                                                 ?.succeeded ??
@@ -2508,12 +2531,20 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                     FFAppState()
                                                                         .electionID,
                                                               );
+                                                              FFAppState()
+                                                                  .addVoterToElection = [];
+                                                              FFAppState()
+                                                                  .update(
+                                                                      () {});
                                                               await ElectionsTable()
                                                                   .update(
                                                                 data: {
                                                                   'district_id':
                                                                       FFAppState()
                                                                           .neighborhoodID,
+                                                                  'voters_wallet_id':
+                                                                      FFAppState()
+                                                                          .addVoterToElection,
                                                                 },
                                                                 matchingRows:
                                                                     (rows) =>
@@ -2543,12 +2574,12 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               );
 
                                                               FFAppState()
-                                                                  .update(() {
-                                                                FFAppState()
-                                                                        .electionDistrict =
-                                                                    FFAppState()
-                                                                        .neighborhoodID;
-                                                              });
+                                                                      .electionDistrict =
+                                                                  FFAppState()
+                                                                      .neighborhoodID;
+                                                              FFAppState()
+                                                                  .update(
+                                                                      () {});
                                                             } else {
                                                               _model.sendDistrict =
                                                                   await DistrictGroup
@@ -2560,12 +2591,20 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                     FFAppState()
                                                                         .electionID,
                                                               );
+                                                              FFAppState()
+                                                                  .addVoterToElection = [];
+                                                              FFAppState()
+                                                                  .update(
+                                                                      () {});
                                                               await ElectionsTable()
                                                                   .update(
                                                                 data: {
                                                                   'district_id':
                                                                       FFAppState()
                                                                           .districtID,
+                                                                  'voters_wallet_id':
+                                                                      FFAppState()
+                                                                          .addVoterToElection,
                                                                 },
                                                                 matchingRows:
                                                                     (rows) =>
@@ -2595,12 +2634,12 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               );
 
                                                               FFAppState()
-                                                                  .update(() {
-                                                                FFAppState()
-                                                                        .electionDistrict =
-                                                                    FFAppState()
-                                                                        .districtID;
-                                                              });
+                                                                      .electionDistrict =
+                                                                  FFAppState()
+                                                                      .districtID;
+                                                              FFAppState()
+                                                                  .update(
+                                                                      () {});
                                                             }
                                                           } else {
                                                             _model.sendCity =
@@ -2613,12 +2652,19 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                   FFAppState()
                                                                       .electionID,
                                                             );
+                                                            FFAppState()
+                                                                .addVoterToElection = [];
+                                                            FFAppState()
+                                                                .update(() {});
                                                             await ElectionsTable()
                                                                 .update(
                                                               data: {
                                                                 'district_id':
                                                                     FFAppState()
                                                                         .cityID,
+                                                                'voters_wallet_id':
+                                                                    FFAppState()
+                                                                        .addVoterToElection,
                                                               },
                                                               matchingRows:
                                                                   (rows) =>
@@ -2648,12 +2694,11 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                             );
 
                                                             FFAppState()
-                                                                .update(() {
-                                                              FFAppState()
-                                                                      .electionDistrict =
-                                                                  FFAppState()
-                                                                      .cityID;
-                                                            });
+                                                                    .electionDistrict =
+                                                                FFAppState()
+                                                                    .cityID;
+                                                            FFAppState()
+                                                                .update(() {});
                                                           }
                                                         } else {
                                                           _model.sendCountry =
@@ -2666,12 +2711,19 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                 FFAppState()
                                                                     .electionID,
                                                           );
+                                                          FFAppState()
+                                                              .addVoterToElection = [];
+                                                          FFAppState()
+                                                              .update(() {});
                                                           await ElectionsTable()
                                                               .update(
                                                             data: {
                                                               'district_id':
                                                                   FFAppState()
                                                                       .countryID,
+                                                              'voters_wallet_id':
+                                                                  FFAppState()
+                                                                      .addVoterToElection,
                                                             },
                                                             matchingRows:
                                                                 (rows) =>
@@ -2701,12 +2753,11 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                           );
 
                                                           FFAppState()
-                                                              .update(() {
-                                                            FFAppState()
-                                                                    .electionDistrict =
-                                                                FFAppState()
-                                                                    .countryID;
-                                                          });
+                                                                  .electionDistrict =
+                                                              FFAppState()
+                                                                  .countryID;
+                                                          FFAppState()
+                                                              .update(() {});
                                                         }
                                                       } else {
                                                         if (FFLocalizations.of(
@@ -2766,12 +2817,11 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                         if (_model
                                                                 .addMyselfVoterValue ==
                                                             true) {
+                                                          FFAppState().addToAddVoterToElection(
+                                                              oylamaOlusturP3UsersRow
+                                                                  .walletIdVoter);
                                                           FFAppState()
-                                                              .update(() {
-                                                            FFAppState().addToAddVoterToElection(
-                                                                oylamaOlusturP3UsersRow
-                                                                    .walletIdVoter);
-                                                          });
+                                                              .update(() {});
                                                           await ElectionsTable()
                                                               .update(
                                                             data: {
@@ -2800,7 +2850,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               await DistrictGroup
                                                                   .addDistrictToElectionCall
                                                                   .call(
-                                                            id: '01',
+                                                            id: '00',
                                                             electionID:
                                                                 FFAppState()
                                                                     .electionID,
@@ -2809,7 +2859,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               .update(
                                                             data: {
                                                               'district_id':
-                                                                  '01',
+                                                                  '00',
                                                             },
                                                             matchingRows:
                                                                 (rows) =>
@@ -2819,6 +2869,10 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                                   .electionID,
                                                             ),
                                                           );
+                                                          FFAppState()
+                                                              .addVoterToElection = [];
+                                                          FFAppState()
+                                                              .update(() {});
 
                                                           context.goNamed(
                                                             'OylamaOlusturP4',
@@ -2842,7 +2896,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               await DistrictGroup
                                                                   .addDistrictToElectionCall
                                                                   .call(
-                                                            id: '01',
+                                                            id: '00',
                                                             electionID:
                                                                 FFAppState()
                                                                     .electionID,
@@ -2851,7 +2905,7 @@ class _OylamaOlusturP3WidgetState extends State<OylamaOlusturP3Widget> {
                                                               .update(
                                                             data: {
                                                               'district_id':
-                                                                  '01',
+                                                                  '00',
                                                             },
                                                             matchingRows:
                                                                 (rows) =>

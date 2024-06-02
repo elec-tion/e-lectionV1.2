@@ -407,6 +407,8 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         onPressed:
                                                                             () async {
                                                                           await showDialog(
+                                                                            barrierDismissible:
+                                                                                false,
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -445,8 +447,8 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
-                                                            .fromSTEB(40.0, 5.0,
-                                                                40.0, 20.0),
+                                                            .fromSTEB(30.0, 5.0,
+                                                                30.0, 20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -509,6 +511,13 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                     BorderRadius
                                                                         .circular(
                                                                             15.0),
+                                                                border:
+                                                                    Border.all(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .customColor2,
+                                                                  width: 0.5,
+                                                                ),
                                                               ),
                                                               child: Builder(
                                                                 builder:
@@ -517,6 +526,8 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                   onPressed:
                                                                       () async {
                                                                     await showDialog(
+                                                                      barrierDismissible:
+                                                                          false,
                                                                       context:
                                                                           context,
                                                                       builder:
@@ -908,6 +919,8 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                         onPressed:
                                                                             () async {
                                                                           await showDialog(
+                                                                            barrierDismissible:
+                                                                                false,
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -1003,6 +1016,12 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         15.0),
+                                                            border: Border.all(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .customColor2,
+                                                              width: 0.5,
+                                                            ),
                                                           ),
                                                           child: Builder(
                                                             builder: (context) =>
@@ -1010,6 +1029,8 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                               onPressed:
                                                                   () async {
                                                                 await showDialog(
+                                                                  barrierDismissible:
+                                                                      false,
                                                                   context:
                                                                       context,
                                                                   builder:
@@ -1270,6 +1291,12 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor2,
+                                                  width: 0.5,
+                                                ),
                                               ),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -1293,12 +1320,11 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                           if (_model
                                                                   .addYourselfAsEleComMemValue ==
                                                               true) {
+                                                            FFAppState().addToAddElecComtoElection(
+                                                                oylamaOlusturP4UsersRow
+                                                                    .walletIdElectionCommittee);
                                                             FFAppState()
-                                                                .update(() {
-                                                              FFAppState().addToAddElecComtoElection(
-                                                                  oylamaOlusturP4UsersRow
-                                                                      .walletIdElectionCommittee);
-                                                            });
+                                                                .update(() {});
                                                             await ElectionsTable()
                                                                 .update(
                                                               data: {
@@ -1358,20 +1384,19 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             );
 
                                                             FFAppState()
-                                                                .update(() {
-                                                              FFAppState()
-                                                                  .addCandidateToElection = [];
-                                                              FFAppState()
-                                                                  .addElecComtoElection = [];
-                                                              FFAppState()
-                                                                  .addVoterToElection = [];
-                                                              FFAppState()
-                                                                  .electionName = '';
-                                                              FFAppState()
-                                                                  .electionID = '';
-                                                              FFAppState()
-                                                                  .candidateNames = [];
-                                                            });
+                                                                .addCandidateToElection = [];
+                                                            FFAppState()
+                                                                .addElecComtoElection = [];
+                                                            FFAppState()
+                                                                .addVoterToElection = [];
+                                                            FFAppState()
+                                                                .electionName = '';
+                                                            FFAppState()
+                                                                .electionID = '';
+                                                            FFAppState()
+                                                                .candidateNames = [];
+                                                            FFAppState()
+                                                                .update(() {});
                                                           } else {
                                                             await ElectionsTable()
                                                                 .update(
@@ -1408,20 +1433,19 @@ class _OylamaOlusturP4WidgetState extends State<OylamaOlusturP4Widget> {
                                                             );
 
                                                             FFAppState()
-                                                                .update(() {
-                                                              FFAppState()
-                                                                  .addCandidateToElection = [];
-                                                              FFAppState()
-                                                                  .addElecComtoElection = [];
-                                                              FFAppState()
-                                                                  .addVoterToElection = [];
-                                                              FFAppState()
-                                                                  .electionName = '';
-                                                              FFAppState()
-                                                                  .electionID = '';
-                                                              FFAppState()
-                                                                  .candidateNames = [];
-                                                            });
+                                                                .addCandidateToElection = [];
+                                                            FFAppState()
+                                                                .addElecComtoElection = [];
+                                                            FFAppState()
+                                                                .addVoterToElection = [];
+                                                            FFAppState()
+                                                                .electionName = '';
+                                                            FFAppState()
+                                                                .electionID = '';
+                                                            FFAppState()
+                                                                .candidateNames = [];
+                                                            FFAppState()
+                                                                .update(() {});
                                                           }
                                                         } else {
                                                           if (FFLocalizations.of(

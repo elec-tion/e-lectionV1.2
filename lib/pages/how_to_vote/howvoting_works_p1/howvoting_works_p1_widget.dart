@@ -1,6 +1,8 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'howvoting_works_p1_model.dart';
 export 'howvoting_works_p1_model.dart';
@@ -12,15 +14,59 @@ class HowvotingWorksP1Widget extends StatefulWidget {
   State<HowvotingWorksP1Widget> createState() => _HowvotingWorksP1WidgetState();
 }
 
-class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
+class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget>
+    with TickerProviderStateMixin {
   late HowvotingWorksP1Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HowvotingWorksP1Model());
+
+    animationsMap.addAll({
+      'progressBarOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -120,14 +166,15 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'progressBarOnPageLoadAnimation']!),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'vdq4klgd' /* How Voting Works */,
+                                      'vdq4klgd' /* Tutorial */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -140,7 +187,8 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                  ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'textOnPageLoadAnimation']!),
                                 ),
                                 SizedBox(
                                   width: 340.0,
@@ -168,8 +216,9 @@ class _HowvotingWorksP1WidgetState extends State<HowvotingWorksP1Widget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'bh30p9wp' /* Welcome!
-In this quick tutoria... */
+                                    'bh30p9wp' /* Welcome to e-lection!
+
+In this... */
                                     ,
                                   ),
                                   textAlign: TextAlign.center,

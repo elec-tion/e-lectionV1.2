@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -41,12 +40,30 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(milliseconds: 9000));
+      await Future.delayed(const Duration(milliseconds: 5000));
       _model.timerController.onStartTimer();
-      await actions.blockScreenRecordingAndScreenshots();
     });
 
     animationsMap.addAll({
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -188,7 +205,8 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                     ),
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['textOnPageLoadAnimation']!),
                             ),
                             SizedBox(
                               width: 340.0,
@@ -234,24 +252,28 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                   if (shouldUpdate) setState(() {});
                                 },
                                 onEnded: () async {
-                                  await showDialog(
-                                    context: context,
-                                    builder: (alertDialogContext) {
-                                      return AlertDialog(
-                                        title: const Text(
-                                            'Alert! Voting Timer Has Ended.'),
-                                        content: const Text(
-                                            'Your Vote is not saved and may invalidated by your election commitee.'),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext),
-                                            child: const Text('NOOOOOOOOO'),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
+                                  if (FFAppState().timerCheck == 1) {
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          title: const Text(
+                                              'Alert! Voting Timer Has Ended.'),
+                                          content: const Text(
+                                              'Your Vote is not saved and may invalidated by your election commitee.'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: const Text('OK'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+
+                                    context.pushNamed('OyKullanP6Final');
+                                  }
                                 },
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
@@ -386,7 +408,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     child: SizedBox(
                                                       width: 300.0,
                                                       child: Divider(
-                                                        height: 20.0,
+                                                        height: 10.0,
                                                         thickness: 1.0,
                                                         color:
                                                             FlutterFlowTheme.of(
@@ -406,7 +428,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                                 .fromSTEB(
                                                                     25.0,
                                                                     0.0,
-                                                                    25.0,
+                                                                    10.0,
                                                                     10.0),
                                                         child: FutureBuilder<
                                                             List<
@@ -470,7 +492,9 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                                           String>(
                                                                       null),
                                                               optionHeight:
-                                                                  95.0,
+                                                                  88.0,
+                                                              optionWidth:
+                                                                  320.0,
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -495,7 +519,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:
-                                                                            FontWeight.bold,
+                                                                            FontWeight.w800,
                                                                       ),
                                                               textPadding:
                                                                   const EdgeInsetsDirectional
@@ -523,7 +547,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                                       .start,
                                                               verticalAlignment:
                                                                   WrapCrossAlignment
-                                                                      .center,
+                                                                      .start,
                                                             );
                                                           },
                                                         ),
@@ -535,7 +559,7 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                     child: SizedBox(
                                                       width: 300.0,
                                                       child: Divider(
-                                                        height: 20.0,
+                                                        height: 10.0,
                                                         thickness: 1.0,
                                                         color:
                                                             FlutterFlowTheme.of(
@@ -575,6 +599,8 @@ class _OyKullanP4PusulaWidgetState extends State<OyKullanP4PusulaWidget>
                                                               .secondaryText,
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
+                                                          fontStyle:
+                                                              FontStyle.italic,
                                                         ),
                                                   ),
                                                 ].divide(const SizedBox(height: 2.0)),

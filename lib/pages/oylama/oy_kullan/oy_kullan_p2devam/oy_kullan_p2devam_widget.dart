@@ -1,4 +1,5 @@
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -6,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'oy_kullan_p2devam_model.dart';
 export 'oy_kullan_p2devam_model.dart';
@@ -22,15 +24,40 @@ class OyKullanP2devamWidget extends StatefulWidget {
   State<OyKullanP2devamWidget> createState() => _OyKullanP2devamWidgetState();
 }
 
-class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
+class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget>
+    with TickerProviderStateMixin {
   late OyKullanP2devamModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => OyKullanP2devamModel());
+
+    animationsMap.addAll({
+      'rowOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -213,7 +240,8 @@ class _OyKullanP2devamWidgetState extends State<OyKullanP2devamWidget> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['rowOnPageLoadAnimation']!),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -270,7 +298,7 @@ war... */
                                       SizedBox(
                                         width: 340.0,
                                         child: Divider(
-                                          height: 20.0,
+                                          height: 22.0,
                                           thickness: 1.0,
                                           color: FlutterFlowTheme.of(context)
                                               .customColor2,
@@ -314,7 +342,7 @@ war... */
                                     return ListView.builder(
                                       padding: const EdgeInsets.fromLTRB(
                                         0,
-                                        10.0,
+                                        0.0,
                                         0,
                                         10.0,
                                       ),
@@ -326,7 +354,7 @@ war... */
                                             listViewUsersRowList[listViewIndex];
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, -1.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               listViewUsersRow.name,
@@ -579,6 +607,17 @@ war... */
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               if (_model.checkwarnValue!) {
+                                                if (widget.p2?.districtId ==
+                                                    '00') {
+                                                  FFAppState().regionalMi =
+                                                      false;
+                                                  FFAppState().update(() {});
+                                                } else {
+                                                  FFAppState().regionalMi =
+                                                      true;
+                                                  FFAppState().update(() {});
+                                                }
+
                                                 context.pushNamed(
                                                   'OyKullanP3devam',
                                                   queryParameters: {

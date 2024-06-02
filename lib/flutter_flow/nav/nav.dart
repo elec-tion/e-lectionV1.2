@@ -218,13 +218,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OyKullanP6Final',
           path: '/oyKullanP6Final',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: OyKullanP6FinalWidget(
-              p6: params.getParam<ElectionsRow>(
-                'p6',
-                ParamType.SupabaseRow,
-              ),
+          builder: (context, params) => OyKullanP6FinalWidget(
+            p6: params.getParam<ElectionsRow>(
+              'p6',
+              ParamType.SupabaseRow,
             ),
           ),
         ),
@@ -242,19 +239,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'SifremiUnuttumP3',
           path: '/sifremiUnuttumP3',
           builder: (context, params) => const SifremiUnuttumP3Widget(),
-        ),
-        FFRoute(
-          name: 'OyKullanP1notstarted',
-          path: '/oyKullanP1notstarted',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: OyKullanP1notstartedWidget(
-              deneme: params.getParam<ElectionsRow>(
-                'deneme',
-                ParamType.SupabaseRow,
-              ),
-            ),
-          ),
         ),
         FFRoute(
           name: 'HowvotingWorksP1',
@@ -342,13 +326,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'OylamaAcklamasi',
-          path: '/oylamaAcklamasi',
+          name: 'Oylamastats',
+          path: '/oylamastats',
           builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: OylamaAcklamasiWidget(
-              votedesc: params.getParam<ElectionsRow>(
-                'votedesc',
+            page: OylamastatsWidget(
+              stats: params.getParam<ElectionsRow>(
+                'stats',
                 ParamType.SupabaseRow,
               ),
             ),
@@ -371,24 +355,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             initialPage: '',
             page: FaqWidget(),
           ),
-        ),
-        FFRoute(
-          name: 'OyKullan',
-          path: '/oyKullan',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: OyKullanWidget(
-              deneme: params.getParam<ElectionsRow>(
-                'deneme',
-                ParamType.SupabaseRow,
-              ),
-            ),
-          ),
-        ),
-        FFRoute(
-          name: 'dropdownDeneme',
-          path: '/dropdownDeneme',
-          builder: (context, params) => const DropdownDenemeWidget(),
         ),
         FFRoute(
           name: 'BilgiGuncellemeP2',

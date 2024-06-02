@@ -278,10 +278,9 @@ class _AddCommitteeMemberWidgetState extends State<AddCommitteeMemberWidget> {
                                     r'''$["wallet"]''',
                                   ) !=
                                   null) {
-                                FFAppState().update(() {
-                                  FFAppState().addToAddElecComtoElection(
-                                      _model.comMemWalletIDTextController.text);
-                                });
+                                FFAppState().addToAddElecComtoElection(
+                                    _model.comMemWalletIDTextController.text);
+                                FFAppState().update(() {});
                                 await ElectionsTable().update(
                                   data: {
                                     'committee_members':

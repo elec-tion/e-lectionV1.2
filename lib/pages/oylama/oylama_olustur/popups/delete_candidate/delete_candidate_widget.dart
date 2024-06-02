@@ -141,12 +141,11 @@ class _DeleteCandidateWidgetState extends State<DeleteCandidateWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          FFAppState().update(() {
-                            FFAppState().removeFromAddCandidateToElection(
-                                widget.deneme!.walletId);
-                            FFAppState()
-                                .removeFromCandidateNames(widget.deneme!.name);
-                          });
+                          FFAppState().removeFromAddCandidateToElection(
+                              widget.deneme!.walletId);
+                          FFAppState()
+                              .removeFromCandidateNames(widget.deneme!.name);
+                          FFAppState().update(() {});
                           await CandidateGroup.removeCandidateFromElectionCall
                               .call(
                             electionID: FFAppState().electionID,

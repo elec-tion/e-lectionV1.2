@@ -568,7 +568,49 @@ class _SaatTarihDegistirPopupWidgetState
                                     _model.datePicked1?.secondsSinceEpoch,
                                 endDate: _model.datePicked2?.secondsSinceEpoch,
                               );
-                              Navigator.pop(context);
+                              if (FFLocalizations.of(context).languageCode ==
+                                  'en') {
+                                // enAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title:
+                                          const Text('Your transaction is complete!'),
+                                      content: const Text(
+                                          'You are directing to the voting panel page.'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              } else {
+                                // trAlert
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: const Text('İşleminiz Tamamlandı!'),
+                                      content: const Text(
+                                          'Oy paneli sayfasına yönlendiriliyorsunuz.'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: const Text('Tamam'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+
+                              context.goNamed('OyPaneli');
                             } else {
                               if (FFLocalizations.of(context).languageCode ==
                                   'en') {

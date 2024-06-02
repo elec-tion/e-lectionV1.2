@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'delete_candidate_oy_panel_model.dart';
@@ -154,21 +155,30 @@ class _DeleteCandidateOyPanelWidgetState
                               await ElectionGroup.getElectionDetailsCall.call(
                             id: widget.electionPara?.id,
                           );
-                          setState(() {
-                            FFAppState().addCandidateToElection = (getJsonField(
-                              (_model.candidateAlmaca?.jsonBody ?? ''),
-                              r'''$["candidateAddresses"]''',
-                              true,
-                            ) as List)
-                                .map<String>((s) => s.toString())
-                                .toList()
-                                .toList()
-                                .cast<String>();
-                          });
+                          FFAppState().addCandidateToElection = functions
+                              .toLowerCaseList((getJsonField(
+                                (_model.candidateAlmaca?.jsonBody ?? ''),
+                                r'''$["candidateAddresses"]''',
+                                true,
+                              ) as List)
+                                  .map<String>((s) => s.toString())
+                                  .toList())!
+                              .toList()
+                              .cast<String>();
+                          FFAppState().update(() {});
+                          FFAppState().candidateNames = widget
+                              .electionPara!.candidateName
+                              .toList()
+                              .cast<String>();
+                          FFAppState().update(() {});
+                          FFAppState().removeFromCandidateNames(
+                              widget.candidatePara!.name);
+                          FFAppState().update(() {});
                           await ElectionsTable().update(
                             data: {
                               'candidates_wallet_id':
                                   FFAppState().addCandidateToElection,
+                              'candidate_name': FFAppState().candidateNames,
                             },
                             matchingRows: (rows) => rows.eq(
                               'id',
@@ -184,6 +194,50 @@ class _DeleteCandidateOyPanelWidgetState
                               widget.candidatePara?.walletId,
                             ),
                           );
+                          if (FFLocalizations.of(context).languageCode ==
+                              'en') {
+                            // enAlert
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  title: const Text('Your transaction is complete!'),
+                                  content: const Text(
+                                      'You are directing to the voting panel page.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: const Text('OK'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          } else {
+                            // trAlert
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  title: const Text('İşleminiz Tamamlandı!'),
+                                  content: const Text(
+                                      'Oy paneli sayfasına yönlendiriliyorsunuz.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: const Text('Tamam'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
+
+                          FFAppState().addCandidateToElection = [];
+                          FFAppState().candidateNames = [];
+                          setState(() {});
 
                           context.goNamed('OyPaneli');
 

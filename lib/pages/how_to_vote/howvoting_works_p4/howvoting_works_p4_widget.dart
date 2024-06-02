@@ -1,8 +1,10 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'howvoting_works_p4_model.dart';
 export 'howvoting_works_p4_model.dart';
@@ -14,15 +16,59 @@ class HowvotingWorksP4Widget extends StatefulWidget {
   State<HowvotingWorksP4Widget> createState() => _HowvotingWorksP4WidgetState();
 }
 
-class _HowvotingWorksP4WidgetState extends State<HowvotingWorksP4Widget> {
+class _HowvotingWorksP4WidgetState extends State<HowvotingWorksP4Widget>
+    with TickerProviderStateMixin {
   late HowvotingWorksP4Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HowvotingWorksP4Model());
+
+    animationsMap.addAll({
+      'progressBarOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -119,7 +165,8 @@ class _HowvotingWorksP4WidgetState extends State<HowvotingWorksP4Widget> {
                                           ),
                                     ),
                                     startAngle: 0.0,
-                                  ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'progressBarOnPageLoadAnimation']!),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
@@ -139,7 +186,8 @@ class _HowvotingWorksP4WidgetState extends State<HowvotingWorksP4Widget> {
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                  ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'textOnPageLoadAnimation']!),
                                 ),
                                 SizedBox(
                                   width: 340.0,

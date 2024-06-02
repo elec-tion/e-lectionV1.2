@@ -1,10 +1,12 @@
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'contact_us_model.dart';
 export 'contact_us_model.dart';
@@ -16,15 +18,40 @@ class ContactUsWidget extends StatefulWidget {
   State<ContactUsWidget> createState() => _ContactUsWidgetState();
 }
 
-class _ContactUsWidgetState extends State<ContactUsWidget> {
+class _ContactUsWidgetState extends State<ContactUsWidget>
+    with TickerProviderStateMixin {
   late ContactUsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => ContactUsModel());
+
+    animationsMap.addAll({
+      'rowOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -204,7 +231,8 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                 size: 58.0,
                               ),
                             ],
-                          ),
+                          ).animateOnPageLoad(
+                              animationsMap['rowOnPageLoadAnimation']!),
                         ),
                         SizedBox(
                           width: 340.0,

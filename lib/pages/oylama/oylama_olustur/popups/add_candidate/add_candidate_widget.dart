@@ -288,12 +288,11 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                         _model.candidateWalletID = await actions.createWalletID(
                           _model.candidatePrivateKey!,
                         );
-                        FFAppState().update(() {
-                          FFAppState().addToAddCandidateToElection(
-                              _model.candidateWalletID!);
-                          FFAppState().addToCandidateNames(
-                              '${_model.candidateNameTextController.text} ${_model.candidateSurnameTextController.text}');
-                        });
+                        FFAppState().addToAddCandidateToElection(
+                            _model.candidateWalletID!);
+                        FFAppState().addToCandidateNames(
+                            '${_model.candidateNameTextController.text} ${_model.candidateSurnameTextController.text}');
+                        FFAppState().update(() {});
                         if (FFAppState().electionDistrict != '') {
                           await CandidatesTable().insert({
                             'name':
@@ -329,7 +328,7 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                                 '${_model.candidateNameTextController.text} ${_model.candidateSurnameTextController.text}',
                             'wallet_id': _model.candidateWalletID,
                             'election_id': FFAppState().electionID,
-                            'district_id': '01',
+                            'district_id': '00',
                           });
                           await ElectionsTable().update(
                             data: {
@@ -344,7 +343,7 @@ class _AddCandidateWidgetState extends State<AddCandidateWidget> {
                           await CandidateGroup.addCandidateCall.call(
                             name:
                                 '${_model.candidateNameTextController.text} ${_model.candidateSurnameTextController.text}',
-                            districtID: '01',
+                            districtID: '00',
                             wallet: _model.candidateWalletID,
                           );
                           await CandidateGroup.addCandidateToElectionCall.call(

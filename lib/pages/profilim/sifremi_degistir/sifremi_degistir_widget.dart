@@ -715,10 +715,9 @@ class _SifremiDegistirWidgetState extends State<SifremiDegistirWidget> {
                                                 );
                                               }
 
-                                              FFAppState().update(() {
-                                                FFAppState().userPassword = '';
-                                                FFAppState().userIDNum = '';
-                                              });
+                                              FFAppState().userPassword = '';
+                                              FFAppState().userIDNum = '';
+                                              FFAppState().update(() {});
 
                                               context.goNamed('Giris');
                                             }

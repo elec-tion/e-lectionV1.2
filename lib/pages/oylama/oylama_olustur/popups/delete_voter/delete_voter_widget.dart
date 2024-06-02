@@ -141,10 +141,9 @@ class _DeleteVoterWidgetState extends State<DeleteVoterWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          FFAppState().update(() {
-                            FFAppState().removeFromAddVoterToElection(
-                                widget.deneme!.walletIdVoter);
-                          });
+                          FFAppState().removeFromAddVoterToElection(
+                              widget.deneme!.walletIdVoter);
+                          FFAppState().update(() {});
                           await VoterGroup.removeVoterFromElectionCall.call(
                             wallet: widget.deneme?.walletIdVoter,
                             electionID: FFAppState().electionID,

@@ -244,45 +244,20 @@ class _GirisWidgetState extends State<GirisWidget>
                                           fontWeight: FontWeight.bold,
                                         ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 20.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        context.pushNamed(
-                                          'dropdownDeneme',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType:
-                                                  PageTransitionType.fade,
-                                              duration:
-                                                  Duration(milliseconds: 0),
-                                            ),
-                                          },
-                                        );
-                                      },
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '72y6svrw' /* v1.1 */,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineSmall
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .text2,
-                                              fontSize: 15.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
+                                  Text(
+                                    FFLocalizations.of(context).getText(
+                                      '72y6svrw' /* v1.0.0 stable 1 */,
                                     ),
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .override(
+                                          fontFamily: 'Montserrat',
+                                          color: FlutterFlowTheme.of(context)
+                                              .text2,
+                                          fontSize: 11.0,
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -975,13 +950,12 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                     ),
                                                                   );
                                                                   FFAppState()
+                                                                          .userIDNum =
+                                                                      _model
+                                                                          .girisHashedID!;
+                                                                  FFAppState()
                                                                       .update(
-                                                                          () {
-                                                                    FFAppState()
-                                                                            .userIDNum =
-                                                                        _model
-                                                                            .girisHashedID!;
-                                                                  });
+                                                                          () {});
                                                                   if (_model.idCheck !=
                                                                           null &&
                                                                       (_model.idCheck)!
@@ -1055,15 +1029,14 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                         );
                                                                       }
 
+                                                                      FFAppState()
+                                                                          .userPassword = '';
+                                                                      FFAppState()
+                                                                          .userDistrictIDs = [];
+                                                                      FFAppState()
+                                                                          .userIDNum = '';
                                                                       setState(
-                                                                          () {
-                                                                        FFAppState().userPassword =
-                                                                            '';
-                                                                        FFAppState().userDistrictIDs =
-                                                                            [];
-                                                                        FFAppState().userIDNum =
-                                                                            '';
-                                                                      });
+                                                                          () {});
                                                                       setState(
                                                                           () {
                                                                         _model
@@ -1135,11 +1108,10 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                     }
 
                                                                     FFAppState()
+                                                                        .userIDNum = '';
+                                                                    FFAppState()
                                                                         .update(
-                                                                            () {
-                                                                      FFAppState()
-                                                                          .userIDNum = '';
-                                                                    });
+                                                                            () {});
                                                                   }
 
                                                                   setState(
@@ -1826,13 +1798,16 @@ class _GirisWidgetState extends State<GirisWidget>
                                                                         ),
                                                                       );
                                                                       FFAppState()
+                                                                              .userIDNum =
+                                                                          _model
+                                                                              .hashedID!;
+                                                                      FFAppState()
+                                                                              .userPassword =
+                                                                          _model
+                                                                              .hashedPassword!;
+                                                                      FFAppState()
                                                                           .update(
-                                                                              () {
-                                                                        FFAppState().userIDNum =
-                                                                            _model.hashedID!;
-                                                                        FFAppState().userPassword =
-                                                                            _model.hashedPassword!;
-                                                                      });
+                                                                              () {});
 
                                                                       context.goNamed(
                                                                           'BilgiGuncellemeP1');

@@ -12,7 +12,12 @@ import 'add_candidate_oy_panel_model.dart';
 export 'add_candidate_oy_panel_model.dart';
 
 class AddCandidateOyPanelWidget extends StatefulWidget {
-  const AddCandidateOyPanelWidget({super.key});
+  const AddCandidateOyPanelWidget({
+    super.key,
+    required this.electionPara,
+  });
+
+  final ElectionsRow? electionPara;
 
   @override
   State<AddCandidateOyPanelWidget> createState() =>
@@ -288,69 +293,127 @@ class _AddCandidateOyPanelWidgetState extends State<AddCandidateOyPanelWidget> {
                         _model.candidateWalletID = await actions.createWalletID(
                           _model.candidatePrivateKey!,
                         );
-                        FFAppState().update(() {
-                          FFAppState().addToAddCandidateToElection(
-                              _model.candidateWalletID!);
-                        });
-                        if (FFAppState().electionDistrict != '') {
+                        FFAppState().addCandidateToElection = widget
+                            .electionPara!.candidatesWalletId
+                            .toList()
+                            .cast<String>();
+                        FFAppState().update(() {});
+                        FFAppState().addToAddCandidateToElection(
+                            _model.candidateWalletID!);
+                        FFAppState().update(() {});
+                        FFAppState().candidateNames = widget
+                            .electionPara!.candidateName
+                            .toList()
+                            .cast<String>();
+                        FFAppState().update(() {});
+                        FFAppState().addToCandidateNames(
+                            '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}');
+                        FFAppState().update(() {});
+                        if (widget.electionPara?.districtId != '00') {
                           await CandidatesTable().insert({
                             'name':
                                 '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
                             'wallet_id': _model.candidateWalletID,
-                            'district_id': FFAppState().electionDistrict,
-                            'election_id': FFAppState().electionID,
+                            'district_id': widget.electionPara?.districtId,
+                            'election_id': widget.electionPara?.id,
                           });
                           await ElectionsTable().update(
                             data: {
                               'candidates_wallet_id':
                                   FFAppState().addCandidateToElection,
+                              'candidate_name': FFAppState().candidateNames,
                             },
                             matchingRows: (rows) => rows.eq(
                               'id',
-                              FFAppState().electionID,
+                              widget.electionPara?.id,
                             ),
                           );
                           await CandidateGroup.addCandidateCall.call(
                             name:
                                 '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
-                            districtID: FFAppState().electionDistrict,
+                            districtID: widget.electionPara?.districtId,
                             wallet: _model.candidateWalletID,
                           );
                           await CandidateGroup.addCandidateToElectionCall.call(
-                            electionID: FFAppState().electionID,
+                            electionID: widget.electionPara?.id,
                             wallet: _model.candidateWalletID,
                           );
-                          Navigator.pop(context);
                         } else {
                           await CandidatesTable().insert({
                             'name':
                                 '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
                             'wallet_id': _model.candidateWalletID,
-                            'election_id': FFAppState().electionID,
-                            'district_id': '01',
+                            'election_id': widget.electionPara?.id,
+                            'district_id': '00',
                           });
                           await ElectionsTable().update(
                             data: {
                               'candidates_wallet_id':
                                   FFAppState().addCandidateToElection,
+                              'candidate_name': FFAppState().candidateNames,
                             },
                             matchingRows: (rows) => rows.eq(
                               'id',
-                              FFAppState().electionID,
+                              widget.electionPara?.id,
                             ),
                           );
                           await CandidateGroup.addCandidateCall.call(
                             name:
                                 '${_model.comMemNameTextController.text} ${_model.comMemSurnameTextController.text}',
-                            districtID: '01',
+                            districtID: '00',
                             wallet: _model.candidateWalletID,
                           );
                           await CandidateGroup.addCandidateToElectionCall.call(
-                            electionID: FFAppState().electionID,
+                            electionID: widget.electionPara?.id,
                             wallet: _model.candidateWalletID,
                           );
-                          Navigator.pop(context);
                         }
+
+                        if (FFLocalizations.of(context).languageCode == 'en') {
+                          // enAlert
+                          await showDialog(
+                            context: context,
+                            builder: (alertDialogContext) {
+                              return AlertDialog(
+                                title: const Text('Your transaction is complete!'),
+                                content: const Text(
+                                    'You are directing to the voting panel page.'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(alertDialogContext),
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        } else {
+                          // trAlert
+                          await showDialog(
+                            context: context,
+                            builder: (alertDialogContext) {
+                              return AlertDialog(
+                                title: const Text('İşleminiz Tamamlandı!'),
+                                content: const Text(
+                                    'Oy paneli sayfasına yönlendiriliyorsunuz.'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(alertDialogContext),
+                                    child: const Text('Tamam'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        }
+
+                        FFAppState().addCandidateToElection = [];
+                        FFAppState().candidateNames = [];
+                        setState(() {});
+
+                        context.goNamed('OyPaneli');
                       } else {
                         if (FFLocalizations.of(context).languageCode == 'en') {
                           // enAlert

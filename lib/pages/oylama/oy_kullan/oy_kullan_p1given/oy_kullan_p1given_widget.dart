@@ -40,6 +40,25 @@ class _OyKullanP1givenWidgetState extends State<OyKullanP1givenWidget>
     _model = createModel(context, () => OyKullanP1givenModel());
 
     animationsMap.addAll({
+      'textOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: const Offset(-21.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 140.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -257,12 +276,13 @@ class _OyKullanP1givenWidgetState extends State<OyKullanP1givenWidget>
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
+                                ).animateOnPageLoad(
+                                    animationsMap['textOnPageLoadAnimation']!),
                               ),
                               SizedBox(
                                 width: 340.0,
                                 child: Divider(
-                                  height: 50.0,
+                                  height: 25.0,
                                   thickness: 1.0,
                                   color:
                                       FlutterFlowTheme.of(context).customColor2,
@@ -564,6 +584,10 @@ Has Saved. */
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .graSet21,
+                                          ),
                                         ),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -704,6 +728,11 @@ Has Saved. */
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .graSet21,
+                                                ),
                                               ),
                                               child: Stack(
                                                 children: [
@@ -951,7 +980,7 @@ Has Saved. */
                                                                   options:
                                                                       FFButtonOptions(
                                                                     width:
-                                                                        286.0,
+                                                                        278.0,
                                                                     height:
                                                                         50.0,
                                                                     padding: const EdgeInsetsDirectional
@@ -986,9 +1015,10 @@ Has Saved. */
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        const BorderSide(
-                                                                      color: Colors
-                                                                          .transparent,
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .graSet21,
                                                                       width:
                                                                           1.0,
                                                                     ),

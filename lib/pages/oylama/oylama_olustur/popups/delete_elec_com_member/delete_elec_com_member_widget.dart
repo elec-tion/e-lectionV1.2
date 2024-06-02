@@ -142,13 +142,12 @@ class _DeleteElecComMemberWidgetState extends State<DeleteElecComMemberWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          FFAppState().update(() {
-                            FFAppState().removeFromAddElecComtoElection(
-                                valueOrDefault<String>(
-                              widget.deneme?.walletIdElectionCommittee,
-                              'elecComID',
-                            ));
-                          });
+                          FFAppState().removeFromAddElecComtoElection(
+                              valueOrDefault<String>(
+                            widget.deneme?.walletIdElectionCommittee,
+                            'elecComID',
+                          ));
+                          FFAppState().update(() {});
                           await CommitteeMemberGroup
                               .removeElectionCommitteeMemberFromElectionCall
                               .call(

@@ -36,8 +36,6 @@ export '/pages/giris/sifremi_unuttum/sifremi_unuttum_p2/sifremi_unuttum_p2_widge
     show SifremiUnuttumP2Widget;
 export '/pages/giris/sifremi_unuttum/sifremi_unuttum_p3/sifremi_unuttum_p3_widget.dart'
     show SifremiUnuttumP3Widget;
-export '/pages/oylama/oy_kullan/oy_kullan_p1notstarted/oy_kullan_p1notstarted_widget.dart'
-    show OyKullanP1notstartedWidget;
 export '/pages/how_to_vote/howvoting_works_p1/howvoting_works_p1_widget.dart'
     show HowvotingWorksP1Widget;
 export '/pages/how_to_vote/howvoting_works_p2/howvoting_works_p2_widget.dart'
@@ -62,16 +60,12 @@ export '/pages/profilim/sifremi_degistir/sifremi_degistir_widget.dart'
 export '/pages/profilim/hakkimda/hakkimda_widget.dart' show HakkimdaWidget;
 export '/pages/oylama/oy_kullan/oylama_adaylar/oylama_adaylar_widget.dart'
     show OylamaAdaylarWidget;
-export '/pages/oylama/oy_kullan/oylama_acklamasi/oylama_acklamasi_widget.dart'
-    show OylamaAcklamasiWidget;
+export '/pages/oylama/oy_kullan/oylamastats/oylamastats_widget.dart'
+    show OylamastatsWidget;
 export '/pages/terms_of_use/terms_of_use_widget.dart' show TermsOfUseWidget;
 export '/pages/oylama/oylama_olustur/oylama_olustur_p3/oylama_olustur_p3_widget.dart'
     show OylamaOlusturP3Widget;
 export '/pages/how_to_vote/faq/faq_widget.dart' show FaqWidget;
-export '/pages/oylama/oy_kullan/oy_kullan/oy_kullan_widget.dart'
-    show OyKullanWidget;
-export '/pages/giris/dropdown_deneme/dropdown_deneme_widget.dart'
-    show DropdownDenemeWidget;
 export '/pages/giris/bilgi_guncelleme_p2/bilgi_guncelleme_p2_widget.dart'
     show BilgiGuncellemeP2Widget;
 export '/pages/oylama/oy_kullan/oy_kullan_p1devam/oy_kullan_p1devam_widget.dart'

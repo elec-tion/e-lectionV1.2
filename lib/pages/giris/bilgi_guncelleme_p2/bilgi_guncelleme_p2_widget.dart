@@ -163,7 +163,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                     ],
                                   ),
                                   Icon(
-                                    Icons.person_add_alt,
+                                    Icons.person_add,
                                     color: FlutterFlowTheme.of(context).text1,
                                     size: 50.0,
                                   ),
@@ -258,11 +258,11 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                     _model.dropDownValue1,
                                                   ),
                                                 );
-                                                setState(() {
-                                                  FFAppState().countryID =
-                                                      _model.countryIDOut!.first
-                                                          .districtID;
-                                                });
+                                                FFAppState().countryID = _model
+                                                    .countryIDOut!
+                                                    .first
+                                                    .districtID;
+                                                setState(() {});
 
                                                 setState(() {});
                                               },
@@ -382,12 +382,11 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                       _model.dropDownValue2,
                                                     ),
                                                   );
-                                                  setState(() {
-                                                    FFAppState().cityID = _model
-                                                        .cityIDOut!
-                                                        .first
-                                                        .districtID;
-                                                  });
+                                                  FFAppState().cityID = _model
+                                                      .cityIDOut!
+                                                      .first
+                                                      .districtID;
+                                                  setState(() {});
 
                                                   setState(() {});
                                                 },
@@ -544,11 +543,10 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                                       .cityID)!,
                                                         ),
                                                   );
-                                                  setState(() {
-                                                    FFAppState().districtID =
-                                                        _model.districtIDOut!
-                                                            .first.districtID;
-                                                  });
+                                                  FFAppState().districtID =
+                                                      _model.districtIDOut!
+                                                          .first.districtID;
+                                                  setState(() {});
 
                                                   setState(() {});
                                                 },
@@ -699,11 +697,10 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                                                     .districtID)!,
                                                       ),
                                                 );
-                                                setState(() {
-                                                  FFAppState().neighborhoodID =
-                                                      _model.neighIDOut!.first
-                                                          .districtID;
-                                                });
+                                                FFAppState().neighborhoodID =
+                                                    _model.neighIDOut!.first
+                                                        .districtID;
+                                                setState(() {});
 
                                                 setState(() {});
                                               },
@@ -853,7 +850,7 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                             Builder(
                               builder: (context) => Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    45.0, 5.0, 0.0, 28.0),
+                                    40.0, 5.0, 0.0, 28.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
@@ -940,113 +937,159 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                               ),
                               child: FFButtonWidget(
                                 onPressed: () async {
-                                  if ((FFAppState().countryID != '') &&
-                                      (FFAppState().cityID != '') &&
-                                      (FFAppState().districtID != '') &&
-                                      (FFAppState().neighborhoodID != '') &&
-                                      _model.checkwarnValue!) {
-                                    setState(() {
+                                  if (_model.checkwarnValue == true) {
+                                    if ((FFAppState().countryID != '') &&
+                                        (FFAppState().cityID != '') &&
+                                        (FFAppState().districtID != '') &&
+                                        (FFAppState().neighborhoodID !=
+                                                '')) {
                                       FFAppState().addToUserDistrictIDs(
                                           FFAppState().countryID);
-                                    });
-                                    setState(() {
+                                      setState(() {});
                                       FFAppState().addToUserDistrictIDs(
                                           FFAppState().cityID);
-                                    });
-                                    setState(() {
+                                      setState(() {});
                                       FFAppState().addToUserDistrictIDs(
                                           FFAppState().districtID);
-                                    });
-                                    setState(() {
+                                      setState(() {});
                                       FFAppState().addToUserDistrictIDs(
                                           FFAppState().neighborhoodID);
-                                    });
-                                    await UsersTable().update(
-                                      data: {
-                                        'districts':
-                                            FFAppState().userDistrictIDs,
-                                      },
-                                      matchingRows: (rows) => rows.eq(
-                                        'id',
-                                        FFAppState().userIDNum,
-                                      ),
-                                    );
-                                    _model.countryVarMi = await DistrictGroup
-                                        .getDistrictCall
-                                        .call(
-                                      id: FFAppState().countryID,
-                                    );
-                                    if (!(_model.countryVarMi?.succeeded ??
-                                        true)) {
-                                      await DistrictGroup.addDistrictCall.call(
+                                      setState(() {});
+                                      await UsersTable().update(
+                                        data: {
+                                          'districts':
+                                              FFAppState().userDistrictIDs,
+                                        },
+                                        matchingRows: (rows) => rows.eq(
+                                          'id',
+                                          FFAppState().userIDNum,
+                                        ),
+                                      );
+                                      _model.countryVarMi = await DistrictGroup
+                                          .getDistrictCall
+                                          .call(
                                         id: FFAppState().countryID,
-                                        name: _model.dropDownValue1,
                                       );
-                                    }
-                                    _model.cityVarMi = await DistrictGroup
-                                        .getDistrictCall
-                                        .call(
-                                      id: FFAppState().cityID,
-                                    );
-                                    if (!(_model.cityVarMi?.succeeded ??
-                                        true)) {
-                                      await DistrictGroup.addDistrictCall.call(
-                                        id: FFAppState().cityID,
-                                        name:
-                                            '${_model.dropDownValue1}, ${_model.dropDownValue2}',
-                                      );
-                                    }
-                                    _model.districtVarMi = await DistrictGroup
-                                        .getDistrictCall
-                                        .call(
-                                      id: FFAppState().districtID,
-                                    );
-                                    if (!(_model.districtVarMi?.succeeded ??
-                                        true)) {
-                                      await DistrictGroup.addDistrictCall.call(
-                                        id: FFAppState().districtID,
-                                        name:
-                                            '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}',
-                                      );
-                                    }
-                                    _model.neighborhoodVarMi =
-                                        await DistrictGroup.getDistrictCall
+                                      if (!(_model.countryVarMi?.succeeded ??
+                                          true)) {
+                                        await DistrictGroup.addDistrictCall
                                             .call(
-                                      id: FFAppState().neighborhoodID,
-                                    );
-                                    if (!(_model.neighborhoodVarMi?.succeeded ??
-                                        true)) {
-                                      await DistrictGroup.addDistrictCall.call(
-                                        id: FFAppState().neighborhoodID,
-                                        name:
-                                            '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}, ${_model.dropDownValue4}',
+                                          id: FFAppState().countryID,
+                                          name: _model.dropDownValue1,
+                                        );
+                                      }
+                                      _model.cityVarMi = await DistrictGroup
+                                          .getDistrictCall
+                                          .call(
+                                        id: FFAppState().cityID,
                                       );
-                                    }
-                                    await VoterGroup.addDistrictToVoterCall
-                                        .call(
-                                      wallet: bilgiGuncellemeP2UsersRow
-                                          ?.walletIdVoter,
-                                      districtID: FFAppState().neighborhoodID,
-                                    );
-                                    FFAppState().update(() {
+                                      if (!(_model.cityVarMi?.succeeded ??
+                                          true)) {
+                                        await DistrictGroup.addDistrictCall
+                                            .call(
+                                          id: FFAppState().cityID,
+                                          name:
+                                              '${_model.dropDownValue1}, ${_model.dropDownValue2}',
+                                        );
+                                      }
+                                      _model.districtVarMi = await DistrictGroup
+                                          .getDistrictCall
+                                          .call(
+                                        id: FFAppState().districtID,
+                                      );
+                                      if (!(_model.districtVarMi?.succeeded ??
+                                          true)) {
+                                        await DistrictGroup.addDistrictCall
+                                            .call(
+                                          id: FFAppState().districtID,
+                                          name:
+                                              '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}',
+                                        );
+                                      }
+                                      _model.neighborhoodVarMi =
+                                          await DistrictGroup.getDistrictCall
+                                              .call(
+                                        id: FFAppState().neighborhoodID,
+                                      );
+                                      if (!(_model
+                                              .neighborhoodVarMi?.succeeded ??
+                                          true)) {
+                                        await DistrictGroup.addDistrictCall
+                                            .call(
+                                          id: FFAppState().neighborhoodID,
+                                          name:
+                                              '${_model.dropDownValue1}, ${_model.dropDownValue2}, ${_model.dropDownValue3}, ${_model.dropDownValue4}',
+                                        );
+                                      }
+                                      await VoterGroup.addDistrictToVoterCall
+                                          .call(
+                                        wallet: bilgiGuncellemeP2UsersRow
+                                            ?.walletIdVoter,
+                                        districtID: FFAppState().neighborhoodID,
+                                      );
                                       FFAppState().countryID = '';
                                       FFAppState().cityID = '';
                                       FFAppState().districtID = '';
                                       FFAppState().neighborhoodID = '';
                                       FFAppState().userDistrictIDs = [];
-                                    });
+                                      FFAppState().update(() {});
 
-                                    context.goNamed(
-                                      'HowvotingWorksP1',
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
-                                        ),
-                                      },
-                                    );
+                                      context.goNamed(
+                                        'HowvotingWorksP1',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: const TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.fade,
+                                            duration: Duration(milliseconds: 0),
+                                          ),
+                                        },
+                                      );
+                                    } else {
+                                      if (FFLocalizations.of(context)
+                                              .languageCode ==
+                                          'tr') {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Tüm alanları doldurunuz!'),
+                                              content: const Text(
+                                                  'Lütfen her alanı eksiksiz doldurduğunuzdan emin olun. '),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext),
+                                                  child: const Text('Tamam'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      } else {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Please fill in all fields!'),
+                                              content: const Text(
+                                                  'Please make sure you entered all of the adress information.'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext),
+                                                  child: const Text('OK'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      }
+                                    }
                                   } else {
                                     if (FFLocalizations.of(context)
                                             .languageCode ==
@@ -1056,9 +1099,9 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
                                             title: const Text(
-                                                'Tüm alanları doldurunuz!'),
+                                                'Kullanım koşullarını onaylayın!'),
                                             content: const Text(
-                                                'Lütfen her alanı eksiksiz doldurduğunuzdan emin olun. '),
+                                                'e-lection\'da hesap açmak için kullanım koşullarını onaylamalısınız.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
@@ -1075,9 +1118,9 @@ class _BilgiGuncellemeP2WidgetState extends State<BilgiGuncellemeP2Widget> {
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
                                             title: const Text(
-                                                'Please fill in all fields!'),
+                                                'Confirm the terms of use!'),
                                             content: const Text(
-                                                'Please make sure you entered all of the adress information and accepted the terms of use form.'),
+                                                'To create an account on e-lection, you must accept the terms of use.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(

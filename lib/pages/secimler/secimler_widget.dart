@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -31,9 +32,6 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => SecimlerModel());
-
-    _model.electionSearchTextController ??= TextEditingController();
-    _model.electionSearchFocusNode ??= FocusNode();
 
     _model.electionsTabBarController = TabController(
       vsync: this,
@@ -253,122 +251,6 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                 ],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 10.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.7,
-                                    child: TextFormField(
-                                      controller:
-                                          _model.electionSearchTextController,
-                                      focusNode: _model.electionSearchFocusNode,
-                                      autofocus: false,
-                                      textCapitalization:
-                                          TextCapitalization.none,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '921a7izv' /* Search Election */,
-                                        ),
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .textfieldHintText,
-                                              letterSpacing: 0.0,
-                                            ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .mavi,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .mavi,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
-                                        ),
-                                        filled: true,
-                                        fillColor: FlutterFlowTheme.of(context)
-                                            .customColor2,
-                                        contentPadding: const EdgeInsets.all(10.0),
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            color: FlutterFlowTheme.of(context)
-                                                .text1,
-                                            letterSpacing: 0.0,
-                                          ),
-                                      textAlign: TextAlign.center,
-                                      cursorColor:
-                                          FlutterFlowTheme.of(context).text1,
-                                      validator: _model
-                                          .electionSearchTextControllerValidator
-                                          .asValidator(context),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'v1fqhy0x' /* To ****: 9 days, 27 hours. */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text1,
-                                          fontSize: 12.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
                             SizedBox(
                               width: 340.0,
                               child: Divider(
@@ -423,6 +305,12 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(15.0),
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .customColor2,
+                                              width: 0.5,
+                                            ),
                                           ),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -433,15 +321,14 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                               's692ylzb' /* Voting Panel */,
                                             ),
                                             icon: Icon(
-                                              Icons
-                                                  .admin_panel_settings_outlined,
+                                              Icons.admin_panel_settings,
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .text1,
                                               size: 28.0,
                                             ),
                                             options: FFButtonOptions(
-                                              width: 280.0,
+                                              width: 250.0,
                                               height: 50.0,
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
@@ -506,6 +393,11 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor2,
+                                            width: 0.5,
+                                          ),
                                         ),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -513,16 +405,16 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(
-                                            'oyuux3d8' /* Voting Panel */,
+                                            'oyuux3d8' /* Create Election */,
                                           ),
                                           icon: Icon(
-                                            Icons.admin_panel_settings_outlined,
+                                            Icons.add,
                                             color: FlutterFlowTheme.of(context)
                                                 .text1,
                                             size: 28.0,
                                           ),
                                           options: FFButtonOptions(
-                                            width: 280.0,
+                                            width: 250.0,
                                             height: 50.0,
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -815,9 +707,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                             onTap:
                                                                                 () async {
                                                                               context.pushNamed(
-                                                                                'OyKullanP1notstarted',
+                                                                                'OyKullanP1notstartednew',
                                                                                 queryParameters: {
-                                                                                  'deneme': serializeParam(
+                                                                                  'givevote': serializeParam(
                                                                                     listViewElectionsRow,
                                                                                     ParamType.SupabaseRow,
                                                                                   ),
@@ -975,9 +867,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                             onTap:
                                                                                 () async {
                                                                               context.pushNamed(
-                                                                                'OyKullanP1notstarted',
+                                                                                'OyKullanP1notstartednew',
                                                                                 queryParameters: {
-                                                                                  'deneme': serializeParam(
+                                                                                  'givevote': serializeParam(
                                                                                     listViewElectionsRow,
                                                                                     ParamType.SupabaseRow,
                                                                                   ),
@@ -1135,9 +1027,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                             onTap:
                                                                                 () async {
                                                                               context.pushNamed(
-                                                                                'OyKullanP1notstarted',
+                                                                                'OyKullanP1notstartednew',
                                                                                 queryParameters: {
-                                                                                  'deneme': serializeParam(
+                                                                                  'givevote': serializeParam(
                                                                                     listViewElectionsRow,
                                                                                     ParamType.SupabaseRow,
                                                                                   ),
@@ -1295,9 +1187,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                             onTap:
                                                                                 () async {
                                                                               context.pushNamed(
-                                                                                'OyKullanP1notstarted',
+                                                                                'OyKullanP1notstartednew',
                                                                                 queryParameters: {
-                                                                                  'deneme': serializeParam(
+                                                                                  'givevote': serializeParam(
                                                                                     listViewElectionsRow,
                                                                                     ParamType.SupabaseRow,
                                                                                   ),
@@ -1455,9 +1347,9 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                             onTap:
                                                                                 () async {
                                                                               context.pushNamed(
-                                                                                'OyKullanP1notstarted',
+                                                                                'OyKullanP1notstartednew',
                                                                                 queryParameters: {
-                                                                                  'deneme': serializeParam(
+                                                                                  'givevote': serializeParam(
                                                                                     listViewElectionsRow,
                                                                                     ParamType.SupabaseRow,
                                                                                   ),
@@ -1627,15 +1519,33 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Colors.transparent,
                                                                             onTap:
                                                                                 () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1devam',
-                                                                                queryParameters: {
-                                                                                  'givevote': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
-                                                                                  ),
-                                                                                }.withoutNulls,
+                                                                              _model.isVoterElected = await VoterGroup.isVoterElectedCall.call(
+                                                                                wallet: secimlerUsersRow.walletIdVoter,
+                                                                                electionID: listViewElectionsRow.id,
                                                                               );
+                                                                              if ((_model.isVoterElected?.bodyText ?? '') == '{\"isElected\":false}') {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1devam',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              } else {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1given',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              }
+
+                                                                              setState(() {});
                                                                             },
                                                                             child:
                                                                                 Column(
@@ -1791,15 +1701,33 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Colors.transparent,
                                                                             onTap:
                                                                                 () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1devam',
-                                                                                queryParameters: {
-                                                                                  'givevote': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
-                                                                                  ),
-                                                                                }.withoutNulls,
+                                                                              _model.isVoterElected2 = await VoterGroup.isVoterElectedCall.call(
+                                                                                wallet: secimlerUsersRow.walletIdVoter,
+                                                                                electionID: listViewElectionsRow.id,
                                                                               );
+                                                                              if ((_model.isVoterElected2?.bodyText ?? '') == '{\"isElected\":false}') {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1devam',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              } else {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1given',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              }
+
+                                                                              setState(() {});
                                                                             },
                                                                             child:
                                                                                 Column(
@@ -1955,15 +1883,33 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Colors.transparent,
                                                                             onTap:
                                                                                 () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1devam',
-                                                                                queryParameters: {
-                                                                                  'givevote': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
-                                                                                  ),
-                                                                                }.withoutNulls,
+                                                                              _model.isVoterElected3 = await VoterGroup.isVoterElectedCall.call(
+                                                                                wallet: secimlerUsersRow.walletIdVoter,
+                                                                                electionID: listViewElectionsRow.id,
                                                                               );
+                                                                              if ((_model.isVoterElected3?.bodyText ?? '') == '{\"isElected\":false}') {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1devam',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              } else {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1given',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              }
+
+                                                                              setState(() {});
                                                                             },
                                                                             child:
                                                                                 Column(
@@ -2119,15 +2065,33 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Colors.transparent,
                                                                             onTap:
                                                                                 () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1devam',
-                                                                                queryParameters: {
-                                                                                  'givevote': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
-                                                                                  ),
-                                                                                }.withoutNulls,
+                                                                              _model.isVoterElected4 = await VoterGroup.isVoterElectedCall.call(
+                                                                                wallet: secimlerUsersRow.walletIdVoter,
+                                                                                electionID: listViewElectionsRow.id,
                                                                               );
+                                                                              if ((_model.isVoterElected4?.bodyText ?? '') == '{\"isElected\":false}') {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1devam',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              } else {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1given',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              }
+
+                                                                              setState(() {});
                                                                             },
                                                                             child:
                                                                                 Column(
@@ -2283,15 +2247,33 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                 Colors.transparent,
                                                                             onTap:
                                                                                 () async {
-                                                                              context.pushNamed(
-                                                                                'OyKullanP1devam',
-                                                                                queryParameters: {
-                                                                                  'givevote': serializeParam(
-                                                                                    listViewElectionsRow,
-                                                                                    ParamType.SupabaseRow,
-                                                                                  ),
-                                                                                }.withoutNulls,
+                                                                              _model.isVoterElected5 = await VoterGroup.isVoterElectedCall.call(
+                                                                                wallet: secimlerUsersRow.walletIdVoter,
+                                                                                electionID: listViewElectionsRow.id,
                                                                               );
+                                                                              if ((_model.isVoterElected5?.bodyText ?? '') == '{\"isElected\":false}') {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1devam',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              } else {
+                                                                                context.pushNamed(
+                                                                                  'OyKullanP1given',
+                                                                                  queryParameters: {
+                                                                                    'givevote': serializeParam(
+                                                                                      listViewElectionsRow,
+                                                                                      ParamType.SupabaseRow,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              }
+
+                                                                              setState(() {});
                                                                             },
                                                                             child:
                                                                                 Column(
@@ -2440,54 +2422,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFFFF0000),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1res',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '5gw230b9' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFFFF0000),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '5gw230b9' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2495,15 +2487,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2577,54 +2581,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFFFF0000),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1res',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        'izbdgjc3' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFFFF0000),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          'izbdgjc3' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2632,15 +2646,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2714,54 +2740,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFFFF0000),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1res',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        '73ek3p3t' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFFFF0000),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          '73ek3p3t' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2769,15 +2805,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2851,54 +2899,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFFFF0000),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1res',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        'pirgo0te' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFFFF0000),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          'pirgo0te' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -2906,15 +2964,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },
@@ -2988,54 +3058,64 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            children: [
-                                                                              Row(
-                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                children: [
-                                                                                  const Icon(
-                                                                                    Icons.arrow_right,
-                                                                                    color: Color(0xFFFF0000),
-                                                                                    size: 29.0,
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              context.pushNamed(
+                                                                                'OyKullanP1res',
+                                                                                queryParameters: {
+                                                                                  'givevote': serializeParam(
+                                                                                    listViewElectionsRow,
+                                                                                    ParamType.SupabaseRow,
                                                                                   ),
-                                                                                  Expanded(
-                                                                                    child: Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        listViewElectionsRow.name,
-                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Montserrat',
-                                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                                              fontSize: 18.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
-                                                                                child: Row(
+                                                                                }.withoutNulls,
+                                                                              );
+                                                                            },
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
-                                                                                    Text(
-                                                                                      FFLocalizations.of(context).getText(
-                                                                                        's0zhuhyi' /* End date & time: */,
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            color: FlutterFlowTheme.of(context).text3,
-                                                                                            fontSize: 15.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                          ),
+                                                                                    const Icon(
+                                                                                      Icons.arrow_right,
+                                                                                      color: Color(0xFFFF0000),
+                                                                                      size: 29.0,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          listViewElectionsRow.name,
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                                fontSize: 18.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 0.0),
+                                                                                  child: Row(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        FFLocalizations.of(context).getText(
+                                                                                          's0zhuhyi' /* End date & time: */,
+                                                                                        ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Montserrat',
                                                                                               color: FlutterFlowTheme.of(context).text3,
@@ -3043,15 +3123,27 @@ class _SecimlerWidgetState extends State<SecimlerWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ),
-                                                                                  ],
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.showDateTime(listViewElectionsRow.endDate),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).text3,
+                                                                                                fontSize: 15.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
                                                                                 ),
-                                                                              ),
-                                                                              Divider(
-                                                                                thickness: 0.5,
-                                                                                color: FlutterFlowTheme.of(context).mavi,
-                                                                              ),
-                                                                            ],
+                                                                                Divider(
+                                                                                  thickness: 0.5,
+                                                                                  color: FlutterFlowTheme.of(context).mavi,
+                                                                                ),
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         );
                                                                       },

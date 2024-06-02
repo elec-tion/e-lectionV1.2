@@ -145,565 +145,504 @@ class _OyPaneliWidgetState extends State<OyPaneliWidget> {
             ),
             body: SafeArea(
               top: true,
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Container(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: MediaQuery.sizeOf(context).height * 0.824,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          FlutterFlowTheme.of(context).background1,
-                          FlutterFlowTheme.of(context).background2
-                        ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: MediaQuery.sizeOf(context).height * 0.824,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            FlutterFlowTheme.of(context).background1,
+                            FlutterFlowTheme.of(context).background2
+                          ],
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
+                        ),
                       ),
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          's6p9x86g' /* Voting Panel */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .text1,
-                                              fontSize: 30.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              Icon(
-                                Icons.admin_panel_settings_outlined,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 58.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: 340.0,
-                          child: Divider(
-                            height: 30.0,
-                            thickness: 1.0,
-                            color: FlutterFlowTheme.of(context).customColor2,
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            width: 411.0,
-                            height: 400.0,
-                            decoration: const BoxDecoration(
-                              color: Color(0x001E1E1E),
-                            ),
-                            child: Column(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 10.0, 0.0, 0.0),
+                            child: Row(
                               mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 10.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          'kmszbpwf' /* Elections that I am responsibl... */,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .text1,
-                                              fontSize: 18.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 0.0, 20.0, 30.0),
-                                        child: Text(
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Text(
                                           FFLocalizations.of(context).getText(
-                                            '4xrr3hrk' /* This page shows the elections ... */,
+                                            's6p9x86g' /* Voting Panel */,
                                           ),
-                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .titleLarge
+                                              .override(
+                                                fontFamily: 'Montserrat',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .text1,
+                                                fontSize: 30.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.admin_panel_settings,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 58.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 340.0,
+                            child: Divider(
+                              height: 30.0,
+                              thickness: 1.0,
+                              color: FlutterFlowTheme.of(context).customColor2,
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              width: 411.0,
+                              height: 400.0,
+                              decoration: const BoxDecoration(
+                                color: Color(0x001E1E1E),
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 10.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text(
+                                          FFLocalizations.of(context).getText(
+                                            'kmszbpwf' /* Elections that I am responsibl... */,
+                                          ),
+                                          textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .text2,
-                                                fontSize: 14.0,
+                                                        .text1,
+                                                fontSize: 18.0,
                                                 letterSpacing: 0.0,
-                                                fontWeight: FontWeight.normal,
+                                                fontWeight: FontWeight.w600,
                                               ),
                                         ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                FutureBuilder<List<UsersRow>>(
-                                  future: UsersTable().queryRows(
-                                    queryFn: (q) => q.eq(
-                                      'id',
-                                      FFAppState().userIDNum,
+                                      ],
                                     ),
                                   ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              FlutterFlowTheme.of(context).mavi,
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  20.0, 0.0, 20.0, 30.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              '4xrr3hrk' /* This page shows the elections ... */,
                                             ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .text2,
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
                                         ),
-                                      );
-                                    }
-                                    List<UsersRow> columnUsersRowList =
-                                        snapshot.data!;
-                                    return SingleChildScrollView(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: List.generate(
-                                            columnUsersRowList.length,
-                                            (columnIndex) {
-                                          final columnUsersRow =
-                                              columnUsersRowList[columnIndex];
-                                          return FutureBuilder<
-                                              List<ElectionsRow>>(
-                                            future: ElectionsTable().queryRows(
-                                              queryFn: (q) => q
-                                                  .contains(
-                                                    'committee_members',
-                                                    '{${columnUsersRow
-                                                            .walletIdElectionCommittee}}',
-                                                  )
-                                                  .gt(
-                                                    'startDate',
-                                                    getCurrentTimestamp
-                                                        .secondsSinceEpoch,
-                                                  ),
+                                      ),
+                                    ],
+                                  ),
+                                  FutureBuilder<List<UsersRow>>(
+                                    future: UsersTable().queryRows(
+                                      queryFn: (q) => q.eq(
+                                        'id',
+                                        FFAppState().userIDNum,
+                                      ),
+                                    ),
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 50.0,
+                                            height: 50.0,
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                FlutterFlowTheme.of(context)
+                                                    .mavi,
+                                              ),
                                             ),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 50.0,
-                                                    height: 50.0,
-                                                    child:
-                                                        CircularProgressIndicator(
-                                                      valueColor:
-                                                          AlwaysStoppedAnimation<
-                                                              Color>(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .mavi,
+                                          ),
+                                        );
+                                      }
+                                      List<UsersRow> columnUsersRowList =
+                                          snapshot.data!;
+                                      return SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: List.generate(
+                                              columnUsersRowList.length,
+                                              (columnIndex) {
+                                            final columnUsersRow =
+                                                columnUsersRowList[columnIndex];
+                                            return FutureBuilder<
+                                                List<ElectionsRow>>(
+                                              future:
+                                                  ElectionsTable().queryRows(
+                                                queryFn: (q) => q
+                                                    .contains(
+                                                      'committee_members',
+                                                      '{${columnUsersRow
+                                                              .walletIdElectionCommittee}}',
+                                                    )
+                                                    .gt(
+                                                      'startDate',
+                                                      getCurrentTimestamp
+                                                          .secondsSinceEpoch,
+                                                    ),
+                                              ),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .mavi,
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                );
-                                              }
-                                              List<ElectionsRow>
-                                                  listViewElectionsRowList =
-                                                  snapshot.data!;
-                                              if (listViewElectionsRowList
-                                                  .isEmpty) {
-                                                return const Center(
-                                                  child: SizedBox(
-                                                    width: 300.0,
-                                                    height: 300.0,
-                                                    child:
-                                                        OyPaneliComponentWidget(),
-                                                  ),
-                                                );
-                                              }
-                                              return ListView.builder(
-                                                padding: EdgeInsets.zero,
-                                                shrinkWrap: true,
-                                                scrollDirection: Axis.vertical,
-                                                itemCount:
-                                                    listViewElectionsRowList
-                                                        .length,
-                                                itemBuilder:
-                                                    (context, listViewIndex) {
-                                                  final listViewElectionsRow =
-                                                      listViewElectionsRowList[
-                                                          listViewIndex];
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 15.0),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      20.0,
-                                                                      0.0,
-                                                                      20.0,
-                                                                      0.0),
-                                                          child: InkWell(
-                                                            splashColor: Colors
-                                                                .transparent,
-                                                            focusColor: Colors
-                                                                .transparent,
-                                                            hoverColor: Colors
-                                                                .transparent,
-                                                            highlightColor:
-                                                                Colors
-                                                                    .transparent,
-                                                            onTap: () async {
-                                                              context.pushNamed(
-                                                                'OyPaneliP2',
-                                                                queryParameters:
-                                                                    {
-                                                                  'oyPaneli':
-                                                                      serializeParam(
-                                                                    listViewElectionsRow,
-                                                                    ParamType
-                                                                        .SupabaseRow,
+                                                  );
+                                                }
+                                                List<ElectionsRow>
+                                                    listViewElectionsRowList =
+                                                    snapshot.data!;
+                                                if (listViewElectionsRowList
+                                                    .isEmpty) {
+                                                  return const Center(
+                                                    child: SizedBox(
+                                                      width: 300.0,
+                                                      height: 300.0,
+                                                      child:
+                                                          OyPaneliComponentWidget(),
+                                                    ),
+                                                  );
+                                                }
+                                                return ListView.builder(
+                                                  padding: EdgeInsets.zero,
+                                                  shrinkWrap: true,
+                                                  scrollDirection:
+                                                      Axis.vertical,
+                                                  itemCount:
+                                                      listViewElectionsRowList
+                                                          .length,
+                                                  itemBuilder:
+                                                      (context, listViewIndex) {
+                                                    final listViewElectionsRow =
+                                                        listViewElectionsRowList[
+                                                            listViewIndex];
+                                                    return Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  15.0),
+                                                      child: Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        20.0,
+                                                                        0.0,
+                                                                        20.0,
+                                                                        0.0),
+                                                            child: InkWell(
+                                                              splashColor: Colors
+                                                                  .transparent,
+                                                              focusColor: Colors
+                                                                  .transparent,
+                                                              hoverColor: Colors
+                                                                  .transparent,
+                                                              highlightColor:
+                                                                  Colors
+                                                                      .transparent,
+                                                              onTap: () async {
+                                                                context
+                                                                    .pushNamed(
+                                                                  'OyPaneliP2',
+                                                                  queryParameters:
+                                                                      {
+                                                                    'oyPaneli':
+                                                                        serializeParam(
+                                                                      listViewElectionsRow,
+                                                                      ParamType
+                                                                          .SupabaseRow,
+                                                                    ),
+                                                                  }.withoutNulls,
+                                                                );
+                                                              },
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceEvenly,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child:
+                                                                        Padding(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          10.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.center,
+                                                                        children: [
+                                                                          Icon(
+                                                                            Icons.circle,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).mavi,
+                                                                            size:
+                                                                                8.0,
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
                                                                   ),
-                                                                }.withoutNulls,
-                                                              );
-                                                            },
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceEvenly,
-                                                              children: [
-                                                                Flexible(
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0),
+                                                                  Expanded(
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .center,
                                                                       children: [
-                                                                        Icon(
-                                                                          Icons
-                                                                              .circle,
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).mavi,
-                                                                          size:
-                                                                              8.0,
+                                                                        Text(
+                                                                          valueOrDefault<
+                                                                              String>(
+                                                                            listViewElectionsRow.name,
+                                                                            'electionName',
+                                                                          ),
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Montserrat',
+                                                                                color: FlutterFlowTheme.of(context).text1,
+                                                                                fontSize: 17.0,
+                                                                                letterSpacing: 0.0,
+                                                                              ),
+                                                                        ),
+                                                                        Text(
+                                                                          functions
+                                                                              .showDateTime(listViewElectionsRow.startDate),
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Montserrat',
+                                                                                color: FlutterFlowTheme.of(context).text2,
+                                                                                letterSpacing: 0.0,
+                                                                              ),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                ),
-                                                                Expanded(
-                                                                  child: Column(
+                                                                  Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
                                                                             .max,
                                                                     children: [
-                                                                      Text(
-                                                                        valueOrDefault<
-                                                                            String>(
-                                                                          listViewElectionsRow
-                                                                              .name,
-                                                                          'electionName',
+                                                                      FlutterFlowIconButton(
+                                                                        borderRadius:
+                                                                            20.0,
+                                                                        borderWidth:
+                                                                            0.0,
+                                                                        buttonSize:
+                                                                            35.0,
+                                                                        fillColor:
+                                                                            const Color(0x004B39EF),
+                                                                        icon:
+                                                                            Icon(
+                                                                          Icons
+                                                                              .arrow_forward_ios_sharp,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).primaryText,
+                                                                          size:
+                                                                              17.0,
                                                                         ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Montserrat',
-                                                                              color: FlutterFlowTheme.of(context).text1,
-                                                                              fontSize: 17.0,
-                                                                              letterSpacing: 0.0,
-                                                                            ),
-                                                                      ),
-                                                                      Text(
-                                                                        functions
-                                                                            .showDateTime(listViewElectionsRow.startDate),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Montserrat',
-                                                                              color: FlutterFlowTheme.of(context).text2,
-                                                                              letterSpacing: 0.0,
-                                                                            ),
+                                                                        onPressed:
+                                                                            () {
+                                                                          print(
+                                                                              'IconButton pressed ...');
+                                                                        },
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ),
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    FlutterFlowIconButton(
-                                                                      borderRadius:
-                                                                          20.0,
-                                                                      borderWidth:
-                                                                          0.0,
-                                                                      buttonSize:
-                                                                          35.0,
-                                                                      fillColor:
-                                                                          const Color(
-                                                                              0x004B39EF),
-                                                                      icon:
-                                                                          Icon(
-                                                                        Icons
-                                                                            .arrow_forward_ios_sharp,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
-                                                                        size:
-                                                                            17.0,
-                                                                      ),
-                                                                      onPressed:
-                                                                          () {
-                                                                        print(
-                                                                            'IconButton pressed ...');
-                                                                      },
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ],
+                                                                ],
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  );
-                                                },
-                                              );
-                                            },
-                                          );
-                                        }),
+                                                        ],
+                                                      ),
+                                                    );
+                                                  },
+                                                );
+                                              },
+                                            );
+                                          }),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 30.0, 0.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 0.0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      boxShadow: const [
+                                        BoxShadow(
+                                          blurRadius: 4.0,
+                                          color: Color(0x33000000),
+                                          offset: Offset(
+                                            0.0,
+                                            2.0,
+                                          ),
+                                        )
+                                      ],
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          FlutterFlowTheme.of(context).graSet23,
+                                          FlutterFlowTheme.of(context).graSet22
+                                        ],
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(-1.0, 0.0),
+                                        end: const AlignmentDirectional(1.0, 0),
                                       ),
-                                    );
-                                  },
+                                      borderRadius: BorderRadius.circular(15.0),
+                                      border: Border.all(
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor2,
+                                        width: 0.5,
+                                      ),
+                                    ),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        context.pushNamed('OylamaOlusturP1');
+                                      },
+                                      text: FFLocalizations.of(context).getText(
+                                        'rmbbqwhr' /* Create a Voting */,
+                                      ),
+                                      icon: Icon(
+                                        Icons.add,
+                                        color:
+                                            FlutterFlowTheme.of(context).text1,
+                                        size: 28.0,
+                                      ),
+                                      options: FFButtonOptions(
+                                        width: 350.0,
+                                        height: 50.0,
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        iconPadding:
+                                            const EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: Colors.transparent,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .text1,
+                                              fontSize: 17.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                        elevation: 0.0,
+                                        borderSide: const BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 20.0, 0.0, 30.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Material(
-                                color: Colors.transparent,
-                                elevation: 0.0,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        blurRadius: 4.0,
-                                        color: Color(0x33000000),
-                                        offset: Offset(
-                                          0.0,
-                                          2.0,
-                                        ),
-                                      )
-                                    ],
-                                    gradient: LinearGradient(
-                                      colors: [
-                                        FlutterFlowTheme.of(context).graSet23,
-                                        FlutterFlowTheme.of(context).graSet22
-                                      ],
-                                      stops: const [0.0, 1.0],
-                                      begin: const AlignmentDirectional(-1.0, 0.0),
-                                      end: const AlignmentDirectional(1.0, 0),
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
-                                    },
-                                    text: FFLocalizations.of(context).getText(
-                                      'tg5053i6' /* Voting Statistics */,
-                                    ),
-                                    icon: Icon(
-                                      Icons.equalizer_sharp,
-                                      color: FlutterFlowTheme.of(context).text1,
-                                      size: 28.0,
-                                    ),
-                                    options: FFButtonOptions(
-                                      width: 350.0,
-                                      height: 50.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          24.0, 0.0, 24.0, 0.0),
-                                      iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: Colors.transparent,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            color: FlutterFlowTheme.of(context)
-                                                .text1,
-                                            fontSize: 17.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                      elevation: 0.0,
-                                      borderSide: const BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 0.0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4.0,
-                                      color: Color(0x33000000),
-                                      offset: Offset(
-                                        0.0,
-                                        2.0,
-                                      ),
-                                    )
-                                  ],
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      FlutterFlowTheme.of(context).graSet23,
-                                      FlutterFlowTheme.of(context).graSet22
-                                    ],
-                                    stops: const [0.0, 1.0],
-                                    begin: const AlignmentDirectional(-1.0, 0.0),
-                                    end: const AlignmentDirectional(1.0, 0),
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('OylamaOlusturP1');
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'rmbbqwhr' /* Create a Voting */,
-                                  ),
-                                  icon: Icon(
-                                    Icons.add,
-                                    color: FlutterFlowTheme.of(context).text1,
-                                    size: 28.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width: 350.0,
-                                    height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Colors.transparent,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: FlutterFlowTheme.of(context)
-                                              .text1,
-                                          fontSize: 17.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

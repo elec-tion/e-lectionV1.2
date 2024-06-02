@@ -226,7 +226,7 @@ class _OyKullanP1notstartednewWidgetState
                               SizedBox(
                                 width: 340.0,
                                 child: Divider(
-                                  height: 50.0,
+                                  height: 25.0,
                                   thickness: 1.0,
                                   color:
                                       FlutterFlowTheme.of(context).customColor2,
@@ -563,6 +563,10 @@ Not Started */
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .graSet21,
+                                          ),
                                         ),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -703,6 +707,11 @@ Not Started */
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(15.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .graSet21,
+                                                ),
                                               ),
                                               child: Stack(
                                                 children: [
@@ -950,7 +959,7 @@ Not Started */
                                                                   options:
                                                                       FFButtonOptions(
                                                                     width:
-                                                                        282.0,
+                                                                        278.0,
                                                                     height:
                                                                         50.0,
                                                                     padding: const EdgeInsetsDirectional
@@ -988,7 +997,7 @@ Not Started */
                                                                         BorderSide(
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .secondaryBackground,
+                                                                          .graSet21,
                                                                       width:
                                                                           1.0,
                                                                     ),

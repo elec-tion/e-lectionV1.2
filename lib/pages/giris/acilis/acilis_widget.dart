@@ -94,15 +94,19 @@ class _AcilisWidgetState extends State<AcilisWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        Theme.of(context).brightness == Brightness.dark
-                            ? 'assets/images/e-lection-logo-beyaz.png'
-                            : 'assets/images/e-lection-logo-siyah.png',
-                        width: 250.0,
-                        height: 125.0,
-                        fit: BoxFit.fill,
+                    Hero(
+                      tag: 'b2',
+                      transitionOnUserGestures: true,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          Theme.of(context).brightness == Brightness.dark
+                              ? 'assets/images/e-lection-logo-beyaz.png'
+                              : 'assets/images/e-lection-logo-siyah.png',
+                          width: 250.0,
+                          height: 125.0,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                     Text(

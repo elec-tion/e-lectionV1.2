@@ -229,10 +229,9 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text(
-                                        'You didn\'t add committee member!'),
+                                    title: const Text('You didn\'t add voter!'),
                                     content: const Text(
-                                        'You didn\'t add committee member, please add a committee member.'),
+                                        'You didn\'t add voter, please try again.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
@@ -249,9 +248,9 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Sorumlu Eklemedin!'),
+                                    title: const Text('Seçmen Eklemedin!'),
                                     content: const Text(
-                                        'Oylamanıza sorumlu eklemediniz. Lütfen tekrar deneyin.'),
+                                        'Oylamanıza seçmen eklemediniz. Lütfen tekrar deneyin.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
@@ -270,10 +269,9 @@ class _AddVoterWidgetState extends State<AddVoterWidget> {
                                 wallet: _model.voterWalletIDTextController.text,
                               );
                               if ((_model.voterVarMi?.succeeded ?? true)) {
-                                FFAppState().update(() {
-                                  FFAppState().addToAddVoterToElection(
-                                      _model.voterWalletIDTextController.text);
-                                });
+                                FFAppState().addToAddVoterToElection(
+                                    _model.voterWalletIDTextController.text);
+                                FFAppState().update(() {});
                                 await ElectionsTable().update(
                                   data: {
                                     'voters_wallet_id':

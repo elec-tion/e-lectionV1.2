@@ -104,3 +104,17 @@ List<String>? districtIDGenerator(String cityID) {
 dynamic returnNull() {
   return "null";
 }
+
+List<String>? toLowerCaseList(List<String> originalList) {
+  List<String> lowerCaseList = [];
+  for (var item in originalList) {
+    lowerCaseList.add(item.toLowerCase());
+  }
+
+  return lowerCaseList;
+}
+
+String toLowerCaseString(String data) {
+  // return string as a lowercase
+  return data.toLowerCase();
+}

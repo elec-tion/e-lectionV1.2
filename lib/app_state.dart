@@ -230,4 +230,75 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInCandidateNames(int index, String value) {
     _candidateNames.insert(index, value);
   }
+
+  bool _regionalMi = false;
+  bool get regionalMi => _regionalMi;
+  set regionalMi(bool value) {
+    _regionalMi = value;
+  }
+
+  int _forLoop = 0;
+  int get forLoop => _forLoop;
+  set forLoop(int value) {
+    _forLoop = value;
+  }
+
+  List<int> _statisticCandidate = [];
+  List<int> get statisticCandidate => _statisticCandidate;
+  set statisticCandidate(List<int> value) {
+    _statisticCandidate = value;
+  }
+
+  void addToStatisticCandidate(int value) {
+    _statisticCandidate.add(value);
+  }
+
+  void removeFromStatisticCandidate(int value) {
+    _statisticCandidate.remove(value);
+  }
+
+  void removeAtIndexFromStatisticCandidate(int index) {
+    _statisticCandidate.removeAt(index);
+  }
+
+  void updateStatisticCandidateAtIndex(
+    int index,
+    int Function(int) updateFn,
+  ) {
+    _statisticCandidate[index] = updateFn(_statisticCandidate[index]);
+  }
+
+  void insertAtIndexInStatisticCandidate(int index, int value) {
+    _statisticCandidate.insert(index, value);
+  }
+
+  String _winnerWalletID1 = '';
+  String get winnerWalletID1 => _winnerWalletID1;
+  set winnerWalletID1(String value) {
+    _winnerWalletID1 = value;
+  }
+
+  int _winnerCount1 = 0;
+  int get winnerCount1 => _winnerCount1;
+  set winnerCount1(int value) {
+    _winnerCount1 = value;
+  }
+
+  String _winnerWalletIDFinal = '';
+  String get winnerWalletIDFinal => _winnerWalletIDFinal;
+  set winnerWalletIDFinal(String value) {
+    _winnerWalletIDFinal = value;
+  }
+
+  int _winnerCountFinal = 0;
+  int get winnerCountFinal => _winnerCountFinal;
+  set winnerCountFinal(int value) {
+    _winnerCountFinal = value;
+  }
+
+  int _timerCheck = 0;
+  int get timerCheck => _timerCheck;
+  set timerCheck(int value) {
+    _timerCheck = value;
+  }
 }

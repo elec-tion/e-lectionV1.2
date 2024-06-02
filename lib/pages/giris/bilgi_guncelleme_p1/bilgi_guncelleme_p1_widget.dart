@@ -171,7 +171,7 @@ class _BilgiGuncellemeP1WidgetState extends State<BilgiGuncellemeP1Widget> {
                                     ],
                                   ),
                                   Icon(
-                                    Icons.person_add_alt,
+                                    Icons.person_add,
                                     color: FlutterFlowTheme.of(context).text1,
                                     size: 50.0,
                                   ),
