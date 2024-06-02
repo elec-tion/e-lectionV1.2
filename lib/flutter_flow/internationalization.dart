@@ -112,7 +112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'e-lection',
     },
     '72y6svrw': {
-      'en': 'v1.0.2 ios h4',
+      'en': 'v1.0.2 ios h5',
       'tr': 'v1.0.2 stable',
     },
     '2nusyfli': {
@@ -843,13 +843,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'The Candidate You Are Voting For',
       'tr': 'Oy Verdiğiniz Aday',
     },
-    'p4s8c5ry': {
-      'en': 'Time Of Voting:',
-      'tr': 'Time Of Voting:',
-    },
     'xygeoi02': {
       'en':
-          'I confirm this information and confirm that my vote may be invalidated in case of incorrect information.',
+          'I confirm this information and confirm\n that my vote may be\n invalidated in case of incorrect information.',
       'tr':
           'Yukarıdaki bilgilerin doğruluğunu onaylayıp, yanlış bir bilgi olması durumunda oyumun geçersiz sayılabileceğini onaylıyorum.',
     },
@@ -860,6 +856,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lxs8hq5i': {
       'en': 'Give Vote',
       'tr': 'Oy Ver',
+    },
+    'p4s8c5ry': {
+      'en': 'Time Of Voting:',
+      'tr': 'Time Of Voting:',
     },
     'nyqx0ta2': {
       'en': '- Ongoing Election -',
@@ -885,35 +885,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'popoty35': {
       'en': 'Finish',
       'tr': 'Bitir',
-    },
-    'kk12equt': {
-      'en': 'From 1 to 5, how would you rate\nyour voting experience today?',
-      'tr':
-          'Bugünkü oy verme deneyiminize 1 ile 5\narasında kaç puan verirdiniz?',
-    },
-    'rqgs9wwy': {
-      'en': '1 Not Satisfied',
-      'tr': '1',
-    },
-    '6xhcwveb': {
-      'en': '2',
-      'tr': '2',
-    },
-    '7kd1xx3u': {
-      'en': '3',
-      'tr': '3',
-    },
-    'hbv1ce40': {
-      'en': '4',
-      'tr': '4',
-    },
-    '5mv8r364': {
-      'en': '5 Satisfied',
-      'tr': '5',
-    },
-    '5iwc0ngh': {
-      'en': '3',
-      'tr': '',
     },
     'lepo6kre': {
       'en': 'Voting',
